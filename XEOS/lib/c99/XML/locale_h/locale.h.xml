@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/locale.h" lang="c" filename="locale.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/c99/include/c99/locale.h"><name>locale.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/null.h">&lt;system/types/null.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/struct_lconv.h">&lt;system/types/struct_lconv.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/localeconv" lang="c"><name>localeconv</name>
+<returntype>struct lconv *</returntype>
+<declaration><declaration_keyword>struct</declaration_keyword> <declaration_type>lconv</declaration_type> <declaration_type>*</declaration_type> <declaration_function>localeconv</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/setlocale" lang="c"><name>setlocale</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>category</name></parsedparameter>
+<parsedparameter><type>const char *</type><name>locale</name></parsedparameter>
+</parsedparameterlist>
+<returntype> char *</returntype>
+<declaration><declaration_type>char</declaration_type> <declaration_type>*</declaration_type> <declaration_function>setlocale</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>category</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>locale</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_C99_LOCALE_H__" definetype="value" lang="c"><name>__XEOS_LIB_C99_LOCALE_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_C99_LOCALE_H__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LC_ALL" definetype="value" lang="c"><name>LC_ALL</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LC_ALL</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LC_COLLATE" definetype="value" lang="c"><name>LC_COLLATE</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LC_COLLATE</declaration_preprocessor> <declaration_preprocessor>1</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LC_CTYPE" definetype="value" lang="c"><name>LC_CTYPE</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LC_CTYPE</declaration_preprocessor> <declaration_preprocessor>2</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LC_MONETARY" definetype="value" lang="c"><name>LC_MONETARY</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LC_MONETARY</declaration_preprocessor> <declaration_preprocessor>3</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LC_NUMERIC" definetype="value" lang="c"><name>LC_NUMERIC</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LC_NUMERIC</declaration_preprocessor> <declaration_preprocessor>4</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LC_TIME" definetype="value" lang="c"><name>LC_TIME</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LC_TIME</declaration_preprocessor> <declaration_preprocessor>5</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

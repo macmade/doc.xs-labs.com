@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/mman.h" lang="c" filename="mman.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/posix/include/posix/sys/mman.h"><name>mman.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/size_t.h">&lt;system/types/size_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/off_t.h">&lt;system/types/off_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/mode_t.h">&lt;system/types/mode_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/struct_posix_typed_mem_info.h">&lt;system/types/struct_posix_typed_mem_info.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/mlock" lang="c"><name>mlock</name>
+<parsedparameterlist>
+<parsedparameter><type>const void *</type><name>addr</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>len</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>mlock</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>addr</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>len</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/mlockall" lang="c"><name>mlockall</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>flags</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>mlockall</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>flags</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/mmap" lang="c"><name>mmap</name>
+<parsedparameterlist>
+<parsedparameter><type>void *</type><name>addr</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>len</name></parsedparameter>
+<parsedparameter><type>int</type><name>prot</name></parsedparameter>
+<parsedparameter><type>int</type><name>flags</name></parsedparameter>
+<parsedparameter><type>int</type><name>fildes</name></parsedparameter>
+<parsedparameter><type>off_t</type><name>off</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void *</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_function>mmap</declaration_function>(
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>addr</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>len</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>prot</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>flags</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>fildes</declaration_param>,
+    <declaration_type>off_t</declaration_type> <declaration_param>off</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/mprotect" lang="c"><name>mprotect</name>
+<parsedparameterlist>
+<parsedparameter><type>void *</type><name>addr</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>len</name></parsedparameter>
+<parsedparameter><type>int</type><name>prot</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>mprotect</declaration_function>(
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>addr</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>len</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>prot</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/msync" lang="c"><name>msync</name>
+<parsedparameterlist>
+<parsedparameter><type>void *</type><name>addr</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>len</name></parsedparameter>
+<parsedparameter><type>int</type><name>flags</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>msync</declaration_function>(
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>addr</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>len</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>flags</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/munlock" lang="c"><name>munlock</name>
+<parsedparameterlist>
+<parsedparameter><type>const void *</type><name>addr</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>len</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>munlock</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>addr</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>len</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/munlockall" lang="c"><name>munlockall</name>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>munlockall</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/munmap" lang="c"><name>munmap</name>
+<parsedparameterlist>
+<parsedparameter><type>void *</type><name>addr</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>len</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>munmap</declaration_function>(
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>addr</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>len</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/posix_madvise" lang="c"><name>posix_madvise</name>
+<parsedparameterlist>
+<parsedparameter><type>void *</type><name>addr</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>len</name></parsedparameter>
+<parsedparameter><type>int</type><name>advice</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>posix_madvise</declaration_function>(
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>addr</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>len</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>advice</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/posix_mem_offset" lang="c"><name>posix_mem_offset</name>
+<parsedparameterlist>
+<parsedparameter><type>const void * restrict</type><name>addr</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>len</name></parsedparameter>
+<parsedparameter><type>off_t * restrict</type><name>off</name></parsedparameter>
+<parsedparameter><type>size_t * restrict</type><name>contig_len</name></parsedparameter>
+<parsedparameter><type>int * restrict</type><name>fildes</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>posix_mem_offset</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>addr</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>len</declaration_param>,
+    <declaration_type>off_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>off</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>contig_len</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>fildes</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/posix_typed_mem_get_info" lang="c"><name>posix_typed_mem_get_info</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>fildes</name></parsedparameter>
+<parsedparameter><type>struct posix_typed_mem_info *</type><name>info</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>posix_typed_mem_get_info</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>fildes</declaration_param>,
+    <declaration_keyword>struct</declaration_keyword> <declaration_type>posix_typed_mem_info</declaration_type> <declaration_type>*</declaration_type><declaration_param>info</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/posix_typed_mem_open" lang="c"><name>posix_typed_mem_open</name>
+<parsedparameterlist>
+<parsedparameter><type>const char *</type><name>name</name></parsedparameter>
+<parsedparameter><type>int</type><name>oflag</name></parsedparameter>
+<parsedparameter><type>int</type><name>tflag</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>posix_typed_mem_open</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>name</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>oflag</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>tflag</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/shm_open" lang="c"><name>shm_open</name>
+<parsedparameterlist>
+<parsedparameter><type>const char *</type><name>name</name></parsedparameter>
+<parsedparameter><type>int</type><name>oflag</name></parsedparameter>
+<parsedparameter><type>mode_t</type><name>mode</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>shm_open</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>name</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>oflag</declaration_param>,
+    <declaration_type>mode_t</declaration_type> <declaration_param>mode</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/shm_unlink" lang="c"><name>shm_unlink</name>
+<parsedparameterlist>
+<parsedparameter><type>const char *</type><name>name</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>shm_unlink</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>name</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_POSIX_SYS_MMAN_H__" definetype="value" lang="c"><name>__XEOS_LIB_POSIX_SYS_MMAN_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_POSIX_SYS_MMAN_H__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/MAP_FAILED" definetype="value" lang="c"><name>MAP_FAILED</name>
+<attributes><attribute><name>Value</name><value>0x0 (0)</value></attribute>
+</attributes>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>MAP_FAILED</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>void</declaration_preprocessor> <declaration_preprocessor>*</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>0</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/MAP_FIXED" definetype="value" lang="c"><name>MAP_FIXED</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>MAP_FIXED</declaration_preprocessor> <declaration_preprocessor>0x0010</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/MAP_PRIVATE" definetype="value" lang="c"><name>MAP_PRIVATE</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>MAP_PRIVATE</declaration_preprocessor> <declaration_preprocessor>0x0002</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/MAP_SHARED" definetype="value" lang="c"><name>MAP_SHARED</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>MAP_SHARED</declaration_preprocessor> <declaration_preprocessor>0x0001</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/MCL_CURRENT" definetype="value" lang="c"><name>MCL_CURRENT</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>MCL_CURRENT</declaration_preprocessor> <declaration_preprocessor>0x0001</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/MCL_FUTURE" definetype="value" lang="c"><name>MCL_FUTURE</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>MCL_FUTURE</declaration_preprocessor> <declaration_preprocessor>0x0002</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/MS_ASYNC" definetype="value" lang="c"><name>MS_ASYNC</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>MS_ASYNC</declaration_preprocessor> <declaration_preprocessor>0x0001</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/MS_INVALIDATE" definetype="value" lang="c"><name>MS_INVALIDATE</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>MS_INVALIDATE</declaration_preprocessor> <declaration_preprocessor>0x0002</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/MS_SYNC" definetype="value" lang="c"><name>MS_SYNC</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>MS_SYNC</declaration_preprocessor> <declaration_preprocessor>0x0010</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/POSIX_TYPED_MEM_ALLOCATE" definetype="value" lang="c"><name>POSIX_TYPED_MEM_ALLOCATE</name>
+<declaration><declaration_comment>/*
+#define POSIX_MADV_NORMAL                       0x0000
+#define POSIX_MADV_RANDOM                       0x0000
+#define POSIX_MADV_SEQUENTIAL                   0x0000
+#define POSIX_MADV_WILLNEED                     0x0000
+#define POSIX_MADV_DONTNEED                     0x0000</declaration_comment>
+    <declaration_comment>*/</declaration_comment>
+<declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>POSIX_TYPED_MEM_ALLOCATE</declaration_preprocessor> <declaration_preprocessor>0x0000</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/POSIX_TYPED_MEM_ALLOCATE_CONTIG" definetype="value" lang="c"><name>POSIX_TYPED_MEM_ALLOCATE_CONTIG</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>POSIX_TYPED_MEM_ALLOCATE_CONTIG</declaration_preprocessor> <declaration_preprocessor>0x0000</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/POSIX_TYPED_MEM_MAP_ALLOCATABLE" definetype="value" lang="c"><name>POSIX_TYPED_MEM_MAP_ALLOCATABLE</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>POSIX_TYPED_MEM_MAP_ALLOCATABLE</declaration_preprocessor> <declaration_preprocessor>0x0000</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/PROT_EXEC" definetype="value" lang="c"><name>PROT_EXEC</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>PROT_EXEC</declaration_preprocessor> <declaration_preprocessor>0x0004</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/PROT_NONE" definetype="value" lang="c"><name>PROT_NONE</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>PROT_NONE</declaration_preprocessor> <declaration_preprocessor>0x0000</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/PROT_READ" definetype="value" lang="c"><name>PROT_READ</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>PROT_READ</declaration_preprocessor> <declaration_preprocessor>0x0001</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/PROT_WRITE" definetype="value" lang="c"><name>PROT_WRITE</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>PROT_WRITE</declaration_preprocessor> <declaration_preprocessor>0x0002</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

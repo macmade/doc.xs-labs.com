@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/keyboard.h" lang="c" filename="keyboard.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/core/xeos/include/xeos/hal/keyboard.h"><name>keyboard.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdint.h">&lt;stdint.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/XEOS_HAL_Keyboard_DisableScan" lang="c"><name>XEOS_HAL_Keyboard_DisableScan</name>
+<returntype> XEOS_HAL_Keyboard_Response</returntype>
+<declaration><declaration_type>XEOS_HAL_Keyboard_Response</declaration_type> <declaration_function>XEOS_HAL_Keyboard_DisableScan</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_Keyboard_Echo" lang="c"><name>XEOS_HAL_Keyboard_Echo</name>
+<returntype> XEOS_HAL_Keyboard_Response</returntype>
+<declaration><declaration_type>XEOS_HAL_Keyboard_Response</declaration_type> <declaration_function>XEOS_HAL_Keyboard_Echo</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_Keyboard_EnableScan" lang="c"><name>XEOS_HAL_Keyboard_EnableScan</name>
+<returntype> XEOS_HAL_Keyboard_Response</returntype>
+<declaration><declaration_type>XEOS_HAL_Keyboard_Response</declaration_type> <declaration_function>XEOS_HAL_Keyboard_EnableScan</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_Keyboard_GetScanCodeSet" lang="c"><name>XEOS_HAL_Keyboard_GetScanCodeSet</name>
+<returntype> XEOS_HAL_Keyboard_ScanCodeSet</returntype>
+<declaration><declaration_type>XEOS_HAL_Keyboard_ScanCodeSet</declaration_type> <declaration_function>XEOS_HAL_Keyboard_GetScanCodeSet</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_Keyboard_ReadData" lang="c"><name>XEOS_HAL_Keyboard_ReadData</name>
+<returntype> uint8_t</returntype>
+<declaration><declaration_type>uint8_t</declaration_type> <declaration_function>XEOS_HAL_Keyboard_ReadData</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_Keyboard_ResendLastByte" lang="c"><name>XEOS_HAL_Keyboard_ResendLastByte</name>
+<returntype> XEOS_HAL_Keyboard_Response</returntype>
+<declaration><declaration_type>XEOS_HAL_Keyboard_Response</declaration_type> <declaration_function>XEOS_HAL_Keyboard_ResendLastByte</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_Keyboard_Reset" lang="c"><name>XEOS_HAL_Keyboard_Reset</name>
+<returntype> XEOS_HAL_Keyboard_Response</returntype>
+<declaration><declaration_type>XEOS_HAL_Keyboard_Response</declaration_type> <declaration_function>XEOS_HAL_Keyboard_Reset</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_Keyboard_SendCommand" lang="c"><name>XEOS_HAL_Keyboard_SendCommand</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_HAL_Keyboard_Command</type><name>command</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_HAL_Keyboard_Response</returntype>
+<declaration><declaration_comment>// IRQ1 needs to be disabled or masked</declaration_comment> 
+<declaration_type>XEOS_HAL_Keyboard_Response</declaration_type> <declaration_function>XEOS_HAL_Keyboard_SendCommand</declaration_function>(
+    <declaration_type>XEOS_HAL_Keyboard_Command</declaration_type> <declaration_param>command</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_Keyboard_SendCommandWithData" lang="c"><name>XEOS_HAL_Keyboard_SendCommandWithData</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_HAL_Keyboard_Command</type><name>command</name></parsedparameter>
+<parsedparameter><type>uint8_t</type><name>data</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_HAL_Keyboard_Response</returntype>
+<declaration><declaration_type>XEOS_HAL_Keyboard_Response</declaration_type> <declaration_function>XEOS_HAL_Keyboard_SendCommandWithData</declaration_function>(
+    <declaration_type>XEOS_HAL_Keyboard_Command</declaration_type> <declaration_param>command</declaration_param>,
+    <declaration_type>uint8_t</declaration_type> <declaration_param>data</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_Keyboard_SetDefaultParameters" lang="c"><name>XEOS_HAL_Keyboard_SetDefaultParameters</name>
+<returntype> XEOS_HAL_Keyboard_Response</returntype>
+<declaration><declaration_type>XEOS_HAL_Keyboard_Response</declaration_type> <declaration_function>XEOS_HAL_Keyboard_SetDefaultParameters</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_Keyboard_SetLED" lang="c"><name>XEOS_HAL_Keyboard_SetLED</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_HAL_Keyboard_LEDState</type><name>state</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_HAL_Keyboard_Response</returntype>
+<declaration><declaration_type>XEOS_HAL_Keyboard_Response</declaration_type> <declaration_function>XEOS_HAL_Keyboard_SetLED</declaration_function>(
+    <declaration_type>XEOS_HAL_Keyboard_LEDState</declaration_type> <declaration_param>state</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_Keyboard_SetRateAndDelay" lang="c"><name>XEOS_HAL_Keyboard_SetRateAndDelay</name>
+<parsedparameterlist>
+<parsedparameter><type>uint8_t</type><name>value</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_HAL_Keyboard_Response</returntype>
+<declaration><declaration_type>XEOS_HAL_Keyboard_Response</declaration_type> <declaration_function>XEOS_HAL_Keyboard_SetRateAndDelay</declaration_function>(
+    <declaration_type>uint8_t</declaration_type> <declaration_param>value</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_Keyboard_SetScanCodeSet" lang="c"><name>XEOS_HAL_Keyboard_SetScanCodeSet</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_HAL_Keyboard_ScanCodeSet</type><name>set</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_HAL_Keyboard_Response</returntype>
+<declaration><declaration_type>XEOS_HAL_Keyboard_Response</declaration_type> <declaration_function>XEOS_HAL_Keyboard_SetScanCodeSet</declaration_function>(
+    <declaration_type>XEOS_HAL_Keyboard_ScanCodeSet</declaration_type> <declaration_param>set</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<typedefs><typedef id="//xsdoc_ref/c/tdef/XEOS_HAL_Keyboard_Command" lang="c" type="simple"><name>XEOS_HAL_Keyboard_Command</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>XEOS_HAL_Keyboard_CommandSetLED</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_Keyboard_CommandEcho</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_Keyboard_CommandScanCode</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_Keyboard_CommandSetRateAndDelay</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_Keyboard_CommandEnableScan</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_Keyboard_CommandDisableScan</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_Keyboard_CommandSetDefaultParameters</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_Keyboard_CommandResendLastByte</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_Keyboard_CommandReset</name></parsedparameter>
+</parsedparameterlist>
+<declaration> <declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>XEOS_HAL_Keyboard_CommandSetLED</declaration_var> = <declaration_number>0xED</declaration_number>, 
+    <declaration_var>XEOS_HAL_Keyboard_CommandEcho</declaration_var> = <declaration_number>0xEE</declaration_number>, 
+    <declaration_var>XEOS_HAL_Keyboard_CommandScanCode</declaration_var> = <declaration_number>0xF0</declaration_number>, 
+    <declaration_var>XEOS_HAL_Keyboard_CommandSetRateAndDelay</declaration_var> = <declaration_number>0xF3</declaration_number>, 
+    <declaration_var>XEOS_HAL_Keyboard_CommandEnableScan</declaration_var> = <declaration_number>0xF4</declaration_number>, 
+    <declaration_var>XEOS_HAL_Keyboard_CommandDisableScan</declaration_var> = <declaration_number>0xF5</declaration_number>, 
+    <declaration_var>XEOS_HAL_Keyboard_CommandSetDefaultParameters</declaration_var> = <declaration_number>0xF6</declaration_number>, 
+    <declaration_var>XEOS_HAL_Keyboard_CommandResendLastByte</declaration_var> = <declaration_number>0xFE</declaration_number>, 
+    <declaration_var>XEOS_HAL_Keyboard_CommandReset</declaration_var> = <declaration_number>0xFF</declaration_number> 
+} <declaration_var>XEOS_HAL_Keyboard_Command</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_HAL_Keyboard_LEDState" lang="c" type="simple"><name>XEOS_HAL_Keyboard_LEDState</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>XEOS_HAL_Keyboard_LEDStateScrollLock</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_Keyboard_LEDStateNumLock</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_Keyboard_LEDStateCapsLock</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>XEOS_HAL_Keyboard_LEDStateScrollLock</declaration_var> = <declaration_number>0x01</declaration_number>, 
+    <declaration_var>XEOS_HAL_Keyboard_LEDStateNumLock</declaration_var> = <declaration_number>0x02</declaration_number>, 
+    <declaration_var>XEOS_HAL_Keyboard_LEDStateCapsLock</declaration_var> = <declaration_number>0x04</declaration_number> 
+} <declaration_var>XEOS_HAL_Keyboard_LEDState</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_HAL_Keyboard_Response" lang="c" type="simple"><name>XEOS_HAL_Keyboard_Response</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>XEOS_HAL_Keyboard_ResponseACK</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_Keyboard_ResponseResend</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_Keyboard_ResponseEcho</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_Keyboard_ResponseSelfTestPassed</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_Keyboard_ResponseSelfTestFailed</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>XEOS_HAL_Keyboard_ResponseACK</declaration_var> = <declaration_number>0xFA</declaration_number>, 
+    <declaration_var>XEOS_HAL_Keyboard_ResponseResend</declaration_var> = <declaration_number>0xFE</declaration_number>, 
+    <declaration_var>XEOS_HAL_Keyboard_ResponseEcho</declaration_var> = <declaration_number>0xEE</declaration_number>, 
+    <declaration_var>XEOS_HAL_Keyboard_ResponseSelfTestPassed</declaration_var> = <declaration_number>0xAA</declaration_number>, 
+    <declaration_var>XEOS_HAL_Keyboard_ResponseSelfTestFailed</declaration_var> = <declaration_number>0xFD</declaration_number> 
+} <declaration_var>XEOS_HAL_Keyboard_Response</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_HAL_Keyboard_ScanCodeSet" lang="c" type="simple"><name>XEOS_HAL_Keyboard_ScanCodeSet</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>XEOS_HAL_Keyboard_ScanCodeSetUnknown</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_Keyboard_ScanCodeSet1</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_Keyboard_ScanCodeSet2</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_Keyboard_ScanCodeSet3</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>XEOS_HAL_Keyboard_ScanCodeSetUnknown</declaration_var> = <declaration_number>0x00</declaration_number>, 
+    <declaration_var>XEOS_HAL_Keyboard_ScanCodeSet1</declaration_var> = <declaration_number>0x01</declaration_number>, 
+    <declaration_var>XEOS_HAL_Keyboard_ScanCodeSet2</declaration_var> = <declaration_number>0x02</declaration_number>, 
+    <declaration_var>XEOS_HAL_Keyboard_ScanCodeSet3</declaration_var> = <declaration_number>0x03</declaration_number> 
+} <declaration_var>XEOS_HAL_Keyboard_ScanCodeSet</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef></typedefs><defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_HAL_KEYBOARD_H__" definetype="value" lang="c"><name>__XEOS_HAL_KEYBOARD_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_HAL_KEYBOARD_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

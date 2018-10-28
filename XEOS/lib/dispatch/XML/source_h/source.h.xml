@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/source.h" lang="c" filename="source.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/dispatch/include/dispatch/source.h"><name>source.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/uintptr_t.h">&lt;system/types/uintptr_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/uint64_t.h">&lt;system/types/uint64_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/dispatch_source_type_t.h">&lt;dispatch/types/dispatch_source_type_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/dispatch_source_t.h">&lt;dispatch/types/dispatch_source_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/dispatch_block_t.h">&lt;dispatch/types/dispatch_block_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/dispatch_function_t.h">&lt;dispatch/types/dispatch_function_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/dispatch_queue_t.h">&lt;dispatch/types/dispatch_queue_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/dispatch_time_t.h">&lt;dispatch/types/dispatch_time_t.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/dispatch_source_cancel" lang="c"><name>dispatch_source_cancel</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_source_t</type><name>source</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>dispatch_source_cancel</declaration_function>(
+    <declaration_type>dispatch_source_t</declaration_type> <declaration_param>source</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_source_create" lang="c"><name>dispatch_source_create</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_source_type_t</type><name>type</name></parsedparameter>
+<parsedparameter><type>uintptr_t</type><name>handle</name></parsedparameter>
+<parsedparameter><type>unsigned long</type><name>mask</name></parsedparameter>
+<parsedparameter><type>dispatch_queue_t</type><name>queue</name></parsedparameter>
+</parsedparameterlist>
+<returntype> dispatch_source_t</returntype>
+<declaration><declaration_type>dispatch_source_t</declaration_type> <declaration_function>dispatch_source_create</declaration_function>(
+    <declaration_type>dispatch_source_type_t</declaration_type> <declaration_param>type</declaration_param>,
+    <declaration_type>uintptr_t</declaration_type> <declaration_param>handle</declaration_param>,
+    <declaration_keyword>unsigned</declaration_keyword> <declaration_type>long</declaration_type> <declaration_param>mask</declaration_param>,
+    <declaration_type>dispatch_queue_t</declaration_type> <declaration_param>queue</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_source_get_data" lang="c"><name>dispatch_source_get_data</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_source_t</type><name>source</name></parsedparameter>
+</parsedparameterlist>
+<returntype> unsigned long</returntype>
+<declaration><declaration_keyword>unsigned</declaration_keyword> <declaration_type>long</declaration_type> <declaration_function>dispatch_source_get_data</declaration_function>(
+    <declaration_type>dispatch_source_t</declaration_type> <declaration_param>source</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_source_get_handle" lang="c"><name>dispatch_source_get_handle</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_source_t</type><name>source</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uintptr_t</returntype>
+<declaration><declaration_type>uintptr_t</declaration_type> <declaration_function>dispatch_source_get_handle</declaration_function>(
+    <declaration_type>dispatch_source_t</declaration_type> <declaration_param>source</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_source_get_mask" lang="c"><name>dispatch_source_get_mask</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_source_t</type><name>source</name></parsedparameter>
+</parsedparameterlist>
+<returntype> unsigned long</returntype>
+<declaration><declaration_keyword>unsigned</declaration_keyword> <declaration_type>long</declaration_type> <declaration_function>dispatch_source_get_mask</declaration_function>(
+    <declaration_type>dispatch_source_t</declaration_type> <declaration_param>source</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_source_merge_data" lang="c"><name>dispatch_source_merge_data</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_source_t</type><name>source</name></parsedparameter>
+<parsedparameter><type>unsigned long</type><name>value</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>dispatch_source_merge_data</declaration_function>(
+    <declaration_type>dispatch_source_t</declaration_type> <declaration_param>source</declaration_param>,
+    <declaration_keyword>unsigned</declaration_keyword> <declaration_type>long</declaration_type> <declaration_param>value</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_source_set_cancel_handler" lang="c"><name>dispatch_source_set_cancel_handler</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_source_t</type><name>source</name></parsedparameter>
+<parsedparameter><type>dispatch_block_t</type><name>cancel_handler</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>dispatch_source_set_cancel_handler</declaration_function>(
+    <declaration_type>dispatch_source_t</declaration_type> <declaration_param>source</declaration_param>,
+    <declaration_type>dispatch_block_t</declaration_type> <declaration_param>cancel_handler</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_source_set_cancel_handler_f" lang="c"><name>dispatch_source_set_cancel_handler_f</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_source_t</type><name>source</name></parsedparameter>
+<parsedparameter><type>dispatch_function_t</type><name>cancel_handler</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>dispatch_source_set_cancel_handler_f</declaration_function>(
+    <declaration_type>dispatch_source_t</declaration_type> <declaration_param>source</declaration_param>,
+    <declaration_type>dispatch_function_t</declaration_type> <declaration_param>cancel_handler</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_source_set_event_handler" lang="c"><name>dispatch_source_set_event_handler</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_source_t</type><name>source</name></parsedparameter>
+<parsedparameter><type>dispatch_block_t</type><name>handler</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>dispatch_source_set_event_handler</declaration_function>(
+    <declaration_type>dispatch_source_t</declaration_type> <declaration_param>source</declaration_param>,
+    <declaration_type>dispatch_block_t</declaration_type> <declaration_param>handler</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_source_set_event_handler_f" lang="c"><name>dispatch_source_set_event_handler_f</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_source_t</type><name>source</name></parsedparameter>
+<parsedparameter><type>dispatch_function_t</type><name>handler</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>dispatch_source_set_event_handler_f</declaration_function>(
+    <declaration_type>dispatch_source_t</declaration_type> <declaration_param>source</declaration_param>,
+    <declaration_type>dispatch_function_t</declaration_type> <declaration_param>handler</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_source_set_registration_handler" lang="c"><name>dispatch_source_set_registration_handler</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_source_t</type><name>source</name></parsedparameter>
+<parsedparameter><type>dispatch_block_t</type><name>registration_handler</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>dispatch_source_set_registration_handler</declaration_function>(
+    <declaration_type>dispatch_source_t</declaration_type> <declaration_param>source</declaration_param>,
+    <declaration_type>dispatch_block_t</declaration_type> <declaration_param>registration_handler</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_source_set_registration_handler_f" lang="c"><name>dispatch_source_set_registration_handler_f</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_source_t</type><name>source</name></parsedparameter>
+<parsedparameter><type>dispatch_function_t</type><name>registration_handler</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>dispatch_source_set_registration_handler_f</declaration_function>(
+    <declaration_type>dispatch_source_t</declaration_type> <declaration_param>source</declaration_param>,
+    <declaration_type>dispatch_function_t</declaration_type> <declaration_param>registration_handler</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_source_set_timer" lang="c"><name>dispatch_source_set_timer</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_source_t</type><name>source</name></parsedparameter>
+<parsedparameter><type>dispatch_time_t</type><name>start</name></parsedparameter>
+<parsedparameter><type>uint64_t</type><name>interval</name></parsedparameter>
+<parsedparameter><type>uint64_t</type><name>leeway</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>dispatch_source_set_timer</declaration_function>(
+    <declaration_type>dispatch_source_t</declaration_type> <declaration_param>source</declaration_param>,
+    <declaration_type>dispatch_time_t</declaration_type> <declaration_param>start</declaration_param>,
+    <declaration_type>uint64_t</declaration_type> <declaration_param>interval</declaration_param>,
+    <declaration_type>uint64_t</declaration_type> <declaration_param>leeway</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_source_testcancel" lang="c"><name>dispatch_source_testcancel</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_source_t</type><name>source</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_function>dispatch_source_testcancel</declaration_function>(
+    <declaration_type>dispatch_source_t</declaration_type> <declaration_param>source</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<enums><enum id="//xsdoc_ref/c/tag/DISPATCH_MACH_SEND_DEAD" lang="c"><name>DISPATCH_MACH_SEND_DEAD</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>DISPATCH_MACH_SEND_DEAD</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>DISPATCH_MACH_SEND_DEAD</declaration_var> = <declaration_number>0x01</declaration_number>, 
+};  </declaration>
+<desc><p/></desc>
+</enum><enum id="//xsdoc_ref/c/tag/DISPATCH_PROC_EXIT" lang="c"><name>DISPATCH_PROC_EXIT</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>DISPATCH_PROC_EXIT</name></parsedparameter>
+<parsedparameter><type></type><name>DISPATCH_PROC_FORK</name></parsedparameter>
+<parsedparameter><type></type><name>DISPATCH_PROC_EXEC</name></parsedparameter>
+<parsedparameter><type></type><name>DISPATCH_PROC_SIGNAL</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>DISPATCH_PROC_EXIT</declaration_var> = <declaration_number>0x08000000</declaration_number>, 
+    <declaration_var>DISPATCH_PROC_FORK</declaration_var> = <declaration_number>0x04000000</declaration_number>, 
+    <declaration_var>DISPATCH_PROC_EXEC</declaration_var> = <declaration_number>0x02000000</declaration_number>, 
+    <declaration_var>DISPATCH_PROC_SIGNAL</declaration_var> = <declaration_number>0x00800000</declaration_number> 
+};  </declaration>
+<desc><p/></desc>
+</enum><enum id="//xsdoc_ref/c/tag/DISPATCH_VNODE_DELETE" lang="c"><name>DISPATCH_VNODE_DELETE</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>DISPATCH_VNODE_DELETE</name></parsedparameter>
+<parsedparameter><type></type><name>DISPATCH_VNODE_WRITE</name></parsedparameter>
+<parsedparameter><type></type><name>DISPATCH_VNODE_EXTEND</name></parsedparameter>
+<parsedparameter><type></type><name>DISPATCH_VNODE_ATTRIB</name></parsedparameter>
+<parsedparameter><type></type><name>DISPATCH_VNODE_LINK</name></parsedparameter>
+<parsedparameter><type></type><name>DISPATCH_VNODE_RENAME</name></parsedparameter>
+<parsedparameter><type></type><name>DISPATCH_VNODE_REVOKE</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>DISPATCH_VNODE_DELETE</declaration_var> = <declaration_number>0x01</declaration_number>, 
+    <declaration_var>DISPATCH_VNODE_WRITE</declaration_var> = <declaration_number>0x02</declaration_number>, 
+    <declaration_var>DISPATCH_VNODE_EXTEND</declaration_var> = <declaration_number>0x04</declaration_number>, 
+    <declaration_var>DISPATCH_VNODE_ATTRIB</declaration_var> = <declaration_number>0x08</declaration_number>, 
+    <declaration_var>DISPATCH_VNODE_LINK</declaration_var> = <declaration_number>0x10</declaration_number>, 
+    <declaration_var>DISPATCH_VNODE_RENAME</declaration_var> = <declaration_number>0x20</declaration_number>, 
+    <declaration_var>DISPATCH_VNODE_REVOKE</declaration_var> = <declaration_number>0x40</declaration_number> 
+};  </declaration>
+<desc><p/></desc>
+</enum></enums><defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_DISPATCH_SOURCE_H__" definetype="value" lang="c"><name>__XEOS_LIB_DISPATCH_SOURCE_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_DISPATCH_SOURCE_H__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DISPATCH_SOURCE_TYPE_DATA_ADD" definetype="value" lang="c"><name>DISPATCH_SOURCE_TYPE_DATA_ADD</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DISPATCH_SOURCE_TYPE_DATA_ADD</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DISPATCH_SOURCE_TYPE_DATA_OR" definetype="value" lang="c"><name>DISPATCH_SOURCE_TYPE_DATA_OR</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DISPATCH_SOURCE_TYPE_DATA_OR</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DISPATCH_SOURCE_TYPE_MACH_RECV" definetype="value" lang="c"><name>DISPATCH_SOURCE_TYPE_MACH_RECV</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DISPATCH_SOURCE_TYPE_MACH_RECV</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DISPATCH_SOURCE_TYPE_MACH_SEND" definetype="value" lang="c"><name>DISPATCH_SOURCE_TYPE_MACH_SEND</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DISPATCH_SOURCE_TYPE_MACH_SEND</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DISPATCH_SOURCE_TYPE_PROC" definetype="value" lang="c"><name>DISPATCH_SOURCE_TYPE_PROC</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DISPATCH_SOURCE_TYPE_PROC</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DISPATCH_SOURCE_TYPE_READ" definetype="value" lang="c"><name>DISPATCH_SOURCE_TYPE_READ</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DISPATCH_SOURCE_TYPE_READ</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DISPATCH_SOURCE_TYPE_SIGNAL" definetype="value" lang="c"><name>DISPATCH_SOURCE_TYPE_SIGNAL</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DISPATCH_SOURCE_TYPE_SIGNAL</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DISPATCH_SOURCE_TYPE_TIMER" definetype="value" lang="c"><name>DISPATCH_SOURCE_TYPE_TIMER</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DISPATCH_SOURCE_TYPE_TIMER</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DISPATCH_SOURCE_TYPE_VNODE" definetype="value" lang="c"><name>DISPATCH_SOURCE_TYPE_VNODE</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DISPATCH_SOURCE_TYPE_VNODE</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DISPATCH_SOURCE_TYPE_WRITE" definetype="value" lang="c"><name>DISPATCH_SOURCE_TYPE_WRITE</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DISPATCH_SOURCE_TYPE_WRITE</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

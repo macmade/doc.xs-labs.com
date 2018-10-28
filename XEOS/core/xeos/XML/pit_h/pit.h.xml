@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/pit.h" lang="c" filename="pit.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/core/xeos/include/xeos/hal/pit.h"><name>pit.h</name>
+<includes>
+</includes>
+<desc><p/></desc>
+<typedefs><typedef id="//xsdoc_ref/c/tdef/XEOS_HAL_PIT_OCW" lang="c" type="simple"><name>XEOS_HAL_PIT_OCW</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>XEOS_HAL_PIT_OCWNone</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIT_OCWBinaryCounterBCD</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIT_OCWModeOneShot</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIT_OCWModeRateGenerator</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIT_OCWModeSquareWaveGenerator</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIT_OCWModeSoftwareTriggeredStrobe</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIT_OCWHardwareTriggeredStrobe</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIT_OCWRLLSB</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIT_OCWRLMSB</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIT_OCWRLLSBMSB</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIT_OCWCounter1</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIT_OCWCounter2</name></parsedparameter>
+</parsedparameterlist>
+<declaration> <declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>XEOS_HAL_PIT_OCWNone</declaration_var> = <declaration_number>0x00</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIT_OCWBinaryCounterBCD</declaration_var> = <declaration_number>0x01</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIT_OCWModeOneShot</declaration_var> = <declaration_number>0x02</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIT_OCWModeRateGenerator</declaration_var> = <declaration_number>0x04</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIT_OCWModeSquareWaveGenerator</declaration_var> = <declaration_number>0x06</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIT_OCWModeSoftwareTriggeredStrobe</declaration_var> = <declaration_number>0x08</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIT_OCWHardwareTriggeredStrobe</declaration_var> = <declaration_number>0x0A</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIT_OCWRLLSB</declaration_var> = <declaration_number>0x10</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIT_OCWRLMSB</declaration_var> = <declaration_number>0x20</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIT_OCWRLLSBMSB</declaration_var> = <declaration_number>0x30</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIT_OCWCounter1</declaration_var> = <declaration_number>0x40</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIT_OCWCounter2</declaration_var> = <declaration_number>0x80</declaration_number> 
+} <declaration_var>XEOS_HAL_PIT_OCW</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_HAL_PIT_Register" lang="c" type="simple"><name>XEOS_HAL_PIT_Register</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>XEOS_HAL_PIT_RegisterCouter0</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIT_RegisterCouter1</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIT_RegisterCouter2</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIT_RegisterCouterCommand</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>XEOS_HAL_PIT_RegisterCouter0</declaration_var> = <declaration_number>0x40</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIT_RegisterCouter1</declaration_var> = <declaration_number>0x41</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIT_RegisterCouter2</declaration_var> = <declaration_number>0x42</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIT_RegisterCouterCommand</declaration_var> = <declaration_number>0x43</declaration_number> 
+} <declaration_var>XEOS_HAL_PIT_Register</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef></typedefs><defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_HAL_PIT_H__" definetype="value" lang="c"><name>__XEOS_HAL_PIT_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_HAL_PIT_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/GitHubProgressWindowController.h" lang="c" filename="GitHubProgressWindowController.h" headerpath="/Users/macmade/Documents/Macmade/GitHub/GitHubUpdates/Documentation/../GitHubUpdates/GitHubProgressWindowController.h"><name>GitHubUpdaterProgressWindowController.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Cocoa.h">&lt;Cocoa/Cocoa.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<classes><class id="//xsdoc_ref/occ/cl/GitHubProgressWindowController" lang="occ"><name>GitHubProgressWindowController</name>
+<abstract><p>Window controller for the progress window.
+</p></abstract>
+<attributes><attribute><name>Superclass</name><value><hd_link logicalPath="//xsdoc_ref/occ/cl/NSWindowController">NSWindowController</hd_link></value></attribute>
+</attributes>
+<declaration>@<declaration_type>interface</declaration_type> <declaration_type>GitHubProgressWindowController</declaration_type>: <declaration_type>NSWindowController</declaration_type>  <declaration_comment>/*!
+@property    title
+@abstract    The progress title message.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readwrite</declaration_param>,
+        <declaration_param>strong</declaration_param>,
+        <declaration_param>nullable</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type><declaration_var>title</declaration_var>;   <declaration_comment>/*!
+@property    message
+@abstract    The progress message.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readwrite</declaration_param>,
+        <declaration_param>strong</declaration_param>,
+        <declaration_param>nullable</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type><declaration_var>message</declaration_var>;   <declaration_comment>/*!
+@property    indeterminate
+@abstract    Whether the progress is indeterminate.
+@disucssion  This is used for the progress bar.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readwrite</declaration_param>,
+        <declaration_param>assign</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>indeterminate</declaration_var>;   <declaration_comment>/*!
+@property    progress
+@abstract    The current progress.
+@disucssion  This is used for the progress bar.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readwrite</declaration_param>,
+        <declaration_param>assign</declaration_param> ) <declaration_type>double</declaration_type> <declaration_var>progress</declaration_var>;   <declaration_comment>/*!
+@property    progressMin
+@abstract    The progress minimum value
+@disucssion  This is used for the progress bar.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readwrite</declaration_param>,
+        <declaration_param>assign</declaration_param> ) <declaration_type>double</declaration_type> <declaration_var>progressMin</declaration_var>;   <declaration_comment>/*!
+@property    progressMax
+@abstract    The progress maximum value
+@disucssion  This is used for the progress bar.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readwrite</declaration_param>,
+        <declaration_param>assign</declaration_param> ) <declaration_type>double</declaration_type> <declaration_var>progressMax</declaration_var>;   <declaration_comment>/*!
+@property    cancel
+@abstract    A block invoked when the user presses the cancel button.
+@discussion  If nil, the cancel button will not be shown.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readwrite</declaration_param>,
+        <declaration_param>strong</declaration_param>,
+        <declaration_param>nullable</declaration_param> ) <declaration_type>void</declaration_type> ( ^ <declaration_function>cancel</declaration_function> )( <declaration_param>void</declaration_param> );   @@end </declaration>
+<desc><p>This window controller is used for all progress activity,
+checing for updates or installing an update.
+</p></desc>
+<properties><property id="//xsdoc_ref/occ/instp/GitHubProgressWindowController/cancel" lang="occ"><name>cancel</name>
+<abstract><p>A block invoked when the user presses the cancel button.
+</p></abstract>
+<returntype>void( ^ cancel )(void</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readwrite</declaration_param>,
+    <declaration_param>strong</declaration_param>,
+    <declaration_param>nullable</declaration_param> ) <declaration_type>void</declaration_type> ( ^ <declaration_function>cancel</declaration_function> )( <declaration_param>void</declaration_param> ); </declaration>
+<desc><p>If nil, the cancel button will not be shown.
+</p></desc>
+</property><property id="//xsdoc_ref/occ/instp/GitHubProgressWindowController/indeterminate" lang="occ"><name>indeterminate</name>
+<abstract><p>Whether the progress is indeterminate.
+@disucssion  This is used for the progress bar.
+</p></abstract>
+<returntype>BOOL</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readwrite</declaration_param>,
+    <declaration_param>assign</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>indeterminate</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/GitHubProgressWindowController/message" lang="occ"><name>message</name>
+<abstract><p>The progress message.
+</p></abstract>
+<returntype>NSString *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readwrite</declaration_param>,
+    <declaration_param>strong</declaration_param>,
+    <declaration_param>nullable</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> <declaration_var>message</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/GitHubProgressWindowController/progress" lang="occ"><name>progress</name>
+<abstract><p>The current progress.
+@disucssion  This is used for the progress bar.
+</p></abstract>
+<returntype>double</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readwrite</declaration_param>,
+    <declaration_param>assign</declaration_param> ) <declaration_type>double</declaration_type> <declaration_var>progress</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/GitHubProgressWindowController/progressMax" lang="occ"><name>progressMax</name>
+<abstract><p>The progress maximum value
+@disucssion  This is used for the progress bar.
+</p></abstract>
+<returntype>double</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readwrite</declaration_param>,
+    <declaration_param>assign</declaration_param> ) <declaration_type>double</declaration_type> <declaration_var>progressMax</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/GitHubProgressWindowController/progressMin" lang="occ"><name>progressMin</name>
+<abstract><p>The progress minimum value
+@disucssion  This is used for the progress bar.
+</p></abstract>
+<returntype>double</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readwrite</declaration_param>,
+    <declaration_param>assign</declaration_param> ) <declaration_type>double</declaration_type> <declaration_var>progressMin</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/GitHubProgressWindowController/title" lang="occ"><name>title</name>
+<abstract><p>The progress title message.
+</p></abstract>
+<returntype>NSString *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readwrite</declaration_param>,
+    <declaration_param>strong</declaration_param>,
+    <declaration_param>nullable</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> <declaration_var>title</declaration_var>; </declaration>
+<desc><p/></desc>
+</property></properties>
+<timestamp>Sunday, June 18, 2017</timestamp>
+</class></classes>
+<copyrightinfo>&#169; (c) 2017, Jean-David Gadina - www.xs-labs.com
+</copyrightinfo>
+<timestamp>Sunday, June 18, 2017</timestamp>
+</header>

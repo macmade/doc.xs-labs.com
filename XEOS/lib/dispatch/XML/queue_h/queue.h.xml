@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/queue.h" lang="c" filename="queue.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/dispatch/include/dispatch/queue.h"><name>queue.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/size_t.h">&lt;system/types/size_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/dispatch_block_t.h">&lt;dispatch/types/dispatch_block_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/dispatch_queue_t.h">&lt;dispatch/types/dispatch_queue_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/dispatch_queue_attr_t.h">&lt;dispatch/types/dispatch_queue_attr_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/dispatch_time_t.h">&lt;dispatch/types/dispatch_time_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/dispatch_function_t.h">&lt;dispatch/types/dispatch_function_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/dispatch_object_t.h">&lt;dispatch/types/dispatch_object_t.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/dispatch_after" lang="c"><name>dispatch_after</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_time_t</type><name>when</name></parsedparameter>
+<parsedparameter><type>dispatch_queue_t</type><name>queue</name></parsedparameter>
+<parsedparameter><type>dispatch_block_t</type><name>block</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration> <declaration_type>void</declaration_type> <declaration_function>dispatch_after</declaration_function>(
+    <declaration_type>dispatch_time_t</declaration_type> <declaration_param>when</declaration_param>,
+    <declaration_type>dispatch_queue_t</declaration_type> <declaration_param>queue</declaration_param>,
+    <declaration_type>dispatch_block_t</declaration_type> <declaration_param>block</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_after_f" lang="c"><name>dispatch_after_f</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_time_t</type><name>when</name></parsedparameter>
+<parsedparameter><type>dispatch_queue_t</type><name>queue</name></parsedparameter>
+<parsedparameter><type>void *</type><name>context</name></parsedparameter>
+<parsedparameter><type>dispatch_function_t</type><name>work</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>dispatch_after_f</declaration_function>(
+    <declaration_type>dispatch_time_t</declaration_type> <declaration_param>when</declaration_param>,
+    <declaration_type>dispatch_queue_t</declaration_type> <declaration_param>queue</declaration_param>,
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>context</declaration_param>,
+    <declaration_type>dispatch_function_t</declaration_type> <declaration_param>work</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_apply" lang="c"><name>dispatch_apply</name>
+<parsedparameterlist>
+<parsedparameter><type>size_t</type><name>iterations</name></parsedparameter>
+<parsedparameter><type>dispatch_queue_t</type><name>queue</name></parsedparameter>
+<parsedparameter><type>void</type><name>block</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>dispatch_apply</declaration_function>(
+    <declaration_type>size_t</declaration_type> <declaration_param>iterations</declaration_param>,
+    <declaration_type>dispatch_queue_t</declaration_type> <declaration_param>queue</declaration_param>,
+    <declaration_type>void</declaration_type> ( ^ <declaration_param>block</declaration_param> )(
+        <declaration_param>size_t</declaration_param> ) );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_apply_f" lang="c"><name>dispatch_apply_f</name>
+<parsedparameterlist>
+<parsedparameter><type>size_t</type><name>iterations</name></parsedparameter>
+<parsedparameter><type>dispatch_queue_t</type><name>queue</name></parsedparameter>
+<parsedparameter><type>void *</type><name>context</name></parsedparameter>
+<parsedparameter><type>void</type><name>work</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>dispatch_apply_f</declaration_function>(
+    <declaration_type>size_t</declaration_type> <declaration_param>iterations</declaration_param>,
+    <declaration_type>dispatch_queue_t</declaration_type> <declaration_param>queue</declaration_param>,
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>context</declaration_param>,
+    <declaration_type>void</declaration_type> ( <declaration_type>*</declaration_type> <declaration_param>work</declaration_param> )(
+        <declaration_type>void</declaration_type> <declaration_param>*</declaration_param>,
+        <declaration_param>size_t</declaration_param> ) );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_async" lang="c"><name>dispatch_async</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_queue_t</type><name>queue</name></parsedparameter>
+<parsedparameter><type>dispatch_block_t</type><name>block</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>dispatch_async</declaration_function>(
+    <declaration_type>dispatch_queue_t</declaration_type> <declaration_param>queue</declaration_param>,
+    <declaration_type>dispatch_block_t</declaration_type> <declaration_param>block</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_async_f" lang="c"><name>dispatch_async_f</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_queue_t</type><name>queue</name></parsedparameter>
+<parsedparameter><type>void *</type><name>context</name></parsedparameter>
+<parsedparameter><type>dispatch_function_t</type><name>work</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>dispatch_async_f</declaration_function>(
+    <declaration_type>dispatch_queue_t</declaration_type> <declaration_param>queue</declaration_param>,
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>context</declaration_param>,
+    <declaration_type>dispatch_function_t</declaration_type> <declaration_param>work</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_barrier_async" lang="c"><name>dispatch_barrier_async</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_queue_t</type><name>queue</name></parsedparameter>
+<parsedparameter><type>dispatch_block_t</type><name>block</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>dispatch_barrier_async</declaration_function>(
+    <declaration_type>dispatch_queue_t</declaration_type> <declaration_param>queue</declaration_param>,
+    <declaration_type>dispatch_block_t</declaration_type> <declaration_param>block</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_barrier_async_f" lang="c"><name>dispatch_barrier_async_f</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_queue_t</type><name>queue</name></parsedparameter>
+<parsedparameter><type>void *</type><name>context</name></parsedparameter>
+<parsedparameter><type>dispatch_function_t</type><name>work</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>dispatch_barrier_async_f</declaration_function>(
+    <declaration_type>dispatch_queue_t</declaration_type> <declaration_param>queue</declaration_param>,
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>context</declaration_param>,
+    <declaration_type>dispatch_function_t</declaration_type> <declaration_param>work</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_barrier_sync" lang="c"><name>dispatch_barrier_sync</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_queue_t</type><name>queue</name></parsedparameter>
+<parsedparameter><type>dispatch_block_t</type><name>block</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>dispatch_barrier_sync</declaration_function>(
+    <declaration_type>dispatch_queue_t</declaration_type> <declaration_param>queue</declaration_param>,
+    <declaration_type>dispatch_block_t</declaration_type> <declaration_param>block</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_barrier_sync_f" lang="c"><name>dispatch_barrier_sync_f</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_queue_t</type><name>queue</name></parsedparameter>
+<parsedparameter><type>void *</type><name>context</name></parsedparameter>
+<parsedparameter><type>dispatch_function_t</type><name>work</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>dispatch_barrier_sync_f</declaration_function>(
+    <declaration_type>dispatch_queue_t</declaration_type> <declaration_param>queue</declaration_param>,
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>context</declaration_param>,
+    <declaration_type>dispatch_function_t</declaration_type> <declaration_param>work</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_get_current_queue" lang="c"><name>dispatch_get_current_queue</name>
+<returntype> dispatch_queue_t</returntype>
+<declaration><declaration_type>dispatch_queue_t</declaration_type> <declaration_function>dispatch_get_current_queue</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_get_global_queue" lang="c"><name>dispatch_get_global_queue</name>
+<parsedparameterlist>
+<parsedparameter><type>long</type><name>priority</name></parsedparameter>
+<parsedparameter><type>unsigned long</type><name>flags</name></parsedparameter>
+</parsedparameterlist>
+<returntype> dispatch_queue_t</returntype>
+<declaration><declaration_type>dispatch_queue_t</declaration_type> <declaration_function>dispatch_get_global_queue</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_param>priority</declaration_param>,
+    <declaration_keyword>unsigned</declaration_keyword> <declaration_type>long</declaration_type> <declaration_param>flags</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_get_main_queue" lang="c"><name>dispatch_get_main_queue</name>
+<returntype> dispatch_queue_t</returntype>
+<declaration><declaration_type>dispatch_queue_t</declaration_type> <declaration_function>dispatch_get_main_queue</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_get_specific" lang="c"><name>dispatch_get_specific</name>
+<parsedparameterlist>
+<parsedparameter><type>const void *</type><name>key</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void *</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_function>dispatch_get_specific</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>key</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_main" lang="c"><name>dispatch_main</name>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>dispatch_main</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_queue_create" lang="c"><name>dispatch_queue_create</name>
+<parsedparameterlist>
+<parsedparameter><type>const char *</type><name>label</name></parsedparameter>
+<parsedparameter><type>dispatch_queue_attr_t</type><name>attr</name></parsedparameter>
+</parsedparameterlist>
+<returntype> dispatch_queue_t</returntype>
+<declaration><declaration_type>dispatch_queue_t</declaration_type> <declaration_function>dispatch_queue_create</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>label</declaration_param>,
+    <declaration_type>dispatch_queue_attr_t</declaration_type> <declaration_param>attr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_queue_get_label" lang="c"><name>dispatch_queue_get_label</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_queue_t</type><name>queue</name></parsedparameter>
+</parsedparameterlist>
+<returntype> const char *</returntype>
+<declaration><declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type> <declaration_function>dispatch_queue_get_label</declaration_function>(
+    <declaration_type>dispatch_queue_t</declaration_type> <declaration_param>queue</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_queue_get_specific" lang="c"><name>dispatch_queue_get_specific</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_queue_t</type><name>queue</name></parsedparameter>
+<parsedparameter><type>const void *</type><name>key</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void *</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_function>dispatch_queue_get_specific</declaration_function>(
+    <declaration_type>dispatch_queue_t</declaration_type> <declaration_param>queue</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>key</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_queue_set_specific" lang="c"><name>dispatch_queue_set_specific</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_queue_t</type><name>queue</name></parsedparameter>
+<parsedparameter><type>const void *</type><name>key</name></parsedparameter>
+<parsedparameter><type>void *</type><name>context</name></parsedparameter>
+<parsedparameter><type>dispatch_function_t</type><name>destructor</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>dispatch_queue_set_specific</declaration_function>(
+    <declaration_type>dispatch_queue_t</declaration_type> <declaration_param>queue</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>key</declaration_param>,
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>context</declaration_param>,
+    <declaration_type>dispatch_function_t</declaration_type> <declaration_param>destructor</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_set_target_queue" lang="c"><name>dispatch_set_target_queue</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_object_t</type><name>object</name></parsedparameter>
+<parsedparameter><type>dispatch_queue_t</type><name>queue</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>dispatch_set_target_queue</declaration_function>(
+    <declaration_type>dispatch_object_t</declaration_type> <declaration_param>object</declaration_param>,
+    <declaration_type>dispatch_queue_t</declaration_type> <declaration_param>queue</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_sync" lang="c"><name>dispatch_sync</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_queue_t</type><name>queue</name></parsedparameter>
+<parsedparameter><type>dispatch_block_t</type><name>block</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>dispatch_sync</declaration_function>(
+    <declaration_type>dispatch_queue_t</declaration_type> <declaration_param>queue</declaration_param>,
+    <declaration_type>dispatch_block_t</declaration_type> <declaration_param>block</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_sync_f" lang="c"><name>dispatch_sync_f</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_queue_t</type><name>queue</name></parsedparameter>
+<parsedparameter><type>void *</type><name>context</name></parsedparameter>
+<parsedparameter><type>dispatch_function_t</type><name>work</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>dispatch_sync_f</declaration_function>(
+    <declaration_type>dispatch_queue_t</declaration_type> <declaration_param>queue</declaration_param>,
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>context</declaration_param>,
+    <declaration_type>dispatch_function_t</declaration_type> <declaration_param>work</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_DISPATCH_QUEUE_H__" definetype="value" lang="c"><name>__XEOS_LIB_DISPATCH_QUEUE_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_DISPATCH_QUEUE_H__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DISPATCH_QUEUE_CONCURRENT" definetype="value" lang="c"><name>DISPATCH_QUEUE_CONCURRENT</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DISPATCH_QUEUE_CONCURRENT</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DISPATCH_QUEUE_PRIORITY_BACKGROUND" definetype="value" lang="c"><name>DISPATCH_QUEUE_PRIORITY_BACKGROUND</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DISPATCH_QUEUE_PRIORITY_BACKGROUND</declaration_preprocessor> <declaration_preprocessor>INT16_MIN</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DISPATCH_QUEUE_PRIORITY_DEFAULT" definetype="value" lang="c"><name>DISPATCH_QUEUE_PRIORITY_DEFAULT</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DISPATCH_QUEUE_PRIORITY_DEFAULT</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DISPATCH_QUEUE_PRIORITY_HIGH" definetype="value" lang="c"><name>DISPATCH_QUEUE_PRIORITY_HIGH</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DISPATCH_QUEUE_PRIORITY_HIGH</declaration_preprocessor> <declaration_preprocessor>2</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DISPATCH_QUEUE_PRIORITY_LOW" definetype="value" lang="c"><name>DISPATCH_QUEUE_PRIORITY_LOW</name>
+<attributes><attribute><name>Value</name><value>0xfffffffffffffffe (-2)</value></attribute>
+</attributes>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DISPATCH_QUEUE_PRIORITY_LOW</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>-</declaration_preprocessor><declaration_preprocessor>2</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DISPATCH_QUEUE_SERIAL" definetype="value" lang="c"><name>DISPATCH_QUEUE_SERIAL</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DISPATCH_QUEUE_SERIAL</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

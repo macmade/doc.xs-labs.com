@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/signal.h" lang="c" filename="signal.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/posix/include/posix/signal.h"><name>signal.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/signal.h">&lt;c99/signal.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/time.h">&lt;time.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pthread_t.h">&lt;system/types/pthread_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pthread_attr_t.h">&lt;system/types/pthread_attr_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/size_t.h">&lt;system/types/size_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/uid_t.h">&lt;system/types/uid_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pid_t.h">&lt;system/types/pid_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/struct_timespec.h">&lt;system/types/struct_timespec.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/sigset_t.h">&lt;system/types/sigset_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/struct_sigevent.h">&lt;system/types/struct_sigevent.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/struct_sigaction.h">&lt;system/types/struct_sigaction.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/union_sigval.h">&lt;system/types/union_sigval.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/mcontext_t.h">&lt;system/types/mcontext_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/ucontext_t.h">&lt;system/types/ucontext_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stack_t.h">&lt;system/types/stack_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/siginfo_t.h">&lt;system/types/siginfo_t.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/kill" lang="c"><name>kill</name>
+<parsedparameterlist>
+<parsedparameter><type>pid_t</type><name>pid</name></parsedparameter>
+<parsedparameter><type>int</type><name>sig</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>kill</declaration_function>(
+    <declaration_type>pid_t</declaration_type> <declaration_param>pid</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>sig</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/killpg" lang="c"><name>killpg</name>
+<parsedparameterlist>
+<parsedparameter><type>pid_t</type><name>pgrp</name></parsedparameter>
+<parsedparameter><type>int</type><name>sig</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>killpg</declaration_function>(
+    <declaration_type>pid_t</declaration_type> <declaration_param>pgrp</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>sig</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/psiginfo" lang="c"><name>psiginfo</name>
+<parsedparameterlist>
+<parsedparameter><type>const siginfo_t *</type><name>pinfo</name></parsedparameter>
+<parsedparameter><type>const char *</type><name>message</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>psiginfo</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>siginfo_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>pinfo</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>message</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/psignal" lang="c"><name>psignal</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>signum</name></parsedparameter>
+<parsedparameter><type>const char *</type><name>message</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>psignal</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>signum</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>message</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_kill" lang="c"><name>pthread_kill</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_t</type><name>thread</name></parsedparameter>
+<parsedparameter><type>int</type><name>sig</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_kill</declaration_function>(
+    <declaration_type>pthread_t</declaration_type> <declaration_param>thread</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>sig</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_sigmask" lang="c"><name>pthread_sigmask</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>how</name></parsedparameter>
+<parsedparameter><type>const sigset_t * restrict</type><name>set</name></parsedparameter>
+<parsedparameter><type>sigset_t * restrict</type><name>oset</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_sigmask</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>how</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>sigset_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>set</declaration_param>,
+    <declaration_type>sigset_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>oset</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sigaction" lang="c"><name>sigaction</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>sig</name></parsedparameter>
+<parsedparameter><type>const struct sigaction *</type><name>restrict</name></parsedparameter>
+<parsedparameter><type>struct sigaction *</type><name>restrict</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>sigaction</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>sig</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>sigaction</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>act</declaration_param>,
+    <declaration_keyword>struct</declaration_keyword> <declaration_type>sigaction</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>oact</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sigaddset" lang="c"><name>sigaddset</name>
+<parsedparameterlist>
+<parsedparameter><type>sigset_t *</type><name>set</name></parsedparameter>
+<parsedparameter><type>int</type><name>signo</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>sigaddset</declaration_function>(
+    <declaration_type>sigset_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>set</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>signo</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sigaltstack" lang="c"><name>sigaltstack</name>
+<parsedparameterlist>
+<parsedparameter><type>const stack_t * restrict</type><name>ss</name></parsedparameter>
+<parsedparameter><type>stack_t * restrict</type><name>oss</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>sigaltstack</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>stack_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>ss</declaration_param>,
+    <declaration_type>stack_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>oss</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sigdelset" lang="c"><name>sigdelset</name>
+<parsedparameterlist>
+<parsedparameter><type>sigset_t *</type><name>set</name></parsedparameter>
+<parsedparameter><type>int</type><name>signo</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>sigdelset</declaration_function>(
+    <declaration_type>sigset_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>set</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>signo</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sigemptyset" lang="c"><name>sigemptyset</name>
+<parsedparameterlist>
+<parsedparameter><type>sigset_t *</type><name>set</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>sigemptyset</declaration_function>(
+    <declaration_type>sigset_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>set</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sigfillset" lang="c"><name>sigfillset</name>
+<parsedparameterlist>
+<parsedparameter><type>sigset_t *</type><name>set</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>sigfillset</declaration_function>(
+    <declaration_type>sigset_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>set</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sighold" lang="c"><name>sighold</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>sig</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>sighold</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>sig</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sigignore" lang="c"><name>sigignore</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>sig</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>sigignore</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>sig</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/siginterrupt" lang="c"><name>siginterrupt</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>sig</name></parsedparameter>
+<parsedparameter><type>int</type><name>flag</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>siginterrupt</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>sig</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>flag</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sigismember" lang="c"><name>sigismember</name>
+<parsedparameterlist>
+<parsedparameter><type>const sigset_t *</type><name>set</name></parsedparameter>
+<parsedparameter><type>int</type><name>signo</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>sigismember</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>sigset_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>set</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>signo</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sigpause" lang="c"><name>sigpause</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>sig</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>sigpause</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>sig</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sigpending" lang="c"><name>sigpending</name>
+<parsedparameterlist>
+<parsedparameter><type>sigset_t *</type><name>set</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>sigpending</declaration_function>(
+    <declaration_type>sigset_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>set</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sigprocmask" lang="c"><name>sigprocmask</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>how</name></parsedparameter>
+<parsedparameter><type>const sigset_t * restrict</type><name>set</name></parsedparameter>
+<parsedparameter><type>sigset_t * restrict</type><name>oset</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>sigprocmask</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>how</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>sigset_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>set</declaration_param>,
+    <declaration_type>sigset_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>oset</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sigqueue" lang="c"><name>sigqueue</name>
+<parsedparameterlist>
+<parsedparameter><type>pid_t</type><name>pid</name></parsedparameter>
+<parsedparameter><type>int</type><name>signo</name></parsedparameter>
+<parsedparameter><type>const union sigval</type><name>value</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>sigqueue</declaration_function>(
+    <declaration_type>pid_t</declaration_type> <declaration_param>pid</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>signo</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_keyword>union</declaration_keyword> <declaration_type>sigval</declaration_type> <declaration_param>value</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sigrelse" lang="c"><name>sigrelse</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>sig</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>sigrelse</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>sig</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sigset" lang="c"><name>sigset</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>sig</name></parsedparameter>
+<parsedparameter><type>void</type><name>disp</name></parsedparameter>
+<parsedparameter><type> int</type><name></name></parsedparameter>
+</parsedparameterlist>
+<returntype>void</returntype>
+<declaration><declaration_type>void</declaration_type> ( <declaration_type>*</declaration_type><declaration_function>sigset</declaration_function>(
+        <declaration_type>int</declaration_type> <declaration_param>sig</declaration_param>,
+        <declaration_type>void</declaration_type> ( <declaration_type>*</declaration_type> <declaration_param>disp</declaration_param> )(
+            <declaration_param>int</declaration_param> ) ) )(
+    <declaration_param>int</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sigsuspend" lang="c"><name>sigsuspend</name>
+<parsedparameterlist>
+<parsedparameter><type>const sigset_t *</type><name>sigmask</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>sigsuspend</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>sigset_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>sigmask</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sigtimedwait" lang="c"><name>sigtimedwait</name>
+<parsedparameterlist>
+<parsedparameter><type>const sigset_t * restrict</type><name>set</name></parsedparameter>
+<parsedparameter><type>siginfo_t * restrict</type><name>info</name></parsedparameter>
+<parsedparameter><type>const struct timespec *</type><name>restrict</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>sigtimedwait</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>sigset_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>set</declaration_param>,
+    <declaration_type>siginfo_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>info</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>timespec</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>timeout</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sigwait" lang="c"><name>sigwait</name>
+<parsedparameterlist>
+<parsedparameter><type>const sigset_t * restrict</type><name>set</name></parsedparameter>
+<parsedparameter><type>int * restrict</type><name>sig</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>sigwait</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>sigset_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>set</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>sig</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sigwaitinfo" lang="c"><name>sigwaitinfo</name>
+<parsedparameterlist>
+<parsedparameter><type>const sigset_t * restrict</type><name>set</name></parsedparameter>
+<parsedparameter><type>siginfo_t * restrict</type><name>info</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>sigwaitinfo</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>sigset_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>set</declaration_param>,
+    <declaration_type>siginfo_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>info</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_POSIX_SIGNAL_H__" definetype="value" lang="c"><name>__XEOS_LIB_POSIX_SIGNAL_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_POSIX_SIGNAL_H__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/BUS_ADRALN" definetype="value" lang="c"><name>BUS_ADRALN</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>BUS_ADRALN</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/BUS_ADRERR" definetype="value" lang="c"><name>BUS_ADRERR</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>BUS_ADRERR</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/BUS_OBJERR" definetype="value" lang="c"><name>BUS_OBJERR</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>BUS_OBJERR</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/CLD_CONTINUED" definetype="value" lang="c"><name>CLD_CONTINUED</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>CLD_CONTINUED</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/CLD_DUMPED" definetype="value" lang="c"><name>CLD_DUMPED</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>CLD_DUMPED</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/CLD_EXITED" definetype="value" lang="c"><name>CLD_EXITED</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>CLD_EXITED</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/CLD_KILLED" definetype="value" lang="c"><name>CLD_KILLED</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>CLD_KILLED</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/CLD_STOPPED" definetype="value" lang="c"><name>CLD_STOPPED</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>CLD_STOPPED</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/CLD_TRAPPED" definetype="value" lang="c"><name>CLD_TRAPPED</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>CLD_TRAPPED</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FPE_FLTDIV" definetype="value" lang="c"><name>FPE_FLTDIV</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FPE_FLTDIV</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FPE_FLTINV" definetype="value" lang="c"><name>FPE_FLTINV</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FPE_FLTINV</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FPE_FLTOVF" definetype="value" lang="c"><name>FPE_FLTOVF</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FPE_FLTOVF</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FPE_FLTRES" definetype="value" lang="c"><name>FPE_FLTRES</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FPE_FLTRES</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FPE_FLTSUB" definetype="value" lang="c"><name>FPE_FLTSUB</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FPE_FLTSUB</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FPE_FLTUND" definetype="value" lang="c"><name>FPE_FLTUND</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FPE_FLTUND</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FPE_INTDIV" definetype="value" lang="c"><name>FPE_INTDIV</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FPE_INTDIV</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FPE_INTOVF" definetype="value" lang="c"><name>FPE_INTOVF</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FPE_INTOVF</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/ILL_BADSTK" definetype="value" lang="c"><name>ILL_BADSTK</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>ILL_BADSTK</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/ILL_COPROC" definetype="value" lang="c"><name>ILL_COPROC</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>ILL_COPROC</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/ILL_ILLADR" definetype="value" lang="c"><name>ILL_ILLADR</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>ILL_ILLADR</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/ILL_ILLOPC" definetype="value" lang="c"><name>ILL_ILLOPC</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>ILL_ILLOPC</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/ILL_ILLOPN" definetype="value" lang="c"><name>ILL_ILLOPN</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>ILL_ILLOPN</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/ILL_ILLTRP" definetype="value" lang="c"><name>ILL_ILLTRP</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>ILL_ILLTRP</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/ILL_PRVOPC" definetype="value" lang="c"><name>ILL_PRVOPC</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>ILL_PRVOPC</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/ILL_PRVREG" definetype="value" lang="c"><name>ILL_PRVREG</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>ILL_PRVREG</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/MINSIGSTKSZ" definetype="value" lang="c"><name>MINSIGSTKSZ</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>MINSIGSTKSZ</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/POLL_ERR" definetype="value" lang="c"><name>POLL_ERR</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>POLL_ERR</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/POLL_HUP" definetype="value" lang="c"><name>POLL_HUP</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>POLL_HUP</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/POLL_IN" definetype="value" lang="c"><name>POLL_IN</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>POLL_IN</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/POLL_MSG" definetype="value" lang="c"><name>POLL_MSG</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>POLL_MSG</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/POLL_OUT" definetype="value" lang="c"><name>POLL_OUT</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>POLL_OUT</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/POLL_PRI" definetype="value" lang="c"><name>POLL_PRI</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>POLL_PRI</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SA_NOCLDSTOP" definetype="value" lang="c"><name>SA_NOCLDSTOP</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SA_NOCLDSTOP</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SA_NOCLDWAIT" definetype="value" lang="c"><name>SA_NOCLDWAIT</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SA_NOCLDWAIT</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SA_NODEFER" definetype="value" lang="c"><name>SA_NODEFER</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SA_NODEFER</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SA_ONSTACK" definetype="value" lang="c"><name>SA_ONSTACK</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SA_ONSTACK</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SA_RESETHAND" definetype="value" lang="c"><name>SA_RESETHAND</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SA_RESETHAND</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SA_RESTART" definetype="value" lang="c"><name>SA_RESTART</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SA_RESTART</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SA_SIGINFO" definetype="value" lang="c"><name>SA_SIGINFO</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SA_SIGINFO</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SEGV_ACCERR" definetype="value" lang="c"><name>SEGV_ACCERR</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SEGV_ACCERR</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SEGV_MAPERR" definetype="value" lang="c"><name>SEGV_MAPERR</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SEGV_MAPERR</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SI_ASYNCIO" definetype="value" lang="c"><name>SI_ASYNCIO</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SI_ASYNCIO</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SI_MESGQ" definetype="value" lang="c"><name>SI_MESGQ</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SI_MESGQ</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SI_QUEUE" definetype="value" lang="c"><name>SI_QUEUE</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SI_QUEUE</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SI_TIMER" definetype="value" lang="c"><name>SI_TIMER</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SI_TIMER</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SI_USER" definetype="value" lang="c"><name>SI_USER</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SI_USER</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIG_BLOCK" definetype="value" lang="c"><name>SIG_BLOCK</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIG_BLOCK</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIG_HOLD" definetype="value" lang="c"><name>SIG_HOLD</name>
+<attributes><attribute><name>Value</name><value>0x5 (5)</value></attribute>
+</attributes>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIG_HOLD</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>void</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>*</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>int</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>5</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIG_SETMASK" definetype="value" lang="c"><name>SIG_SETMASK</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIG_SETMASK</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIG_UNBLOCK" definetype="value" lang="c"><name>SIG_UNBLOCK</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIG_UNBLOCK</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGALRM" definetype="value" lang="c"><name>SIGALRM</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGALRM</declaration_preprocessor> <declaration_preprocessor>14</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGBUS" definetype="value" lang="c"><name>SIGBUS</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGBUS</declaration_preprocessor> <declaration_preprocessor>10</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGCHLD" definetype="value" lang="c"><name>SIGCHLD</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGCHLD</declaration_preprocessor> <declaration_preprocessor>20</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGCONT" definetype="value" lang="c"><name>SIGCONT</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGCONT</declaration_preprocessor> <declaration_preprocessor>19</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGEV_NONE" definetype="value" lang="c"><name>SIGEV_NONE</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGEV_NONE</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGEV_SIGNAL" definetype="value" lang="c"><name>SIGEV_SIGNAL</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGEV_SIGNAL</declaration_preprocessor> <declaration_preprocessor>1</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGEV_THREAD" definetype="value" lang="c"><name>SIGEV_THREAD</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGEV_THREAD</declaration_preprocessor> <declaration_preprocessor>2</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGHUP" definetype="value" lang="c"><name>SIGHUP</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGHUP</declaration_preprocessor> <declaration_preprocessor>1</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGKILL" definetype="value" lang="c"><name>SIGKILL</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGKILL</declaration_preprocessor> <declaration_preprocessor>9</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGPIPE" definetype="value" lang="c"><name>SIGPIPE</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGPIPE</declaration_preprocessor> <declaration_preprocessor>13</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGPOLL" definetype="value" lang="c"><name>SIGPOLL</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGPOLL</declaration_preprocessor> <declaration_preprocessor>7</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGPROF" definetype="value" lang="c"><name>SIGPROF</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGPROF</declaration_preprocessor> <declaration_preprocessor>27</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGQUIT" definetype="value" lang="c"><name>SIGQUIT</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGQUIT</declaration_preprocessor> <declaration_preprocessor>3</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGRTMAX" definetype="value" lang="c"><name>SIGRTMAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGRTMAX</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGRTMIN" definetype="value" lang="c"><name>SIGRTMIN</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGRTMIN</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGSTKSZ" definetype="value" lang="c"><name>SIGSTKSZ</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGSTKSZ</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGSTOP" definetype="value" lang="c"><name>SIGSTOP</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGSTOP</declaration_preprocessor> <declaration_preprocessor>17</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGSYS" definetype="value" lang="c"><name>SIGSYS</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGSYS</declaration_preprocessor> <declaration_preprocessor>12</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGTRAP" definetype="value" lang="c"><name>SIGTRAP</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGTRAP</declaration_preprocessor> <declaration_preprocessor>5</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGTSTP" definetype="value" lang="c"><name>SIGTSTP</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGTSTP</declaration_preprocessor> <declaration_preprocessor>18</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGTTIN" definetype="value" lang="c"><name>SIGTTIN</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGTTIN</declaration_preprocessor> <declaration_preprocessor>21</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGTTOU" definetype="value" lang="c"><name>SIGTTOU</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGTTOU</declaration_preprocessor> <declaration_preprocessor>22</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGURG" definetype="value" lang="c"><name>SIGURG</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGURG</declaration_preprocessor> <declaration_preprocessor>16</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGUSR1" definetype="value" lang="c"><name>SIGUSR1</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGUSR1</declaration_preprocessor> <declaration_preprocessor>30</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGUSR2" definetype="value" lang="c"><name>SIGUSR2</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGUSR2</declaration_preprocessor> <declaration_preprocessor>31</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGVTALRM" definetype="value" lang="c"><name>SIGVTALRM</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGVTALRM</declaration_preprocessor> <declaration_preprocessor>26</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGXCPU" definetype="value" lang="c"><name>SIGXCPU</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGXCPU</declaration_preprocessor> <declaration_preprocessor>24</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGXFSZ" definetype="value" lang="c"><name>SIGXFSZ</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGXFSZ</declaration_preprocessor> <declaration_preprocessor>25</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SS_DISABLE" definetype="value" lang="c"><name>SS_DISABLE</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SS_DISABLE</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SS_ONSTACK" definetype="value" lang="c"><name>SS_ONSTACK</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SS_ONSTACK</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/TRAP_BRKPT" definetype="value" lang="c"><name>TRAP_BRKPT</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>TRAP_BRKPT</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/TRAP_TRACE" definetype="value" lang="c"><name>TRAP_TRACE</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>TRAP_TRACE</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

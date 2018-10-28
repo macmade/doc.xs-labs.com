@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/acpi.h" lang="c" filename="acpi.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/core/xeos/include/xeos/hal/acpi.h"><name>acpi.h</name>
+<includes>
+</includes>
+<desc><p/></desc>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_HAL_ACPI_H__" definetype="value" lang="c"><name>__XEOS_HAL_ACPI_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_HAL_ACPI_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

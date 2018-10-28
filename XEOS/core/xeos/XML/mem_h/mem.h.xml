@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/mem.h" lang="c" filename="mem.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/core/xeos/include/xeos/mem.h"><name>mem.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/info.h">&lt;xeos/info.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdbool.h">&lt;stdbool.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/XEOS_Mem_AllocPage" lang="c"><name>XEOS_Mem_AllocPage</name>
+<returntype> void *</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_function>XEOS_Mem_AllocPage</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Mem_AllocPages" lang="c"><name>XEOS_Mem_AllocPages</name>
+<parsedparameterlist>
+<parsedparameter><type>unsigned int</type><name>n</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void *</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_function>XEOS_Mem_AllocPages</declaration_function>(
+    <declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_param>n</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Mem_FreePage" lang="c"><name>XEOS_Mem_FreePage</name>
+<parsedparameterlist>
+<parsedparameter><type>void *</type><name>address</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_Mem_FreePage</declaration_function>(
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>address</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Mem_FreePages" lang="c"><name>XEOS_Mem_FreePages</name>
+<parsedparameterlist>
+<parsedparameter><type>void *</type><name>address</name></parsedparameter>
+<parsedparameter><type>unsigned int</type><name>n</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_Mem_FreePages</declaration_function>(
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>address</declaration_param>,
+    <declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_param>n</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Mem_GetNumberOfZones" lang="c"><name>XEOS_Mem_GetNumberOfZones</name>
+<returntype> unsigned int</returntype>
+<declaration><declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_function>XEOS_Mem_GetNumberOfZones</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Mem_GetTotalBytes" lang="c"><name>XEOS_Mem_GetTotalBytes</name>
+<returntype> uint64_t</returntype>
+<declaration><declaration_type>uint64_t</declaration_type> <declaration_function>XEOS_Mem_GetTotalBytes</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Mem_GetZoneAtIndex" lang="c"><name>XEOS_Mem_GetZoneAtIndex</name>
+<parsedparameterlist>
+<parsedparameter><type>unsigned int</type><name>index</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_Mem_ZoneRef</returntype>
+<declaration><declaration_type>XEOS_Mem_ZoneRef</declaration_type> <declaration_function>XEOS_Mem_GetZoneAtIndex</declaration_function>(
+    <declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_param>index</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Mem_Initialize" lang="c"><name>XEOS_Mem_Initialize</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_Info_MemoryRef</type><name>memory</name></parsedparameter>
+<parsedparameter><type>int</type><name>outputHandler</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_Mem_Initialize</declaration_function>(
+    <declaration_type>XEOS_Info_MemoryRef</declaration_type> <declaration_param>memory</declaration_param>,
+    <declaration_type>int</declaration_type> ( <declaration_type>*</declaration_type> <declaration_param>outputHandler</declaration_param> )(
+        <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_param>*</declaration_param>,
+        ... ) );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Mem_ZoneGetAddress" lang="c"><name>XEOS_Mem_ZoneGetAddress</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_Mem_ZoneRef</type><name>object</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void *</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_function>XEOS_Mem_ZoneGetAddress</declaration_function>(
+    <declaration_type>XEOS_Mem_ZoneRef</declaration_type> <declaration_param>object</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Mem_ZoneGetFreePageCount" lang="c"><name>XEOS_Mem_ZoneGetFreePageCount</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_Mem_ZoneRef</type><name>object</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uint64_t</returntype>
+<declaration><declaration_type>uint64_t</declaration_type> <declaration_function>XEOS_Mem_ZoneGetFreePageCount</declaration_function>(
+    <declaration_type>XEOS_Mem_ZoneRef</declaration_type> <declaration_param>object</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Mem_ZoneGetLength" lang="c"><name>XEOS_Mem_ZoneGetLength</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_Mem_ZoneRef</type><name>object</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uint64_t</returntype>
+<declaration><declaration_type>uint64_t</declaration_type> <declaration_function>XEOS_Mem_ZoneGetLength</declaration_function>(
+    <declaration_type>XEOS_Mem_ZoneRef</declaration_type> <declaration_param>object</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Mem_ZoneGetNext" lang="c"><name>XEOS_Mem_ZoneGetNext</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_Mem_ZoneRef</type><name>object</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_Mem_ZoneRef</returntype>
+<declaration><declaration_type>XEOS_Mem_ZoneRef</declaration_type> <declaration_function>XEOS_Mem_ZoneGetNext</declaration_function>(
+    <declaration_type>XEOS_Mem_ZoneRef</declaration_type> <declaration_param>object</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Mem_ZoneGetPageCount" lang="c"><name>XEOS_Mem_ZoneGetPageCount</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_Mem_ZoneRef</type><name>object</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uint64_t</returntype>
+<declaration><declaration_type>uint64_t</declaration_type> <declaration_function>XEOS_Mem_ZoneGetPageCount</declaration_function>(
+    <declaration_type>XEOS_Mem_ZoneRef</declaration_type> <declaration_param>object</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Mem_ZoneGetPages" lang="c"><name>XEOS_Mem_ZoneGetPages</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_Mem_ZoneRef</type><name>object</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uint8_t *</returntype>
+<declaration><declaration_type>uint8_t</declaration_type> <declaration_type>*</declaration_type> <declaration_function>XEOS_Mem_ZoneGetPages</declaration_function>(
+    <declaration_type>XEOS_Mem_ZoneRef</declaration_type> <declaration_param>object</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Mem_ZoneGetType" lang="c"><name>XEOS_Mem_ZoneGetType</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_Mem_ZoneRef</type><name>object</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_Mem_ZoneType</returntype>
+<declaration><declaration_type>XEOS_Mem_ZoneType</declaration_type> <declaration_function>XEOS_Mem_ZoneGetType</declaration_function>(
+    <declaration_type>XEOS_Mem_ZoneRef</declaration_type> <declaration_param>object</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<typedefs><typedef id="//xsdoc_ref/c/tdef/XEOS_Mem_ZoneRef" lang="c" type="simple"><name>XEOS_Mem_ZoneRef</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>__XEOS_Mem_Zone</declaration_type> <declaration_type>*</declaration_type> <declaration_var>XEOS_Mem_ZoneRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_Mem_ZoneType" lang="c" type="simple"><name>XEOS_Mem_ZoneType</name>
+<abstract><p>Type of a memory entry
+</p></abstract>
+<constantlist>
+<constant><name>XEOS_Mem_ZoneTypeUnknown</name><desc><p>Unknown entry type</p></desc></constant>
+<constant><name>XEOS_Mem_ZoneTypeUsable</name><desc><p>Usable (free) memory region</p></desc></constant>
+<constant><name>XEOS_Mem_ZoneTypeReserved</name><desc><p>Reserved (unusable) memory region</p></desc></constant>
+<constant><name>XEOS_Mem_ZoneTypeACPIReclaimable</name><desc><p>ACPI reclaimable memory region</p></desc></constant>
+<constant><name>XEOS_Mem_ZoneTypeACPINVS</name><desc><p>ACPI NVS memory regions</p></desc></constant>
+<constant><name>XEOS_Mem_ZoneTypeBad</name><desc><p>Bad memory region</p></desc></constant>
+</constantlist>
+<parsedparameterlist>
+<parsedparameter><type></type><name>XEOS_Mem_ZoneTypeUnknown</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_Mem_ZoneTypeUsable</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_Mem_ZoneTypeReserved</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_Mem_ZoneTypeACPIReclaimable</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_Mem_ZoneTypeACPINVS</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_Mem_ZoneTypeBad</name></parsedparameter>
+</parsedparameterlist>
+<declaration> <declaration_comment>/*!</declaration_comment>
+    <declaration_comment>*/</declaration_comment>
+<declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>XEOS_Mem_ZoneTypeUnknown</declaration_var> = <declaration_var>XEOS_Info_MemoryEntryTypeUnknown</declaration_var>, 
+    <declaration_var>XEOS_Mem_ZoneTypeUsable</declaration_var> = <declaration_var>XEOS_Info_MemoryEntryTypeUsable</declaration_var>, 
+    <declaration_var>XEOS_Mem_ZoneTypeReserved</declaration_var> = <declaration_var>XEOS_Info_MemoryEntryTypeReserved</declaration_var>, 
+    <declaration_var>XEOS_Mem_ZoneTypeACPIReclaimable</declaration_var> = <declaration_var>XEOS_Info_MemoryEntryTypeACPIReclaimable</declaration_var>, 
+    <declaration_var>XEOS_Mem_ZoneTypeACPINVS</declaration_var> = <declaration_var>XEOS_Info_MemoryEntryTypeACPINVS</declaration_var>, 
+    <declaration_var>XEOS_Mem_ZoneTypeBad</declaration_var> = <declaration_var>XEOS_Info_MemoryEntryTypeBad</declaration_var> 
+} <declaration_var>XEOS_Mem_ZoneType</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef></typedefs><defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_PROC_H__" definetype="value" lang="c"><name>__XEOS_PROC_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_PROC_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/Utils.h" lang="c" filename="Utils.h" headerpath="/Users/macmade/Documents/Macmade/DigiDNA/GitHub/ISOBMFF/Documentation/tmp/include/ISOBMFF/Utils.h"><name>Utils.hpp</name>
+<attributes><attribute><name>Author</name><value>Jean-David Gadina - www.digidna.net</value></attribute>
+</attributes>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Macros.hpp">&lt;ISOBMFF/Macros.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/vector">&lt;vector&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/string">&lt;string&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/cstdint">&lt;cstdint&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/Pad" lang="c"><name>Pad</name>
+<parameterlist>
+<parameter><name>s</name><desc><p>The string to pad.</p></desc></parameter>
+<parameter><name>length</name><desc><p>The desired length of the returned string.</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>const std :: string &amp;amp;</type><name>s</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>length</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ISOBMFF_EXPORT std :: string</returntype>
+<result><p>The padded string.
+</p></result>
+<declaration><declaration_type>ISOBMFF_EXPORT</declaration_type> <declaration_type>std</declaration_type>::<declaration_type>string</declaration_type> <declaration_function>Pad</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>std</declaration_type>::<declaration_type>string</declaration_type> &amp; <declaration_param>s</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>length</declaration_param> );  </declaration>
+<desc><p>If the input string is longer than the `length`
+argument, the input string will be return untouched.
+</p></desc>
+</function><function id="//xsdoc_ref/c/func/ToHexString_DONTLINK_6" lang="c"><name>ToHexString(uint16_t)</name>
+<abstract><p>Returns an hexadecimal string representation of a 16-bits unsigned integer value.
+</p></abstract>
+<parameterlist>
+<parameter><name>u</name><desc><p>The 16-bits unsigned integer value.</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>uint16_t</type><name>u</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ISOBMFF_EXPORT std :: string</returntype>
+<result><p>The hexacdecimal string representation of the value.
+</p></result>
+<declaration><declaration_type>ISOBMFF_EXPORT</declaration_type> <declaration_type>std</declaration_type>::<declaration_type>string</declaration_type> <declaration_function>ToHexString</declaration_function>(
+    <declaration_type>uint16_t</declaration_type> <declaration_param>u</declaration_param> );  </declaration>
+<desc><p>Result string will be prefixed by `0x`, and padded
+with zeros if necessary.
+</p></desc>
+</function><function id="//xsdoc_ref/c/func/ToHexString_DONTLINK_7" lang="c"><name>ToHexString(uint32_t)</name>
+<abstract><p>Returns an hexadecimal string representation of a 32-bits unsigned integer value.
+</p></abstract>
+<parameterlist>
+<parameter><name>u</name><desc><p>The 32-bits unsigned integer value.</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>uint32_t</type><name>u</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ISOBMFF_EXPORT std :: string</returntype>
+<result><p>The hexacdecimal string representation of the value.
+</p></result>
+<declaration><declaration_type>ISOBMFF_EXPORT</declaration_type> <declaration_type>std</declaration_type>::<declaration_type>string</declaration_type> <declaration_function>ToHexString</declaration_function>(
+    <declaration_type>uint32_t</declaration_type> <declaration_param>u</declaration_param> );  </declaration>
+<desc><p>Result string will be prefixed by `0x`, and padded
+with zeros if necessary.
+</p></desc>
+</function><function id="//xsdoc_ref/c/func/ToHexString_DONTLINK_8" lang="c"><name>ToHexString(uint64_t)</name>
+<abstract><p>Returns an hexadecimal string representation of a 64-bits unsigned integer value.
+</p></abstract>
+<parameterlist>
+<parameter><name>u</name><desc><p>The 64-bits unsigned integer value.</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>uint64_t</type><name>u</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ISOBMFF_EXPORT std :: string</returntype>
+<result><p>The hexacdecimal string representation of the value.
+</p></result>
+<declaration><declaration_type>ISOBMFF_EXPORT</declaration_type> <declaration_type>std</declaration_type>::<declaration_type>string</declaration_type> <declaration_function>ToHexString</declaration_function>(
+    <declaration_type>uint64_t</declaration_type> <declaration_param>u</declaration_param> );  </declaration>
+<desc><p>Result string will be prefixed by `0x`, and padded
+with zeros if necessary.
+</p></desc>
+</function><function id="//xsdoc_ref/c/func/ToHexString" lang="c"><name>ToHexString(uint8_t)</name>
+<abstract><p>Returns an hexadecimal string representation of an 8-bits unsigned integer value.
+</p></abstract>
+<parameterlist>
+<parameter><name>u</name><desc><p>The 8-bits unsigned integer value.</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>uint8_t</type><name>u</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ISOBMFF_EXPORT std :: string</returntype>
+<result><p>The hexacdecimal string representation of the value.
+</p></result>
+<declaration><declaration_type>ISOBMFF_EXPORT</declaration_type> <declaration_type>std</declaration_type>::<declaration_type>string</declaration_type> <declaration_function>ToHexString</declaration_function>(
+    <declaration_type>uint8_t</declaration_type> <declaration_param>u</declaration_param> );  </declaration>
+<desc><p>Result string will be prefixed by `0x`, and padded
+with zeros if necessary.
+</p></desc>
+</function><function id="//xsdoc_ref/c/func/ToString" lang="c"><name>ToString(const std :: vector &amp;)</name>
+<abstract><p>Returns a string representation of a string vector.
+</p></abstract>
+<parameterlist>
+<parameter><name>v</name><desc><p>The string vector.</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>const std :: vector &amp;amp;</type><name>v</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ISOBMFF_EXPORT std :: string</returntype>
+<result><p>A string representing all values of the input string vector.
+</p></result>
+<declaration><declaration_type>ISOBMFF_EXPORT</declaration_type> <declaration_type>std</declaration_type>::<declaration_type>string</declaration_type> <declaration_function>ToString</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>std</declaration_type>::<declaration_type>vector</declaration_type>&lt; <declaration_template>std</declaration_template>::<declaration_template>string</declaration_template> &gt; &amp; <declaration_param>v</declaration_param> );  </declaration>
+<desc><p>Individual values will be separated by a comma and a
+space.
+</p></desc>
+</function><function id="//xsdoc_ref/c/func/ToString_DONTLINK_2" lang="c"><name>ToString(const std :: vector &amp;)</name>
+<abstract><p>Returns a string representation of a vector of values.
+</p></abstract>
+<parameterlist>
+<parameter><name>v</name><desc><p>The input vector.</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>const std :: vector &amp;amp;</type><name>v</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>Template Field</name><list>
+<item><name><p>_T_</p></name><value>The type of value contained in the input vector.</value></item></list></listattribute>
+</attributelists>
+<returntype> template std :: string</returntype>
+<result><p>A string representing all values of the input string vector.
+</p></result>
+<declaration><declaration_type>template</declaration_type>&lt; <declaration_template>typename</declaration_template> <declaration_template>_T_</declaration_template> &gt; <declaration_type>std</declaration_type>::<declaration_type>string</declaration_type> <declaration_function>ToString</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>std</declaration_type>::<declaration_type>vector</declaration_type>&lt; <declaration_template>_T_</declaration_template> &gt; &amp; <declaration_param>v</declaration_param> ) </declaration>
+<desc><p>Individual values will be separated by a comma and a
+space.
+This method will call `std::to_string` on each value
+from the input vector.
+</p></desc>
+</function></functions>
+<copyrightinfo>&#169; (c) 2017, DigiDNA - www.digidna.net
+</copyrightinfo>
+<timestamp>Wednesday, November 01, 2017</timestamp>
+</header>

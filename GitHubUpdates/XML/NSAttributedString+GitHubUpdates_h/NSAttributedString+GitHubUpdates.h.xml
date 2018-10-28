@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/NSAttributedString+GitHubUpdates.h" lang="c" filename="NSAttributedString+GitHubUpdates.h" headerpath="/Users/macmade/Documents/Macmade/GitHub/GitHubUpdates/Documentation/../GitHubUpdates/NSAttributedString+GitHubUpdates.h"><name>NSAttributedString+GitHubUpdates.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Cocoa.h">&lt;Cocoa/Cocoa.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<classes><category id="//xsdoc_ref/occ/cat/NSAttributedString(GitHubUpdates)" lang="occ"><name>NSAttributedString(GitHubUpdates)</name>
+<abstract><p>Additional methods for NSAttributedString.
+</p></abstract>
+<attributes><attribute><name>Extends Class</name><value><hd_link logicalPath="//xsdoc_ref/occ/cl/NSAttributedString">NSAttributedString</hd_link></value></attribute>
+</attributes>
+<declaration>@<declaration_type>interface</declaration_type> <declaration_function>NSAttributedString</declaration_function>(
+        <declaration_param>GitHubUpdates</declaration_param> )  <declaration_comment>/*!
+@method      attributedStringFromMarkdownString:
+@abstract    Returns an attributed string from a Markdown string
+@param       md  The Markdown string
+@result      An attributed string</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    + (
+            <declaration_type>NSAttributedString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>attributedStringFromMarkdownString</declaration_type>: (
+            <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>md</declaration_var>;   @@end </declaration>
+<desc><p/></desc>
+<methods><method id="//xsdoc_ref/occ/clm/NSAttributedString(GitHubUpdates)/attributedStringFromMarkdownString:" lang="occ" type="clm" accessControl="private"><name>attributedStringFromMarkdownString:</name>
+<abstract><p>Returns an attributed string from a Markdown string
+</p></abstract>
+<parameterlist>
+<parameter><name>md</name><desc><p>The Markdown string</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>md</name></parsedparameter>
+</parsedparameterlist>
+<returntype> NSAttributedString * </returntype>
+<result><p>An attributed string
+</p></result>
+<declaration>+ ( <declaration_type>NSAttributedString</declaration_type> <declaration_type>*</declaration_type> )<declaration_function>attributedStringFromMarkdownString</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>md</declaration_var>; </declaration>
+<desc><p/></desc>
+</method></methods>
+<timestamp>Sunday, June 18, 2017</timestamp>
+</category></classes>
+<copyrightinfo>&#169; (c) 2017, Jean-David Gadina - www.xs-labs.com
+</copyrightinfo>
+<timestamp>Sunday, June 18, 2017</timestamp>
+</header>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/NSString+ShellKit.h" lang="c" filename="NSString+ShellKit.h" headerpath="/Users/macmade/Documents/Macmade/GitHub/ShellKit/Documentation/../ShellKit/Classes/ShellKit/NSString+ShellKit.h"><name>NSString+ShellKit.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Foundation.h">&lt;Foundation/Foundation.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/SKTypes.h">&lt;ShellKit/SKTypes.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<classes><category id="//xsdoc_ref/occ/cat/NSString(ShellKit)" lang="occ"><name>NSString(ShellKit)</name>
+<abstract><p>Additional NSString methods for ShellKit
+</p></abstract>
+<attributes><attribute><name>Extends Class</name><value><hd_link logicalPath="//xsdoc_ref/occ/cl/NSString">NSString</hd_link></value></attribute>
+</attributes>
+<declaration><declaration_type>NS_ASSUME_NONNULL_BEGIN</declaration_type>  @<declaration_type>interface</declaration_type> <declaration_function>NSString</declaration_function>(
+        <declaration_param>ShellKit</declaration_param> )  <declaration_comment>/*!
+@method      stringForShellStatus:
+@abstract    Returns an emoji string for a status
+@discussion  Status icons can be disabled with the `statusIconsEnabled` of
+`SKShell`.
+@result      A string representing the status
+@see         SKStatus
+@see         SKShell#statusIconsEnabled</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    + (
+            <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>stringForShellStatus</declaration_type>: (
+            <declaration_param>SKStatus</declaration_param> )<declaration_var>status</declaration_var>;   <declaration_comment>/*!
+@method      stringForShellColor:
+@abstract    Returns the string used to represent a shell color
+@discussion  Colors can be disabled with the `colorsEnabled` property of
+`SKShell`.
+@result      A string representing the shell color
+@see         SKColor
+@see         SKShell#colorsEnabled</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    + (
+            <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>stringForShellColor</declaration_type>: (
+            <declaration_param>SKColor</declaration_param> )<declaration_var>color</declaration_var>;   <declaration_comment>/*!
+@method      stringWithShellColor:
+@abstract    Returns a string with a shell color.
+@discussion  Colors can be disabled with the `colorsEnabled` property of
+`SKShell`.
+@result      The colorized version of the string
+@see         SKColor
+@see         SKShell#colorsEnabled</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - (
+            <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>stringWithShellColor</declaration_type>: (
+            <declaration_param>SKColor</declaration_param> )<declaration_var>color</declaration_var>;   @@end </declaration>
+<desc><p/></desc>
+<methods><method id="//xsdoc_ref/occ/clm/NSString(ShellKit)/stringForShellColor:" lang="occ" type="clm" accessControl="private"><name>stringForShellColor:</name>
+<abstract><p>Returns the string used to represent a shell color
+</p></abstract>
+<parsedparameterlist>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See</name><list>
+<item><name>SKColor</name><value><hd_link logicalPath="SKColor" isseealso="yes">SKColor</hd_link></value></item><item><name>SKShell#colorsEnabled</name><value><hd_link logicalPath="SKShell#colorsEnabled" isseealso="yes">SKShell#colorsEnabled</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> NSString * </returntype>
+<result><p>A string representing the shell color
+</p></result>
+<declaration>+ ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_function>stringForShellColor</declaration_function>: ( <declaration_type>SKColor</declaration_type> )<declaration_var>color</declaration_var>; </declaration>
+<desc><p>Colors can be disabled with the `colorsEnabled` property of
+`SKShell`.
+</p></desc>
+</method><method id="//xsdoc_ref/occ/clm/NSString(ShellKit)/stringForShellStatus:" lang="occ" type="clm" accessControl="private"><name>stringForShellStatus:</name>
+<abstract><p>Returns an emoji string for a status
+</p></abstract>
+<parsedparameterlist>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See</name><list>
+<item><name>SKStatus</name><value><hd_link logicalPath="SKStatus" isseealso="yes">SKStatus</hd_link></value></item><item><name>SKShell#statusIconsEnabled</name><value><hd_link logicalPath="SKShell#statusIconsEnabled" isseealso="yes">SKShell#statusIconsEnabled</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> NSString * </returntype>
+<result><p>A string representing the status
+</p></result>
+<declaration>+ ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_function>stringForShellStatus</declaration_function>: ( <declaration_type>SKStatus</declaration_type> )<declaration_var>status</declaration_var>; </declaration>
+<desc><p>Status icons can be disabled with the `statusIconsEnabled` of
+`SKShell`.
+</p></desc>
+</method><method id="//xsdoc_ref/occ/instm/NSString(ShellKit)/stringWithShellColor:" lang="occ" type="instm" accessControl="private"><name>stringWithShellColor:</name>
+<abstract><p>Returns a string with a shell color.
+</p></abstract>
+<parsedparameterlist>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See</name><list>
+<item><name>SKColor</name><value><hd_link logicalPath="SKColor" isseealso="yes">SKColor</hd_link></value></item><item><name>SKShell#colorsEnabled</name><value><hd_link logicalPath="SKShell#colorsEnabled" isseealso="yes">SKShell#colorsEnabled</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> NSString * </returntype>
+<result><p>The colorized version of the string
+</p></result>
+<declaration>- ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_function>stringWithShellColor</declaration_function>: ( <declaration_type>SKColor</declaration_type> )<declaration_var>color</declaration_var>; </declaration>
+<desc><p>Colors can be disabled with the `colorsEnabled` property of
+`SKShell`.
+</p></desc>
+</method></methods>
+<timestamp>Monday, May 15, 2017</timestamp>
+</category></classes>
+<copyrightinfo>&#169; (c) 2017, Jean-David Gadina - www.xs-labs.com
+</copyrightinfo>
+<timestamp>Monday, May 15, 2017</timestamp>
+</header>

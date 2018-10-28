@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/ps2.h" lang="c" filename="ps2.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/core/xeos/include/xeos/hal/ps2.h"><name>ps2.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdint.h">&lt;stdint.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdbool.h">&lt;stdbool.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/XEOS_HAL_PS2_GetStatus" lang="c"><name>XEOS_HAL_PS2_GetStatus</name>
+<abstract><p>Reads the PS2 status register
+</p></abstract>
+<returntype> uint8_t</returntype>
+<result><p>The content of the PS2 status register
+</p></result>
+<declaration><declaration_type>uint8_t</declaration_type> <declaration_function>XEOS_HAL_PS2_GetStatus</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_PS2_InputBufferEmpty" lang="c"><name>XEOS_HAL_PS2_InputBufferEmpty</name>
+<abstract><p>Checks if the PS2 input buffer is empty
+</p></abstract>
+<returntype> bool</returntype>
+<result><p>True if the input buffer is empty, otherwise false
+</p></result>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>XEOS_HAL_PS2_InputBufferEmpty</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_PS2_OutputBufferEmpty" lang="c"><name>XEOS_HAL_PS2_OutputBufferEmpty</name>
+<abstract><p>Checks if the PS2 output buffer is empty
+</p></abstract>
+<returntype> bool</returntype>
+<result><p>True if the output buffer is empty, otherwise false
+</p></result>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>XEOS_HAL_PS2_OutputBufferEmpty</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_PS2_ParityError" lang="c"><name>XEOS_HAL_PS2_ParityError</name>
+<abstract><p>Checks for a PS2 parity error
+</p></abstract>
+<returntype> bool</returntype>
+<result><p>True for a PS2 parity error, otherwise false
+</p></result>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>XEOS_HAL_PS2_ParityError</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_PS2_ReadData" lang="c"><name>XEOS_HAL_PS2_ReadData</name>
+<abstract><p>Always check that the output buffer is full before
+reading data.
+</p></abstract>
+<returntype> uint8_t</returntype>
+<result><p>The content of the PS2 data register
+</p></result>
+<declaration><declaration_type>uint8_t</declaration_type> <declaration_function>XEOS_HAL_PS2_ReadData</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_PS2_SendCommand" lang="c"><name>XEOS_HAL_PS2_SendCommand</name>
+<abstract><p>Writes a commands to the PS2 controller
+</p></abstract>
+<parameterlist>
+<parameter><name>command</name><desc><p>The command to send</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>uint8_t</type><name>command</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration> <declaration_comment>/*!</declaration_comment>
+    <declaration_comment>*/</declaration_comment>
+<declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_PS2_SendCommand</declaration_function>(
+    <declaration_type>uint8_t</declaration_type> <declaration_param>command</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_PS2_TimeoutError" lang="c"><name>XEOS_HAL_PS2_TimeoutError</name>
+<abstract><p>Checks for a PS2 timeout error
+</p></abstract>
+<returntype> bool</returntype>
+<result><p>True for a PS2 timeout error, otherwise false
+</p></result>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>XEOS_HAL_PS2_TimeoutError</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_PS2_WriteData" lang="c"><name>XEOS_HAL_PS2_WriteData</name>
+<abstract><p>Always check that the input buffer is empty before
+writing data.
+</p></abstract>
+<parameterlist>
+<parameter><name>data</name><desc><p>The data to write</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>uint8_t</type><name>data</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_PS2_WriteData</declaration_function>(
+    <declaration_type>uint8_t</declaration_type> <declaration_param>data</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_HAL_PS2_H__" definetype="value" lang="c"><name>__XEOS_HAL_PS2_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_HAL_PS2_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/initrd.h" lang="c" filename="initrd.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/core/xeos/include/xeos/initrd.h"><name>initrd.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/uint32_t.h">&lt;system/types/uint32_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdbool.h">&lt;stdbool.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/XEOS_InitRD_EntryGetFilename" lang="c"><name>XEOS_InitRD_EntryGetFilename</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_InitRD_EntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> const char *</returntype>
+<declaration><declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type> <declaration_function>XEOS_InitRD_EntryGetFilename</declaration_function>(
+    <declaration_type>XEOS_InitRD_EntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_InitRD_EntryGetOffset" lang="c"><name>XEOS_InitRD_EntryGetOffset</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_InitRD_EntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uint32_t</returntype>
+<declaration><declaration_type>uint32_t</declaration_type> <declaration_function>XEOS_InitRD_EntryGetOffset</declaration_function>(
+    <declaration_type>XEOS_InitRD_EntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_InitRD_EntryGetSize" lang="c"><name>XEOS_InitRD_EntryGetSize</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_InitRD_EntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uint32_t</returntype>
+<declaration><declaration_type>uint32_t</declaration_type> <declaration_function>XEOS_InitRD_EntryGetSize</declaration_function>(
+    <declaration_type>XEOS_InitRD_EntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_InitRDGetEntryCount" lang="c"><name>XEOS_InitRDGetEntryCount</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_InitRDRef</type><name>initrd</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uint32_t</returntype>
+<declaration><declaration_type>uint32_t</declaration_type> <declaration_function>XEOS_InitRDGetEntryCount</declaration_function>(
+    <declaration_type>XEOS_InitRDRef</declaration_type> <declaration_param>initrd</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_InitRDGetSignature" lang="c"><name>XEOS_InitRDGetSignature</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_InitRDRef</type><name>initrd</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uint32_t</returntype>
+<declaration><declaration_type>uint32_t</declaration_type> <declaration_function>XEOS_InitRDGetSignature</declaration_function>(
+    <declaration_type>XEOS_InitRDRef</declaration_type> <declaration_param>initrd</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_InitRDIsValid" lang="c"><name>XEOS_InitRDIsValid</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_InitRDRef</type><name>initrd</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>XEOS_InitRDIsValid</declaration_function>(
+    <declaration_type>XEOS_InitRDRef</declaration_type> <declaration_param>initrd</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<typedefs><typedef id="//xsdoc_ref/c/tdef/XEOS_InitRD_EntryRef" lang="c" type="simple"><name>XEOS_InitRD_EntryRef</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>__XEOS_InitRD_Entry</declaration_type> <declaration_type>*</declaration_type> <declaration_var>XEOS_InitRD_EntryRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_InitRDRef" lang="c" type="simple"><name>XEOS_InitRDRef</name>
+<declaration> <declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>__XEOS_InitRD</declaration_type> <declaration_type>*</declaration_type> <declaration_var>XEOS_InitRDRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef></typedefs><defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_INITRD_H__" definetype="value" lang="c"><name>__XEOS_INITRD_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_INITRD_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

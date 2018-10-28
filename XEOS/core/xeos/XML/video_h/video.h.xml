@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/video.h" lang="c" filename="video.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/core/xeos/include/xeos/video.h"><name>video.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/macros.h">&lt;system/macros.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdarg.h">&lt;stdarg.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdbool.h">&lt;stdbool.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/string.h">&lt;string.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/XEOS_Video_Clear" lang="c"><name>XEOS_Video_Clear</name>
+<abstract><p>Clears the screem
+</p></abstract>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_Video_Clear</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Video_GetPromptLength" lang="c"><name>XEOS_Video_GetPromptLength</name>
+<abstract><p>Gets the standard prompt length
+</p></abstract>
+<returntype> size_t</returntype>
+<result><p>The length of the standard prompt string
+</p></result>
+<declaration><declaration_type>size_t</declaration_type> <declaration_function>XEOS_Video_GetPromptLength</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Video_MoveCursor" lang="c"><name>XEOS_Video_MoveCursor</name>
+<abstract><p>Moves the hardware cursor
+</p></abstract>
+<parameterlist>
+<parameter><name>x</name><desc><p>The X position</p></desc></parameter>
+<parameter><name>y</name><desc><p>The Y position</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>unsigned int</type><name>x</name></parsedparameter>
+<parsedparameter><type>unsigned int</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_Video_MoveCursor</declaration_function>(
+    <declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Video_Print" lang="c"><name>XEOS_Video_Print</name>
+<abstract><p>Displays a message
+</p></abstract>
+<parameterlist>
+<parameter><name>s</name><desc><p>The message</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>const char *</type><name>s</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<result><p>The number of character printed
+</p></result>
+<declaration><declaration_type>int</declaration_type> <declaration_function>XEOS_Video_Print</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>s</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Video_Printf" lang="c"><name>XEOS_Video_Printf</name>
+<abstract><p>Displays a formatted message
+</p></abstract>
+<parameterlist>
+<parameter><name>format</name><desc><p>The message format</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type> printf</type><name></name></parsedparameter>
+<parsedparameter><type> 1</type><name></name></parsedparameter>
+<parsedparameter><type> 2</type><name></name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<result><p>The number of character printed
+</p></result>
+<declaration><declaration_type>int</declaration_type> <declaration_function>XEOS_Video_Printf</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>format</declaration_param>,
+    ... ) <declaration_function>FORMAT_ATTRIBUTE</declaration_function>(
+    <declaration_param>printf</declaration_param>,
+    <declaration_number>1</declaration_number>,
+    <declaration_number>2</declaration_number> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Video_PrintPrompt" lang="c"><name>XEOS_Video_PrintPrompt</name>
+<abstract><p>Prints the standard prompt
+</p></abstract>
+<returntype> int</returntype>
+<result><p>The number of character printed
+</p></result>
+<declaration><declaration_type>int</declaration_type> <declaration_function>XEOS_Video_PrintPrompt</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Video_Prompt" lang="c"><name>XEOS_Video_Prompt</name>
+<abstract><p>Displays a message with the standard prompt
+</p></abstract>
+<parameterlist>
+<parameter><name>s</name><desc><p>The message</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>const char *</type><name>s</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<result><p>The number of character printed
+</p></result>
+<declaration><declaration_type>int</declaration_type> <declaration_function>XEOS_Video_Prompt</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>s</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Video_Promptf" lang="c"><name>XEOS_Video_Promptf</name>
+<abstract><p>Displays a formatted message with the standard prompt
+</p></abstract>
+<parameterlist>
+<parameter><name>format</name><desc><p>The message format</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type> printf</type><name></name></parsedparameter>
+<parsedparameter><type> 1</type><name></name></parsedparameter>
+<parsedparameter><type> 2</type><name></name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<result><p>The number of character printed
+</p></result>
+<declaration><declaration_type>int</declaration_type> <declaration_function>XEOS_Video_Promptf</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>format</declaration_param>,
+    ... ) <declaration_function>FORMAT_ATTRIBUTE</declaration_function>(
+    <declaration_param>printf</declaration_param>,
+    <declaration_number>1</declaration_number>,
+    <declaration_number>2</declaration_number> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Video_Putc" lang="c"><name>XEOS_Video_Putc</name>
+<abstract><p>Displays a single character
+</p></abstract>
+<parameterlist>
+<parameter><name>c</name><desc><p>The character to display</p></desc></parameter>
+<parameter><name>updateCursor</name><desc><p>If set, updates the hardware cursor</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>char</type><name>c</name></parsedparameter>
+<parsedparameter><type>bool</type><name>updateCursor</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_Video_Putc</declaration_function>(
+    <declaration_type>char</declaration_type> <declaration_param>c</declaration_param>,
+    <declaration_type>bool</declaration_type> <declaration_param>updateCursor</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Video_Scroll" lang="c"><name>XEOS_Video_Scroll</name>
+<abstract><p>Scrolls the screen
+</p></abstract>
+<parameterlist>
+<parameter><name>n</name><desc><p>The number of lines to scroll</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>unsigned int</type><name>n</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_Video_Scroll</declaration_function>(
+    <declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_param>n</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Video_SetBG" lang="c"><name>XEOS_Video_SetBG</name>
+<abstract><p>Sets the screen background color
+</p></abstract>
+<parameterlist>
+<parameter><name>color</name><desc><p>The background color</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_Video_Color</type><name>color</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_Video_SetBG</declaration_function>(
+    <declaration_type>XEOS_Video_Color</declaration_type> <declaration_param>color</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Video_SetFG" lang="c"><name>XEOS_Video_SetFG</name>
+<abstract><p>Sets the screen foreground color
+</p></abstract>
+<parameterlist>
+<parameter><name>color</name><desc><p>The foregournd color</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_Video_Color</type><name>color</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_Video_SetFG</declaration_function>(
+    <declaration_type>XEOS_Video_Color</declaration_type> <declaration_param>color</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Video_SetStickyLines" lang="c"><name>XEOS_Video_SetStickyLines</name>
+<abstract><p>Scrolls the number of sticky lines (that won't scroll)
+</p></abstract>
+<parameterlist>
+<parameter><name>lines</name><desc><p>The number of lines</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>unsigned int</type><name>lines</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_Video_SetStickyLines</declaration_function>(
+    <declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_param>lines</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Video_VPrintf" lang="c"><name>XEOS_Video_VPrintf</name>
+<abstract><p>Displays a formatted message
+</p></abstract>
+<parameterlist>
+<parameter><name>format</name><desc><p>The message format</p></desc></parameter>
+<parameter><name>arg</name><desc><p>The arguments for the format</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>const char *</type><name>format</name></parsedparameter>
+<parsedparameter><type>va_list</type><name>arg</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<result><p>The number of character printed
+</p></result>
+<declaration><declaration_type>int</declaration_type> <declaration_function>XEOS_Video_VPrintf</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>format</declaration_param>,
+    <declaration_type>va_list</declaration_type> <declaration_param>arg</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Video_X" lang="c"><name>XEOS_Video_X</name>
+<abstract><p>Gets the hardware cursor's X position
+</p></abstract>
+<returntype> unsigned int</returntype>
+<result><p>The X position
+</p></result>
+<declaration><declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_function>XEOS_Video_X</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Video_Y" lang="c"><name>XEOS_Video_Y</name>
+<abstract><p>Gets the hardware cursor's X position
+</p></abstract>
+<returntype> unsigned int</returntype>
+<result><p>The Y position
+</p></result>
+<declaration><declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_function>XEOS_Video_Y</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<typedefs><typedef id="//xsdoc_ref/c/tdef/XEOS_Video_Color" lang="c" type="simple"><name>XEOS_Video_Color</name>
+<abstract><p>Video colors
+</p></abstract>
+<constantlist>
+<constant><name>XEOS_Video_ColorBlack</name><desc><p>Black</p></desc></constant>
+<constant><name>XEOS_Video_ColorBlue</name><desc><p>Dark blue</p></desc></constant>
+<constant><name>XEOS_Video_ColorGreen</name><desc><p>Dark green</p></desc></constant>
+<constant><name>XEOS_Video_ColorCyan</name><desc><p>Dark cyan</p></desc></constant>
+<constant><name>XEOS_Video_ColorRed</name><desc><p>Dark red</p></desc></constant>
+<constant><name>XEOS_Video_ColorMagenta</name><desc><p>Dark magenta</p></desc></constant>
+<constant><name>XEOS_Video_ColorBrown</name><desc><p>Dark brown</p></desc></constant>
+<constant><name>XEOS_Video_ColorGrayLight</name><desc><p>Light gray</p></desc></constant>
+<constant><name>XEOS_Video_ColorGray</name><desc><p>Dark gray</p></desc></constant>
+<constant><name>XEOS_Video_ColorBlueLight</name><desc><p>Light blue</p></desc></constant>
+<constant><name>XEOS_Video_ColorGreenLight</name><desc><p>Light green</p></desc></constant>
+<constant><name>XEOS_Video_ColorCyanLight</name><desc><p>Light cyan</p></desc></constant>
+<constant><name>XEOS_Video_ColorRedLight</name><desc><p>Light red</p></desc></constant>
+<constant><name>XEOS_Video_ColorMagentaLight</name><desc><p>Light magenta</p></desc></constant>
+<constant><name>XEOS_Video_ColorBrownLight</name><desc><p>Light brown</p></desc></constant>
+<constant><name>XEOS_Video_ColorWhite</name><desc><p>White</p></desc></constant>
+</constantlist>
+<parsedparameterlist>
+<parsedparameter><type></type><name>XEOS_Video_ColorBlack</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_Video_ColorBlue</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_Video_ColorGreen</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_Video_ColorCyan</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_Video_ColorRed</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_Video_ColorMagenta</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_Video_ColorBrown</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_Video_ColorGrayLight</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_Video_ColorGray</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_Video_ColorBlueLight</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_Video_ColorGreenLight</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_Video_ColorCyanLight</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_Video_ColorRedLight</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_Video_ColorMagentaLight</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_Video_ColorBrownLight</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_Video_ColorWhite</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>XEOS_Video_ColorBlack</declaration_var> = <declaration_number>0x00</declaration_number>, 
+    <declaration_var>XEOS_Video_ColorBlue</declaration_var> = <declaration_number>0x01</declaration_number>, 
+    <declaration_var>XEOS_Video_ColorGreen</declaration_var> = <declaration_number>0x02</declaration_number>, 
+    <declaration_var>XEOS_Video_ColorCyan</declaration_var> = <declaration_number>0x03</declaration_number>, 
+    <declaration_var>XEOS_Video_ColorRed</declaration_var> = <declaration_number>0x04</declaration_number>, 
+    <declaration_var>XEOS_Video_ColorMagenta</declaration_var> = <declaration_number>0x05</declaration_number>, 
+    <declaration_var>XEOS_Video_ColorBrown</declaration_var> = <declaration_number>0x06</declaration_number>, 
+    <declaration_var>XEOS_Video_ColorGrayLight</declaration_var> = <declaration_number>0x07</declaration_number>, 
+    <declaration_var>XEOS_Video_ColorGray</declaration_var> = <declaration_number>0x08</declaration_number>, 
+    <declaration_var>XEOS_Video_ColorBlueLight</declaration_var> = <declaration_number>0x09</declaration_number>, 
+    <declaration_var>XEOS_Video_ColorGreenLight</declaration_var> = <declaration_number>0x0A</declaration_number>, 
+    <declaration_var>XEOS_Video_ColorCyanLight</declaration_var> = <declaration_number>0x0B</declaration_number>, 
+    <declaration_var>XEOS_Video_ColorRedLight</declaration_var> = <declaration_number>0x0C</declaration_number>, 
+    <declaration_var>XEOS_Video_ColorMagentaLight</declaration_var> = <declaration_number>0x0D</declaration_number>, 
+    <declaration_var>XEOS_Video_ColorBrownLight</declaration_var> = <declaration_number>0x0E</declaration_number>, 
+    <declaration_var>XEOS_Video_ColorWhite</declaration_var> = <declaration_number>0x0F</declaration_number> 
+} <declaration_var>XEOS_Video_Color</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef></typedefs><defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_VIDEO_H__" definetype="value" lang="c"><name>__XEOS_VIDEO_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_VIDEO_H__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/XEOS_VIDEO_COLS" definetype="value" lang="c"><name>XEOS_VIDEO_COLS</name>
+<abstract><p>The number of video columns
+</p></abstract>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>XEOS_VIDEO_COLS</declaration_preprocessor> <declaration_preprocessor>80</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/XEOS_VIDEO_MEM" definetype="value" lang="c"><name>XEOS_VIDEO_MEM</name>
+<abstract><p>The video buffer location
+</p></abstract>
+<declaration> <declaration_comment>/*!</declaration_comment>
+    <declaration_comment>*/</declaration_comment>
+<declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>XEOS_VIDEO_MEM</declaration_preprocessor> <declaration_preprocessor>0xB8000</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/XEOS_VIDEO_ROWS" definetype="value" lang="c"><name>XEOS_VIDEO_ROWS</name>
+<abstract><p>The number of video rows
+</p></abstract>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>XEOS_VIDEO_ROWS</declaration_preprocessor> <declaration_preprocessor>25</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

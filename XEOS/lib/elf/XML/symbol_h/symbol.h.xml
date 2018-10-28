@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/symbol.h" lang="c" filename="symbol.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/elf/include/elf/symbol.h"><name>symbol.h</name>
+<includes>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/ELF64_SymbolTableEntryGetBinding" lang="c"><name>ELF64_SymbolTableEntryGetBinding</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_SymbolTableEntryRef</type><name>sym</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_SymbolBinding</returntype>
+<declaration><declaration_type>ELF64_SymbolBinding</declaration_type> <declaration_function>ELF64_SymbolTableEntryGetBinding</declaration_function>(
+    <declaration_type>ELF64_SymbolTableEntryRef</declaration_type> <declaration_param>sym</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_SymbolTableEntryGetBindingString" lang="c"><name>ELF64_SymbolTableEntryGetBindingString</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_SymbolTableEntryRef</type><name>sym</name></parsedparameter>
+</parsedparameterlist>
+<returntype> const char *</returntype>
+<declaration><declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type> <declaration_function>ELF64_SymbolTableEntryGetBindingString</declaration_function>(
+    <declaration_type>ELF64_SymbolTableEntryRef</declaration_type> <declaration_param>sym</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_SymbolTableEntryGetInfo" lang="c"><name>ELF64_SymbolTableEntryGetInfo</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_SymbolTableEntryRef</type><name>sym</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_UChar</returntype>
+<declaration><declaration_type>ELF64_UChar</declaration_type> <declaration_function>ELF64_SymbolTableEntryGetInfo</declaration_function>(
+    <declaration_type>ELF64_SymbolTableEntryRef</declaration_type> <declaration_param>sym</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_SymbolTableEntryGetNameOffset" lang="c"><name>ELF64_SymbolTableEntryGetNameOffset</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_SymbolTableEntryRef</type><name>sym</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_Word</returntype>
+<declaration> <declaration_type>ELF64_Word</declaration_type> <declaration_function>ELF64_SymbolTableEntryGetNameOffset</declaration_function>(
+    <declaration_type>ELF64_SymbolTableEntryRef</declaration_type> <declaration_param>sym</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_SymbolTableEntryGetObjectSize" lang="c"><name>ELF64_SymbolTableEntryGetObjectSize</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_SymbolTableEntryRef</type><name>sym</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_XWord</returntype>
+<declaration><declaration_type>ELF64_XWord</declaration_type> <declaration_function>ELF64_SymbolTableEntryGetObjectSize</declaration_function>(
+    <declaration_type>ELF64_SymbolTableEntryRef</declaration_type> <declaration_param>sym</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_SymbolTableEntryGetSectionTableIndex" lang="c"><name>ELF64_SymbolTableEntryGetSectionTableIndex</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_SymbolTableEntryRef</type><name>sym</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_Half</returntype>
+<declaration><declaration_type>ELF64_Half</declaration_type> <declaration_function>ELF64_SymbolTableEntryGetSectionTableIndex</declaration_function>(
+    <declaration_type>ELF64_SymbolTableEntryRef</declaration_type> <declaration_param>sym</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_SymbolTableEntryGetSymbolValue" lang="c"><name>ELF64_SymbolTableEntryGetSymbolValue</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_SymbolTableEntryRef</type><name>sym</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_Addr</returntype>
+<declaration><declaration_type>ELF64_Addr</declaration_type> <declaration_function>ELF64_SymbolTableEntryGetSymbolValue</declaration_function>(
+    <declaration_type>ELF64_SymbolTableEntryRef</declaration_type> <declaration_param>sym</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_SymbolTableEntryGetType" lang="c"><name>ELF64_SymbolTableEntryGetType</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_SymbolTableEntryRef</type><name>sym</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_SymbolType</returntype>
+<declaration><declaration_type>ELF64_SymbolType</declaration_type> <declaration_function>ELF64_SymbolTableEntryGetType</declaration_function>(
+    <declaration_type>ELF64_SymbolTableEntryRef</declaration_type> <declaration_param>sym</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_SymbolTableEntryGetTypeString" lang="c"><name>ELF64_SymbolTableEntryGetTypeString</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_SymbolTableEntryRef</type><name>sym</name></parsedparameter>
+</parsedparameterlist>
+<returntype> const char *</returntype>
+<declaration><declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type> <declaration_function>ELF64_SymbolTableEntryGetTypeString</declaration_function>(
+    <declaration_type>ELF64_SymbolTableEntryRef</declaration_type> <declaration_param>sym</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_ELF_SYMBOL_H__" definetype="value" lang="c"><name>__XEOS_LIB_ELF_SYMBOL_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_ELF_SYMBOL_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/objc.h" lang="c" filename="objc.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/objc/include/objc/objc.h"><name>objc.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/objc-api.h">&lt;objc/objc-api.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/null.h">&lt;system/types/null.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<typedefs><typedef id="//xsdoc_ref/c/tdef/BOOL" lang="c" type="simple"><name>BOOL</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>signed</declaration_keyword> <declaration_type>char</declaration_type> <declaration_var>BOOL</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/Class" lang="c" type="simple"><name>Class</name>
+<declaration> <declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>objc_class</declaration_type> <declaration_type>*</declaration_type> <declaration_var>Class</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/id" lang="c" type="simple"><name>id</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>objc_object</declaration_type> <declaration_type>*</declaration_type> <declaration_var>id</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/IMP" lang="c" type="funcPtr"><name>IMP</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>id</name></parsedparameter>
+<parsedparameter><type></type><name>SEL</name></parsedparameter>
+<parsedparameter><type></type><name>...</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_type>id</declaration_type> ( <declaration_type>*</declaration_type><declaration_function>IMP</declaration_function> )(
+    <declaration_param>id</declaration_param>,
+    <declaration_param>SEL</declaration_param>,
+    ... );  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/SEL" lang="c" type="simple"><name>SEL</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>objc_selector</declaration_type> <declaration_type>*</declaration_type> <declaration_var>SEL</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef></typedefs><structs_and_unions><struct id="//xsdoc_ref/c/tag/objc_object" lang="c"><name>objc_object</name>
+<parsedparameterlist>
+<parsedparameter><type>Class</type><name>isa</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>struct</declaration_keyword> <declaration_type>objc_object</declaration_type> { 
+    <declaration_type>Class</declaration_type> <declaration_var>isa</declaration_var>; 
+};  </declaration>
+<desc><p/></desc>
+</struct></structs_and_unions><defines><pdefine id="//xsdoc_ref/c/macro/__autoreleasing" definetype="value" lang="c"><name>__autoreleasing</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__autoreleasing</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/__strong" definetype="value" lang="c"><name>__strong</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__strong</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/__unsafe_unretained" definetype="value" lang="c"><name>__unsafe_unretained</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__unsafe_unretained</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_OBJC_OBJC_H__" definetype="value" lang="c"><name>__XEOS_LIB_OBJC_OBJC_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_OBJC_OBJC_H__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/Nil" definetype="value" lang="c"><name>Nil</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>Nil</declaration_preprocessor> <declaration_preprocessor>nullptr</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/Nil_DONTLINK_1" definetype="value" lang="c"><name>Nil</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>Nil</declaration_preprocessor> <declaration_preprocessor>NULL</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/nil" definetype="value" lang="c"><name>nil</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>nil</declaration_preprocessor> <declaration_preprocessor>nullptr</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/nil_DONTLINK_1" definetype="value" lang="c"><name>nil</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>nil</declaration_preprocessor> <declaration_preprocessor>NULL</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/NO" definetype="value" lang="c"><name>NO</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>NO</declaration_preprocessor> <declaration_preprocessor>__objc_no</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/NO_DONTLINK_1" definetype="value" lang="c"><name>NO</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>NO</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>BOOL</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>0</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/OBJC_BOOL_DEFINED" definetype="value" lang="c"><name>OBJC_BOOL_DEFINED</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>OBJC_BOOL_DEFINED</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/YES" definetype="value" lang="c"><name>YES</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>YES</declaration_preprocessor> <declaration_preprocessor>__objc_yes</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/YES_DONTLINK_1" definetype="value" lang="c"><name>YES</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>YES</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>BOOL</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>1</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

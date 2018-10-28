@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/elf.h" lang="c" filename="elf.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/elf/include/elf.h"><name>elf.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/types.h">&lt;elf/types.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/file.h">&lt;elf/file.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/functions.h">&lt;elf/functions.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/header.h">&lt;elf/header.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pheader.h">&lt;elf/pheader.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/sheader.h">&lt;elf/sheader.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/symbol.h">&lt;elf/symbol.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_ELF_H__" definetype="value" lang="c"><name>__XEOS_LIB_ELF_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_ELF_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

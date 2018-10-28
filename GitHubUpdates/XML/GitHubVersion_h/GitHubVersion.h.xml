@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/GitHubVersion.h" lang="c" filename="GitHubVersion.h" headerpath="/Users/macmade/Documents/Macmade/GitHub/GitHubUpdates/Documentation/../GitHubUpdates/GitHubVersion.h"><name>GitHubVersion.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Foundation.h">&lt;Foundation/Foundation.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/property" lang="c"><name>property(atomic,  readwrite,  strong)</name>
+<abstract><p>The version string.
+</p></abstract>
+<parsedparameterlist>
+<parsedparameter><type> atomic</type><name></name></parsedparameter>
+<parsedparameter><type> readwrite</type><name></name></parsedparameter>
+<parsedparameter><type> strong</type><name></name></parsedparameter>
+</parsedparameterlist>
+<declaration>@<declaration_function>property</declaration_function>(
+    <declaration_param>atomic</declaration_param>,
+    <declaration_param>readwrite</declaration_param>,
+    <declaration_param>strong</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> <declaration_var>versionString</declaration_var>;  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/property_DONTLINK_2" lang="c"><name>property(atomic,  readwrite,  strong)</name>
+<abstract><p>The bundle version string.
+</p></abstract>
+<parsedparameterlist>
+<parsedparameter><type> atomic</type><name></name></parsedparameter>
+<parsedparameter><type> readwrite</type><name></name></parsedparameter>
+<parsedparameter><type> strong</type><name></name></parsedparameter>
+</parsedparameterlist>
+<declaration>@<declaration_function>property</declaration_function>(
+    <declaration_param>atomic</declaration_param>,
+    <declaration_param>readwrite</declaration_param>,
+    <declaration_param>strong</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> <declaration_var>bundleVersion</declaration_var>;  </declaration>
+<desc><p/></desc>
+</function></functions>
+<methods><method id="//xsdoc_ref/c/func/initWithVersionString:bundleVersion:" lang="c" type="func"><name>initWithVersionString:bundleVersion:</name>
+<abstract><p>Designated initializer.
+</p></abstract>
+<parameterlist>
+<parameter><name>versionString</name><desc><p>The version string</p></desc></parameter>
+<parameter><name>bundleVersion</name><desc><p>The bundle version string</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>versionString</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>bundleVersion</name></parsedparameter>
+</parsedparameterlist>
+<returntype> instancetype </returntype>
+<result><p>The initialized instance
+</p></result>
+<declaration>- ( <declaration_type>instancetype</declaration_type> )<declaration_function>initWithVersionString</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>versionString</declaration_param> 
+        <declaration_function>bundleVersion</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>bundleVersion</declaration_param> <declaration_var>NS_DESIGNATED_INITIALIZER</declaration_var>;  </declaration>
+<desc><p/></desc>
+</method></methods>
+<copyrightinfo>&#169; (c) 2017, Jean-David Gadina - www.xs-labs.com
+</copyrightinfo>
+<timestamp>Sunday, June 18, 2017</timestamp>
+</header>

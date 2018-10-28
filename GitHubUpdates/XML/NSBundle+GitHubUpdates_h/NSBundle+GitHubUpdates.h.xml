@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/NSBundle+GitHubUpdates.h" lang="c" filename="NSBundle+GitHubUpdates.h" headerpath="/Users/macmade/Documents/Macmade/GitHub/GitHubUpdates/Documentation/../GitHubUpdates/NSBundle+GitHubUpdates.h"><name>NSBundle+GitHubUpdates.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Foundation.h">&lt;Foundation/Foundation.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<classes><category id="//xsdoc_ref/occ/cat/NSBundle(GitHubUpdates)" lang="occ"><name>NSBundle(GitHubUpdates)</name>
+<abstract><p>Additional methods for NSBundle.
+</p></abstract>
+<attributes><attribute><name>Extends Class</name><value><hd_link logicalPath="//xsdoc_ref/occ/cl/NSBundle">NSBundle</hd_link></value></attribute>
+</attributes>
+<declaration>@<declaration_type>interface</declaration_type> <declaration_function>NSBundle</declaration_function>(
+        <declaration_param>GitHubUpdates</declaration_param> )  <declaration_comment>/*!
+@property    isCodeSigned
+@abstract    Checks if the bundle is code-signed.
+@discussion  This will invoke the `codesign` utility.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>nonatomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>isCodeSigned</declaration_var>;   <declaration_comment>/*!
+@property    codeSigningIdentity
+@abstract    Returns the identity used to code-sign the bundle, if any.
+@discussion  This will invoke the `codesign` utility.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>nonatomic</declaration_param>,
+        <declaration_param>readonly</declaration_param>,
+        <declaration_param>nullable</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type><declaration_var>codeSigningIdentity</declaration_var>;   @@end </declaration>
+<desc><p/></desc>
+<properties><property id="//xsdoc_ref/occ/instp/NSBundle(GitHubUpdates)/codeSigningIdentity" lang="occ" accessControl="private"><name>codeSigningIdentity</name>
+<abstract><p>Returns the identity used to code-sign the bundle, if any.
+</p></abstract>
+<returntype>NSString *</returntype>
+<declaration>@property( <declaration_param>nonatomic</declaration_param>,
+    <declaration_param>readonly</declaration_param>,
+    <declaration_param>nullable</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> <declaration_var>codeSigningIdentity</declaration_var>; </declaration>
+<desc><p>This will invoke the `codesign` utility.
+</p></desc>
+</property><property id="//xsdoc_ref/occ/instp/NSBundle(GitHubUpdates)/isCodeSigned" lang="occ" accessControl="private"><name>isCodeSigned</name>
+<abstract><p>Checks if the bundle is code-signed.
+</p></abstract>
+<returntype>BOOL</returntype>
+<declaration>@property( <declaration_param>nonatomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>isCodeSigned</declaration_var>; </declaration>
+<desc><p>This will invoke the `codesign` utility.
+</p></desc>
+</property></properties>
+<timestamp>Sunday, June 18, 2017</timestamp>
+</category></classes>
+<copyrightinfo>&#169; (c) 2017, Jean-David Gadina - www.xs-labs.com
+</copyrightinfo>
+<timestamp>Sunday, June 18, 2017</timestamp>
+</header>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/SKTaskGroup.h" lang="c" filename="SKTaskGroup.h" headerpath="/Users/macmade/Documents/Macmade/GitHub/ShellKit/Documentation/../ShellKit/Classes/ShellKit/SKTaskGroup.h"><name>SKTaskGroup.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Foundation.h">&lt;Foundation/Foundation.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/SKObject.h">&lt;ShellKit/SKObject.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/SKRunableObject.h">&lt;ShellKit/SKRunableObject.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<classes><class id="//xsdoc_ref/occ/cl/SKTaskGroup" lang="occ"><name>SKTaskGroup</name>
+<abstract><p>Represents a group of tasks that may be run
+</p></abstract>
+<attributes><attribute><name>Conforms to</name><value><hd_link logicalPath="//xsdoc_ref/occ/intf/SKRunableObject">SKRunableObject</hd_link></value></attribute>
+<attribute><name>Superclass</name><value><hd_link logicalPath="//xsdoc_ref/occ/cl/SKObject">SKObject</hd_link></value></attribute>
+</attributes>
+<attributelists><listattribute><name>See</name><list>
+<item><name>SKRunableObject</name><value><hd_link logicalPath="SKRunableObject" isseealso="yes">SKRunableObject</hd_link></value></item></list></listattribute>
+</attributelists>
+<declaration>@<declaration_type>interface</declaration_type> <declaration_type>SKTaskGroup</declaration_type>: <declaration_type>SKObject</declaration_type> &lt; <declaration_template>SKRunableObject</declaration_template> &gt;  <declaration_comment>/*!
+@property    name
+@abstract    The name of the task group</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type><declaration_var>name</declaration_var>;   <declaration_comment>/*!
+@property    tasks
+@abstract    The tasks contained in the task group
+@see         SKRunableObject</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>NSArray</declaration_type>&lt; <declaration_template>id</declaration_template>&lt; <declaration_template>SKRunableObject</declaration_template> &gt; &gt; <declaration_type>*</declaration_type> <declaration_var>tasks</declaration_var>;   <declaration_comment>/*!
+@property    currentTask
+@abstract    The task currently executing
+@discussion  This property will be nil if the task group isn't running,
+or if no task is actually executing.
+@see         SKRunableObject</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param>,
+        <declaration_param>nullable</declaration_param> ) <declaration_type>id</declaration_type>&lt; <declaration_template>SKRunableObject</declaration_template> &gt; <declaration_var>currentTask</declaration_var>;   <declaration_comment>/*!
+@method      taskGroupWithName:tasks:
+@abstract    Creates a task group object
+@param       name    The name of the task group
+@param       tasks   The tasks to execute when the task group is run
+@result      The task group object
+@see         SKRunableObject</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    + ( <declaration_param>instancetype</declaration_param> )<declaration_type>taskGroupWithName</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>name</declaration_type> <declaration_type>tasks</declaration_type>: ( <declaration_type>NSArray</declaration_type>&lt; <declaration_template>id</declaration_template>&lt; <declaration_template>SKRunableObject</declaration_template> &gt; &gt; <declaration_type>*</declaration_type> )<declaration_var>tasks</declaration_var>;   
+    <declaration_comment>/*!
+@method      initWithName:tasks:
+@abstract    Creates a task group object
+@param       name    The name of the task group
+@param       tasks   The tasks to execute when the task group is run
+@result      The task group object
+@see         SKRunableObject</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>instancetype</declaration_param> )<declaration_type>initWithName</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>name</declaration_type> <declaration_type>tasks</declaration_type>: ( <declaration_type>NSArray</declaration_type>&lt; <declaration_template>id</declaration_template>&lt; <declaration_template>SKRunableObject</declaration_template> &gt; &gt; <declaration_type>*</declaration_type> )<declaration_type>tasks</declaration_type> <declaration_var>NS_DESIGNATED_INITIALIZER</declaration_var>;   
+    @@end </declaration>
+<desc><p/></desc>
+<methods><method id="//xsdoc_ref/occ/instm/SKTaskGroup/initWithName:tasks:" lang="occ" type="instm" accessControl="private"><name>initWithName:tasks:</name>
+<abstract><p>Creates a task group object
+</p></abstract>
+<parameterlist>
+<parameter><name>name</name><desc><p>The name of the task group</p></desc></parameter>
+<parameter><name>tasks</name><desc><p>The tasks to execute when the task group is run</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>name</name></parsedparameter>
+<parsedparameter><type>( NSArray&amp;lt; id&amp;lt; SKRunableObject &amp;gt; &amp;gt; * )</type><name>tasks</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See</name><list>
+<item><name>SKRunableObject</name><value><hd_link logicalPath="SKRunableObject" isseealso="yes">SKRunableObject</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> instancetype </returntype>
+<result><p>The task group object
+</p></result>
+<declaration>- ( <declaration_type>instancetype</declaration_type> )<declaration_function>initWithName</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>name</declaration_param> <declaration_function>tasks</declaration_function>: ( <declaration_type>NSArray</declaration_type>&lt; <declaration_param>id</declaration_param>&lt; <declaration_param>SKRunableObject</declaration_param> &gt; &gt; <declaration_type>*</declaration_type> )<declaration_param>tasks</declaration_param> <declaration_var>NS_DESIGNATED_INITIALIZER</declaration_var>; </declaration>
+<desc><p/></desc>
+</method><method id="//xsdoc_ref/occ/clm/SKTaskGroup/taskGroupWithName:tasks:" lang="occ" type="clm" accessControl="private"><name>taskGroupWithName:tasks:</name>
+<abstract><p>Creates a task group object
+</p></abstract>
+<parameterlist>
+<parameter><name>name</name><desc><p>The name of the task group</p></desc></parameter>
+<parameter><name>tasks</name><desc><p>The tasks to execute when the task group is run</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>name</name></parsedparameter>
+<parsedparameter><type>( NSArray&amp;lt; id&amp;lt; SKRunableObject &amp;gt; &amp;gt; * )</type><name>tasks</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>name</name></parsedparameter>
+<parsedparameter><type>( NSArray&amp;lt; id&amp;lt; SKRunableObject &amp;gt; &amp;gt; * )</type><name>tasks</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See</name><list>
+<item><name>SKRunableObject</name><value><hd_link logicalPath="SKRunableObject" isseealso="yes">SKRunableObject</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> instancetype </returntype>
+<result><p>The task group object
+</p></result>
+<declaration>+ ( <declaration_type>instancetype</declaration_type> )<declaration_function>taskGroupWithName</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>name</declaration_param> 
+        <declaration_function>tasks</declaration_function>: ( <declaration_type>NSArray</declaration_type>&lt; <declaration_param>id</declaration_param>&lt; <declaration_param>SKRunableObject</declaration_param> &gt; &gt; <declaration_type>*</declaration_type> )<declaration_var>tasks</declaration_var>; </declaration>
+<desc><p/></desc>
+</method></methods>
+<properties><property id="//xsdoc_ref/occ/instp/SKTaskGroup/currentTask" lang="occ" accessControl="private"><name>currentTask</name>
+<abstract><p>The task currently executing
+</p></abstract>
+<attributelists><listattribute><name>See</name><list>
+<item><name>SKRunableObject</name><value><hd_link logicalPath="SKRunableObject" isseealso="yes">SKRunableObject</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype>id&lt; SKRunableObject  &gt;</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param>,
+    <declaration_param>nullable</declaration_param> ) <declaration_type>id</declaration_type>&lt; <declaration_template>SKRunableObject</declaration_template> &gt; <declaration_var>currentTask</declaration_var>; </declaration>
+<desc><p>This property will be nil if the task group isn't running,
+or if no task is actually executing.
+</p></desc>
+</property><property id="//xsdoc_ref/occ/instp/SKTaskGroup/name" lang="occ" accessControl="private"><name>name</name>
+<abstract><p>The name of the task group
+</p></abstract>
+<returntype>NSString *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> <declaration_var>name</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/SKTaskGroup/tasks" lang="occ" accessControl="private"><name>tasks</name>
+<abstract><p>The tasks contained in the task group
+</p></abstract>
+<attributelists><listattribute><name>See</name><list>
+<item><name>SKRunableObject</name><value><hd_link logicalPath="SKRunableObject" isseealso="yes">SKRunableObject</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype>NSArray&lt; id&lt; SKRunableObject  &gt;  &gt; *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>NSArray</declaration_type>&lt; <declaration_template>id</declaration_template>&lt; <declaration_template>SKRunableObject</declaration_template> &gt; &gt; <declaration_type>*</declaration_type> <declaration_var>tasks</declaration_var>; </declaration>
+<desc><p/></desc>
+</property></properties>
+<timestamp>Monday, May 15, 2017</timestamp>
+</class></classes>
+<copyrightinfo>&#169; (c) 2017, Jean-David Gadina - www.xs-labs.com
+</copyrightinfo>
+<timestamp>Monday, May 15, 2017</timestamp>
+</header>

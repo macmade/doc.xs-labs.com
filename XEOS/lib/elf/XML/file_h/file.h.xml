@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/file.h" lang="c" filename="file.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/elf/include/elf/file.h"><name>file.h</name>
+<includes>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/ELF64_FileGetDataForSection" lang="c"><name>ELF64_FileGetDataForSection</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_FileRef</type><name>file</name></parsedparameter>
+<parsedparameter><type>ELF64_SectionHeaderEntryRef</type><name>section</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_UChar *</returntype>
+<declaration><declaration_type>ELF64_UChar</declaration_type> <declaration_type>*</declaration_type> <declaration_function>ELF64_FileGetDataForSection</declaration_function>(
+    <declaration_type>ELF64_FileRef</declaration_type> <declaration_param>file</declaration_param>,
+    <declaration_type>ELF64_SectionHeaderEntryRef</declaration_type> <declaration_param>section</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_FileGetDataForSectionAtIndex" lang="c"><name>ELF64_FileGetDataForSectionAtIndex</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_FileRef</type><name>file</name></parsedparameter>
+<parsedparameter><type>unsigned int</type><name>index</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_UChar *</returntype>
+<declaration><declaration_type>ELF64_UChar</declaration_type> <declaration_type>*</declaration_type> <declaration_function>ELF64_FileGetDataForSectionAtIndex</declaration_function>(
+    <declaration_type>ELF64_FileRef</declaration_type> <declaration_param>file</declaration_param>,
+    <declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_param>index</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_FileGetHeader" lang="c"><name>ELF64_FileGetHeader</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_FileRef</type><name>file</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_HeaderRef</returntype>
+<declaration><declaration_type>ELF64_HeaderRef</declaration_type> <declaration_function>ELF64_FileGetHeader</declaration_function>(
+    <declaration_type>ELF64_FileRef</declaration_type> <declaration_param>file</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_FileGetNameOfSection" lang="c"><name>ELF64_FileGetNameOfSection</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_FileRef</type><name>file</name></parsedparameter>
+<parsedparameter><type>ELF64_SectionHeaderEntryRef</type><name>section</name></parsedparameter>
+</parsedparameterlist>
+<returntype> const char *</returntype>
+<declaration><declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type> <declaration_function>ELF64_FileGetNameOfSection</declaration_function>(
+    <declaration_type>ELF64_FileRef</declaration_type> <declaration_param>file</declaration_param>,
+    <declaration_type>ELF64_SectionHeaderEntryRef</declaration_type> <declaration_param>section</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_FileGetNameOfSectionAtIndex" lang="c"><name>ELF64_FileGetNameOfSectionAtIndex</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_FileRef</type><name>file</name></parsedparameter>
+<parsedparameter><type>unsigned int</type><name>index</name></parsedparameter>
+</parsedparameterlist>
+<returntype> const char *</returntype>
+<declaration><declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type> <declaration_function>ELF64_FileGetNameOfSectionAtIndex</declaration_function>(
+    <declaration_type>ELF64_FileRef</declaration_type> <declaration_param>file</declaration_param>,
+    <declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_param>index</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_FileGetProgramHeaderEntry" lang="c"><name>ELF64_FileGetProgramHeaderEntry</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_FileRef</type><name>file</name></parsedparameter>
+<parsedparameter><type>unsigned int</type><name>index</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_ProgramHeaderEntryRef</returntype>
+<declaration><declaration_type>ELF64_ProgramHeaderEntryRef</declaration_type> <declaration_function>ELF64_FileGetProgramHeaderEntry</declaration_function>(
+    <declaration_type>ELF64_FileRef</declaration_type> <declaration_param>file</declaration_param>,
+    <declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_param>index</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_FileGetSectionHeaderEntry" lang="c"><name>ELF64_FileGetSectionHeaderEntry</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_FileRef</type><name>file</name></parsedparameter>
+<parsedparameter><type>unsigned int</type><name>index</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_SectionHeaderEntryRef</returntype>
+<declaration><declaration_type>ELF64_SectionHeaderEntryRef</declaration_type> <declaration_function>ELF64_FileGetSectionHeaderEntry</declaration_function>(
+    <declaration_type>ELF64_FileRef</declaration_type> <declaration_param>file</declaration_param>,
+    <declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_param>index</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_FileGetSectionHeaderEntryWithName" lang="c"><name>ELF64_FileGetSectionHeaderEntryWithName</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_FileRef</type><name>file</name></parsedparameter>
+<parsedparameter><type>const char *</type><name>name</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_SectionHeaderEntryRef</returntype>
+<declaration><declaration_type>ELF64_SectionHeaderEntryRef</declaration_type> <declaration_function>ELF64_FileGetSectionHeaderEntryWithName</declaration_function>(
+    <declaration_type>ELF64_FileRef</declaration_type> <declaration_param>file</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>name</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_FileGetStringTableHeaderEntry" lang="c"><name>ELF64_FileGetStringTableHeaderEntry</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_FileRef</type><name>file</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_SectionHeaderEntryRef</returntype>
+<declaration><declaration_type>ELF64_SectionHeaderEntryRef</declaration_type> <declaration_function>ELF64_FileGetStringTableHeaderEntry</declaration_function>(
+    <declaration_type>ELF64_FileRef</declaration_type> <declaration_param>file</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_FileGetSymbolTableEntryForSection" lang="c"><name>ELF64_FileGetSymbolTableEntryForSection</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_FileRef</type><name>file</name></parsedparameter>
+<parsedparameter><type>ELF64_SectionHeaderEntryRef</type><name>section</name></parsedparameter>
+<parsedparameter><type>unsigned int</type><name>index</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_SymbolTableEntryRef</returntype>
+<declaration><declaration_type>ELF64_SymbolTableEntryRef</declaration_type> <declaration_function>ELF64_FileGetSymbolTableEntryForSection</declaration_function>(
+    <declaration_type>ELF64_FileRef</declaration_type> <declaration_param>file</declaration_param>,
+    <declaration_type>ELF64_SectionHeaderEntryRef</declaration_type> <declaration_param>section</declaration_param>,
+    <declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_param>index</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_FileGetSymbolTableEntryNameForSection" lang="c"><name>ELF64_FileGetSymbolTableEntryNameForSection</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_FileRef</type><name>file</name></parsedparameter>
+<parsedparameter><type>ELF64_SymbolTableEntryRef</type><name>sym</name></parsedparameter>
+<parsedparameter><type>ELF64_SectionHeaderEntryRef</type><name>section</name></parsedparameter>
+</parsedparameterlist>
+<returntype> const char *</returntype>
+<declaration><declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type> <declaration_function>ELF64_FileGetSymbolTableEntryNameForSection</declaration_function>(
+    <declaration_type>ELF64_FileRef</declaration_type> <declaration_param>file</declaration_param>,
+    <declaration_type>ELF64_SymbolTableEntryRef</declaration_type> <declaration_param>sym</declaration_param>,
+    <declaration_type>ELF64_SectionHeaderEntryRef</declaration_type> <declaration_param>section</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_FileGetSymbolTableEntryWithAddress" lang="c"><name>ELF64_FileGetSymbolTableEntryWithAddress</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_FileRef</type><name>file</name></parsedparameter>
+<parsedparameter><type>ELF64_Addr</type><name>address</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_SymbolTableEntryRef</returntype>
+<declaration><declaration_type>ELF64_SymbolTableEntryRef</declaration_type> <declaration_function>ELF64_FileGetSymbolTableEntryWithAddress</declaration_function>(
+    <declaration_type>ELF64_FileRef</declaration_type> <declaration_param>file</declaration_param>,
+    <declaration_type>ELF64_Addr</declaration_type> <declaration_param>address</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_FileGetSymbolTableEntryWithName" lang="c"><name>ELF64_FileGetSymbolTableEntryWithName</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_FileRef</type><name>file</name></parsedparameter>
+<parsedparameter><type>const char *</type><name>name</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_SymbolTableEntryRef</returntype>
+<declaration><declaration_type>ELF64_SymbolTableEntryRef</declaration_type> <declaration_function>ELF64_FileGetSymbolTableEntryWithName</declaration_function>(
+    <declaration_type>ELF64_FileRef</declaration_type> <declaration_param>file</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>name</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_FileIsValid" lang="c"><name>ELF64_FileIsValid</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_FileRef</type><name>file</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<declaration> <declaration_type>bool</declaration_type> <declaration_function>ELF64_FileIsValid</declaration_function>(
+    <declaration_type>ELF64_FileRef</declaration_type> <declaration_param>file</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_ELF_FILE_H__" definetype="value" lang="c"><name>__XEOS_LIB_ELF_FILE_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_ELF_FILE_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

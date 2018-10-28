@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/stdarg.h" lang="c" filename="stdarg.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/c99/include/c99/stdarg.h"><name>stdarg.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/va_list.h">&lt;system/types/va_list.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_C99_STDARG_H__" definetype="value" lang="c"><name>__XEOS_LIB_C99_STDARG_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_C99_STDARG_H__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/va_arg" definetype="function" lang="c"><name>va_arg</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_ap_</name></parsedparameter>
+<parsedparameter><type></type><name>_type_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>va_arg</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_ap_</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>_type_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>__builtin_va_arg</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_ap_</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>_type_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/va_arg_DONTLINK_1" definetype="function" lang="c"><name>va_arg</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_ap_</name></parsedparameter>
+<parsedparameter><type></type><name>_type_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>va_arg</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_ap_</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>_type_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>*</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_type_</declaration_preprocessor> <declaration_preprocessor>*</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_ap_</declaration_preprocessor> <declaration_preprocessor>+</declaration_preprocessor><declaration_preprocessor>=</declaration_preprocessor> <declaration_preprocessor>sizeof</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_type_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>_ap_</declaration_preprocessor> <declaration_preprocessor>-</declaration_preprocessor> <declaration_preprocessor>sizeof</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_type_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/va_copy" definetype="function" lang="c"><name>va_copy</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_dst_</name></parsedparameter>
+<parsedparameter><type></type><name>_src_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>va_copy</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_dst_</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>_src_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>__builtin_va_copy</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_dst_</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>_src_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/va_copy_DONTLINK_1" definetype="function" lang="c"><name>va_copy</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_dst_</name></parsedparameter>
+<parsedparameter><type></type><name>_src_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>va_copy</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_dst_</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>_src_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>void</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_dst_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>=</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_src_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/va_end" definetype="function" lang="c"><name>va_end</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_ap_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>va_end</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_ap_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>__builtin_va_end</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_ap_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/va_end_DONTLINK_1" definetype="function" lang="c"><name>va_end</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_ap_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>va_end</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_ap_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>_ap_</declaration_preprocessor> <declaration_preprocessor>=</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>va_list</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/va_start" definetype="function" lang="c"><name>va_start</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_ap_</name></parsedparameter>
+<parsedparameter><type></type><name>_lastarg_</name></parsedparameter>
+</parsedparameterlist>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>va_start</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_ap_</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>_lastarg_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>__builtin_va_start</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_ap_</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>_lastarg_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/va_start_DONTLINK_1" definetype="function" lang="c"><name>va_start</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_ap_</name></parsedparameter>
+<parsedparameter><type></type><name>_lastarg_</name></parsedparameter>
+</parsedparameterlist>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>va_start</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_ap_</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>_lastarg_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>_ap_</declaration_preprocessor> <declaration_preprocessor>=</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>char</declaration_preprocessor> <declaration_preprocessor>*</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>&amp;</declaration_preprocessor> <declaration_preprocessor>_lastarg_</declaration_preprocessor> <declaration_preprocessor>+</declaration_preprocessor> <declaration_preprocessor>sizeof</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>int</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

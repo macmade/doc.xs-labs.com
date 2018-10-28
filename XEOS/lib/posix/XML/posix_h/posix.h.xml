@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/posix.h" lang="c" filename="posix.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/posix/include/posix.h"><name>posix.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/aio.h">&lt;aio.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/inet.h">&lt;arpa/inet.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/assert.h">&lt;assert.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/complex.h">&lt;complex.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/cpio.h">&lt;cpio.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/ctype.h">&lt;ctype.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/dirent.h">&lt;dirent.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/dlfcn.h">&lt;dlfcn.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/errno.h">&lt;errno.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/fcntl.h">&lt;fcntl.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/fenv.h">&lt;fenv.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/float.h">&lt;float.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/fmtmsg.h">&lt;fmtmsg.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/fnmatch.h">&lt;fnmatch.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/ftw.h">&lt;ftw.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/glob.h">&lt;glob.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/grp.h">&lt;grp.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/iconv.h">&lt;iconv.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/inttypes.h">&lt;inttypes.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/iso646.h">&lt;iso646.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/langinfo.h">&lt;langinfo.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/libgen.h">&lt;libgen.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/limits.h">&lt;limits.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/locale.h">&lt;locale.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/math.h">&lt;math.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/monetary.h">&lt;monetary.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/mqueue.h">&lt;mqueue.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/ndbm.h">&lt;ndbm.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/if.h">&lt;net/if.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/netdb.h">&lt;netdb.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/in.h">&lt;netinet/in.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/tcp.h">&lt;netinet/tcp.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/nl_types.h">&lt;nl_types.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/poll.h">&lt;poll.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pthread.h">&lt;pthread.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pwd.h">&lt;pwd.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/regex.h">&lt;regex.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/sched.h">&lt;sched.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/search.h">&lt;search.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/semaphore.h">&lt;semaphore.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/setjmp.h">&lt;setjmp.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/signal.h">&lt;signal.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/spawn.h">&lt;spawn.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdarg.h">&lt;stdarg.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdbool.h">&lt;stdbool.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stddef.h">&lt;stddef.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdint.h">&lt;stdint.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdio.h">&lt;stdio.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdlib.h">&lt;stdlib.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/string.h">&lt;string.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/strings.h">&lt;strings.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stropts.h">&lt;stropts.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/ipc.h">&lt;sys/ipc.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/mman.h">&lt;sys/mman.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/msg.h">&lt;sys/msg.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/resource.h">&lt;sys/resource.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/select.h">&lt;sys/select.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/sem.h">&lt;sys/sem.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/shm.h">&lt;sys/shm.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/socket.h">&lt;sys/socket.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stat.h">&lt;sys/stat.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/statvfs.h">&lt;sys/statvfs.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/time.h">&lt;sys/time.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/times.h">&lt;sys/times.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/types.h">&lt;sys/types.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/uio.h">&lt;sys/uio.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/un.h">&lt;sys/un.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/utsname.h">&lt;sys/utsname.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/wait.h">&lt;sys/wait.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/syslog.h">&lt;syslog.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/tar.h">&lt;tar.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/termios.h">&lt;termios.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/tgmath.h">&lt;tgmath.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/time.h">&lt;time.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/trace.h">&lt;trace.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/ulimit.h">&lt;ulimit.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/unistd.h">&lt;unistd.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/utime.h">&lt;utime.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/utmpx.h">&lt;utmpx.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/wchar.h">&lt;wchar.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/wctype.h">&lt;wctype.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/wordexp.h">&lt;wordexp.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_POSIX_H__" definetype="value" lang="c"><name>__XEOS_LIB_POSIX_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_POSIX_H__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/_POSIX_C_SOURCE" definetype="value" lang="c"><name>_POSIX_C_SOURCE</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>_POSIX_C_SOURCE</declaration_preprocessor> <declaration_preprocessor>200809L</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

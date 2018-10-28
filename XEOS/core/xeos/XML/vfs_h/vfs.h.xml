@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/vfs.h" lang="c" filename="vfs.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/core/xeos/include/xeos/vfs.h"><name>vfs.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/macros.h">&lt;system/macros.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdint.h">&lt;stdint.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/time.h">&lt;time.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/ino_t.h">&lt;system/types/ino_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/uid_t.h">&lt;system/types/uid_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/gid_t.h">&lt;system/types/gid_t.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/XEOS_VFS_DriverGetName" lang="c"><name>XEOS_VFS_DriverGetName</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VFS_DriverRef</type><name>driver</name></parsedparameter>
+</parsedparameterlist>
+<returntype> const char *</returntype>
+<declaration><declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type> <declaration_function>XEOS_VFS_DriverGetName</declaration_function>(
+    <declaration_type>XEOS_VFS_DriverRef</declaration_type> <declaration_param>driver</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VFS_DriverGetOpenFunc" lang="c"><name>XEOS_VFS_DriverGetOpenFunc</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VFS_DriverRef</type><name>driver</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_VFS_DriverOpenFunc</returntype>
+<declaration><declaration_type>XEOS_VFS_DriverOpenFunc</declaration_type> <declaration_function>XEOS_VFS_DriverGetOpenFunc</declaration_function>(
+    <declaration_type>XEOS_VFS_DriverRef</declaration_type> <declaration_param>driver</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VFS_DriverGetReadFunc" lang="c"><name>XEOS_VFS_DriverGetReadFunc</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VFS_DriverRef</type><name>driver</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_VFS_DriverReadFunc</returntype>
+<declaration><declaration_type>XEOS_VFS_DriverReadFunc</declaration_type> <declaration_function>XEOS_VFS_DriverGetReadFunc</declaration_function>(
+    <declaration_type>XEOS_VFS_DriverRef</declaration_type> <declaration_param>driver</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VFS_DriverGetWriteFunc" lang="c"><name>XEOS_VFS_DriverGetWriteFunc</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VFS_DriverRef</type><name>driver</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_VFS_DriverWriteFunc</returntype>
+<declaration><declaration_type>XEOS_VFS_DriverWriteFunc</declaration_type> <declaration_function>XEOS_VFS_DriverGetWriteFunc</declaration_function>(
+    <declaration_type>XEOS_VFS_DriverRef</declaration_type> <declaration_param>driver</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VFS_EntryGetATime" lang="c"><name>XEOS_VFS_EntryGetATime</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VFS_EntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> time_t</returntype>
+<declaration><declaration_type>time_t</declaration_type> <declaration_function>XEOS_VFS_EntryGetATime</declaration_function>(
+    <declaration_type>XEOS_VFS_EntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VFS_EntryGetCTime" lang="c"><name>XEOS_VFS_EntryGetCTime</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VFS_EntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> time_t</returntype>
+<declaration><declaration_type>time_t</declaration_type> <declaration_function>XEOS_VFS_EntryGetCTime</declaration_function>(
+    <declaration_type>XEOS_VFS_EntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VFS_EntryGetDriver" lang="c"><name>XEOS_VFS_EntryGetDriver</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VFS_EntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_VFS_DriverRef</returntype>
+<declaration><declaration_type>XEOS_VFS_DriverRef</declaration_type> <declaration_function>XEOS_VFS_EntryGetDriver</declaration_function>(
+    <declaration_type>XEOS_VFS_EntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VFS_EntryGetFilename" lang="c"><name>XEOS_VFS_EntryGetFilename</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VFS_EntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> const char *</returntype>
+<declaration><declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type> <declaration_function>XEOS_VFS_EntryGetFilename</declaration_function>(
+    <declaration_type>XEOS_VFS_EntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VFS_EntryGetGID" lang="c"><name>XEOS_VFS_EntryGetGID</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VFS_EntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> gid_t</returntype>
+<declaration><declaration_type>gid_t</declaration_type> <declaration_function>XEOS_VFS_EntryGetGID</declaration_function>(
+    <declaration_type>XEOS_VFS_EntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VFS_EntryGetInode" lang="c"><name>XEOS_VFS_EntryGetInode</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VFS_EntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ino_t</returntype>
+<declaration><declaration_type>ino_t</declaration_type> <declaration_function>XEOS_VFS_EntryGetInode</declaration_function>(
+    <declaration_type>XEOS_VFS_EntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VFS_EntryGetMTime" lang="c"><name>XEOS_VFS_EntryGetMTime</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VFS_EntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> time_t</returntype>
+<declaration><declaration_type>time_t</declaration_type> <declaration_function>XEOS_VFS_EntryGetMTime</declaration_function>(
+    <declaration_type>XEOS_VFS_EntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VFS_EntryGetSize" lang="c"><name>XEOS_VFS_EntryGetSize</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VFS_EntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> size_t</returntype>
+<declaration><declaration_type>size_t</declaration_type> <declaration_function>XEOS_VFS_EntryGetSize</declaration_function>(
+    <declaration_type>XEOS_VFS_EntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VFS_EntryGetUID" lang="c"><name>XEOS_VFS_EntryGetUID</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VFS_EntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uid_t</returntype>
+<declaration><declaration_type>uid_t</declaration_type> <declaration_function>XEOS_VFS_EntryGetUID</declaration_function>(
+    <declaration_type>XEOS_VFS_EntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<typedefs><typedef id="//xsdoc_ref/c/tdef/XEOS_VFS_DriverOpenFunc" lang="c" type="funcPtr"><name>XEOS_VFS_DriverOpenFunc</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VFS_EntryRef *</type><name></name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_type>void</declaration_type> ( <declaration_type>*</declaration_type><declaration_function>XEOS_VFS_DriverOpenFunc</declaration_function> )(
+    <declaration_type>XEOS_VFS_EntryRef</declaration_type> <declaration_type>*</declaration_type>);  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_VFS_DriverReadFunc" lang="c" type="funcPtr"><name>XEOS_VFS_DriverReadFunc</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VFS_EntryRef *</type><name></name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_type>void</declaration_type> ( <declaration_type>*</declaration_type><declaration_function>XEOS_VFS_DriverReadFunc</declaration_function> )(
+    <declaration_type>XEOS_VFS_EntryRef</declaration_type> <declaration_type>*</declaration_type>);  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_VFS_DriverRef" lang="c" type="simple"><name>XEOS_VFS_DriverRef</name>
+<declaration> <declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>__XEOS_VFS_Driver</declaration_type> <declaration_type>*</declaration_type> <declaration_var>XEOS_VFS_DriverRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_VFS_DriverWriteFunc" lang="c" type="funcPtr"><name>XEOS_VFS_DriverWriteFunc</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VFS_EntryRef *</type><name></name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_type>void</declaration_type> ( <declaration_type>*</declaration_type><declaration_function>XEOS_VFS_DriverWriteFunc</declaration_function> )(
+    <declaration_type>XEOS_VFS_EntryRef</declaration_type> <declaration_type>*</declaration_type>);  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_VFS_EntryRef" lang="c" type="simple"><name>XEOS_VFS_EntryRef</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>__XEOS_VFS_Entry</declaration_type> <declaration_type>*</declaration_type> <declaration_var>XEOS_VFS_EntryRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef></typedefs><defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_VFS_H__" definetype="value" lang="c"><name>__XEOS_VFS_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_VFS_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

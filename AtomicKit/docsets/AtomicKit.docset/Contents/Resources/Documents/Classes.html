@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Classes  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="Classes  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">AtomicKit Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/macmade/AtomicKit"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">AtomicKit Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Classes  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes.html#/s:9AtomicKit0A0C">Atomic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DispatchedArrayController.html">DispatchedArrayController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DispatchedBool.html">DispatchedBool</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DispatchedDictionaryController.html">DispatchedDictionaryController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DispatchedMutableArray.html">DispatchedMutableArray</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DispatchedMutableDictionary.html">DispatchedMutableDictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DispatchedMutableSet.html">DispatchedMutableSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DispatchedNumber.html">DispatchedNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DispatchedObject.html">DispatchedObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DispatchedString.html">DispatchedString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DispatchedTreeController.html">DispatchedTreeController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DispatchedValue.html">DispatchedValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/LockingValue.html">LockingValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Mutex.html">Mutex</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Mutex/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RWLock.html">RWLock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RWLock/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RWLock/Intent.html">– Intent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RecursiveMutex.html">RecursiveMutex</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RecursiveMutex/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Semaphore.html">Semaphore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Semaphore/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/UnfairLock.html">UnfairLock</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/DispatchedValueWrapper.html">DispatchedValueWrapper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/Lockable.html">Lockable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/ThreadSafeValueWrapper.html">ThreadSafeValueWrapper</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Classes</h1>
+            <p>The following classes are available globally.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9AtomicKit10UnfairLockC"></a>
+                    <a name="//apple_ref/swift/Class/UnfairLock" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9AtomicKit10UnfairLockC">UnfairLock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Swift wrapper class for <code>os_unfair_lock_t</code>.<br>
+A low-level lock that allows waiters to block efficiently on contention.</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    Locakble
+
+</div>
+
+                        <a href="Classes/UnfairLock.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UnfairLock</span><span class="p">:</span> <span class="kt"><a href="Protocols/Lockable.html">Lockable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@AtomicKit@objc(cs)DispatchedMutableSet"></a>
+                    <a name="//apple_ref/swift/Class/DispatchedMutableSet" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@AtomicKit@objc(cs)DispatchedMutableSet">DispatchedMutableSet</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Thread-safe value wrapper for <code>NSMutableSet</code>, using dispatch queues to
+achieve synchronization.
+This class is KVO-compliant. You may observe its <code>value</code> property to be
+notified of changes. This is applicable to Cocoa bindings.</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    DispatchedValueWrapper
+
+</div>
+
+                        <a href="Classes/DispatchedMutableSet.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">DispatchedMutableSet</span><span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt"><a href="Protocols/DispatchedValueWrapper.html">DispatchedValueWrapper</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9AtomicKit14RecursiveMutexC"></a>
+                    <a name="//apple_ref/swift/Class/RecursiveMutex" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9AtomicKit14RecursiveMutexC">RecursiveMutex</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Swift wrapper class for <code>pthread_mutex_t</code>.<br>
+Note that this is a recursive version.</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    Locakble
+
+</div>
+
+                        <a href="Classes/RecursiveMutex.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">RecursiveMutex</span><span class="p">:</span> <span class="kt"><a href="Protocols/Lockable.html">Lockable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@AtomicKit@objc(cs)DispatchedNumber"></a>
+                    <a name="//apple_ref/swift/Class/DispatchedNumber" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@AtomicKit@objc(cs)DispatchedNumber">DispatchedNumber</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Thread-safe value wrapper for <code>NSNumber</code>, using dispatch queues to
+achieve synchronization.
+This class is KVO-compliant. You may observe its <code>value</code> property to be
+notified of changes. This is applicable to Cocoa bindings.</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    DispatchedValueWrapper
+
+</div>
+
+                        <a href="Classes/DispatchedNumber.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">DispatchedNumber</span><span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt"><a href="Protocols/DispatchedValueWrapper.html">DispatchedValueWrapper</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@AtomicKit@objc(cs)DispatchedTreeController"></a>
+                    <a name="//apple_ref/swift/Class/DispatchedTreeController" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@AtomicKit@objc(cs)DispatchedTreeController">DispatchedTreeController</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Thread-safe value wrapper for <code>NSTreeController</code>, using dispatch queues to
+achieve synchronization.
+This class is KVO-compliant. You may observe its <code>value</code> property to be
+notified of changes. This is applicable to Cocoa bindings.</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    DispatchedValueWrapper
+
+</div>
+
+                        <a href="Classes/DispatchedTreeController.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">DispatchedTreeController</span><span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt"><a href="Protocols/DispatchedValueWrapper.html">DispatchedValueWrapper</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@AtomicKit@objc(cs)DispatchedMutableArray"></a>
+                    <a name="//apple_ref/swift/Class/DispatchedMutableArray" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@AtomicKit@objc(cs)DispatchedMutableArray">DispatchedMutableArray</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Thread-safe value wrapper for <code>NSMutableArray</code>, using dispatch queues to
+achieve synchronization.
+This class is KVO-compliant. You may observe its <code>value</code> property to be
+notified of changes. This is applicable to Cocoa bindings.</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    DispatchedValueWrapper
+
+</div>
+
+                        <a href="Classes/DispatchedMutableArray.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">DispatchedMutableArray</span><span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt"><a href="Protocols/DispatchedValueWrapper.html">DispatchedValueWrapper</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@AtomicKit@objc(cs)DispatchedArrayController"></a>
+                    <a name="//apple_ref/swift/Class/DispatchedArrayController" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@AtomicKit@objc(cs)DispatchedArrayController">DispatchedArrayController</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Thread-safe value wrapper for <code>NSArrayController</code>, using dispatch queues to
+achieve synchronization.
+This class is KVO-compliant. You may observe its <code>value</code> property to be
+notified of changes. This is applicable to Cocoa bindings.</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    DispatchedValueWrapper
+
+</div>
+
+                        <a href="Classes/DispatchedArrayController.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">DispatchedArrayController</span><span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt"><a href="Protocols/DispatchedValueWrapper.html">DispatchedValueWrapper</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@AtomicKit@objc(cs)DispatchedDictionaryController"></a>
+                    <a name="//apple_ref/swift/Class/DispatchedDictionaryController" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@AtomicKit@objc(cs)DispatchedDictionaryController">DispatchedDictionaryController</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Thread-safe value wrapper for <code>NSDictionaryController</code>, using dispatch queues
+to achieve synchronization.
+This class is KVO-compliant. You may observe its <code>value</code> property to be
+notified of changes. This is applicable to Cocoa bindings.</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    DispatchedValueWrapper
+
+</div>
+
+                        <a href="Classes/DispatchedDictionaryController.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">DispatchedDictionaryController</span><span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt"><a href="Protocols/DispatchedValueWrapper.html">DispatchedValueWrapper</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@AtomicKit@objc(cs)DispatchedBool"></a>
+                    <a name="//apple_ref/swift/Class/DispatchedBool" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@AtomicKit@objc(cs)DispatchedBool">DispatchedBool</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Thread-safe value wrapper for <code>Bool</code>, using dispatch queues to achieve
+synchronization.<br>
+This class is KVO-compliant. You may observe its <code>value</code> property to be
+notified of changes. This is applicable to Cocoa bindings.</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    DispatchedValueWrapper
+
+</div>
+
+                        <a href="Classes/DispatchedBool.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">DispatchedBool</span><span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt"><a href="Protocols/DispatchedValueWrapper.html">DispatchedValueWrapper</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9AtomicKit15DispatchedValueC"></a>
+                    <a name="//apple_ref/swift/Class/DispatchedValue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9AtomicKit15DispatchedValueC">DispatchedValue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Thread-safe value wrapper, using dispatch queues to achieve synchronization.<br>
+Note that this class is not KVO-compliant.<br>
+If you need this, please use subclasses of <code>DispatchedValue</code>.</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    DispatchedValueWrapper
+
+</div>
+
+                        <a href="Classes/DispatchedValue.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">DispatchedValue</span><span class="o">&lt;</span> <span class="kt">T</span> <span class="o">&gt;</span><span class="p">:</span> <span class="kt"><a href="Protocols/DispatchedValueWrapper.html">DispatchedValueWrapper</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@AtomicKit@objc(cs)DispatchedObject"></a>
+                    <a name="//apple_ref/swift/Class/DispatchedObject" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@AtomicKit@objc(cs)DispatchedObject">DispatchedObject</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Thread-safe value wrapper for <code>NSObject</code>, using dispatch queues to
+achieve synchronization.
+This class is KVO-compliant. You may observe its <code>value</code> property to be
+notified of changes. This is applicable to Cocoa bindings.</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    DispatchedValueWrapper
+
+</div>
+
+                        <a href="Classes/DispatchedObject.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">DispatchedObject</span><span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt"><a href="Protocols/DispatchedValueWrapper.html">DispatchedValueWrapper</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9AtomicKit5MutexC"></a>
+                    <a name="//apple_ref/swift/Class/Mutex" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9AtomicKit5MutexC">Mutex</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Swift wrapper class for <code>pthread_mutex_t</code>.<br>
+Note that this is a non-recursive version.</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    Locakble
+
+</div>
+
+                        <a href="Classes/Mutex.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Mutex</span><span class="p">:</span> <span class="kt"><a href="Protocols/Lockable.html">Lockable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@AtomicKit@objc(cs)DispatchedMutableDictionary"></a>
+                    <a name="//apple_ref/swift/Class/DispatchedMutableDictionary" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@AtomicKit@objc(cs)DispatchedMutableDictionary">DispatchedMutableDictionary</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Thread-safe value wrapper for <code>NSMutableDictionary</code>, using dispatch queues to
+achieve synchronization.
+This class is KVO-compliant. You may observe its <code>value</code> property to be
+notified of changes. This is applicable to Cocoa bindings.</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    DispatchedValueWrapper
+
+</div>
+
+                        <a href="Classes/DispatchedMutableDictionary.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">DispatchedMutableDictionary</span><span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt"><a href="Protocols/DispatchedValueWrapper.html">DispatchedValueWrapper</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9AtomicKit6RWLockC"></a>
+                    <a name="//apple_ref/swift/Class/RWLock" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9AtomicKit6RWLockC">RWLock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Represents a reader-writer lock.<br>
+Note that this implementation is recursive.</p>
+
+<p>Using a reader-writer lock, multiple treads can lock for reading, if no
+writer is currently holding the lock.<br>
+Only one writer can hold the lock, preventing readers to acquire it.</p>
+
+                        <a href="Classes/RWLock.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">RWLock</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9AtomicKit12LockingValueC"></a>
+                    <a name="//apple_ref/swift/Class/LockingValue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9AtomicKit12LockingValueC">LockingValue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Represents a thread-safe value wrapper, using locking to achieve
+synchronization.<br>
+Note that this class is not KVO-compliant.<br>
+If you need this, please use subclasses of <code><a href="Classes/DispatchedValue.html">DispatchedValue</a></code>.</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <code><a href="Classes/DispatchedValue.html">DispatchedValue</a></code>
+
+</div>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <code><a href="Protocols/ThreadSafeValueWrapper.html">ThreadSafeValueWrapper</a></code>
+
+</div>
+
+                        <a href="Classes/LockingValue.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">LockingValue</span><span class="o">&lt;</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">L</span> <span class="o">&gt;</span><span class="p">:</span> <span class="kt"><a href="Protocols/ThreadSafeValueWrapper.html">ThreadSafeValueWrapper</a></span> <span class="k">where</span> <span class="kt">L</span><span class="p">:</span> <span class="kt">NSLocking</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@AtomicKit@objc(cs)DispatchedString"></a>
+                    <a name="//apple_ref/swift/Class/DispatchedString" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@AtomicKit@objc(cs)DispatchedString">DispatchedString</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Thread-safe value wrapper for <code>String</code>, using dispatch queues to
+achieve synchronization.
+This class is KVO-compliant. You may observe its <code>value</code> property to be
+notified of changes. This is applicable to Cocoa bindings.</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    DispatchedValueWrapper
+
+</div>
+
+                        <a href="Classes/DispatchedString.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">DispatchedString</span><span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt"><a href="Protocols/DispatchedValueWrapper.html">DispatchedValueWrapper</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9AtomicKit9SemaphoreC"></a>
+                    <a name="//apple_ref/swift/Class/Semaphore" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9AtomicKit9SemaphoreC">Semaphore</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Represents a semaphore object.<br>
+Note that named semaphores are shared accross different processes.</p>
+
+                        <a href="Classes/Semaphore.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Semaphore</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9AtomicKit0A0C"></a>
+                    <a name="//apple_ref/swift/Class/Atomic" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9AtomicKit0A0C">Atomic</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Represents a thread-safe value wrapper, using an unfair lock to achieve
+synchronization.<br>
+Note that this class is not KVO-compliant.<br>
+If you need this, please use subclasses of <code><a href="Classes/DispatchedValue.html">DispatchedValue</a></code>.</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <code><a href="Classes/DispatchedValue.html">DispatchedValue</a></code>
+
+</div>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <code><a href="Classes/LockingValue.html">LockingValue</a></code>
+
+</div>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <code><a href="Classes/UnfairLock.html">UnfairLock</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Atomic</span><span class="o">&lt;</span> <span class="kt">T</span> <span class="o">&gt;</span><span class="p">:</span> <span class="kt"><a href="Classes/LockingValue.html">LockingValue</a></span><span class="o">&lt;</span> <span class="kt">T</span><span class="p">,</span> <span class="kt"><a href="Classes/UnfairLock.html">UnfairLock</a></span> <span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>(c) 2017 Jean-David Gadina - <a class="link" href="http://www.xs-labs.com" target="_blank" rel="external">www.xs-labs.com</a></p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

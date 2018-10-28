@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/ShellKit.h" lang="c" filename="ShellKit.h" headerpath="/Users/macmade/Documents/Macmade/GitHub/ShellKit/Documentation/../ShellKit/Classes/ShellKit/ShellKit.h"><name>ShellKit.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/SKTypes.h">&lt;ShellKit/SKTypes.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/NSString+ShellKit.h">&lt;ShellKit/NSString+ShellKit.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/NSDate+ShellKit.h">&lt;ShellKit/NSDate+ShellKit.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/SKObject.h">&lt;ShellKit/SKObject.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/SKRunableObject.h">&lt;ShellKit/SKRunableObject.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/SKShell.h">&lt;ShellKit/SKShell.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/SKTask.h">&lt;ShellKit/SKTask.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/SKOptionalTask.h">&lt;ShellKit/SKOptionalTask.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/SKTaskGroup.h">&lt;ShellKit/SKTaskGroup.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<copyrightinfo>&#169; (c) 2017, Jean-David Gadina - www.xs-labs.com
+@abstarct    ShellKit's umbrella header
+</copyrightinfo>
+<timestamp>Monday, May 15, 2017</timestamp>
+</header>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/syscall.h" lang="c" filename="syscall.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/core/xeos/include/xeos/syscall.h"><name>syscall.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/unistd.h">&lt;unistd.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/mman.h">&lt;sys/mman.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdint.h">&lt;stdint.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/XEOS_SysCall_mmap" lang="c"><name>XEOS_SysCall_mmap</name>
+<parsedparameterlist>
+<parsedparameter><type>void *</type><name>addr</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>len</name></parsedparameter>
+<parsedparameter><type>int</type><name>prot</name></parsedparameter>
+<parsedparameter><type>int</type><name>flags</name></parsedparameter>
+<parsedparameter><type>int</type><name>fildes</name></parsedparameter>
+<parsedparameter><type>off_t</type><name>off</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uint64_t</returntype>
+<declaration> <declaration_type>uint64_t</declaration_type> <declaration_function>XEOS_SysCall_mmap</declaration_function>(
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>addr</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>len</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>prot</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>flags</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>fildes</declaration_param>,
+    <declaration_type>off_t</declaration_type> <declaration_param>off</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_SysCall_munmap" lang="c"><name>XEOS_SysCall_munmap</name>
+<parsedparameterlist>
+<parsedparameter><type>void *</type><name>addr</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>len</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uint64_t</returntype>
+<declaration><declaration_type>uint64_t</declaration_type> <declaration_function>XEOS_SysCall_munmap</declaration_function>(
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>addr</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>len</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_SYSCALL_H__" definetype="value" lang="c"><name>__XEOS_SYSCALL_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_SYSCALL_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

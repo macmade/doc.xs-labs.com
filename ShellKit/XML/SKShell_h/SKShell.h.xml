@@ -1,0 +1,1451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/SKShell.h" lang="c" filename="SKShell.h" headerpath="/Users/macmade/Documents/Macmade/GitHub/ShellKit/Documentation/../ShellKit/Classes/ShellKit/SKShell.h"><name>SKShell.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Foundation.h">&lt;Foundation/Foundation.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/SKTypes.h">&lt;ShellKit/SKTypes.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<typedefs><typedef id="//xsdoc_ref/c/tdef/SKShellCommandCompletion" lang="c" type="funcPtr"><name>SKShellCommandCompletion</name>
+<abstract><p>Completion block for a shell command
+</p></abstract>
+<parameterlist>
+<parameter><name>status</name><desc><p>The command's exit status</p></desc></parameter>
+<parameter><name>stdandardOutput</name><desc><p>The command's standard output, if any</p></desc></parameter>
+<parameter><name>standardError</name><desc><p>The command's standard error, if any</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>status</name></parsedparameter>
+<parsedparameter><type>NSString *</type><name>stdandardOutput</name></parsedparameter>
+<parsedparameter><type>NSString *</type><name>standardError</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_type>void</declaration_type> ( ^ <declaration_function>SKShellCommandCompletion</declaration_function> )(
+    <declaration_type>int</declaration_type> <declaration_param>status</declaration_param>,
+    <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type><declaration_param>stdandardOutput</declaration_param>,
+    <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type><declaration_param>standardError</declaration_param> );  </declaration>
+<desc><p/></desc>
+</typedef></typedefs><classes><class id="//xsdoc_ref/occ/cl/SKShell" lang="occ"><name>SKShell</name>
+<abstract><p>An object representing the current shell
+</p></abstract>
+<attributes><attribute><name>Superclass</name><value><hd_link logicalPath="//xsdoc_ref/occ/cl/NSObject">NSObject</hd_link></value></attribute>
+</attributes>
+<declaration>@<declaration_type>interface</declaration_type> <declaration_type>SKShell</declaration_type>: <declaration_type>NSObject</declaration_type>  <declaration_comment>/*!
+@property    supportsColors
+@abstract    Set if the current erminal supports color</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>supportsColors</declaration_var>;   <declaration_comment>/*!
+@property    colorsEnabled
+@abstact     Used to enable/disable the use of shell colors
+@discussion  Enabled by default. Only applicable if the current terminal
+supports colors.
+@see         supportsColors
+@see         SKColor</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readwrite</declaration_param>,
+        <declaration_param>assign</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>colorsEnabled</declaration_var>;   <declaration_comment>/*!
+@property    statusIconsEnabled
+@abstact     Used to enable/disable the use of status icons
+@discussion  Enabled by default. Status icons are reprensented by unicode
+emojis.
+@see         SKSTatus</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readwrite</declaration_param>,
+        <declaration_param>assign</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>statusIconsEnabled</declaration_var>;   <declaration_comment>/*!
+@property    prompt
+@abstract    Used to get/set the current prompt
+@discussion  If a prompt is set, all messages printed with `SKShell` will
+be prefixed by the prompt.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readwrite</declaration_param>,
+        <declaration_param>strong</declaration_param>,
+        <declaration_param>nullable</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type><declaration_var>prompt</declaration_var>;   <declaration_comment>/*!
+@property    promptParts
+@abstract    Used to get/set the promt parts
+@discussion  Prompt parts may be set to reflect a hierarchy in the prompt.
+For instance, setting `@[ @"foo", @"bar" ]` as prompt parts will
+result in a `[ foo ]&gt; [ bar ]&gt;` prompt.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readwrite</declaration_param>,
+        <declaration_param>strong</declaration_param>,
+        <declaration_param>nullable</declaration_param> ) <declaration_type>NSArray</declaration_type>&lt; <declaration_template>NSString</declaration_template> <declaration_template>*</declaration_template> &gt; <declaration_type>*</declaration_type> <declaration_var>promptParts</declaration_var>;   <declaration_comment>/*!
+@property    allowPromptHierarchy
+@abstract    Enables/Disables prompt hierarchy
+@discussion  Enabled by default. If disabled, setting prompt parts will have
+no effect.
+@see         promptParts</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readwrite</declaration_param>,
+        <declaration_param>assign</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>allowPromptHierarchy</declaration_var>;   <declaration_comment>/*!
+@property    shell
+@property    The path of the current shell
+@discussion  Retrieved using the `SHELL` environment variable.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param>,
+        <declaration_param>nullable</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type><declaration_var>shell</declaration_var>;   <declaration_comment>/*!
+@method      currentShell
+@abstract    Gets the instance representing the current shell
+@discussion  Although a `SKShell` can be instanciated, it is advised
+to alyways use this shared instance.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    + ( <declaration_param>instancetype</declaration_param> )<declaration_var>currentShell</declaration_var>;   <declaration_comment>/*!
+@method      pathForCommand:
+@abstract    Gets the paths of a shell command
+@discussion  Commands are found using `which`, invoked through the logn shell.
+@param       command The command name
+@result      The full path to the command, or nil</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_type>nullable</declaration_type> <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>pathForCommand</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>command</declaration_var>;   
+    <declaration_comment>/*!
+@method      commandIsAvailable:
+@abstract    Checks if a shell command is available
+@discussion  Commands are found using `which`, invoked through the logn shell.
+@param       command The command name
+@result      YES is the command is available, otherwise NO</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>BOOL</declaration_param> )<declaration_type>commandIsAvailable</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>command</declaration_var>;   <declaration_comment>/*!
+@method      runCommand:
+@abstract    Executes a shell command synchronously
+@discussion  Command can be a complex shell commands.
+@param       command The command to execute
+@result      YES if the command executed successfully, otherwise NO</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>BOOL</declaration_param> )<declaration_type>runCommand</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>command</declaration_var>;   <declaration_comment>/*!
+@method      runCommand:
+@abstract    Executes a shell command synchronously
+@discussion  Command can be a complex shell commands.
+@param       command The command to execute
+@param       input   An optional string to use as standard input for the command
+@result      YES if the command executed successfully, otherwise NO</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>BOOL</declaration_param> )<declaration_type>runCommand</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>command</declaration_type> <declaration_type>stdandardInput</declaration_type>: ( <declaration_type>nullable</declaration_type> <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>input</declaration_var>;   
+    <declaration_comment>/*!
+@method      runCommand:
+@abstract    Executes a shell command synchronously
+@discussion  Command can be a complex shell commands.
+@param       command The command to execute
+@param       completion  An optional completion block
+@result      YES if the command executed successfully, otherwise NO
+@see         SKShellCommandCompletion</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>BOOL</declaration_param> )<declaration_type>runCommand</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>command</declaration_type> <declaration_type>completion</declaration_type>: ( <declaration_type>nullable</declaration_type> <declaration_param>SKShellCommandCompletion</declaration_param> )<declaration_var>completion</declaration_var>;   
+    <declaration_comment>/*!
+@method      runCommand:
+@abstract    Executes a shell command synchronously
+@discussion  Command can be a complex shell commands.
+@param       command The command to execute
+@param       input       An optional string to use as standard input for the command
+@param       completion  An optional completion block
+@result      YES if the command executed successfully, otherwise NO
+@see         SKShellCommandCompletion</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>BOOL</declaration_param> )<declaration_type>runCommand</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>command</declaration_type> <declaration_type>stdandardInput</declaration_type>: ( <declaration_type>nullable</declaration_type> <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>input</declaration_type> <declaration_type>completion</declaration_type>: ( <declaration_type>nullable</declaration_type> <declaration_param>SKShellCommandCompletion</declaration_param> )<declaration_var>completion</declaration_var>;   
+    <declaration_comment>/*!
+@method      runCommand:
+@abstract    Executes a shell command asynchronously
+@discussion  Command can be a complex shell commands.
+@param       command The command to execute</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>void</declaration_param> )<declaration_type>runCommandAsynchronously</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>command</declaration_var>;   <declaration_comment>/*!
+@method      runCommand:
+@abstract    Executes a shell command asynchronously
+@discussion  Command can be a complex shell commands.
+@param       command The command to execute
+@param       input   An optional string to use as standard input for the command</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>void</declaration_param> )<declaration_type>runCommandAsynchronously</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>command</declaration_type> <declaration_type>stdandardInput</declaration_type>: ( <declaration_type>nullable</declaration_type> <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>input</declaration_var>;   
+    <declaration_comment>/*!
+@method      runCommand:
+@abstract    Executes a shell command asynchronously
+@discussion  Command can be a complex shell commands.
+@param       command The command to execute
+@param       completion  An optional completion block
+@see         SKShellCommandCompletion</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>void</declaration_param> )<declaration_type>runCommandAsynchronously</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>command</declaration_type> <declaration_type>completion</declaration_type>: ( <declaration_type>nullable</declaration_type> <declaration_param>SKShellCommandCompletion</declaration_param> )<declaration_var>completion</declaration_var>;   
+    <declaration_comment>/*!
+@method      runCommand:
+@abstract    Executes a shell command asynchronously
+@discussion  Command can be a complex shell commands.
+@param       command The command to execute
+@param       input       An optional string to use as standard input for the command
+@param       completion  An optional completion block
+@see         SKShellCommandCompletion</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>void</declaration_param> )<declaration_type>runCommandAsynchronously</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>command</declaration_type> <declaration_type>stdandardInput</declaration_type>: ( <declaration_type>nullable</declaration_type> <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>input</declaration_type> <declaration_type>completion</declaration_type>: ( <declaration_type>nullable</declaration_type> <declaration_param>SKShellCommandCompletion</declaration_param> )<declaration_var>completion</declaration_var>;   
+    <declaration_comment>/*!
+@method      printError:
+@abstract    Prints an error
+@discussion  If the `error` param is nil, this method will print a generic
+error message.
+Errors are printed in red if colors are available/enabled and
+with an error sign if status icons are enabled.
+@param       error   The error object to print</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>void</declaration_param> )<declaration_type>printError</declaration_type>: ( <declaration_type>nullable</declaration_type> <declaration_type>NSError</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>error</declaration_var>;   <declaration_comment>/*!
+@method      printErrorMessage:
+@abstract    Prints an error message
+@param       format  The error message format
+@param       ...     Optional parameters for the format string
+@see         printError:</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>void</declaration_param> )<declaration_type>printErrorMessage</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>format</declaration_var>, ... <declaration_function>NS_FORMAT_FUNCTION</declaration_function>( <declaration_number>1</declaration_number>,
+            <declaration_number>2</declaration_number> );   <declaration_comment>/*!
+@method      printWarningMessage:
+@abstract    Prints an warning message
+@discussion  Warnings are printed in yellow if colors are available/enabled
+and with an warning sign if status icons are enabled.
+@param       format  The warning message format
+@param       ...     Optional parameters for the format string</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>void</declaration_param> )<declaration_type>printWarningMessage</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>format</declaration_var>, ... <declaration_function>NS_FORMAT_FUNCTION</declaration_function>( <declaration_number>1</declaration_number>,
+            <declaration_number>2</declaration_number> );   <declaration_comment>/*!
+@method      printSuccessMessage:
+@abstract    Prints a success message
+@discussion  Success messages are printed in green if colors are
+available/enabled and with a checkmark sign if status icons are
+enabled.
+@param       format  The success message format
+@param       ...     Optional parameters for the format string</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>void</declaration_param> )<declaration_type>printSuccessMessage</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>format</declaration_var>, ... <declaration_function>NS_FORMAT_FUNCTION</declaration_function>( <declaration_number>1</declaration_number>,
+            <declaration_number>2</declaration_number> );   <declaration_comment>/*!
+@method      printInfoMessage:
+@abstract    Prints an info message
+@discussion  Info messages are printed in blue if colors are
+available/enabled and with an info sign if status icons are
+enabled.
+@param       format  The info message format
+@param       ...     Optional parameters for the format string</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>void</declaration_param> )<declaration_type>printInfoMessage</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>format</declaration_var>, ... <declaration_function>NS_FORMAT_FUNCTION</declaration_function>( <declaration_number>1</declaration_number>,
+            <declaration_number>2</declaration_number> );   <declaration_comment>/*!
+@method      printMessage:
+@abstract    Prints a message
+@param       format  The message format
+@param       ...     Optional parameters for the format string</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>void</declaration_param> )<declaration_type>printMessage</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>format</declaration_var>, ... <declaration_function>NS_FORMAT_FUNCTION</declaration_function>( <declaration_number>1</declaration_number>,
+            <declaration_number>2</declaration_number> );   <declaration_comment>/*!
+@method      printMessage:status:
+@abstract    Prints a message with a status
+@discussion  Statuses will be printed as an emoji, if status icons are
+enabled.
+@param       format  The message format
+@param       status  The message status
+@param       ...     Optional parameters for the format string
+@see         SKSTatus
+@see         statusIconsEnabled</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>void</declaration_param> )<declaration_type>printMessage</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>format</declaration_type> <declaration_type>status</declaration_type>: ( <declaration_param>SKStatus</declaration_param> )<declaration_var>status</declaration_var>, 
+        ... <declaration_function>NS_FORMAT_FUNCTION</declaration_function>( <declaration_number>1</declaration_number>,
+            <declaration_number>3</declaration_number> );   <declaration_comment>/*!
+@method      printMessage:color:
+@abstract    Prints a message with a color
+@discussion  Colors will only be printed if the terminal supports them and
+if they are enabled.
+@param       format  The message format
+@param       color   The message color
+@param       ...     Optional parameters for the format string
+@see         SKColor
+@see         supportsColors
+@see         colorsEnabled</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>void</declaration_param> )<declaration_type>printMessage</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>format</declaration_type> <declaration_type>color</declaration_type>: ( <declaration_param>SKColor</declaration_param> )<declaration_var>color</declaration_var>, 
+        ... <declaration_function>NS_FORMAT_FUNCTION</declaration_function>( <declaration_number>1</declaration_number>,
+            <declaration_number>3</declaration_number> );   <declaration_comment>/*!
+@method      printMessage:color:
+@abstract    Prints a message with a color
+@discussion  Statuses will be printed as an emoji, if status icons are
+enabled. Colors will only be printed if the terminal supports
+them and if they are enabled.
+@param       format  The message format
+@param       status  The message status
+@param       color   The message color
+@param       ...     Optional parameters for the format string
+@see         SKSTatus
+@see         statusIconsEnabled
+@see         SKColor
+@see         supportsColors
+@see         colorsEnabled</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>void</declaration_param> )<declaration_type>printMessage</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>format</declaration_type> <declaration_type>status</declaration_type>: ( <declaration_param>SKStatus</declaration_param> )<declaration_type>status</declaration_type> <declaration_type>color</declaration_type>: ( <declaration_param>SKColor</declaration_param> )<declaration_var>color</declaration_var>, 
+        ... <declaration_function>NS_FORMAT_FUNCTION</declaration_function>( <declaration_number>1</declaration_number>,
+            <declaration_number>4</declaration_number> );   <declaration_comment>/*!
+@method      addPromptPart:
+@abstract    Adds a part to the current prompt parts
+@discussion  Only applicable if the prompt hierarchy is enabled.
+@see         promptParts
+@see         allowPromptHierarchy</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>void</declaration_param> )<declaration_type>addPromptPart</declaration_type>:( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>part</declaration_var>;   <declaration_comment>/*!
+@method      removeLastPromptPart:
+@abstract    Removes the last part of the current prompt parts
+@discussion  Only applicable if the prompt hierarchy is enabled.
+@see         promptParts
+@see         allowPromptHierarchy</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>void</declaration_param> )<declaration_var>removeLastPromptPart</declaration_var>;   @@end </declaration>
+<desc><p/></desc>
+<methods><method id="//xsdoc_ref/occ/instm/SKShell/addPromptPart:" lang="occ" type="instm"><name>addPromptPart:</name>
+<abstract><p>Adds a part to the current prompt parts
+</p></abstract>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>part</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See</name><list>
+<item><name>promptParts</name><value><hd_link logicalPath="promptParts" isseealso="yes">promptParts</hd_link></value></item><item><name>allowPromptHierarchy</name><value><hd_link logicalPath="allowPromptHierarchy" isseealso="yes">allowPromptHierarchy</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_function>addPromptPart</declaration_function>:( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>part</declaration_var>; </declaration>
+<desc><p>Only applicable if the prompt hierarchy is enabled.
+</p></desc>
+</method><method id="//xsdoc_ref/occ/instm/SKShell/commandIsAvailable:" lang="occ" type="instm"><name>commandIsAvailable:</name>
+<abstract><p>Checks if a shell command is available
+</p></abstract>
+<parameterlist>
+<parameter><name>command</name><desc><p>The command name</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( nullable NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>part</name></parsedparameter>
+</parsedparameterlist>
+<returntype> BOOL </returntype>
+<result><p>YES is the command is available, otherwise NO
+</p></result>
+<declaration>- ( <declaration_type>BOOL</declaration_type> )<declaration_function>commandIsAvailable</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>command</declaration_var>; </declaration>
+<desc><p>Commands are found using `which`, invoked through the logn shell.
+</p></desc>
+</method><method id="//xsdoc_ref/occ/clm/SKShell/currentShell" lang="occ" type="clm"><name>currentShell</name>
+<abstract><p>Gets the instance representing the current shell
+</p></abstract>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( nullable NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>part</name></parsedparameter>
+</parsedparameterlist>
+<returntype> instancetype </returntype>
+<declaration>+ ( <declaration_type>instancetype</declaration_type> )<declaration_var>currentShell</declaration_var>; </declaration>
+<desc><p>Although a `SKShell` can be instanciated, it is advised
+to alyways use this shared instance.
+</p></desc>
+</method><method id="//xsdoc_ref/occ/instm/SKShell/pathForCommand:" lang="occ" type="instm"><name>pathForCommand:</name>
+<abstract><p>Gets the paths of a shell command
+</p></abstract>
+<parameterlist>
+<parameter><name>command</name><desc><p>The command name</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( nullable NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>part</name></parsedparameter>
+</parsedparameterlist>
+<returntype> nullable NSString * </returntype>
+<result><p>The full path to the command, or nil
+</p></result>
+<declaration>- ( <declaration_type>nullable</declaration_type> <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_function>pathForCommand</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>command</declaration_var>; </declaration>
+<desc><p>Commands are found using `which`, invoked through the logn shell.
+</p></desc>
+</method><method id="//xsdoc_ref/occ/instm/SKShell/printError:" lang="occ" type="instm"><name>printError:</name>
+<abstract><p>Prints an error
+</p></abstract>
+<parameterlist>
+<parameter><name>error</name><desc><p>The error object to print</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( nullable NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>part</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_function>printError</declaration_function>: ( <declaration_type>nullable</declaration_type> <declaration_type>NSError</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>error</declaration_var>; </declaration>
+<desc><p>If the `error` param is nil, this method will print a generic
+error message.
+Errors are printed in red if colors are available/enabled and
+with an error sign if status icons are enabled.
+</p></desc>
+</method><method id="//xsdoc_ref/occ/instm/SKShell/printErrorMessage:" lang="occ" type="instm"><name>printErrorMessage:</name>
+<abstract><p>Prints an error message
+</p></abstract>
+<parameterlist>
+<parameter><name>format</name><desc><p>The error message format</p></desc></parameter>
+<parameter><name>...</name><desc><p>Optional parameters for the format string</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>part</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See</name><list>
+<item><name>printError:</name><value><hd_link logicalPath="printError:" isseealso="yes">printError:</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_function>printErrorMessage</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>format</declaration_var>, ... NS_FORMAT_FUNCTION( <declaration_number>1</declaration_number>, <declaration_number>2</declaration_number> ); </declaration>
+<desc><p/></desc>
+</method><method id="//xsdoc_ref/occ/instm/SKShell/printInfoMessage:" lang="occ" type="instm"><name>printInfoMessage:</name>
+<abstract><p>Prints an info message
+</p></abstract>
+<parameterlist>
+<parameter><name>format</name><desc><p>The info message format</p></desc></parameter>
+<parameter><name>...</name><desc><p>Optional parameters for the format string</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>part</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_function>printInfoMessage</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>format</declaration_var>, ... NS_FORMAT_FUNCTION( <declaration_number>1</declaration_number>, <declaration_number>2</declaration_number> ); </declaration>
+<desc><p>Info messages are printed in blue if colors are
+available/enabled and with an info sign if status icons are
+enabled.
+</p></desc>
+</method><method id="//xsdoc_ref/occ/instm/SKShell/printMessage:" lang="occ" type="instm"><name>printMessage:</name>
+<abstract><p>Prints a message
+</p></abstract>
+<parameterlist>
+<parameter><name>format</name><desc><p>The message format</p></desc></parameter>
+<parameter><name>...</name><desc><p>Optional parameters for the format string</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>part</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_function>printMessage</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>format</declaration_var>, ... NS_FORMAT_FUNCTION( <declaration_number>1</declaration_number>, <declaration_number>2</declaration_number> ); </declaration>
+<desc><p/></desc>
+</method><method id="//xsdoc_ref/occ/instm/SKShell/printMessage:color:" lang="occ" type="instm"><name>printMessage:color:</name>
+<abstract><p>Prints a message with a color
+</p></abstract>
+<parameterlist>
+<parameter><name>format</name><desc><p>The message format</p></desc></parameter>
+<parameter><name>color</name><desc><p>The message color</p></desc></parameter>
+<parameter><name>...</name><desc><p>Optional parameters for the format string</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>part</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See</name><list>
+<item><name>SKColor</name><value><hd_link logicalPath="SKColor" isseealso="yes">SKColor</hd_link></value></item><item><name>supportsColors</name><value><hd_link logicalPath="supportsColors" isseealso="yes">supportsColors</hd_link></value></item><item><name>colorsEnabled</name><value><hd_link logicalPath="colorsEnabled" isseealso="yes">colorsEnabled</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_function>printMessage</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>format</declaration_param> <declaration_function>color</declaration_function>: ( <declaration_type>SKColor</declaration_type> )<declaration_var>color</declaration_var>, ... NS_FORMAT_FUNCTION( <declaration_number>1</declaration_number>, <declaration_number>3</declaration_number> ); </declaration>
+<desc><p>Colors will only be printed if the terminal supports them and
+if they are enabled.
+</p></desc>
+</method><method id="//xsdoc_ref/doc/title:instm/SKShell/printMessage:color:" lang="occ" type="instm"><name>printMessage:color:</name>
+<abstract><p>Prints a message with a color
+</p></abstract>
+<parameterlist>
+<parameter><name>format</name><desc><p>The message format</p></desc></parameter>
+<parameter><name>status</name><desc><p>The message status</p></desc></parameter>
+<parameter><name>color</name><desc><p>The message color</p></desc></parameter>
+<parameter><name>...</name><desc><p>Optional parameters for the format string</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>part</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See</name><list>
+<item><name>SKSTatus</name><value><hd_link logicalPath="SKSTatus" isseealso="yes">SKSTatus</hd_link></value></item><item><name>statusIconsEnabled</name><value><hd_link logicalPath="statusIconsEnabled" isseealso="yes">statusIconsEnabled</hd_link></value></item><item><name>SKColor</name><value><hd_link logicalPath="SKColor" isseealso="yes">SKColor</hd_link></value></item><item><name>supportsColors</name><value><hd_link logicalPath="supportsColors" isseealso="yes">supportsColors</hd_link></value></item><item><name>colorsEnabled</name><value><hd_link logicalPath="colorsEnabled" isseealso="yes">colorsEnabled</hd_link></value></item></list></listattribute>
+<listattribute><name>See Also</name><list>
+<item><name>printMessage:status:color:</name><value><hd_link logicalPath="//xsdoc_ref/occ/instm/SKShell/printMessage:status:color:" isseealso="yes">printMessage:status:color:</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_function>printMessage</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>format</declaration_param> <declaration_function>status</declaration_function>: ( <declaration_type>SKStatus</declaration_type> )<declaration_param>status</declaration_param> 
+        <declaration_function>color</declaration_function>: ( <declaration_type>SKColor</declaration_type> )<declaration_var>color</declaration_var>, ... NS_FORMAT_FUNCTION( <declaration_number>1</declaration_number>, <declaration_number>4</declaration_number> ); </declaration>
+<desc><p>Statuses will be printed as an emoji, if status icons are
+enabled. Colors will only be printed if the terminal supports
+them and if they are enabled.
+</p></desc>
+<autorelated>
+<relateduid>//xsdoc_ref/occ/instm/SKShell/printMessage:status:color:</relateduid>
+</autorelated>
+</method><method id="//xsdoc_ref/occ/instm/SKShell/printMessage:status:" lang="occ" type="instm"><name>printMessage:status:</name>
+<abstract><p>Prints a message with a status
+</p></abstract>
+<parameterlist>
+<parameter><name>format</name><desc><p>The message format</p></desc></parameter>
+<parameter><name>status</name><desc><p>The message status</p></desc></parameter>
+<parameter><name>...</name><desc><p>Optional parameters for the format string</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>part</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See</name><list>
+<item><name>SKSTatus</name><value><hd_link logicalPath="SKSTatus" isseealso="yes">SKSTatus</hd_link></value></item><item><name>statusIconsEnabled</name><value><hd_link logicalPath="statusIconsEnabled" isseealso="yes">statusIconsEnabled</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_function>printMessage</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>format</declaration_param> <declaration_function>status</declaration_function>: ( <declaration_type>SKStatus</declaration_type> )<declaration_var>status</declaration_var>, ... NS_FORMAT_FUNCTION( <declaration_number>1</declaration_number>, <declaration_number>3</declaration_number> ); </declaration>
+<desc><p>Statuses will be printed as an emoji, if status icons are
+enabled.
+</p></desc>
+</method><method id="//xsdoc_ref/occ/instm/SKShell/printMessage:status:color:" lang="occ" type="instm"><name>printMessage:status:color:</name>
+<abstract><p>Prints a message with a color
+</p></abstract>
+<parameterlist>
+<parameter><name>format</name><desc><p>The message format</p></desc></parameter>
+<parameter><name>status</name><desc><p>The message status</p></desc></parameter>
+<parameter><name>color</name><desc><p>The message color</p></desc></parameter>
+<parameter><name>...</name><desc><p>Optional parameters for the format string</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>part</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See Also</name><list>
+<item><name>printMessage:color:</name><value><hd_link logicalPath="//xsdoc_ref/doc/title:instm/SKShell/printMessage:color:" isseealso="yes">printMessage:color:</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_function>printMessage</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>format</declaration_param> <declaration_function>status</declaration_function>: ( <declaration_type>SKStatus</declaration_type> )<declaration_param>status</declaration_param> 
+        <declaration_function>color</declaration_function>: ( <declaration_type>SKColor</declaration_type> )<declaration_var>color</declaration_var>, ... NS_FORMAT_FUNCTION( <declaration_number>1</declaration_number>, <declaration_number>4</declaration_number> ); </declaration>
+<desc><p>Statuses will be printed as an emoji, if status icons are
+enabled. Colors will only be printed if the terminal supports
+them and if they are enabled.
+</p></desc>
+<autorelated>
+<relateduid>//xsdoc_ref/doc/title:instm/SKShell/printMessage:color:</relateduid>
+</autorelated>
+</method><method id="//xsdoc_ref/occ/instm/SKShell/printSuccessMessage:" lang="occ" type="instm"><name>printSuccessMessage:</name>
+<abstract><p>Prints a success message
+</p></abstract>
+<parameterlist>
+<parameter><name>format</name><desc><p>The success message format</p></desc></parameter>
+<parameter><name>...</name><desc><p>Optional parameters for the format string</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>part</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_function>printSuccessMessage</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>format</declaration_var>, ... NS_FORMAT_FUNCTION( <declaration_number>1</declaration_number>, <declaration_number>2</declaration_number> ); </declaration>
+<desc><p>Success messages are printed in green if colors are
+available/enabled and with a checkmark sign if status icons are
+enabled.
+</p></desc>
+</method><method id="//xsdoc_ref/occ/instm/SKShell/printWarningMessage:" lang="occ" type="instm"><name>printWarningMessage:</name>
+<abstract><p>Prints an warning message
+</p></abstract>
+<parameterlist>
+<parameter><name>format</name><desc><p>The warning message format</p></desc></parameter>
+<parameter><name>...</name><desc><p>Optional parameters for the format string</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>part</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_function>printWarningMessage</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>format</declaration_var>, ... NS_FORMAT_FUNCTION( <declaration_number>1</declaration_number>, <declaration_number>2</declaration_number> ); </declaration>
+<desc><p>Warnings are printed in yellow if colors are available/enabled
+and with an warning sign if status icons are enabled.
+</p></desc>
+</method><method id="//xsdoc_ref/occ/instm/SKShell/removeLastPromptPart" lang="occ" type="instm"><name>removeLastPromptPart</name>
+<abstract><p>Removes the last part of the current prompt parts
+</p></abstract>
+<attributelists><listattribute><name>See</name><list>
+<item><name>promptParts</name><value><hd_link logicalPath="promptParts" isseealso="yes">promptParts</hd_link></value></item><item><name>allowPromptHierarchy</name><value><hd_link logicalPath="allowPromptHierarchy" isseealso="yes">allowPromptHierarchy</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_var>removeLastPromptPart</declaration_var>; </declaration>
+<desc><p>Only applicable if the prompt hierarchy is enabled.
+</p></desc>
+</method><method id="//xsdoc_ref/occ/instm/SKShell/runCommand:" lang="occ" type="instm"><name>runCommand:</name>
+<abstract><p>Executes a shell command synchronously
+</p></abstract>
+<parameterlist>
+<parameter><name>command</name><desc><p>The command to execute</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( nullable NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>part</name></parsedparameter>
+</parsedparameterlist>
+<returntype> BOOL </returntype>
+<result><p>YES if the command executed successfully, otherwise NO
+</p></result>
+<declaration>- ( <declaration_type>BOOL</declaration_type> )<declaration_function>runCommand</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>command</declaration_var>; </declaration>
+<desc><p>Command can be a complex shell commands.
+</p></desc>
+</method><method id="//xsdoc_ref/doc/title:instm/SKShell/runCommand:" lang="occ" type="instm"><name>runCommand:</name>
+<abstract><p>Executes a shell command synchronously
+</p></abstract>
+<parameterlist>
+<parameter><name>command</name><desc><p>The command to execute</p></desc></parameter>
+<parameter><name>input</name><desc><p>An optional string to use as standard input for the command</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( nullable NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>part</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See Also</name><list>
+<item><name>runCommand:stdandardInput:</name><value><hd_link logicalPath="//xsdoc_ref/occ/instm/SKShell/runCommand:stdandardInput:" isseealso="yes">runCommand:stdandardInput:</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> BOOL </returntype>
+<result><p>YES if the command executed successfully, otherwise NO
+</p></result>
+<declaration>- ( <declaration_type>BOOL</declaration_type> )<declaration_function>runCommand</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>command</declaration_param> <declaration_function>stdandardInput</declaration_function>: ( <declaration_type>nullable</declaration_type> <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>input</declaration_var>; </declaration>
+<desc><p>Command can be a complex shell commands.
+</p></desc>
+<autorelated>
+<relateduid>//xsdoc_ref/occ/instm/SKShell/runCommand:stdandardInput:</relateduid>
+</autorelated>
+</method><method id="//xsdoc_ref/doc/title:instm/SKShell/runCommand:_DONTLINK_12" lang="occ" type="instm"><name>runCommand:</name>
+<abstract><p>Executes a shell command synchronously
+</p></abstract>
+<parameterlist>
+<parameter><name>command</name><desc><p>The command to execute</p></desc></parameter>
+<parameter><name>completion</name><desc><p>An optional completion block</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( nullable NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>part</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See</name><list>
+<item><name>SKShellCommandCompletion</name><value><hd_link logicalPath="SKShellCommandCompletion" isseealso="yes">SKShellCommandCompletion</hd_link></value></item></list></listattribute>
+<listattribute><name>See Also</name><list>
+<item><name>runCommand:completion:</name><value><hd_link logicalPath="//xsdoc_ref/occ/instm/SKShell/runCommand:completion:" isseealso="yes">runCommand:completion:</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> BOOL </returntype>
+<result><p>YES if the command executed successfully, otherwise NO
+</p></result>
+<declaration>- ( <declaration_type>BOOL</declaration_type> )<declaration_function>runCommand</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>command</declaration_param> <declaration_function>completion</declaration_function>: ( <declaration_type>nullable</declaration_type> <declaration_type>SKShellCommandCompletion</declaration_type> )<declaration_var>completion</declaration_var>; </declaration>
+<desc><p>Command can be a complex shell commands.
+</p></desc>
+<autorelated>
+<relateduid>//xsdoc_ref/occ/instm/SKShell/runCommand:completion:</relateduid>
+</autorelated>
+</method><method id="//xsdoc_ref/doc/title:instm/SKShell/runCommand:_DONTLINK_13" lang="occ" type="instm"><name>runCommand:</name>
+<abstract><p>Executes a shell command synchronously
+</p></abstract>
+<parameterlist>
+<parameter><name>command</name><desc><p>The command to execute</p></desc></parameter>
+<parameter><name>input</name><desc><p>An optional string to use as standard input for the command</p></desc></parameter>
+<parameter><name>completion</name><desc><p>An optional completion block</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( nullable NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>part</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See</name><list>
+<item><name>SKShellCommandCompletion</name><value><hd_link logicalPath="SKShellCommandCompletion" isseealso="yes">SKShellCommandCompletion</hd_link></value></item></list></listattribute>
+<listattribute><name>See Also</name><list>
+<item><name>runCommand:stdandardInput:completion:</name><value><hd_link logicalPath="//xsdoc_ref/occ/instm/SKShell/runCommand:stdandardInput:completion:" isseealso="yes">runCommand:stdandardInput:completion:</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> BOOL </returntype>
+<result><p>YES if the command executed successfully, otherwise NO
+</p></result>
+<declaration>- ( <declaration_type>BOOL</declaration_type> )<declaration_function>runCommand</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>command</declaration_param> <declaration_function>stdandardInput</declaration_function>: ( <declaration_type>nullable</declaration_type> <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>input</declaration_param> 
+        <declaration_function>completion</declaration_function>: ( <declaration_type>nullable</declaration_type> <declaration_type>SKShellCommandCompletion</declaration_type> )<declaration_var>completion</declaration_var>; </declaration>
+<desc><p>Command can be a complex shell commands.
+</p></desc>
+<autorelated>
+<relateduid>//xsdoc_ref/occ/instm/SKShell/runCommand:stdandardInput:completion:</relateduid>
+</autorelated>
+</method><method id="//xsdoc_ref/doc/title:instm/SKShell/runCommand:_DONTLINK_14" lang="occ" type="instm"><name>runCommand:</name>
+<abstract><p>Executes a shell command asynchronously
+</p></abstract>
+<parameterlist>
+<parameter><name>command</name><desc><p>The command to execute</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( nullable NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>part</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See Also</name><list>
+<item><name>runCommandAsynchronously:</name><value><hd_link logicalPath="//xsdoc_ref/occ/instm/SKShell/runCommandAsynchronously:" isseealso="yes">runCommandAsynchronously:</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_function>runCommandAsynchronously</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>command</declaration_var>; </declaration>
+<desc><p>Command can be a complex shell commands.
+</p></desc>
+<autorelated>
+<relateduid>//xsdoc_ref/occ/instm/SKShell/runCommandAsynchronously:</relateduid>
+</autorelated>
+</method><method id="//xsdoc_ref/doc/title:instm/SKShell/runCommand:_DONTLINK_15" lang="occ" type="instm"><name>runCommand:</name>
+<abstract><p>Executes a shell command asynchronously
+</p></abstract>
+<parameterlist>
+<parameter><name>command</name><desc><p>The command to execute</p></desc></parameter>
+<parameter><name>input</name><desc><p>An optional string to use as standard input for the command</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( nullable NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>part</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See Also</name><list>
+<item><name>runCommandAsynchronously:stdandardInput:</name><value><hd_link logicalPath="//xsdoc_ref/occ/instm/SKShell/runCommandAsynchronously:stdandardInput:" isseealso="yes">runCommandAsynchronously:stdandardInput:</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_function>runCommandAsynchronously</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>command</declaration_param> 
+        <declaration_function>stdandardInput</declaration_function>: ( <declaration_type>nullable</declaration_type> <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>input</declaration_var>; </declaration>
+<desc><p>Command can be a complex shell commands.
+</p></desc>
+<autorelated>
+<relateduid>//xsdoc_ref/occ/instm/SKShell/runCommandAsynchronously:stdandardInput:</relateduid>
+</autorelated>
+</method><method id="//xsdoc_ref/doc/title:instm/SKShell/runCommand:_DONTLINK_16" lang="occ" type="instm"><name>runCommand:</name>
+<abstract><p>Executes a shell command asynchronously
+</p></abstract>
+<parameterlist>
+<parameter><name>command</name><desc><p>The command to execute</p></desc></parameter>
+<parameter><name>completion</name><desc><p>An optional completion block</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( nullable NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>part</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See</name><list>
+<item><name>SKShellCommandCompletion</name><value><hd_link logicalPath="SKShellCommandCompletion" isseealso="yes">SKShellCommandCompletion</hd_link></value></item></list></listattribute>
+<listattribute><name>See Also</name><list>
+<item><name>runCommandAsynchronously:completion:</name><value><hd_link logicalPath="//xsdoc_ref/occ/instm/SKShell/runCommandAsynchronously:completion:" isseealso="yes">runCommandAsynchronously:completion:</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_function>runCommandAsynchronously</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>command</declaration_param> 
+        <declaration_function>completion</declaration_function>: ( <declaration_type>nullable</declaration_type> <declaration_type>SKShellCommandCompletion</declaration_type> )<declaration_var>completion</declaration_var>; </declaration>
+<desc><p>Command can be a complex shell commands.
+</p></desc>
+<autorelated>
+<relateduid>//xsdoc_ref/occ/instm/SKShell/runCommandAsynchronously:completion:</relateduid>
+</autorelated>
+</method><method id="//xsdoc_ref/doc/title:instm/SKShell/runCommand:_DONTLINK_17" lang="occ" type="instm"><name>runCommand:</name>
+<abstract><p>Executes a shell command asynchronously
+</p></abstract>
+<parameterlist>
+<parameter><name>command</name><desc><p>The command to execute</p></desc></parameter>
+<parameter><name>input</name><desc><p>An optional string to use as standard input for the command</p></desc></parameter>
+<parameter><name>completion</name><desc><p>An optional completion block</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( nullable NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>part</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See</name><list>
+<item><name>SKShellCommandCompletion</name><value><hd_link logicalPath="SKShellCommandCompletion" isseealso="yes">SKShellCommandCompletion</hd_link></value></item></list></listattribute>
+<listattribute><name>See Also</name><list>
+<item><name>runCommandAsynchronously:stdandardInput:completion:</name><value><hd_link logicalPath="//xsdoc_ref/occ/instm/SKShell/runCommandAsynchronously:stdandardInput:completion:" isseealso="yes">runCommandAsynchronously:stdandardInput:completion:</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_function>runCommandAsynchronously</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>command</declaration_param> 
+        <declaration_function>stdandardInput</declaration_function>: ( <declaration_type>nullable</declaration_type> <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>input</declaration_param> <declaration_function>completion</declaration_function>: ( <declaration_type>nullable</declaration_type> <declaration_type>SKShellCommandCompletion</declaration_type> )<declaration_var>completion</declaration_var>; </declaration>
+<desc><p>Command can be a complex shell commands.
+</p></desc>
+<autorelated>
+<relateduid>//xsdoc_ref/occ/instm/SKShell/runCommandAsynchronously:stdandardInput:completion:</relateduid>
+</autorelated>
+</method><method id="//xsdoc_ref/occ/instm/SKShell/runCommand:completion:" lang="occ" type="instm"><name>runCommand:completion:</name>
+<abstract><p>Executes a shell command synchronously
+</p></abstract>
+<parameterlist>
+<parameter><name>command</name><desc><p>The command to execute</p></desc></parameter>
+<parameter><name>completion</name><desc><p>An optional completion block</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( nullable NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>part</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See Also</name><list>
+<item><name>runCommand:</name><value><hd_link logicalPath="//xsdoc_ref/doc/title:instm/SKShell/runCommand:_DONTLINK_1" isseealso="yes">runCommand:</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> BOOL </returntype>
+<declaration>- ( <declaration_type>BOOL</declaration_type> )<declaration_function>runCommand</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>command</declaration_param> <declaration_function>completion</declaration_function>: ( <declaration_type>nullable</declaration_type> <declaration_type>SKShellCommandCompletion</declaration_type> )<declaration_var>completion</declaration_var>; </declaration>
+<desc><p>Command can be a complex shell commands.
+</p></desc>
+<autorelated>
+<relateduid>//xsdoc_ref/doc/title:instm/SKShell/runCommand:_DONTLINK_1</relateduid>
+</autorelated>
+</method><method id="//xsdoc_ref/occ/instm/SKShell/runCommand:stdandardInput:" lang="occ" type="instm"><name>runCommand:stdandardInput:</name>
+<abstract><p>Executes a shell command synchronously
+</p></abstract>
+<parameterlist>
+<parameter><name>command</name><desc><p>The command to execute</p></desc></parameter>
+<parameter><name>input</name><desc><p>An optional string to use as standard input for the command</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( nullable NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>part</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See Also</name><list>
+<item><name>runCommand:</name><value><hd_link logicalPath="//xsdoc_ref/doc/title:instm/SKShell/runCommand:" isseealso="yes">runCommand:</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> BOOL </returntype>
+<declaration>- ( <declaration_type>BOOL</declaration_type> )<declaration_function>runCommand</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>command</declaration_param> <declaration_function>stdandardInput</declaration_function>: ( <declaration_type>nullable</declaration_type> <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>input</declaration_var>; </declaration>
+<desc><p>Command can be a complex shell commands.
+</p></desc>
+<autorelated>
+<relateduid>//xsdoc_ref/doc/title:instm/SKShell/runCommand:</relateduid>
+</autorelated>
+</method><method id="//xsdoc_ref/occ/instm/SKShell/runCommand:stdandardInput:completion:" lang="occ" type="instm"><name>runCommand:stdandardInput:completion:</name>
+<abstract><p>Executes a shell command synchronously
+</p></abstract>
+<parameterlist>
+<parameter><name>command</name><desc><p>The command to execute</p></desc></parameter>
+<parameter><name>input</name><desc><p>An optional string to use as standard input for the command</p></desc></parameter>
+<parameter><name>completion</name><desc><p>An optional completion block</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( nullable NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>part</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See Also</name><list>
+<item><name>runCommand:</name><value><hd_link logicalPath="//xsdoc_ref/doc/title:instm/SKShell/runCommand:_DONTLINK_3" isseealso="yes">runCommand:</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> BOOL </returntype>
+<declaration>- ( <declaration_type>BOOL</declaration_type> )<declaration_function>runCommand</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>command</declaration_param> <declaration_function>stdandardInput</declaration_function>: ( <declaration_type>nullable</declaration_type> <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>input</declaration_param> 
+        <declaration_function>completion</declaration_function>: ( <declaration_type>nullable</declaration_type> <declaration_type>SKShellCommandCompletion</declaration_type> )<declaration_var>completion</declaration_var>; </declaration>
+<desc><p>Command can be a complex shell commands.
+</p></desc>
+<autorelated>
+<relateduid>//xsdoc_ref/doc/title:instm/SKShell/runCommand:_DONTLINK_3</relateduid>
+</autorelated>
+</method><method id="//xsdoc_ref/occ/instm/SKShell/runCommandAsynchronously:" lang="occ" type="instm"><name>runCommandAsynchronously:</name>
+<abstract><p>Executes a shell command asynchronously
+</p></abstract>
+<parameterlist>
+<parameter><name>command</name><desc><p>The command to execute</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( nullable NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>part</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See Also</name><list>
+<item><name>runCommand:</name><value><hd_link logicalPath="//xsdoc_ref/doc/title:instm/SKShell/runCommand:_DONTLINK_5" isseealso="yes">runCommand:</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_function>runCommandAsynchronously</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>command</declaration_var>; </declaration>
+<desc><p>Command can be a complex shell commands.
+</p></desc>
+<autorelated>
+<relateduid>//xsdoc_ref/doc/title:instm/SKShell/runCommand:_DONTLINK_5</relateduid>
+</autorelated>
+</method><method id="//xsdoc_ref/occ/instm/SKShell/runCommandAsynchronously:completion:" lang="occ" type="instm"><name>runCommandAsynchronously:completion:</name>
+<abstract><p>Executes a shell command asynchronously
+</p></abstract>
+<parameterlist>
+<parameter><name>command</name><desc><p>The command to execute</p></desc></parameter>
+<parameter><name>completion</name><desc><p>An optional completion block</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( nullable NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>part</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See Also</name><list>
+<item><name>runCommand:</name><value><hd_link logicalPath="//xsdoc_ref/doc/title:instm/SKShell/runCommand:_DONTLINK_9" isseealso="yes">runCommand:</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_function>runCommandAsynchronously</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>command</declaration_param> 
+        <declaration_function>completion</declaration_function>: ( <declaration_type>nullable</declaration_type> <declaration_type>SKShellCommandCompletion</declaration_type> )<declaration_var>completion</declaration_var>; </declaration>
+<desc><p>Command can be a complex shell commands.
+</p></desc>
+<autorelated>
+<relateduid>//xsdoc_ref/doc/title:instm/SKShell/runCommand:_DONTLINK_9</relateduid>
+</autorelated>
+</method><method id="//xsdoc_ref/occ/instm/SKShell/runCommandAsynchronously:stdandardInput:" lang="occ" type="instm"><name>runCommandAsynchronously:stdandardInput:</name>
+<abstract><p>Executes a shell command asynchronously
+</p></abstract>
+<parameterlist>
+<parameter><name>command</name><desc><p>The command to execute</p></desc></parameter>
+<parameter><name>input</name><desc><p>An optional string to use as standard input for the command</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( nullable NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>part</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See Also</name><list>
+<item><name>runCommand:</name><value><hd_link logicalPath="//xsdoc_ref/doc/title:instm/SKShell/runCommand:_DONTLINK_7" isseealso="yes">runCommand:</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_function>runCommandAsynchronously</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>command</declaration_param> 
+        <declaration_function>stdandardInput</declaration_function>: ( <declaration_type>nullable</declaration_type> <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>input</declaration_var>; </declaration>
+<desc><p>Command can be a complex shell commands.
+</p></desc>
+<autorelated>
+<relateduid>//xsdoc_ref/doc/title:instm/SKShell/runCommand:_DONTLINK_7</relateduid>
+</autorelated>
+</method><method id="//xsdoc_ref/occ/instm/SKShell/runCommandAsynchronously:stdandardInput:completion:" lang="occ" type="instm"><name>runCommandAsynchronously:stdandardInput:completion:</name>
+<abstract><p>Executes a shell command asynchronously
+</p></abstract>
+<parameterlist>
+<parameter><name>command</name><desc><p>The command to execute</p></desc></parameter>
+<parameter><name>input</name><desc><p>An optional string to use as standard input for the command</p></desc></parameter>
+<parameter><name>completion</name><desc><p>An optional completion block</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>command</name></parsedparameter>
+<parsedparameter><type>( nullable NSString * )</type><name>input</name></parsedparameter>
+<parsedparameter><type>( nullable SKShellCommandCompletion )</type><name>completion</name></parsedparameter>
+<parsedparameter><type>( nullable NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+<parsedparameter><type>( SKStatus )</type><name>status</name></parsedparameter>
+<parsedparameter><type>( SKColor )</type><name>color</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>part</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See Also</name><list>
+<item><name>runCommand:</name><value><hd_link logicalPath="//xsdoc_ref/doc/title:instm/SKShell/runCommand:_DONTLINK_11" isseealso="yes">runCommand:</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_function>runCommandAsynchronously</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>command</declaration_param> 
+        <declaration_function>stdandardInput</declaration_function>: ( <declaration_type>nullable</declaration_type> <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>input</declaration_param> <declaration_function>completion</declaration_function>: ( <declaration_type>nullable</declaration_type> <declaration_type>SKShellCommandCompletion</declaration_type> )<declaration_var>completion</declaration_var>; </declaration>
+<desc><p>Command can be a complex shell commands.
+</p></desc>
+<autorelated>
+<relateduid>//xsdoc_ref/doc/title:instm/SKShell/runCommand:_DONTLINK_11</relateduid>
+</autorelated>
+</method></methods>
+<properties><property id="//xsdoc_ref/occ/instp/SKShell/allowPromptHierarchy" lang="occ"><name>allowPromptHierarchy</name>
+<abstract><p>Enables/Disables prompt hierarchy
+</p></abstract>
+<attributelists><listattribute><name>See</name><list>
+<item><name>promptParts</name><value><hd_link logicalPath="promptParts" isseealso="yes">promptParts</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype>BOOL</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readwrite</declaration_param>,
+    <declaration_param>assign</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>allowPromptHierarchy</declaration_var>; </declaration>
+<desc><p>Enabled by default. If disabled, setting prompt parts will have
+no effect.
+</p></desc>
+</property><property id="//xsdoc_ref/occ/instp/SKShell/colorsEnabled" lang="occ"><name>colorsEnabled</name>
+<attributelists><listattribute><name>See</name><list>
+<item><name>supportsColors</name><value><hd_link logicalPath="supportsColors" isseealso="yes">supportsColors</hd_link></value></item><item><name>SKColor</name><value><hd_link logicalPath="SKColor" isseealso="yes">SKColor</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype>BOOL</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readwrite</declaration_param>,
+    <declaration_param>assign</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>colorsEnabled</declaration_var>; </declaration>
+<desc><p>Enabled by default. Only applicable if the current terminal
+supports colors.
+</p></desc>
+</property><property id="//xsdoc_ref/occ/instp/SKShell/prompt" lang="occ"><name>prompt</name>
+<abstract><p>Used to get/set the current prompt
+</p></abstract>
+<returntype>NSString *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readwrite</declaration_param>,
+    <declaration_param>strong</declaration_param>,
+    <declaration_param>nullable</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> <declaration_var>prompt</declaration_var>; </declaration>
+<desc><p>If a prompt is set, all messages printed with `SKShell` will
+be prefixed by the prompt.
+</p></desc>
+</property><property id="//xsdoc_ref/occ/instp/SKShell/promptParts" lang="occ"><name>promptParts</name>
+<abstract><p>Used to get/set the promt parts
+</p></abstract>
+<returntype>NSArray&lt; NSString *  &gt; *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readwrite</declaration_param>,
+    <declaration_param>strong</declaration_param>,
+    <declaration_param>nullable</declaration_param> ) <declaration_type>NSArray</declaration_type>&lt; <declaration_template>NSString</declaration_template> <declaration_template>*</declaration_template> &gt; <declaration_type>*</declaration_type> <declaration_var>promptParts</declaration_var>; </declaration>
+<desc><p>Prompt parts may be set to reflect a hierarchy in the prompt.
+For instance, setting `@[ @"foo", @"bar" ]` as prompt parts will
+result in a `[ foo ]&gt; [ bar ]&gt;` prompt.
+</p></desc>
+</property><property id="//xsdoc_ref/occ/instp/SKShell/shell" lang="occ"><name>shell</name>
+<fieldlist>
+<field><name>The</name><desc><p>path of the current shell</p></desc></field>
+</fieldlist>
+<returntype>NSString *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param>,
+    <declaration_param>nullable</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> <declaration_var>shell</declaration_var>; </declaration>
+<desc><p>Retrieved using the `SHELL` environment variable.
+</p></desc>
+</property><property id="//xsdoc_ref/occ/instp/SKShell/statusIconsEnabled" lang="occ"><name>statusIconsEnabled</name>
+<attributelists><listattribute><name>See</name><list>
+<item><name>SKSTatus</name><value><hd_link logicalPath="SKSTatus" isseealso="yes">SKSTatus</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype>BOOL</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readwrite</declaration_param>,
+    <declaration_param>assign</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>statusIconsEnabled</declaration_var>; </declaration>
+<desc><p>Enabled by default. Status icons are reprensented by unicode
+emojis.
+</p></desc>
+</property><property id="//xsdoc_ref/occ/instp/SKShell/supportsColors" lang="occ"><name>supportsColors</name>
+<abstract><p>Set if the current erminal supports color
+</p></abstract>
+<returntype>BOOL</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>supportsColors</declaration_var>; </declaration>
+<desc><p/></desc>
+</property></properties>
+<timestamp>Monday, May 15, 2017</timestamp>
+</class></classes>
+<copyrightinfo>&#169; (c) 2017, Jean-David Gadina - www.xs-labs.com
+</copyrightinfo>
+<timestamp>Monday, May 15, 2017</timestamp>
+</header>

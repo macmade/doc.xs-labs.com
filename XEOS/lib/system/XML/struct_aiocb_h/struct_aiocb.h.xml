@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/struct_aiocb.h" lang="c" filename="struct_aiocb.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/system/include/system/types/struct_aiocb.h"><name>struct_aiocb.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdint.h">&lt;system/types/__private/stdint.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/size_t.h">&lt;system/types/size_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/off_t.h">&lt;system/types/off_t.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<structs_and_unions><struct id="//xsdoc_ref/c/tag/aiocb" lang="c"><name>aiocb</name>
+<parsedparameterlist>
+<parsedparameter><type>struct sigevent</type><name>aio_sigevent</name></parsedparameter>
+<parsedparameter><type>volatile void *</type><name>aio_buf</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>aio_nbytes</name></parsedparameter>
+<parsedparameter><type>int</type><name>aio_fildes</name></parsedparameter>
+<parsedparameter><type>int</type><name>aio_reqprio</name></parsedparameter>
+<parsedparameter><type>int</type><name>aio_lio_opcode</name></parsedparameter>
+<parsedparameter><type>char</type><name>__pad_0</name></parsedparameter>
+<parsedparameter><type>off_t</type><name>aio_offset</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>struct</declaration_keyword> <declaration_type>aiocb</declaration_type> { 
+    <declaration_keyword>struct</declaration_keyword> <declaration_type>sigevent</declaration_type> <declaration_var>aio_sigevent</declaration_var>; 
+    <declaration_keyword>volatile</declaration_keyword> <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_var>aio_buf</declaration_var>; 
+    <declaration_type>size_t</declaration_type> <declaration_var>aio_nbytes</declaration_var>; 
+    <declaration_type>int</declaration_type> <declaration_var>aio_fildes</declaration_var>; 
+    <declaration_type>int</declaration_type> <declaration_var>aio_reqprio</declaration_var>; 
+    <declaration_type>int</declaration_type> <declaration_var>aio_lio_opcode</declaration_var>; 
+    <declaration_type>char</declaration_type> <declaration_type>__pad_0</declaration_type>[ <declaration_number>4</declaration_number> ]; 
+    <declaration_type>off_t</declaration_type> <declaration_var>aio_offset</declaration_var>; 
+};  </declaration>
+<desc><p/></desc>
+</struct><struct id="//xsdoc_ref/c/tag/sigevent" lang="c"><name>sigevent</name>
+<declaration> <declaration_keyword>struct</declaration_keyword> <declaration_var>sigevent</declaration_var>;  </declaration>
+<desc><p/></desc>
+</struct></structs_and_unions><defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_SYSTEM_TYPES_STRUCT_AIOCB_H__" definetype="value" lang="c"><name>__XEOS_LIB_SYSTEM_TYPES_STRUCT_AIOCB_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_SYSTEM_TYPES_STRUCT_AIOCB_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

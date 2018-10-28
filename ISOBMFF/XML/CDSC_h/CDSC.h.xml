@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/CDSC.h" lang="c" filename="CDSC.h" headerpath="/Users/macmade/Documents/Macmade/DigiDNA/GitHub/ISOBMFF/Documentation/tmp/include/ISOBMFF/CDSC.h"><name>CDSC.hpp</name>
+<attributes><attribute><name>Author</name><value>Jean-David Gadina - www.digidna.net</value></attribute>
+</attributes>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Object.hpp">&lt;XS/PIMPL/Object.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Macros.hpp">&lt;ISOBMFF/Macros.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/SingleItemTypeReferenceBox.hpp">&lt;ISOBMFF/SingleItemTypeReferenceBox.hpp&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<copyrightinfo>&#169; (c) 2017, DigiDNA - www.digidna.net
+</copyrightinfo>
+<timestamp>Wednesday, November 01, 2017</timestamp>
+</header>

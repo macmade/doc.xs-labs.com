@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/types.h" lang="c" filename="types.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/posix/include/posix/sys/types.h"><name>types.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/blkcnt_t.h">&lt;system/types/blkcnt_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/blksize_t.h">&lt;system/types/blksize_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/clock_t.h">&lt;system/types/clock_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/clockid_t.h">&lt;system/types/clockid_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/dev_t.h">&lt;system/types/dev_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/fsblkcnt_t.h">&lt;system/types/fsblkcnt_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/fsfilcnt_t.h">&lt;system/types/fsfilcnt_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/gid_t.h">&lt;system/types/gid_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/id_t.h">&lt;system/types/id_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/ino_t.h">&lt;system/types/ino_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/key_t.h">&lt;system/types/key_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/mode_t.h">&lt;system/types/mode_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/nlink_t.h">&lt;system/types/nlink_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/off_t.h">&lt;system/types/off_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pid_t.h">&lt;system/types/pid_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pthread_attr_t.h">&lt;system/types/pthread_attr_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pthread_barrier_t.h">&lt;system/types/pthread_barrier_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pthread_barrierattr_t.h">&lt;system/types/pthread_barrierattr_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pthread_cond_t.h">&lt;system/types/pthread_cond_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pthread_condattr_t.h">&lt;system/types/pthread_condattr_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pthread_key_t.h">&lt;system/types/pthread_key_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pthread_mutex_t.h">&lt;system/types/pthread_mutex_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pthread_mutexattr_t.h">&lt;system/types/pthread_mutexattr_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pthread_once_t.h">&lt;system/types/pthread_once_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pthread_rwlock_t.h">&lt;system/types/pthread_rwlock_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pthread_rwlockattr_t.h">&lt;system/types/pthread_rwlockattr_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pthread_spinlock_t.h">&lt;system/types/pthread_spinlock_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pthread_t.h">&lt;system/types/pthread_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/size_t.h">&lt;system/types/size_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/ssize_t.h">&lt;system/types/ssize_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/suseconds_t.h">&lt;system/types/suseconds_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/time_t.h">&lt;system/types/time_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/timer_t.h">&lt;system/types/timer_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/trace_attr_t.h">&lt;system/types/trace_attr_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/trace_event_id_t.h">&lt;system/types/trace_event_id_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/trace_event_set_t.h">&lt;system/types/trace_event_set_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/trace_id_t.h">&lt;system/types/trace_id_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/uid_t.h">&lt;system/types/uid_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/useconds_t.h">&lt;system/types/useconds_t.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_POSIX_SYS_TYPES_H__" definetype="value" lang="c"><name>__XEOS_LIB_POSIX_SYS_TYPES_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_POSIX_SYS_TYPES_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

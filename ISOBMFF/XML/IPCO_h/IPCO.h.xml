@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/IPCO.h" lang="c" filename="IPCO.h" headerpath="/Users/macmade/Documents/Macmade/DigiDNA/GitHub/ISOBMFF/Documentation/tmp/include/ISOBMFF/IPCO.h"><name>IPCO.hpp</name>
+<attributes><attribute><name>Author</name><value>Jean-David Gadina - www.digidna.net</value></attribute>
+</attributes>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Macros.hpp">&lt;ISOBMFF/Macros.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/ContainerBox.hpp">&lt;ISOBMFF/ContainerBox.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/IPMA.hpp">&lt;ISOBMFF/IPMA.hpp&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<copyrightinfo>&#169; (c) 2017, DigiDNA - www.digidna.net
+</copyrightinfo>
+<timestamp>Wednesday, November 01, 2017</timestamp>
+</header>

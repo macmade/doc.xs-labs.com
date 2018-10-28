@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/stdio.h" lang="c" filename="stdio.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/c99/include/c99/stdio.h"><name>stdio.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/null.h">&lt;system/types/null.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/size_t.h">&lt;system/types/size_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/va_list.h">&lt;system/types/va_list.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/fpos_t.h">&lt;system/types/fpos_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/file.h">&lt;system/types/file.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/seek_set.h">&lt;system/types/seek_set.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/seek_cur.h">&lt;system/types/seek_cur.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/seek_end.h">&lt;system/types/seek_end.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/clearerr" lang="c"><name>clearerr</name>
+<parsedparameterlist>
+<parsedparameter><type>FILE *</type><name>stream</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>clearerr</declaration_function>(
+    <declaration_type>FILE</declaration_type> <declaration_type>*</declaration_type><declaration_param>stream</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fclose" lang="c"><name>fclose</name>
+<parsedparameterlist>
+<parsedparameter><type>FILE *</type><name>stream</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>fclose</declaration_function>(
+    <declaration_type>FILE</declaration_type> <declaration_type>*</declaration_type><declaration_param>stream</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/feof" lang="c"><name>feof</name>
+<parsedparameterlist>
+<parsedparameter><type>FILE *</type><name>stream</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>feof</declaration_function>(
+    <declaration_type>FILE</declaration_type> <declaration_type>*</declaration_type><declaration_param>stream</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ferror" lang="c"><name>ferror</name>
+<parsedparameterlist>
+<parsedparameter><type>FILE *</type><name>stream</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>ferror</declaration_function>(
+    <declaration_type>FILE</declaration_type> <declaration_type>*</declaration_type><declaration_param>stream</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fflush" lang="c"><name>fflush</name>
+<parsedparameterlist>
+<parsedparameter><type>FILE *</type><name>stream</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>fflush</declaration_function>(
+    <declaration_type>FILE</declaration_type> <declaration_type>*</declaration_type><declaration_param>stream</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fgetc" lang="c"><name>fgetc</name>
+<parsedparameterlist>
+<parsedparameter><type>FILE *</type><name>stream</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>fgetc</declaration_function>(
+    <declaration_type>FILE</declaration_type> <declaration_type>*</declaration_type><declaration_param>stream</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fgetpos" lang="c"><name>fgetpos</name>
+<parsedparameterlist>
+<parsedparameter><type>FILE * restrict</type><name>stream</name></parsedparameter>
+<parsedparameter><type>fpos_t * restrict</type><name>pos</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>fgetpos</declaration_function>(
+    <declaration_type>FILE</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>stream</declaration_param>,
+    <declaration_type>fpos_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>pos</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fgets" lang="c"><name>fgets</name>
+<parsedparameterlist>
+<parsedparameter><type>char * restrict</type><name>s</name></parsedparameter>
+<parsedparameter><type>int</type><name>n</name></parsedparameter>
+<parsedparameter><type>FILE * restrict</type><name>stream</name></parsedparameter>
+</parsedparameterlist>
+<returntype> char *</returntype>
+<declaration><declaration_type>char</declaration_type> <declaration_type>*</declaration_type> <declaration_function>fgets</declaration_function>(
+    <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>s</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>n</declaration_param>,
+    <declaration_type>FILE</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>stream</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fopen" lang="c"><name>fopen</name>
+<parsedparameterlist>
+<parsedparameter><type>const char * restrict</type><name>filename</name></parsedparameter>
+<parsedparameter><type>const char * restrict</type><name>mode</name></parsedparameter>
+</parsedparameterlist>
+<returntype> FILE *</returntype>
+<declaration><declaration_type>FILE</declaration_type> <declaration_type>*</declaration_type> <declaration_function>fopen</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>filename</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>mode</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fprintf" lang="c"><name>fprintf</name>
+<parsedparameterlist>
+<parsedparameter><type>FILE * restrict</type><name>stream</name></parsedparameter>
+<parsedparameter><type>const char * restrict</type><name>format</name></parsedparameter>
+<parsedparameter><type> ...</type><name>...</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>fprintf</declaration_function>(
+    <declaration_type>FILE</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>stream</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>format</declaration_param>,
+    ... );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fputc" lang="c"><name>fputc</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+<parsedparameter><type>FILE *</type><name>stream</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>fputc</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param>,
+    <declaration_type>FILE</declaration_type> <declaration_type>*</declaration_type><declaration_param>stream</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fputs" lang="c"><name>fputs</name>
+<parsedparameterlist>
+<parsedparameter><type>const char * restrict</type><name>s</name></parsedparameter>
+<parsedparameter><type>FILE * restrict</type><name>stream</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>fputs</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>s</declaration_param>,
+    <declaration_type>FILE</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>stream</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fread" lang="c"><name>fread</name>
+<parsedparameterlist>
+<parsedparameter><type>void * restrict</type><name>ptr</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>size</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>nmemb</name></parsedparameter>
+<parsedparameter><type>FILE * restrict</type><name>stream</name></parsedparameter>
+</parsedparameterlist>
+<returntype> size_t</returntype>
+<declaration><declaration_type>size_t</declaration_type> <declaration_function>fread</declaration_function>(
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>ptr</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>size</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>nmemb</declaration_param>,
+    <declaration_type>FILE</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>stream</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/freopen" lang="c"><name>freopen</name>
+<parsedparameterlist>
+<parsedparameter><type>const char * restrict</type><name>filename</name></parsedparameter>
+<parsedparameter><type>const char * restrict</type><name>mode</name></parsedparameter>
+<parsedparameter><type>FILE * restrict</type><name>stream</name></parsedparameter>
+</parsedparameterlist>
+<returntype> FILE *</returntype>
+<declaration><declaration_type>FILE</declaration_type> <declaration_type>*</declaration_type> <declaration_function>freopen</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>filename</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>mode</declaration_param>,
+    <declaration_type>FILE</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>stream</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fscanf" lang="c"><name>fscanf</name>
+<parsedparameterlist>
+<parsedparameter><type>FILE * restrict</type><name>stream</name></parsedparameter>
+<parsedparameter><type>const char * restrict</type><name>format</name></parsedparameter>
+<parsedparameter><type> ...</type><name>...</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>fscanf</declaration_function>(
+    <declaration_type>FILE</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>stream</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>format</declaration_param>,
+    ... );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fseek" lang="c"><name>fseek</name>
+<parsedparameterlist>
+<parsedparameter><type>FILE *</type><name>stream</name></parsedparameter>
+<parsedparameter><type>long int</type><name>offset</name></parsedparameter>
+<parsedparameter><type>int</type><name>whence</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>fseek</declaration_function>(
+    <declaration_type>FILE</declaration_type> <declaration_type>*</declaration_type><declaration_param>stream</declaration_param>,
+    <declaration_type>long</declaration_type> <declaration_type>int</declaration_type> <declaration_param>offset</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>whence</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fsetpos" lang="c"><name>fsetpos</name>
+<parsedparameterlist>
+<parsedparameter><type>FILE *</type><name>stream</name></parsedparameter>
+<parsedparameter><type>const fpos_t *</type><name>pos</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>fsetpos</declaration_function>(
+    <declaration_type>FILE</declaration_type> <declaration_type>*</declaration_type><declaration_param>stream</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>fpos_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>pos</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ftell" lang="c"><name>ftell</name>
+<parsedparameterlist>
+<parsedparameter><type>FILE *</type><name>stream</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long int</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>int</declaration_type> <declaration_function>ftell</declaration_function>(
+    <declaration_type>FILE</declaration_type> <declaration_type>*</declaration_type><declaration_param>stream</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fwrite" lang="c"><name>fwrite</name>
+<parsedparameterlist>
+<parsedparameter><type>const void * restrict</type><name>ptr</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>size</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>nmemb</name></parsedparameter>
+<parsedparameter><type>FILE * restrict</type><name>stream</name></parsedparameter>
+</parsedparameterlist>
+<returntype> size_t</returntype>
+<declaration><declaration_type>size_t</declaration_type> <declaration_function>fwrite</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>ptr</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>size</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>nmemb</declaration_param>,
+    <declaration_type>FILE</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>stream</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/getc" lang="c"><name>getc</name>
+<parsedparameterlist>
+<parsedparameter><type>FILE *</type><name>stream</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>getc</declaration_function>(
+    <declaration_type>FILE</declaration_type> <declaration_type>*</declaration_type><declaration_param>stream</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/getchar" lang="c"><name>getchar</name>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>getchar</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/gets" lang="c"><name>gets</name>
+<parsedparameterlist>
+<parsedparameter><type>char *</type><name>s</name></parsedparameter>
+</parsedparameterlist>
+<returntype> char *</returntype>
+<declaration><declaration_type>char</declaration_type> <declaration_type>*</declaration_type> <declaration_function>gets</declaration_function>(
+    <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>s</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/perror" lang="c"><name>perror</name>
+<parsedparameterlist>
+<parsedparameter><type>const char *</type><name>s</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>perror</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>s</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/printf" lang="c"><name>printf</name>
+<parsedparameterlist>
+<parsedparameter><type>const char * restrict</type><name>format</name></parsedparameter>
+<parsedparameter><type> ...</type><name>...</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>printf</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>format</declaration_param>,
+    ... );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/putc" lang="c"><name>putc</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+<parsedparameter><type>FILE *</type><name>stream</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>putc</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param>,
+    <declaration_type>FILE</declaration_type> <declaration_type>*</declaration_type><declaration_param>stream</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/putchar" lang="c"><name>putchar</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>putchar</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/puts" lang="c"><name>puts</name>
+<parsedparameterlist>
+<parsedparameter><type>const char *</type><name>s</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>puts</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>s</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/remove" lang="c"><name>remove</name>
+<parsedparameterlist>
+<parsedparameter><type>const char *</type><name>filename</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>remove</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>filename</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/rename" lang="c"><name>rename</name>
+<parsedparameterlist>
+<parsedparameter><type>const char *</type><name>old</name></parsedparameter>
+<parsedparameter><type>const char *</type><name>new</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>rename</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>old</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>new</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/rewind" lang="c"><name>rewind</name>
+<parsedparameterlist>
+<parsedparameter><type>FILE *</type><name>stream</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>rewind</declaration_function>(
+    <declaration_type>FILE</declaration_type> <declaration_type>*</declaration_type><declaration_param>stream</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/scanf" lang="c"><name>scanf</name>
+<parsedparameterlist>
+<parsedparameter><type>const char * restrict</type><name>format</name></parsedparameter>
+<parsedparameter><type> ...</type><name>...</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>scanf</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>format</declaration_param>,
+    ... );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/setbuf" lang="c"><name>setbuf</name>
+<parsedparameterlist>
+<parsedparameter><type>FILE * restrict</type><name>stream</name></parsedparameter>
+<parsedparameter><type>char * restrict</type><name>buf</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>setbuf</declaration_function>(
+    <declaration_type>FILE</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>stream</declaration_param>,
+    <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>buf</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/setvbuf" lang="c"><name>setvbuf</name>
+<parsedparameterlist>
+<parsedparameter><type>FILE * restrict</type><name>stream</name></parsedparameter>
+<parsedparameter><type>char * restrict</type><name>buf</name></parsedparameter>
+<parsedparameter><type>int</type><name>mode</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>size</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>setvbuf</declaration_function>(
+    <declaration_type>FILE</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>stream</declaration_param>,
+    <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>buf</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>mode</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>size</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/snprintf" lang="c"><name>snprintf</name>
+<parsedparameterlist>
+<parsedparameter><type>char * restrict</type><name>s</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>n</name></parsedparameter>
+<parsedparameter><type>const char * restrict</type><name>format</name></parsedparameter>
+<parsedparameter><type> ...</type><name>...</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>snprintf</declaration_function>(
+    <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>s</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>n</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>format</declaration_param>,
+    ... );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sprintf" lang="c"><name>sprintf</name>
+<parsedparameterlist>
+<parsedparameter><type>char * restrict</type><name>s</name></parsedparameter>
+<parsedparameter><type>const char * restrict</type><name>format</name></parsedparameter>
+<parsedparameter><type> ...</type><name>...</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>sprintf</declaration_function>(
+    <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>s</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>format</declaration_param>,
+    ... );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sscanf" lang="c"><name>sscanf</name>
+<parsedparameterlist>
+<parsedparameter><type>const char * restrict</type><name>s</name></parsedparameter>
+<parsedparameter><type>const char * restrict</type><name>format</name></parsedparameter>
+<parsedparameter><type> ...</type><name>...</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>sscanf</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>s</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>format</declaration_param>,
+    ... );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/tmpfile" lang="c"><name>tmpfile</name>
+<returntype> FILE *</returntype>
+<declaration><declaration_type>FILE</declaration_type> <declaration_type>*</declaration_type> <declaration_function>tmpfile</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/tmpnam" lang="c"><name>tmpnam</name>
+<parsedparameterlist>
+<parsedparameter><type>char *</type><name>s</name></parsedparameter>
+</parsedparameterlist>
+<returntype> char *</returntype>
+<declaration><declaration_type>char</declaration_type> <declaration_type>*</declaration_type> <declaration_function>tmpnam</declaration_function>(
+    <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>s</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ungetc" lang="c"><name>ungetc</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+<parsedparameter><type>FILE *</type><name>stream</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>ungetc</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param>,
+    <declaration_type>FILE</declaration_type> <declaration_type>*</declaration_type><declaration_param>stream</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/vfprintf" lang="c"><name>vfprintf</name>
+<parsedparameterlist>
+<parsedparameter><type>FILE * restrict</type><name>stream</name></parsedparameter>
+<parsedparameter><type>const char * restrict</type><name>format</name></parsedparameter>
+<parsedparameter><type>va_list</type><name>arg</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>vfprintf</declaration_function>(
+    <declaration_type>FILE</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>stream</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>format</declaration_param>,
+    <declaration_type>va_list</declaration_type> <declaration_param>arg</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/vfscanf" lang="c"><name>vfscanf</name>
+<parsedparameterlist>
+<parsedparameter><type>FILE * restrict</type><name>stream</name></parsedparameter>
+<parsedparameter><type>const char * restrict</type><name>format</name></parsedparameter>
+<parsedparameter><type>va_list</type><name>arg</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>vfscanf</declaration_function>(
+    <declaration_type>FILE</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>stream</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>format</declaration_param>,
+    <declaration_type>va_list</declaration_type> <declaration_param>arg</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/vprintf" lang="c"><name>vprintf</name>
+<parsedparameterlist>
+<parsedparameter><type>const char * restrict</type><name>format</name></parsedparameter>
+<parsedparameter><type>va_list</type><name>arg</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>vprintf</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>format</declaration_param>,
+    <declaration_type>va_list</declaration_type> <declaration_param>arg</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/vscanf" lang="c"><name>vscanf</name>
+<parsedparameterlist>
+<parsedparameter><type>const char * restrict</type><name>format</name></parsedparameter>
+<parsedparameter><type>va_list</type><name>arg</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>vscanf</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>format</declaration_param>,
+    <declaration_type>va_list</declaration_type> <declaration_param>arg</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/vsnprintf" lang="c"><name>vsnprintf</name>
+<parsedparameterlist>
+<parsedparameter><type>char * restrict</type><name>s</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>n</name></parsedparameter>
+<parsedparameter><type>const char * restrict</type><name>format</name></parsedparameter>
+<parsedparameter><type>va_list</type><name>arg</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>vsnprintf</declaration_function>(
+    <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>s</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>n</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>format</declaration_param>,
+    <declaration_type>va_list</declaration_type> <declaration_param>arg</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/vsprintf" lang="c"><name>vsprintf</name>
+<parsedparameterlist>
+<parsedparameter><type>char * restrict</type><name>s</name></parsedparameter>
+<parsedparameter><type>const char * restrict</type><name>format</name></parsedparameter>
+<parsedparameter><type>va_list</type><name>arg</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>vsprintf</declaration_function>(
+    <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>s</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>format</declaration_param>,
+    <declaration_type>va_list</declaration_type> <declaration_param>arg</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/vsscanf" lang="c"><name>vsscanf</name>
+<parsedparameterlist>
+<parsedparameter><type>const char * restrict</type><name>s</name></parsedparameter>
+<parsedparameter><type>const char * restrict</type><name>format</name></parsedparameter>
+<parsedparameter><type>va_list</type><name>arg</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>vsscanf</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>s</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>format</declaration_param>,
+    <declaration_type>va_list</declaration_type> <declaration_param>arg</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<globals><variable id="//xsdoc_ref/c/data/__XEOS_Lib_C99_stderr_p" lang="c"><name>__XEOS_Lib_C99_stderr_p</name>
+<returntype>extern FILE *</returntype>
+<declaration><declaration_keyword>extern</declaration_keyword> <declaration_type>FILE</declaration_type> <declaration_type>*</declaration_type> <declaration_var>__XEOS_Lib_C99_stderr_p</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/__XEOS_Lib_C99_stdin_p" lang="c"><name>__XEOS_Lib_C99_stdin_p</name>
+<returntype>extern FILE *</returntype>
+<declaration><declaration_keyword>extern</declaration_keyword> <declaration_type>FILE</declaration_type> <declaration_type>*</declaration_type> <declaration_var>__XEOS_Lib_C99_stdin_p</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable><variable id="//xsdoc_ref/c/data/__XEOS_Lib_C99_stdout_p" lang="c"><name>__XEOS_Lib_C99_stdout_p</name>
+<returntype>extern FILE *</returntype>
+<declaration><declaration_keyword>extern</declaration_keyword> <declaration_type>FILE</declaration_type> <declaration_type>*</declaration_type> <declaration_var>__XEOS_Lib_C99_stdout_p</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable></globals>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_C99_STDIO_H__" definetype="value" lang="c"><name>__XEOS_LIB_C99_STDIO_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_C99_STDIO_H__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/_IOFBF" definetype="value" lang="c"><name>_IOFBF</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>_IOFBF</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/_IOLBF" definetype="value" lang="c"><name>_IOLBF</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>_IOLBF</declaration_preprocessor> <declaration_preprocessor>1</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/_IONBF" definetype="value" lang="c"><name>_IONBF</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>_IONBF</declaration_preprocessor> <declaration_preprocessor>2</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/BUFSIZ" definetype="value" lang="c"><name>BUFSIZ</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>BUFSIZ</declaration_preprocessor> <declaration_preprocessor>1024</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/EOF" definetype="value" lang="c"><name>EOF</name>
+<attributes><attribute><name>Value</name><value>0xffffffffffffffff (-1)</value></attribute>
+</attributes>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>EOF</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>-</declaration_preprocessor><declaration_preprocessor>1</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FILENAME_MAX" definetype="value" lang="c"><name>FILENAME_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FILENAME_MAX</declaration_preprocessor> <declaration_preprocessor>1024</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FOPEN_MAX" definetype="value" lang="c"><name>FOPEN_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FOPEN_MAX</declaration_preprocessor> <declaration_preprocessor>20</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/L_tmpnam" definetype="value" lang="c"><name>L_tmpnam</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>L_tmpnam</declaration_preprocessor> <declaration_preprocessor>1024</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/stderr" definetype="value" lang="c"><name>stderr</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>stderr</declaration_preprocessor> <declaration_preprocessor>__XEOS_Lib_C99_stderr_p</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/stdin" definetype="value" lang="c"><name>stdin</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>stdin</declaration_preprocessor> <declaration_preprocessor>__XEOS_Lib_C99_stdin_p</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/stdout" definetype="value" lang="c"><name>stdout</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>stdout</declaration_preprocessor> <declaration_preprocessor>__XEOS_Lib_C99_stdout_p</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/TMP_MAX" definetype="value" lang="c"><name>TMP_MAX</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>TMP_MAX</declaration_preprocessor> <declaration_preprocessor>0xFFFF</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

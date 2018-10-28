@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/float.h" lang="c" filename="float.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/c99/include/c99/float.h"><name>float.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/flt_eval_method.h">&lt;system/types/flt_eval_method.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_C99_FLOAT_H__" definetype="value" lang="c"><name>__XEOS_LIB_C99_FLOAT_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_C99_FLOAT_H__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DBL_DIG" definetype="value" lang="c"><name>DBL_DIG</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DBL_DIG</declaration_preprocessor> <declaration_preprocessor>15</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DBL_EPSILON" definetype="value" lang="c"><name>DBL_EPSILON</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DBL_EPSILON</declaration_preprocessor> <declaration_preprocessor>2</declaration_preprocessor><declaration_preprocessor>.</declaration_preprocessor><declaration_preprocessor>2204460492503131e</declaration_preprocessor><declaration_preprocessor>-</declaration_preprocessor><declaration_preprocessor>16</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DBL_MANT_DIG" definetype="value" lang="c"><name>DBL_MANT_DIG</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DBL_MANT_DIG</declaration_preprocessor> <declaration_preprocessor>53</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DBL_MAX" definetype="value" lang="c"><name>DBL_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DBL_MAX</declaration_preprocessor> <declaration_preprocessor>1</declaration_preprocessor><declaration_preprocessor>.</declaration_preprocessor><declaration_preprocessor>7976931348623157e</declaration_preprocessor><declaration_preprocessor>+</declaration_preprocessor><declaration_preprocessor>308</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DBL_MAX_10_EXP" definetype="value" lang="c"><name>DBL_MAX_10_EXP</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DBL_MAX_10_EXP</declaration_preprocessor> <declaration_preprocessor>308</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DBL_MAX_EXP" definetype="value" lang="c"><name>DBL_MAX_EXP</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DBL_MAX_EXP</declaration_preprocessor> <declaration_preprocessor>1024</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DBL_MIN" definetype="value" lang="c"><name>DBL_MIN</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DBL_MIN</declaration_preprocessor> <declaration_preprocessor>2</declaration_preprocessor><declaration_preprocessor>.</declaration_preprocessor><declaration_preprocessor>2250738585072014e</declaration_preprocessor><declaration_preprocessor>-</declaration_preprocessor><declaration_preprocessor>308</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DBL_MIN_10_EXP" definetype="value" lang="c"><name>DBL_MIN_10_EXP</name>
+<attributes><attribute><name>Value</name><value>0xfffffffffffffecd (-307)</value></attribute>
+</attributes>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DBL_MIN_10_EXP</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>-</declaration_preprocessor><declaration_preprocessor>307</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DBL_MIN_EXP" definetype="value" lang="c"><name>DBL_MIN_EXP</name>
+<attributes><attribute><name>Value</name><value>0xfffffffffffffc03 (-1021)</value></attribute>
+</attributes>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DBL_MIN_EXP</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>-</declaration_preprocessor><declaration_preprocessor>1021</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DECIMAL_DIG" definetype="value" lang="c"><name>DECIMAL_DIG</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DECIMAL_DIG</declaration_preprocessor> <declaration_preprocessor>10</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FLT_DIG" definetype="value" lang="c"><name>FLT_DIG</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FLT_DIG</declaration_preprocessor> <declaration_preprocessor>6</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FLT_EPSILON" definetype="value" lang="c"><name>FLT_EPSILON</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FLT_EPSILON</declaration_preprocessor> <declaration_preprocessor>1</declaration_preprocessor><declaration_preprocessor>.</declaration_preprocessor><declaration_preprocessor>1920929e</declaration_preprocessor><declaration_preprocessor>-</declaration_preprocessor><declaration_preprocessor>07F</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FLT_MANT_DIG" definetype="value" lang="c"><name>FLT_MANT_DIG</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FLT_MANT_DIG</declaration_preprocessor> <declaration_preprocessor>24</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FLT_MAX" definetype="value" lang="c"><name>FLT_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FLT_MAX</declaration_preprocessor> <declaration_preprocessor>3</declaration_preprocessor><declaration_preprocessor>.</declaration_preprocessor><declaration_preprocessor>40282347e</declaration_preprocessor><declaration_preprocessor>+</declaration_preprocessor><declaration_preprocessor>38F</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FLT_MAX_10_EXP" definetype="value" lang="c"><name>FLT_MAX_10_EXP</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FLT_MAX_10_EXP</declaration_preprocessor> <declaration_preprocessor>38</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FLT_MAX_EXP" definetype="value" lang="c"><name>FLT_MAX_EXP</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FLT_MAX_EXP</declaration_preprocessor> <declaration_preprocessor>128</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FLT_MIN" definetype="value" lang="c"><name>FLT_MIN</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FLT_MIN</declaration_preprocessor> <declaration_preprocessor>1</declaration_preprocessor><declaration_preprocessor>.</declaration_preprocessor><declaration_preprocessor>17549435e</declaration_preprocessor><declaration_preprocessor>-</declaration_preprocessor><declaration_preprocessor>38F</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FLT_MIN_10_EXP" definetype="value" lang="c"><name>FLT_MIN_10_EXP</name>
+<attributes><attribute><name>Value</name><value>0xffffffffffffffdb (-37)</value></attribute>
+</attributes>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FLT_MIN_10_EXP</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>-</declaration_preprocessor><declaration_preprocessor>37</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FLT_MIN_EXP" definetype="value" lang="c"><name>FLT_MIN_EXP</name>
+<attributes><attribute><name>Value</name><value>0xffffffffffffff83 (-125)</value></attribute>
+</attributes>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FLT_MIN_EXP</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>-</declaration_preprocessor><declaration_preprocessor>125</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FLT_RADIX" definetype="value" lang="c"><name>FLT_RADIX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FLT_RADIX</declaration_preprocessor> <declaration_preprocessor>2</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FLT_ROUNDS" definetype="value" lang="c"><name>FLT_ROUNDS</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FLT_ROUNDS</declaration_preprocessor> <declaration_preprocessor>1</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LDBL_DIG" definetype="value" lang="c"><name>LDBL_DIG</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LDBL_DIG</declaration_preprocessor> <declaration_preprocessor>DBL_DIG</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LDBL_EPSILON" definetype="value" lang="c"><name>LDBL_EPSILON</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LDBL_EPSILON</declaration_preprocessor> <declaration_preprocessor>DBL_EPSILON</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LDBL_MANT_DIG" definetype="value" lang="c"><name>LDBL_MANT_DIG</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LDBL_MANT_DIG</declaration_preprocessor> <declaration_preprocessor>DBL_MANT_DIG</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LDBL_MAX" definetype="value" lang="c"><name>LDBL_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LDBL_MAX</declaration_preprocessor> <declaration_preprocessor>DBL_MAX</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LDBL_MAX_10_EXP" definetype="value" lang="c"><name>LDBL_MAX_10_EXP</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LDBL_MAX_10_EXP</declaration_preprocessor> <declaration_preprocessor>DBL_MAX_10_EXP</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LDBL_MAX_EXP" definetype="value" lang="c"><name>LDBL_MAX_EXP</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LDBL_MAX_EXP</declaration_preprocessor> <declaration_preprocessor>DBL_MAX_EXP</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LDBL_MIN" definetype="value" lang="c"><name>LDBL_MIN</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LDBL_MIN</declaration_preprocessor> <declaration_preprocessor>DBL_MIN</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LDBL_MIN_10_EXP" definetype="value" lang="c"><name>LDBL_MIN_10_EXP</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LDBL_MIN_10_EXP</declaration_preprocessor> <declaration_preprocessor>DBL_MIN_10_EXP</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LDBL_MIN_EXP" definetype="value" lang="c"><name>LDBL_MIN_EXP</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LDBL_MIN_EXP</declaration_preprocessor> <declaration_preprocessor>DBL_MIN_EXP</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

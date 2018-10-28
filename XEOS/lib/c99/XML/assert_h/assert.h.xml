@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/assert.h" lang="c" filename="assert.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/c99/include/c99/assert.h"><name>assert.h</name>
+<includes>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/__XEOS_Lib_C99_AssertFail" lang="c"><name>__XEOS_Lib_C99_AssertFail</name>
+<parsedparameterlist>
+<parsedparameter><type>char *</type><name>expression</name></parsedparameter>
+<parsedparameter><type>char *</type><name>file</name></parsedparameter>
+<parsedparameter><type>int</type><name>line</name></parsedparameter>
+<parsedparameter><type>char *</type><name>func</name></parsedparameter>
+</parsedparameterlist>
+<returntype> extern void</returntype>
+<declaration> <declaration_keyword>extern</declaration_keyword> <declaration_type>void</declaration_type> <declaration_function>__XEOS_Lib_C99_AssertFail</declaration_function>(
+    <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>expression</declaration_param>,
+    <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>file</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>line</declaration_param>,
+    <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>func</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_C99_ASSERT_H__" definetype="value" lang="c"><name>__XEOS_LIB_C99_ASSERT_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_C99_ASSERT_H__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/assert" definetype="function" lang="c"><name>assert</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_e_</name></parsedparameter>
+</parsedparameterlist>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>assert</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_e_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>void</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>0</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/assert_DONTLINK_1" definetype="function" lang="c"><name>assert</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_e_</name></parsedparameter>
+</parsedparameterlist>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>assert</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_e_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_e_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>?</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>void</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>0</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>:</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>__XEOS_Lib_C99_AssertFail</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>#</declaration_preprocessor><declaration_preprocessor>_e_</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>__FILE__</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>__LINE__</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>__func__</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

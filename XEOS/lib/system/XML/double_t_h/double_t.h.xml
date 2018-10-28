@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/double_t.h" lang="c" filename="double_t.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/system/include/system/types/double_t.h"><name>double_t.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/flt_eval_method.h">&lt;system/types/flt_eval_method.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<typedefs><typedef id="//xsdoc_ref/c/tdef/double_t" lang="c" type="simple"><name>double_t</name>
+<declaration> <declaration_keyword>typedef</declaration_keyword> <declaration_type>double</declaration_type> <declaration_var>double_t</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/double_t_DONTLINK_3" lang="c" type="simple"><name>double_t</name>
+<declaration> <declaration_keyword>typedef</declaration_keyword> <declaration_type>double</declaration_type> <declaration_var>double_t</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/double_t_DONTLINK_4" lang="c" type="simple"><name>double_t</name>
+<declaration> <declaration_keyword>typedef</declaration_keyword> <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_var>double_t</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/double_t_DONTLINK_5" lang="c" type="simple"><name>double_t</name>
+<declaration> <declaration_keyword>typedef</declaration_keyword> <declaration_type>double</declaration_type> <declaration_var>double_t</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef></typedefs><defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_SYSTEM_TYPES_DOUBLE_T_H__" definetype="value" lang="c"><name>__XEOS_LIB_SYSTEM_TYPES_DOUBLE_T_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_SYSTEM_TYPES_DOUBLE_T_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

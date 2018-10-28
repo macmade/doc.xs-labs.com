@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/GitHubUpdates.h" lang="c" filename="GitHubUpdates.h" headerpath="/Users/macmade/Documents/Macmade/GitHub/GitHubUpdates/Documentation/../GitHubUpdates/GitHubUpdates.h"><name>GitHubUpdates.h</name>
+<abstract><p>Umbrella header for the GitHubUpdates framework/module.
+</p></abstract>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/GitHubUpdater.h">&lt;GitHubUpdates/GitHubUpdater.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/GitHubUpdaterDelegate.h">&lt;GitHubUpdates/GitHubUpdaterDelegate.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/GitHubRelease.h">&lt;GitHubUpdates/GitHubRelease.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/GitHubReleaseAsset.h">&lt;GitHubUpdates/GitHubReleaseAsset.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/GitHubProgressWindowController.h">&lt;GitHubUpdates/GitHubProgressWindowController.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/GitHubInstallWindowController.h">&lt;GitHubUpdates/GitHubInstallWindowController.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<copyrightinfo>&#169; (c) 2017, Jean-David Gadina - www.xs-labs.com
+</copyrightinfo>
+<timestamp>Sunday, June 18, 2017</timestamp>
+</header>

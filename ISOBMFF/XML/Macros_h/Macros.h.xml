@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/Macros.h" lang="c" filename="Macros.h" headerpath="/Users/macmade/Documents/Macmade/DigiDNA/GitHub/ISOBMFF/Documentation/tmp/include/ISOBMFF/Macros.h"><name>Macros.hpp</name>
+<attributes><attribute><name>Author</name><value>Jean-David Gadina - www.digidna.net</value></attribute>
+</attributes>
+<includes>
+</includes>
+<desc><p/></desc>
+<defines><pdefine id="//xsdoc_ref/c/macro/ISOBMFF_EXPORT" definetype="block" lang="c"><name>ISOBMFF_EXPORT</name>
+<abstract><p>Used to export public functions.
+</p></abstract>
+<declaration><declaration_preprocessor>#if</declaration_preprocessor> <declaration_preprocessor>defined</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_WIN32</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>&amp;</declaration_preprocessor><declaration_preprocessor>&amp;</declaration_preprocessor> <declaration_preprocessor>defined</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>ISOBMFF_DLL_BUILD</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> 
+<declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>ISOBMFF_EXPORT</declaration_preprocessor> <declaration_preprocessor>__declspec</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>dllexport</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> 
+<declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>ISOBMFF_EXPORT</declaration_preprocessor> 
+<declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>ISOBMFF_EXPORT</declaration_preprocessor> <declaration_preprocessor>__declspec</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>dllimport</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> 
+<declaration_preprocessor>#else</declaration_preprocessor> 
+<declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>ISOBMFF_EXPORT</declaration_preprocessor> 
+<declaration_preprocessor>#endif</declaration_preprocessor>  
+</declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/ISOBMFF_NOEXCEPT" definetype="block" lang="c"><name>ISOBMFF_NOEXCEPT</name>
+<abstract><p>Replacement for the C++ `noexcept` keyword, not supported by all compilers.
+</p></abstract>
+<parameterlist>
+<parameter><name>_a_</name><desc><p>If `_a_` evaluates to true, the function is declared to not throw any exceptions.</p></desc></parameter>
+</parameterlist>
+<declaration><declaration_preprocessor>#ifndef</declaration_preprocessor> <declaration_preprocessor>_MSC_VER</declaration_preprocessor> 
+<declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>ISOBMFF_NOEXCEPT</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_a_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>noexcept</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_a_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> 
+<declaration_preprocessor>#else</declaration_preprocessor> 
+<declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>ISOBMFF_NOEXCEPT</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_a_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> 
+<declaration_preprocessor>#endif</declaration_preprocessor>  
+</declaration>
+</pdefine></defines><copyrightinfo>&#169; (c) 2017, DigiDNA - www.digidna.net
+</copyrightinfo>
+<timestamp>Wednesday, November 01, 2017</timestamp>
+</header>

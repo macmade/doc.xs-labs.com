@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>STDThreadKit  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="STDThreadKit  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">STDThreadKit Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/macmade/STDThreadKit"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">STDThreadKit Reference</a>
+        <img id="carat" src="img/carat.png" />
+        STDThreadKit  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/STDThread.html">STDThread</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='stdthreadkit' class='heading'>STDThreadKit</h1>
+
+<p><a href="https://travis-ci.org/macmade/STDThreadKit"><img src="https://img.shields.io/travis/macmade/STDThreadKit.svg?branch=master&style=flat" alt="Build Status"></a>
+<a href="https://coveralls.io/r/macmade/STDThreadKit?branch=master"><img src="https://img.shields.io/coveralls/macmade/STDThreadKit.svg?branch=master&style=flat" alt="Coverage Status"></a>
+<a href="https://github.com/macmade/STDThreadKit/issues"><img src="http://img.shields.io/github/issues/macmade/STDThreadKit.svg?style=flat" alt="Issues"></a>
+<img src="https://img.shields.io/badge/status-active-brightgreen.svg?style=flat" alt="Status">
+<img src="https://img.shields.io/badge/license-mit-brightgreen.svg?style=flat" alt="License">
+<a href="https://twitter.com/macmade"><img src="https://img.shields.io/badge/contact-@macmade-blue.svg?style=flat" alt="Contact"></a><br>
+<a href="https://patreon.com/macmade"><img src="https://img.shields.io/badge/donate-patreon-yellow.svg?style=flat" alt="Donate-Patreon"></a>
+<a href="https://www.gratipay.com/macmade"><img src="https://img.shields.io/badge/donate-gratipay-yellow.svg?style=flat" alt="Donate-Gratipay"></a>
+<a href="https://paypal.me/xslabs"><img src="https://img.shields.io/badge/donate-paypal-yellow.svg?style=flat" alt="Donate-Paypal"></a></p>
+<h2 id='c-code-std-thread-code-api-for-swift' class='heading'>C++ <code>std::thread</code> API for Swift</h2>
+<h3 id='documentation' class='heading'>Documentation</h3>
+
+<p>Documentation and API reference can be found at: <a href="http://doc.xs-labs.com/STDThreadKit/">http://doc.xs-labs.com/STDThreadKit/</a></p>
+<h3 id='rationale' class='heading'>Rationale</h3>
+
+<p>Swift has several APIs to execute threads, or concurrent tasks.</p>
+<h4 id='dispatchqueues' class='heading'>DispatchQueues</h4>
+
+<p><strong>The obvious and recommended approach is to use <a href="https://developer.apple.com/documentation/dispatch/dispatchqueue"><code>DispatchQueue</code></a>.</strong><br>
+This is usually how you should deal with concurrent tasks in Swift.</p>
+
+<p>However, using <code>DispatchQueue</code> <strong>doesn&rsquo;t always guarantee</strong> your task will be executed in a separated thread.</p>
+
+<p>Take a look at the following example, assuming we&rsquo;re currently on the main queue:</p>
+<pre class="highlight swift"><code><span class="kt">DispatchQueue</span><span class="o">.</span><span class="nf">global</span><span class="p">(</span> <span class="nv">qos</span><span class="p">:</span> <span class="o">.</span><span class="n">userInitiated</span> <span class="p">)</span><span class="o">.</span><span class="n">sync</span>
+<span class="p">{}</span>
+</code></pre>
+
+<p>You might think that your code will be executed on the specified global queue, and that the main queue will wait until completion before resuming execution.</p>
+
+<p>But actually, as we called <code>sync</code>, <code>DispatchQueue</code> is <strong>clever enough</strong> to see there&rsquo;s no reason to execute the closure on the global queue, and will simply execute it from the main queue.</p>
+
+<p>As stated in the documentation for <a href="https://developer.apple.com/documentation/dispatch/dispatchqueue/1452870-sync">sync</a>:</p>
+
+<blockquote>
+<p>As an optimization, this function invokes the block on the current thread when possible.</p>
+</blockquote>
+
+<p>While this is absolutely great, and leads to less overheads, you sometimes want <strong>real threads</strong>.</p>
+<h4 id='nsthread' class='heading'>NSThread</h4>
+
+<p>The other approach is to use the good old Objective-C&rsquo;s <a href="https://developer.apple.com/documentation/foundation/nsthread?language=objc"><code>NSThread</code></a> API, exposed as <a href="https://developer.apple.com/documentation/foundation/thread"><code>Thread</code></a> in Swift.</p>
+
+<p>Unfortunately, <code>NSThread</code> can be <strong>a pain when it comes to synchronization</strong>, as there&rsquo;s no way to join a thread.</p>
+<h4 id='c-11-threads' class='heading'>C++11 threads</h4>
+
+<p>Since C++11, the C++ standard library supports threads, using <code>std::stread</code>.<br>
+The API is very simple, but still efficient and complete, as threads can be <strong>detached or joined very easily</strong>.</p>
+
+<p>But as it&rsquo;s C++, there&rsquo;s unfortunately no way to use them directly from Swift.</p>
+<h2 id='stdthreadkit' class='heading'>STDThreadKit</h2>
+
+<p><strong>STDThreadKit</strong> solves these issues by exposing a Swift API for <code>std::thread</code>:</p>
+<pre class="highlight swift"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">STDThread</span><span class="p">:</span> <span class="kt">NSObject</span>
+<span class="p">{</span>
+    <span class="n">open</span> <span class="kd">class</span> <span class="k">var</span> <span class="nv">hardwareConcurrency</span><span class="p">:</span> <span class="kt">UInt32</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="nf">init</span><span class="p">(</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Swift</span><span class="o">.</span><span class="kt">Void</span> <span class="p">)</span>
+
+    <span class="n">open</span> <span class="k">var</span> <span class="nv">joinable</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
+
+    <span class="n">open</span> <span class="kd">func</span> <span class="nf">join</span><span class="p">()</span>   <span class="k">throws</span>
+    <span class="n">open</span> <span class="kd">func</span> <span class="nf">detach</span><span class="p">()</span> <span class="k">throws</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Meaning you can easily use the C++ <code>std::thread</code> API from Swift, like:</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Foundation</span>
+<span class="kd">import</span> <span class="kt">STDThreadKit</span>
+
+<span class="k">var</span> <span class="nv">foo</span>    <span class="o">=</span> <span class="kc">false</span>
+<span class="k">let</span> <span class="nv">thread</span> <span class="o">=</span> <span class="kt">STDThread</span>
+<span class="p">{</span>
+    <span class="nf">sleep</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>
+
+    <span class="n">foo</span> <span class="o">=</span> <span class="kc">true</span>
+<span class="p">}</span>
+
+<span class="n">thread</span><span class="o">.</span><span class="nf">join</span><span class="p">()</span>
+
+</code></pre>
+<h2 id='license' class='heading'>License</h2>
+
+<p><strong>STDThreadKit</strong> is released under the terms of the MIT license.</p>
+<h2 id='repository-infos' class='heading'>Repository Infos</h2>
+<pre class="highlight plaintext"><code>Owner:          Jean-David Gadina - XS-Labs
+Web:            www.xs-labs.com
+Blog:           www.noxeos.com
+Twitter:        @macmade
+GitHub:         github.com/macmade
+LinkedIn:       ch.linkedin.com/in/macmade/
+StackOverflow:  stackoverflow.com/users/182676/macmade
+</code></pre>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>(c) 2017 Jean-David Gadina - <a class="link" href="http://www.xs-labs.com" target="_blank" rel="external">www.xs-labs.com</a></p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

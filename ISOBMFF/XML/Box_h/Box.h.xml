@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/Box.h" lang="c" filename="Box.h" headerpath="/Users/macmade/Documents/Macmade/DigiDNA/GitHub/ISOBMFF/Documentation/tmp/include/ISOBMFF/Box.h"><name>Box.hpp</name>
+<attributes><attribute><name>Author</name><value>Jean-David Gadina - www.digidna.net</value></attribute>
+</attributes>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Object.hpp">&lt;XS/PIMPL/Object.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Macros.hpp">&lt;ISOBMFF/Macros.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/BinaryStream.hpp">&lt;ISOBMFF/BinaryStream.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/DisplayableObject.hpp">&lt;ISOBMFF/DisplayableObject.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/string">&lt;string&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/ostream">&lt;ostream&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/vector">&lt;vector&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/utility">&lt;utility&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<classes><class id="//xsdoc_ref/cpp/cl/DisplayableObject" lang="cpp"><name>DisplayableObject</name>
+<abstract><p>Base interface for ISOBMFF boxes.
+</p></abstract>
+<attributes><attribute><name>Superclass</name><value><hd_link logicalPath="//xsdoc_ref/cpp/cl/class //xsdoc_ref/cpp/tdef/class //xsdoc_ref/cpp/tag/class //xsdoc_ref/cpp/struct/class //xsdoc_ref/cpp/intf/class //xsdoc_ref/cpp/econst/class //xsdoc_ref/cpp/data/class //xsdoc_ref/cpp/clconst/class //xsdoc_ref/cpp/instm/class //xsdoc_ref/cpp/clm/class //xsdoc_ref/cpp/intfcm/class //xsdoc_ref/cpp/intfm/class //xsdoc_ref/cpp/func/class //xsdoc_ref/cpp/ftmplt/class //xsdoc_ref/cpp/defn/class //xsdoc_ref/cpp/macro/class //xsdoc_ref/doc/com/intfm/class //xsdoc_ref/doc/anysymbol/class">class</hd_link></value></attribute>
+</attributes>
+<declaration><declaration_keyword>class</declaration_keyword> <declaration_type>ISOBMFF_EXPORT</declaration_type> <declaration_type>Box</declaration_type>: <declaration_keyword>public</declaration_keyword> <declaration_type>XS</declaration_type>::<declaration_type>PIMPL</declaration_type>::<declaration_type>Object</declaration_type>&lt; <declaration_template>Box</declaration_template> &gt;, <declaration_keyword>public</declaration_keyword> <declaration_type>DisplayableObject</declaration_type> { 
+    <declaration_keyword>public</declaration_keyword>:  <declaration_type>using</declaration_type> <declaration_type>XS</declaration_type>::<declaration_type>PIMPL</declaration_type>::<declaration_type>Object</declaration_type>&lt; <declaration_template>Box</declaration_template> &gt;::<declaration_var>impl</declaration_var>;  
+    <declaration_comment>/*!
+@function    Box
+@abstract    Constructor
+@param       name    The name of the box.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_function>Box</declaration_function>(
+        <declaration_keyword>const</declaration_keyword> <declaration_type>std</declaration_type>::<declaration_type>string</declaration_type> &amp; <declaration_param>name</declaration_param> );  
+    <declaration_comment>/*!
+@function    GetName
+@abstract    Gets the box name.
+@result      The box name.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_type>std</declaration_type>::<declaration_type>string</declaration_type> <declaration_function>GetName</declaration_function>(
+        <declaration_param>void</declaration_param> ) <declaration_keyword>const</declaration_keyword> <declaration_var>override</declaration_var>;  
+    <declaration_comment>/*!
+@function    GetDisplayableProperties
+@abstract    Gets the box displayable properties.
+@result      The box displayable properties.
+@see         DisplayableObject</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_keyword>virtual</declaration_keyword> <declaration_type>std</declaration_type>::<declaration_type>vector</declaration_type>&lt; <declaration_template>std</declaration_template>::<declaration_template>pair</declaration_template>&lt; <declaration_template>std</declaration_template>::<declaration_template>string</declaration_template>, <declaration_template>std</declaration_template>::<declaration_template>string</declaration_template> &gt; &gt; <declaration_function>GetDisplayableProperties</declaration_function>(
+        <declaration_param>void</declaration_param> ) <declaration_keyword>const</declaration_keyword> <declaration_var>override</declaration_var>;  
+    <declaration_comment>/*!
+@function    ReadData
+@abstract    Reads box data from a stream.
+@param       parser  The parser currently being used.
+@param       stream  The binary stream from which to read the box data.
+@discussion  Reading will discard all previous box data.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_keyword>virtual</declaration_keyword> <declaration_type>void</declaration_type> <declaration_function>ReadData</declaration_function>(
+        <declaration_type>Parser</declaration_type> &amp; <declaration_param>parser</declaration_param>,
+        <declaration_type>BinaryStream</declaration_type> &amp; <declaration_param>stream</declaration_param> );  
+    <declaration_comment>/*!
+@function    GetData
+@abstract    Gets the box data.
+@result      The box data, as a vector of bytes.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_keyword>virtual</declaration_keyword> <declaration_type>std</declaration_type>::<declaration_type>vector</declaration_type>&lt; <declaration_template>uint8_t</declaration_template> &gt; <declaration_function>GetData</declaration_function>(
+        <declaration_param>void</declaration_param> ) <declaration_keyword>const</declaration_keyword>; 
+};  </declaration>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/cpp/instm/DisplayableObject/Box//(conststd::string%26)" lang="cpp" accessControl="public"><name>Box</name>
+<abstract><p>Constructor
+</p></abstract>
+<parameterlist>
+<parameter><name>name</name><desc><p>The name of the box.</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>const std :: string &amp;amp;</type><name>name</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_function>Box</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>std</declaration_type>::<declaration_type>string</declaration_type> &amp; <declaration_param>name</declaration_param> ); </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/cpp/instm/DisplayableObject/GetData/std::vector/()" lang="cpp" accessControl="public"><name>GetData</name>
+<abstract><p>Gets the box data.
+</p></abstract>
+<returntype> virtual std :: vector</returntype>
+<result><p>The box data, as a vector of bytes.
+</p></result>
+<declaration><declaration_keyword>virtual</declaration_keyword> <declaration_type>std</declaration_type>::<declaration_type>vector</declaration_type>&lt; <declaration_template>uint8_t</declaration_template> &gt; <declaration_function>GetData</declaration_function>(
+    <declaration_param>void</declaration_param> ) <declaration_keyword>const</declaration_keyword>; </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/cpp/instm/DisplayableObject/GetDisplayableProperties/std::vector/()" lang="cpp" accessControl="public"><name>GetDisplayableProperties</name>
+<abstract><p>Gets the box displayable properties.
+</p></abstract>
+<attributelists><listattribute><name>See</name><list>
+<item><name>DisplayableObject</name><value><hd_link logicalPath="DisplayableObject" isseealso="yes">DisplayableObject</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> virtual std :: vector</returntype>
+<result><p>The box displayable properties.
+</p></result>
+<declaration><declaration_keyword>virtual</declaration_keyword> <declaration_type>std</declaration_type>::<declaration_type>vector</declaration_type>&lt; <declaration_template>std</declaration_template>::<declaration_template>pair</declaration_template>&lt; <declaration_template>std</declaration_template>::<declaration_template>string</declaration_template>, <declaration_template>std</declaration_template>::<declaration_template>string</declaration_template> &gt; &gt; <declaration_function>GetDisplayableProperties</declaration_function>(
+    <declaration_param>void</declaration_param> ) <declaration_keyword>const</declaration_keyword> <declaration_var>override</declaration_var>; </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/cpp/instm/DisplayableObject/GetName/std::string/()" lang="cpp" accessControl="public"><name>GetName</name>
+<abstract><p>Gets the box name.
+</p></abstract>
+<returntype> std :: string</returntype>
+<result><p>The box name.
+</p></result>
+<declaration><declaration_type>std</declaration_type>::<declaration_type>string</declaration_type> <declaration_function>GetName</declaration_function>(
+    <declaration_param>void</declaration_param> ) <declaration_keyword>const</declaration_keyword> <declaration_var>override</declaration_var>; </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/cpp/instm/DisplayableObject/ReadData/void/(Parser%26,BinaryStream%26)" lang="cpp" accessControl="public"><name>ReadData</name>
+<abstract><p>Reads box data from a stream.
+</p></abstract>
+<parameterlist>
+<parameter><name>parser</name><desc><p>The parser currently being used.</p></desc></parameter>
+<parameter><name>stream</name><desc><p>The binary stream from which to read the box data.</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>Parser &amp;amp;</type><name>parser</name></parsedparameter>
+<parsedparameter><type>BinaryStream &amp;amp;</type><name>stream</name></parsedparameter>
+</parsedparameterlist>
+<returntype> virtual void</returntype>
+<declaration><declaration_keyword>virtual</declaration_keyword> <declaration_type>void</declaration_type> <declaration_function>ReadData</declaration_function>(
+    <declaration_type>Parser</declaration_type> &amp; <declaration_param>parser</declaration_param>,
+    <declaration_type>BinaryStream</declaration_type> &amp; <declaration_param>stream</declaration_param> ); </declaration>
+<desc><p>Reading will discard all previous box data.
+</p></desc>
+</function></functions>
+<timestamp>Wednesday, November 01, 2017</timestamp>
+</class></classes>
+<copyrightinfo>&#169; (c) 2017, DigiDNA - www.digidna.net
+</copyrightinfo>
+<timestamp>Wednesday, November 01, 2017</timestamp>
+</header>

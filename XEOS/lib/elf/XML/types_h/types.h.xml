@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/types.h" lang="c" filename="types.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/elf/include/elf/types.h"><name>types.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdint.h">&lt;stdint.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdbool.h">&lt;stdbool.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<typedefs><typedef id="//xsdoc_ref/c/tdef/ELF64_Addr" lang="c" type="simple"><name>ELF64_Addr</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_type>uint64_t</declaration_type> <declaration_var>ELF64_Addr</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/ELF64_DataEncoding" lang="c" type="simple"><name>ELF64_DataEncoding</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>ELF64_DataEncodingUnknown</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_DataEncodingLSB</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_DataEncodingMSB</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>ELF64_DataEncodingUnknown</declaration_var> = <declaration_number>0</declaration_number>, 
+    <declaration_var>ELF64_DataEncodingLSB</declaration_var> = <declaration_number>1</declaration_number>, 
+    <declaration_var>ELF64_DataEncodingMSB</declaration_var> = <declaration_number>2</declaration_number> 
+} <declaration_var>ELF64_DataEncoding</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/ELF64_FileRef" lang="c" type="simple"><name>ELF64_FileRef</name>
+<declaration> <declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>__ELF64_File</declaration_type> <declaration_type>*</declaration_type> <declaration_var>ELF64_FileRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/ELF64_Half" lang="c" type="simple"><name>ELF64_Half</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_type>uint16_t</declaration_type> <declaration_var>ELF64_Half</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/ELF64_HeaderRef" lang="c" type="simple"><name>ELF64_HeaderRef</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>__ELF64_Header</declaration_type> <declaration_type>*</declaration_type> <declaration_var>ELF64_HeaderRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/ELF64_MachineType" lang="c" type="simple"><name>ELF64_MachineType</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>ELF64_MachineTypeUnknown</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeM32</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeSPARC</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineType386</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineType68K</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineType88K</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineType860</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeMIPS</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeS370</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeMIPSRS3LE</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypePARISC</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeVPP500</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeSPARC32Plus</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineType960</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypePPC</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypePPC64</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeV800</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeFR20</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeRH32</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeRCE</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeARM</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeAlpha</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeSH</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeSPARCV9</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeTricore</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeARC</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeH8300</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeH8300H</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeH8S</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeH8500</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeIA64</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeMIPSX</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeColdFire</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineType68HC12</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeMMA</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypePCP</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeNCPU</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeNDR1</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeStarCore</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeME16</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeST100</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeTinyJ</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeFX66</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeST9Plus</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeST7</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineType68HC16</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineType68HC11</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineType68HC08</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineType68HC05</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeSVX</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeST19</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeVAX</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeCRIS</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeJavelin</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeFirePath</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeZSP</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeMMIX</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypeHUANY</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_MachineTypePrism</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>ELF64_MachineTypeUnknown</declaration_var> = <declaration_number>0</declaration_number>, <declaration_comment>/* No machine */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeM32</declaration_var> = <declaration_number>1</declaration_number>, <declaration_comment>/* AT&amp;T WE 32100 */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeSPARC</declaration_var> = <declaration_number>2</declaration_number>, <declaration_comment>/* SPARC */</declaration_comment>
+    <declaration_var>ELF64_MachineType386</declaration_var> = <declaration_number>3</declaration_number>, <declaration_comment>/* Intel 80386 */</declaration_comment>
+    <declaration_var>ELF64_MachineType68K</declaration_var> = <declaration_number>4</declaration_number>, <declaration_comment>/* Motorola 68000 */</declaration_comment>
+    <declaration_var>ELF64_MachineType88K</declaration_var> = <declaration_number>5</declaration_number>, <declaration_comment>/* Motorola 88000 */</declaration_comment>
+    <declaration_var>ELF64_MachineType860</declaration_var> = <declaration_number>7</declaration_number>, <declaration_comment>/* Intel 80860 */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeMIPS</declaration_var> = <declaration_number>8</declaration_number>, <declaration_comment>/* MIPS I Architecture */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeS370</declaration_var> = <declaration_number>9</declaration_number>, <declaration_comment>/* IBM System/370 Processor */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeMIPSRS3LE</declaration_var> = <declaration_number>10</declaration_number>, <declaration_comment>/* MIPS RS3000 Little-endian */</declaration_comment>
+    <declaration_var>ELF64_MachineTypePARISC</declaration_var> = <declaration_number>15</declaration_number>, <declaration_comment>/* Hewlett-Packard PA-RISC */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeVPP500</declaration_var> = <declaration_number>17</declaration_number>, <declaration_comment>/* Fujitsu VPP500 */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeSPARC32Plus</declaration_var> = <declaration_number>18</declaration_number>, <declaration_comment>/* Enhanced instruction set SPARC */</declaration_comment>
+    <declaration_var>ELF64_MachineType960</declaration_var> = <declaration_number>19</declaration_number>, <declaration_comment>/* Intel 80960 */</declaration_comment>
+    <declaration_var>ELF64_MachineTypePPC</declaration_var> = <declaration_number>20</declaration_number>, <declaration_comment>/* PowerPC */</declaration_comment>
+    <declaration_var>ELF64_MachineTypePPC64</declaration_var> = <declaration_number>21</declaration_number>, <declaration_comment>/* 64-bit PowerPC */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeV800</declaration_var> = <declaration_number>36</declaration_number>, <declaration_comment>/* NEC V800 */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeFR20</declaration_var> = <declaration_number>37</declaration_number>, <declaration_comment>/* Fujitsu FR20 */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeRH32</declaration_var> = <declaration_number>38</declaration_number>, <declaration_comment>/* TRW RH-32 */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeRCE</declaration_var> = <declaration_number>39</declaration_number>, <declaration_comment>/* Motorola RCE */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeARM</declaration_var> = <declaration_number>40</declaration_number>, <declaration_comment>/* Advanced RISC Machines ARM */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeAlpha</declaration_var> = <declaration_number>41</declaration_number>, <declaration_comment>/* Digital Alpha */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeSH</declaration_var> = <declaration_number>42</declaration_number>, <declaration_comment>/* Hitachi SH */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeSPARCV9</declaration_var> = <declaration_number>43</declaration_number>, <declaration_comment>/* SPARC Version 9 */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeTricore</declaration_var> = <declaration_number>44</declaration_number>, <declaration_comment>/* Siemens Tricore embedded processor */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeARC</declaration_var> = <declaration_number>45</declaration_number>, <declaration_comment>/* Argonaut RISC Core, Argonaut Technologies Inc. </declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_var>ELF64_MachineTypeH8300</declaration_var> = <declaration_number>46</declaration_number>, <declaration_comment>/* Hitachi H8/300 */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeH8300H</declaration_var> = <declaration_number>47</declaration_number>, <declaration_comment>/* Hitachi H8/300H */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeH8S</declaration_var> = <declaration_number>48</declaration_number>, <declaration_comment>/* Hitachi H8S */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeH8500</declaration_var> = <declaration_number>49</declaration_number>, <declaration_comment>/* Hitachi H8/500 */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeIA64</declaration_var> = <declaration_number>50</declaration_number>, <declaration_comment>/* Intel IA-64 processor architecture */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeMIPSX</declaration_var> = <declaration_number>51</declaration_number>, <declaration_comment>/* Stanford MIPS-X */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeColdFire</declaration_var> = <declaration_number>52</declaration_number>, <declaration_comment>/* Motorola ColdFire */</declaration_comment>
+    <declaration_var>ELF64_MachineType68HC12</declaration_var> = <declaration_number>53</declaration_number>, <declaration_comment>/* Motorola M68HC12 */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeMMA</declaration_var> = <declaration_number>54</declaration_number>, <declaration_comment>/* Fujitsu MMA Multimedia Accelerator */</declaration_comment>
+    <declaration_var>ELF64_MachineTypePCP</declaration_var> = <declaration_number>55</declaration_number>, <declaration_comment>/* Siemens PCP */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeNCPU</declaration_var> = <declaration_number>56</declaration_number>, <declaration_comment>/* Sony nCPU embedded RISC processor */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeNDR1</declaration_var> = <declaration_number>57</declaration_number>, <declaration_comment>/* Denso NDR1 microprocessor */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeStarCore</declaration_var> = <declaration_number>58</declaration_number>, <declaration_comment>/* Motorola Star*Core processor */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeME16</declaration_var> = <declaration_number>59</declaration_number>, <declaration_comment>/* Toyota ME16 processor */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeST100</declaration_var> = <declaration_number>60</declaration_number>, <declaration_comment>/* STMicroelectronics ST100 processor */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeTinyJ</declaration_var> = <declaration_number>61</declaration_number>, <declaration_comment>/* Advanced Logic Corp. TinyJ embedded processor family */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeFX66</declaration_var> = <declaration_number>66</declaration_number>, <declaration_comment>/* Siemens FX66 microcontroller */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeST9Plus</declaration_var> = <declaration_number>67</declaration_number>, <declaration_comment>/* STMicroelectronics ST9+ 8/16 bit microcontroller */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeST7</declaration_var> = <declaration_number>68</declaration_number>, <declaration_comment>/* STMicroelectronics ST7 8-bit microcontroller */</declaration_comment>
+    <declaration_var>ELF64_MachineType68HC16</declaration_var> = <declaration_number>69</declaration_number>, <declaration_comment>/* Motorola MC68HC16 Microcontroller */</declaration_comment>
+    <declaration_var>ELF64_MachineType68HC11</declaration_var> = <declaration_number>70</declaration_number>, <declaration_comment>/* Motorola MC68HC11 Microcontroller */</declaration_comment>
+    <declaration_var>ELF64_MachineType68HC08</declaration_var> = <declaration_number>71</declaration_number>, <declaration_comment>/* Motorola MC68HC08 Microcontroller */</declaration_comment>
+    <declaration_var>ELF64_MachineType68HC05</declaration_var> = <declaration_number>72</declaration_number>, <declaration_comment>/* Motorola MC68HC05 Microcontroller */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeSVX</declaration_var> = <declaration_number>73</declaration_number>, <declaration_comment>/* Silicon Graphics SVx */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeST19</declaration_var> = <declaration_number>74</declaration_number>, <declaration_comment>/* STMicroelectronics ST19 8-bit microcontroller */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeVAX</declaration_var> = <declaration_number>75</declaration_number>, <declaration_comment>/* Digital VAX */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeCRIS</declaration_var> = <declaration_number>76</declaration_number>, <declaration_comment>/* Axis Communications 32-bit embedded processor */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeJavelin</declaration_var> = <declaration_number>77</declaration_number>, <declaration_comment>/* Infineon Technologies 32-bit embedded processor */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeFirePath</declaration_var> = <declaration_number>78</declaration_number>, <declaration_comment>/* Element 14 64-bit DSP Processor */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeZSP</declaration_var> = <declaration_number>79</declaration_number>, <declaration_comment>/* LSI Logic 16-bit DSP Processor */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeMMIX</declaration_var> = <declaration_number>80</declaration_number>, <declaration_comment>/* Donald Knuth's educational 64-bit processor */</declaration_comment>
+    <declaration_var>ELF64_MachineTypeHUANY</declaration_var> = <declaration_number>81</declaration_number>, <declaration_comment>/* Harvard University machine-independent object files */</declaration_comment>
+    <declaration_var>ELF64_MachineTypePrism</declaration_var> = <declaration_number>82</declaration_number> <declaration_comment>/* SiTera Prism */</declaration_comment>
+} <declaration_var>ELF64_MachineType</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/ELF64_ObjectFileClass" lang="c" type="simple"><name>ELF64_ObjectFileClass</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>ELF64_ObjectFileClassUnknown</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_ObjectFileClass32</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_ObjectFileClass64</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>ELF64_ObjectFileClassUnknown</declaration_var> = <declaration_number>0</declaration_number>, 
+    <declaration_var>ELF64_ObjectFileClass32</declaration_var> = <declaration_number>1</declaration_number>, 
+    <declaration_var>ELF64_ObjectFileClass64</declaration_var> = <declaration_number>2</declaration_number> 
+} <declaration_var>ELF64_ObjectFileClass</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/ELF64_ObjectFileType" lang="c" type="simple"><name>ELF64_ObjectFileType</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>ELF64_ObjectFileTypeNone</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_ObjectFileTypeRelocatableObjectFile</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_ObjectFileTypeExecutableFile</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_ObjectFileTypeSharedObjectFile</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_ObjectFileTypeCoreFile</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>ELF64_ObjectFileTypeNone</declaration_var> = <declaration_number>0</declaration_number>, 
+    <declaration_var>ELF64_ObjectFileTypeRelocatableObjectFile</declaration_var> = <declaration_number>1</declaration_number>, 
+    <declaration_var>ELF64_ObjectFileTypeExecutableFile</declaration_var> = <declaration_number>2</declaration_number>, 
+    <declaration_var>ELF64_ObjectFileTypeSharedObjectFile</declaration_var> = <declaration_number>3</declaration_number>, 
+    <declaration_var>ELF64_ObjectFileTypeCoreFile</declaration_var> = <declaration_number>4</declaration_number> 
+} <declaration_var>ELF64_ObjectFileType</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/ELF64_Off" lang="c" type="simple"><name>ELF64_Off</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_type>uint64_t</declaration_type> <declaration_var>ELF64_Off</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/ELF64_OSABI" lang="c" type="simple"><name>ELF64_OSABI</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>ELF64_OSABIUnknown</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_OSABISysV</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_OSABIHPUX</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_OSABIStandalone</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>ELF64_OSABIUnknown</declaration_var> = <declaration_number>0</declaration_number>, 
+    <declaration_var>ELF64_OSABISysV</declaration_var> = <declaration_number>1</declaration_number>, 
+    <declaration_var>ELF64_OSABIHPUX</declaration_var> = <declaration_number>2</declaration_number>, 
+    <declaration_var>ELF64_OSABIStandalone</declaration_var> = <declaration_number>255</declaration_number> 
+} <declaration_var>ELF64_OSABI</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/ELF64_ProgramHeaderEntryRef" lang="c" type="simple"><name>ELF64_ProgramHeaderEntryRef</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>__ELF64_ProgramHeaderEntry</declaration_type> <declaration_type>*</declaration_type> <declaration_var>ELF64_ProgramHeaderEntryRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/ELF64_SectionAttribute" lang="c" type="simple"><name>ELF64_SectionAttribute</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>ELF64_SectionAttributeWrite</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_SectionAttributeAlloc</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_SectionAttributeExecute</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>ELF64_SectionAttributeWrite</declaration_var> = <declaration_number>1</declaration_number>, 
+    <declaration_var>ELF64_SectionAttributeAlloc</declaration_var> = <declaration_number>2</declaration_number>, 
+    <declaration_var>ELF64_SectionAttributeExecute</declaration_var> = <declaration_number>4</declaration_number> 
+} <declaration_var>ELF64_SectionAttribute</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/ELF64_SectionHeaderEntryRef" lang="c" type="simple"><name>ELF64_SectionHeaderEntryRef</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>__ELF64_SectionHeaderEntry</declaration_type> <declaration_type>*</declaration_type> <declaration_var>ELF64_SectionHeaderEntryRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/ELF64_SectionType" lang="c" type="simple"><name>ELF64_SectionType</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>ELF64_SectionTypeUnused</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_SectionTypeProgBits</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_SectionTypeLinkerSymbolTable</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_SectionTypeStringTable</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_SectionTypeRelaRelocationEntries</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_SectionTypeSymbolHashTable</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_SectionTypeDynamicLinkingTables</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_SectionTypeNoteInformation</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_SectionTypeUninitializedSpace</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_SectionTypeRelRelocationEntries</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_SectionTypeDynamicLoaderSymbolTable</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>ELF64_SectionTypeUnused</declaration_var> = <declaration_number>0</declaration_number>, 
+    <declaration_var>ELF64_SectionTypeProgBits</declaration_var> = <declaration_number>1</declaration_number>, 
+    <declaration_var>ELF64_SectionTypeLinkerSymbolTable</declaration_var> = <declaration_number>2</declaration_number>, 
+    <declaration_var>ELF64_SectionTypeStringTable</declaration_var> = <declaration_number>3</declaration_number>, 
+    <declaration_var>ELF64_SectionTypeRelaRelocationEntries</declaration_var> = <declaration_number>4</declaration_number>, 
+    <declaration_var>ELF64_SectionTypeSymbolHashTable</declaration_var> = <declaration_number>5</declaration_number>, 
+    <declaration_var>ELF64_SectionTypeDynamicLinkingTables</declaration_var> = <declaration_number>6</declaration_number>, 
+    <declaration_var>ELF64_SectionTypeNoteInformation</declaration_var> = <declaration_number>7</declaration_number>, 
+    <declaration_var>ELF64_SectionTypeUninitializedSpace</declaration_var> = <declaration_number>8</declaration_number>, 
+    <declaration_var>ELF64_SectionTypeRelRelocationEntries</declaration_var> = <declaration_number>9</declaration_number>, 
+    <declaration_var>ELF64_SectionTypeDynamicLoaderSymbolTable</declaration_var> = <declaration_number>11</declaration_number> 
+} <declaration_var>ELF64_SectionType</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/ELF64_SegmentAttribute" lang="c" type="simple"><name>ELF64_SegmentAttribute</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>ELF64_SegmentAttributeExecute</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_SegmentAttributeWrite</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_SegmentAttributeRead</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>ELF64_SegmentAttributeExecute</declaration_var> = <declaration_number>1</declaration_number>, 
+    <declaration_var>ELF64_SegmentAttributeWrite</declaration_var> = <declaration_number>2</declaration_number>, 
+    <declaration_var>ELF64_SegmentAttributeRead</declaration_var> = <declaration_number>4</declaration_number> 
+} <declaration_var>ELF64_SegmentAttribute</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/ELF64_SegmentType" lang="c" type="simple"><name>ELF64_SegmentType</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>ELF64_SegmentTypeUnused</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_SegmentTypeLoadable</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_SegmentTypeDynamicLinkingTables</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_SegmentTypeProgramInterpreterPathName</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_SegmentTypeNoteSections</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_SegmentTypeProgramHeaderTable</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>ELF64_SegmentTypeUnused</declaration_var> = <declaration_number>0</declaration_number>, 
+    <declaration_var>ELF64_SegmentTypeLoadable</declaration_var> = <declaration_number>1</declaration_number>, 
+    <declaration_var>ELF64_SegmentTypeDynamicLinkingTables</declaration_var> = <declaration_number>2</declaration_number>, 
+    <declaration_var>ELF64_SegmentTypeProgramInterpreterPathName</declaration_var> = <declaration_number>3</declaration_number>, 
+    <declaration_var>ELF64_SegmentTypeNoteSections</declaration_var> = <declaration_number>4</declaration_number>, 
+    <declaration_var>ELF64_SegmentTypeProgramHeaderTable</declaration_var> = <declaration_number>6</declaration_number> 
+} <declaration_var>ELF64_SegmentType</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/ELF64_SWord" lang="c" type="simple"><name>ELF64_SWord</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_type>int32_t</declaration_type> <declaration_var>ELF64_SWord</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/ELF64_SXWord" lang="c" type="simple"><name>ELF64_SXWord</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_type>int64_t</declaration_type> <declaration_var>ELF64_SXWord</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/ELF64_SymbolBinding" lang="c" type="simple"><name>ELF64_SymbolBinding</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>ELF64_SymbolBindingLocal</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_SymbolBindingGlobal</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_SymbolBindingWeak</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>ELF64_SymbolBindingLocal</declaration_var> = <declaration_number>0</declaration_number>, 
+    <declaration_var>ELF64_SymbolBindingGlobal</declaration_var> = <declaration_number>1</declaration_number>, 
+    <declaration_var>ELF64_SymbolBindingWeak</declaration_var> = <declaration_number>2</declaration_number> 
+} <declaration_var>ELF64_SymbolBinding</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/ELF64_SymbolTableEntryRef" lang="c" type="simple"><name>ELF64_SymbolTableEntryRef</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>__ELF64_SymbolTableEntry</declaration_type> <declaration_type>*</declaration_type> <declaration_var>ELF64_SymbolTableEntryRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/ELF64_SymbolType" lang="c" type="simple"><name>ELF64_SymbolType</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>ELF64_SymbolTypeNone</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_SymbolTypeDataObject</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_SymbolTypeFunctionEntryPoint</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_SymbolTypeSection</name></parsedparameter>
+<parsedparameter><type></type><name>ELF64_SymbolTypeFile</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>ELF64_SymbolTypeNone</declaration_var> = <declaration_number>0</declaration_number>, 
+    <declaration_var>ELF64_SymbolTypeDataObject</declaration_var> = <declaration_number>1</declaration_number>, 
+    <declaration_var>ELF64_SymbolTypeFunctionEntryPoint</declaration_var> = <declaration_number>2</declaration_number>, 
+    <declaration_var>ELF64_SymbolTypeSection</declaration_var> = <declaration_number>3</declaration_number>, 
+    <declaration_var>ELF64_SymbolTypeFile</declaration_var> = <declaration_number>4</declaration_number> 
+} <declaration_var>ELF64_SymbolType</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/ELF64_UChar" lang="c" type="simple"><name>ELF64_UChar</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_type>uint8_t</declaration_type> <declaration_var>ELF64_UChar</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/ELF64_Word" lang="c" type="simple"><name>ELF64_Word</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_type>uint32_t</declaration_type> <declaration_var>ELF64_Word</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/ELF64_XWord" lang="c" type="simple"><name>ELF64_XWord</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_type>uint64_t</declaration_type> <declaration_var>ELF64_XWord</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef></typedefs><defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_ELF_TYPES_H__" definetype="value" lang="c"><name>__XEOS_LIB_ELF_TYPES_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_ELF_TYPES_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

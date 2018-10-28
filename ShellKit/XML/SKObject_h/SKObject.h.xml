@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/SKObject.h" lang="c" filename="SKObject.h" headerpath="/Users/macmade/Documents/Macmade/GitHub/ShellKit/Documentation/../ShellKit/Classes/ShellKit/SKObject.h"><name>SKObject.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Foundation.h">&lt;Foundation/Foundation.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<classes><class id="//xsdoc_ref/occ/cl/SKObject" lang="occ"><name>SKObject</name>
+<abstract><p>Base class for ShellKit objects
+</p></abstract>
+<attributes><attribute><name>Superclass</name><value><hd_link logicalPath="//xsdoc_ref/occ/cl/NSObject">NSObject</hd_link></value></attribute>
+</attributes>
+<declaration>@<declaration_type>interface</declaration_type> <declaration_type>SKObject</declaration_type>: <declaration_type>NSObject</declaration_type>  <declaration_comment>/*!
+@method      errorWithDescription:
+@abstract    Returns an error object for the class with a custom description
+@discussion  The error object will be created with a domain containing the
+class name, eg: `com.xs-labs.ShellKit.SommClass`.
+The message will be set as the error's localized description.
+@param       format  The error message format
+@param       ...     Optional parameters for the format string
+@result      An error object</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - (
+            <declaration_type>NSError</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>errorWithDescription</declaration_type>: (
+            <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>format</declaration_var>, ... <declaration_function>NS_FORMAT_FUNCTION</declaration_function>(
+            <declaration_number>1</declaration_number>,
+            <declaration_number>2</declaration_number> );   @@end </declaration>
+<desc><p/></desc>
+<methods><method id="//xsdoc_ref/occ/instm/SKObject/errorWithDescription:" lang="occ" type="instm"><name>errorWithDescription:</name>
+<abstract><p>Returns an error object for the class with a custom description
+</p></abstract>
+<parameterlist>
+<parameter><name>format</name><desc><p>The error message format</p></desc></parameter>
+<parameter><name>...</name><desc><p>Optional parameters for the format string</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>format</name></parsedparameter>
+</parsedparameterlist>
+<returntype> NSError * </returntype>
+<result><p>An error object
+</p></result>
+<declaration>- ( <declaration_type>NSError</declaration_type> <declaration_type>*</declaration_type> )<declaration_function>errorWithDescription</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>format</declaration_var>, ... NS_FORMAT_FUNCTION( <declaration_number>1</declaration_number>, <declaration_number>2</declaration_number> ); </declaration>
+<desc><p>The error object will be created with a domain containing the
+class name, eg: `com.xs-labs.ShellKit.SommClass`.
+The message will be set as the error's localized description.
+</p></desc>
+</method></methods>
+<timestamp>Monday, May 15, 2017</timestamp>
+</class></classes>
+<copyrightinfo>&#169; (c) 2017, Jean-David Gadina - www.xs-labs.com
+</copyrightinfo>
+<timestamp>Monday, May 15, 2017</timestamp>
+</header>

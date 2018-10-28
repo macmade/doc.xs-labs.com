@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/locale.h" lang="c" filename="locale.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/system/include/system/locale.h"><name>locale.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdbool.h">&lt;stdbool.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/locale_t.h">&lt;system/types/locale_t.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/System_Locale_Create" lang="c"><name>System_Locale_Create</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>categoryMask</name></parsedparameter>
+<parsedparameter><type>const char *</type><name>name</name></parsedparameter>
+<parsedparameter><type>System_LocaleRef</type><name>base</name></parsedparameter>
+</parsedparameterlist>
+<returntype> System_LocaleRef</returntype>
+<declaration><declaration_type>System_LocaleRef</declaration_type> <declaration_function>System_Locale_Create</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>categoryMask</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>name</declaration_param>,
+    <declaration_type>System_LocaleRef</declaration_type> <declaration_param>base</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Locale_CType_IsAlpha" lang="c"><name>System_Locale_CType_IsAlpha</name>
+<parsedparameterlist>
+<parsedparameter><type>System_Locale_CTypeRef</type><name>ctype</name></parsedparameter>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>System_Locale_CType_IsAlpha</declaration_function>(
+    <declaration_type>System_Locale_CTypeRef</declaration_type> <declaration_param>ctype</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Locale_CType_IsAlphaNumeric" lang="c"><name>System_Locale_CType_IsAlphaNumeric</name>
+<parsedparameterlist>
+<parsedparameter><type>System_Locale_CTypeRef</type><name>ctype</name></parsedparameter>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>System_Locale_CType_IsAlphaNumeric</declaration_function>(
+    <declaration_type>System_Locale_CTypeRef</declaration_type> <declaration_param>ctype</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Locale_CType_IsASCII" lang="c"><name>System_Locale_CType_IsASCII</name>
+<parsedparameterlist>
+<parsedparameter><type>System_Locale_CTypeRef</type><name>ctype</name></parsedparameter>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>System_Locale_CType_IsASCII</declaration_function>(
+    <declaration_type>System_Locale_CTypeRef</declaration_type> <declaration_param>ctype</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Locale_CType_IsBlank" lang="c"><name>System_Locale_CType_IsBlank</name>
+<parsedparameterlist>
+<parsedparameter><type>System_Locale_CTypeRef</type><name>ctype</name></parsedparameter>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>System_Locale_CType_IsBlank</declaration_function>(
+    <declaration_type>System_Locale_CTypeRef</declaration_type> <declaration_param>ctype</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Locale_CType_IsControl" lang="c"><name>System_Locale_CType_IsControl</name>
+<parsedparameterlist>
+<parsedparameter><type>System_Locale_CTypeRef</type><name>ctype</name></parsedparameter>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>System_Locale_CType_IsControl</declaration_function>(
+    <declaration_type>System_Locale_CTypeRef</declaration_type> <declaration_param>ctype</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Locale_CType_IsDigit" lang="c"><name>System_Locale_CType_IsDigit</name>
+<parsedparameterlist>
+<parsedparameter><type>System_Locale_CTypeRef</type><name>ctype</name></parsedparameter>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>System_Locale_CType_IsDigit</declaration_function>(
+    <declaration_type>System_Locale_CTypeRef</declaration_type> <declaration_param>ctype</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Locale_CType_IsGraph" lang="c"><name>System_Locale_CType_IsGraph</name>
+<parsedparameterlist>
+<parsedparameter><type>System_Locale_CTypeRef</type><name>ctype</name></parsedparameter>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>System_Locale_CType_IsGraph</declaration_function>(
+    <declaration_type>System_Locale_CTypeRef</declaration_type> <declaration_param>ctype</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Locale_CType_IsLower" lang="c"><name>System_Locale_CType_IsLower</name>
+<parsedparameterlist>
+<parsedparameter><type>System_Locale_CTypeRef</type><name>ctype</name></parsedparameter>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>System_Locale_CType_IsLower</declaration_function>(
+    <declaration_type>System_Locale_CTypeRef</declaration_type> <declaration_param>ctype</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Locale_CType_IsPrint" lang="c"><name>System_Locale_CType_IsPrint</name>
+<parsedparameterlist>
+<parsedparameter><type>System_Locale_CTypeRef</type><name>ctype</name></parsedparameter>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>System_Locale_CType_IsPrint</declaration_function>(
+    <declaration_type>System_Locale_CTypeRef</declaration_type> <declaration_param>ctype</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Locale_CType_IsPunct" lang="c"><name>System_Locale_CType_IsPunct</name>
+<parsedparameterlist>
+<parsedparameter><type>System_Locale_CTypeRef</type><name>ctype</name></parsedparameter>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>System_Locale_CType_IsPunct</declaration_function>(
+    <declaration_type>System_Locale_CTypeRef</declaration_type> <declaration_param>ctype</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Locale_CType_IsSpace" lang="c"><name>System_Locale_CType_IsSpace</name>
+<parsedparameterlist>
+<parsedparameter><type>System_Locale_CTypeRef</type><name>ctype</name></parsedparameter>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>System_Locale_CType_IsSpace</declaration_function>(
+    <declaration_type>System_Locale_CTypeRef</declaration_type> <declaration_param>ctype</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Locale_CType_IsUpper" lang="c"><name>System_Locale_CType_IsUpper</name>
+<parsedparameterlist>
+<parsedparameter><type>System_Locale_CTypeRef</type><name>ctype</name></parsedparameter>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>System_Locale_CType_IsUpper</declaration_function>(
+    <declaration_type>System_Locale_CTypeRef</declaration_type> <declaration_param>ctype</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Locale_CType_IsXDigit" lang="c"><name>System_Locale_CType_IsXDigit</name>
+<parsedparameterlist>
+<parsedparameter><type>System_Locale_CTypeRef</type><name>ctype</name></parsedparameter>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>System_Locale_CType_IsXDigit</declaration_function>(
+    <declaration_type>System_Locale_CTypeRef</declaration_type> <declaration_param>ctype</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Locale_CType_ToASCII" lang="c"><name>System_Locale_CType_ToASCII</name>
+<parsedparameterlist>
+<parsedparameter><type>System_Locale_CTypeRef</type><name>ctype</name></parsedparameter>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>System_Locale_CType_ToASCII</declaration_function>(
+    <declaration_type>System_Locale_CTypeRef</declaration_type> <declaration_param>ctype</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Locale_CType_ToLower" lang="c"><name>System_Locale_CType_ToLower</name>
+<parsedparameterlist>
+<parsedparameter><type>System_Locale_CTypeRef</type><name>ctype</name></parsedparameter>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>System_Locale_CType_ToLower</declaration_function>(
+    <declaration_type>System_Locale_CTypeRef</declaration_type> <declaration_param>ctype</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Locale_CType_ToUpper" lang="c"><name>System_Locale_CType_ToUpper</name>
+<parsedparameterlist>
+<parsedparameter><type>System_Locale_CTypeRef</type><name>ctype</name></parsedparameter>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>System_Locale_CType_ToUpper</declaration_function>(
+    <declaration_type>System_Locale_CTypeRef</declaration_type> <declaration_param>ctype</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Locale_Duplicate" lang="c"><name>System_Locale_Duplicate</name>
+<parsedparameterlist>
+<parsedparameter><type>System_LocaleRef</type><name>locale</name></parsedparameter>
+</parsedparameterlist>
+<returntype> System_LocaleRef</returntype>
+<declaration><declaration_type>System_LocaleRef</declaration_type> <declaration_function>System_Locale_Duplicate</declaration_function>(
+    <declaration_type>System_LocaleRef</declaration_type> <declaration_param>locale</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Locale_Free" lang="c"><name>System_Locale_Free</name>
+<parsedparameterlist>
+<parsedparameter><type>System_LocaleRef</type><name>locale</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>System_Locale_Free</declaration_function>(
+    <declaration_type>System_LocaleRef</declaration_type> <declaration_param>locale</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Locale_GetCLocale" lang="c"><name>System_Locale_GetCLocale</name>
+<returntype> System_LocaleRef</returntype>
+<declaration><declaration_type>System_LocaleRef</declaration_type> <declaration_function>System_Locale_GetCLocale</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Locale_GetCollate" lang="c"><name>System_Locale_GetCollate</name>
+<parsedparameterlist>
+<parsedparameter><type>System_LocaleRef</type><name>locale</name></parsedparameter>
+</parsedparameterlist>
+<returntype> System_Locale_CollateRef</returntype>
+<declaration><declaration_type>System_Locale_CollateRef</declaration_type> <declaration_function>System_Locale_GetCollate</declaration_function>(
+    <declaration_type>System_LocaleRef</declaration_type> <declaration_param>locale</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Locale_GetCType" lang="c"><name>System_Locale_GetCType</name>
+<parsedparameterlist>
+<parsedparameter><type>System_LocaleRef</type><name>locale</name></parsedparameter>
+</parsedparameterlist>
+<returntype> System_Locale_CTypeRef</returntype>
+<declaration><declaration_type>System_Locale_CTypeRef</declaration_type> <declaration_function>System_Locale_GetCType</declaration_function>(
+    <declaration_type>System_LocaleRef</declaration_type> <declaration_param>locale</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Locale_GetCurrentLocale" lang="c"><name>System_Locale_GetCurrentLocale</name>
+<returntype> System_LocaleRef</returntype>
+<declaration><declaration_type>System_LocaleRef</declaration_type> <declaration_function>System_Locale_GetCurrentLocale</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Locale_GetDefaultLocale" lang="c"><name>System_Locale_GetDefaultLocale</name>
+<returntype> System_LocaleRef</returntype>
+<declaration><declaration_type>System_LocaleRef</declaration_type> <declaration_function>System_Locale_GetDefaultLocale</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Locale_GetLConv" lang="c"><name>System_Locale_GetLConv</name>
+<returntype>struct lconv   *</returntype>
+<declaration><declaration_keyword>struct</declaration_keyword> <declaration_type>lconv</declaration_type> <declaration_type>*</declaration_type> <declaration_function>System_Locale_GetLConv</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Locale_GetLocale" lang="c"><name>System_Locale_GetLocale</name>
+<parsedparameterlist>
+<parsedparameter><type>const char *</type><name>name</name></parsedparameter>
+</parsedparameterlist>
+<returntype> System_LocaleRef</returntype>
+<declaration><declaration_type>System_LocaleRef</declaration_type> <declaration_function>System_Locale_GetLocale</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>name</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Locale_GetMessages" lang="c"><name>System_Locale_GetMessages</name>
+<parsedparameterlist>
+<parsedparameter><type>System_LocaleRef</type><name>locale</name></parsedparameter>
+</parsedparameterlist>
+<returntype> System_Locale_MessagesRef</returntype>
+<declaration><declaration_type>System_Locale_MessagesRef</declaration_type> <declaration_function>System_Locale_GetMessages</declaration_function>(
+    <declaration_type>System_LocaleRef</declaration_type> <declaration_param>locale</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Locale_GetMonetary" lang="c"><name>System_Locale_GetMonetary</name>
+<parsedparameterlist>
+<parsedparameter><type>System_LocaleRef</type><name>locale</name></parsedparameter>
+</parsedparameterlist>
+<returntype> System_Locale_MonetaryRef</returntype>
+<declaration><declaration_type>System_Locale_MonetaryRef</declaration_type> <declaration_function>System_Locale_GetMonetary</declaration_function>(
+    <declaration_type>System_LocaleRef</declaration_type> <declaration_param>locale</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Locale_GetNumeric" lang="c"><name>System_Locale_GetNumeric</name>
+<parsedparameterlist>
+<parsedparameter><type>System_LocaleRef</type><name>locale</name></parsedparameter>
+</parsedparameterlist>
+<returntype> System_Locale_NumericRef</returntype>
+<declaration><declaration_type>System_Locale_NumericRef</declaration_type> <declaration_function>System_Locale_GetNumeric</declaration_function>(
+    <declaration_type>System_LocaleRef</declaration_type> <declaration_param>locale</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Locale_GetPOSIXLocale" lang="c"><name>System_Locale_GetPOSIXLocale</name>
+<returntype> System_LocaleRef</returntype>
+<declaration><declaration_type>System_LocaleRef</declaration_type> <declaration_function>System_Locale_GetPOSIXLocale</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Locale_GetTime" lang="c"><name>System_Locale_GetTime</name>
+<parsedparameterlist>
+<parsedparameter><type>System_LocaleRef</type><name>locale</name></parsedparameter>
+</parsedparameterlist>
+<returntype> System_Locale_TimeRef</returntype>
+<declaration><declaration_type>System_Locale_TimeRef</declaration_type> <declaration_function>System_Locale_GetTime</declaration_function>(
+    <declaration_type>System_LocaleRef</declaration_type> <declaration_param>locale</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Locale_SetLocale" lang="c"><name>System_Locale_SetLocale</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>category</name></parsedparameter>
+<parsedparameter><type>const char *</type><name>name</name></parsedparameter>
+</parsedparameterlist>
+<returntype> char *</returntype>
+<declaration><declaration_type>char</declaration_type> <declaration_type>*</declaration_type> <declaration_function>System_Locale_SetLocale</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>category</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>name</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Locale_Use" lang="c"><name>System_Locale_Use</name>
+<parsedparameterlist>
+<parsedparameter><type>System_LocaleRef</type><name>locale</name></parsedparameter>
+</parsedparameterlist>
+<returntype> System_LocaleRef</returntype>
+<declaration><declaration_type>System_LocaleRef</declaration_type> <declaration_function>System_Locale_Use</declaration_function>(
+    <declaration_type>System_LocaleRef</declaration_type> <declaration_param>locale</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<typedefs><typedef id="//xsdoc_ref/c/tdef/System_Locale_CollateRef" lang="c" type="simple"><name>System_Locale_CollateRef</name>
+<declaration> <declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>__System_Locale_Collate</declaration_type> <declaration_type>*</declaration_type> <declaration_var>System_Locale_CollateRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/System_Locale_CTypeRef" lang="c" type="simple"><name>System_Locale_CTypeRef</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>__System_Locale_CType</declaration_type> <declaration_type>*</declaration_type> <declaration_var>System_Locale_CTypeRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/System_Locale_MessagesRef" lang="c" type="simple"><name>System_Locale_MessagesRef</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>__System_Locale_Messages</declaration_type> <declaration_type>*</declaration_type> <declaration_var>System_Locale_MessagesRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/System_Locale_MonetaryRef" lang="c" type="simple"><name>System_Locale_MonetaryRef</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>__System_Locale_Monetary</declaration_type> <declaration_type>*</declaration_type> <declaration_var>System_Locale_MonetaryRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/System_Locale_NumericRef" lang="c" type="simple"><name>System_Locale_NumericRef</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>__System_Locale_Numeric</declaration_type> <declaration_type>*</declaration_type> <declaration_var>System_Locale_NumericRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/System_Locale_TimeRef" lang="c" type="simple"><name>System_Locale_TimeRef</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>__System_Locale_Time</declaration_type> <declaration_type>*</declaration_type> <declaration_var>System_Locale_TimeRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/System_LocaleRef" lang="c" type="simple"><name>System_LocaleRef</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>__System_Locale</declaration_type> <declaration_type>*</declaration_type> <declaration_var>System_LocaleRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef></typedefs><defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_SYSTEM_LOCALE_H__" definetype="value" lang="c"><name>__XEOS_LIB_SYSTEM_LOCALE_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_SYSTEM_LOCALE_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

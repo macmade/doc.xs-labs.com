@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/siginfo_t.h" lang="c" filename="siginfo_t.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/system/include/system/types/siginfo_t.h"><name>siginfo_t.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdint.h">&lt;system/types/__private/stdint.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pid_t.h">&lt;system/types/pid_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/uid_t.h">&lt;system/types/uid_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/union_sigval.h">&lt;system/types/union_sigval.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<typedefs><typedef id="//xsdoc_ref/c/tdef/siginfo_t" lang="c" type="simple"><name>siginfo_t</name>
+<parsedparameterlist>
+<parsedparameter><type>long</type><name>si_band</name></parsedparameter>
+<parsedparameter><type>int</type><name>si_signo</name></parsedparameter>
+<parsedparameter><type>int</type><name>si_code</name></parsedparameter>
+<parsedparameter><type>int</type><name>si_errno</name></parsedparameter>
+<parsedparameter><type>int</type><name>si_status</name></parsedparameter>
+<parsedparameter><type>pid_t</type><name>si_pid</name></parsedparameter>
+<parsedparameter><type>uid_t</type><name>si_uid</name></parsedparameter>
+<parsedparameter><type>union sigval</type><name>si_value</name></parsedparameter>
+<parsedparameter><type>void *</type><name>si_addr</name></parsedparameter>
+</parsedparameterlist>
+<declaration> <declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> { 
+    <declaration_type>long</declaration_type> <declaration_var>si_band</declaration_var>; 
+    <declaration_type>int</declaration_type> <declaration_var>si_signo</declaration_var>; 
+    <declaration_type>int</declaration_type> <declaration_var>si_code</declaration_var>; 
+    <declaration_type>int</declaration_type> <declaration_var>si_errno</declaration_var>; 
+    <declaration_type>int</declaration_type> <declaration_var>si_status</declaration_var>; 
+    <declaration_type>pid_t</declaration_type> <declaration_var>si_pid</declaration_var>; 
+    <declaration_type>uid_t</declaration_type> <declaration_var>si_uid</declaration_var>; 
+    <declaration_keyword>union</declaration_keyword> <declaration_type>sigval</declaration_type> <declaration_var>si_value</declaration_var>; 
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_var>si_addr</declaration_var>; 
+} <declaration_var>siginfo_t</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef></typedefs><defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_SYSTEM_TYPES_SIGINFO_T_H__" definetype="value" lang="c"><name>__XEOS_LIB_SYSTEM_TYPES_SIGINFO_T_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_SYSTEM_TYPES_SIGINFO_T_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/time.h" lang="c" filename="time.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/dispatch/include/dispatch/time.h"><name>time.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/int64_t.h">&lt;system/types/int64_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/struct_timespec.h">&lt;system/types/struct_timespec.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/dispatch_time_t.h">&lt;dispatch/types/dispatch_time_t.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/dispatch_time" lang="c"><name>dispatch_time</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_time_t</type><name>when</name></parsedparameter>
+<parsedparameter><type>int64_t</type><name>delta</name></parsedparameter>
+</parsedparameterlist>
+<returntype> dispatch_time_t</returntype>
+<declaration><declaration_type>dispatch_time_t</declaration_type> <declaration_function>dispatch_time</declaration_function>(
+    <declaration_type>dispatch_time_t</declaration_type> <declaration_param>when</declaration_param>,
+    <declaration_type>int64_t</declaration_type> <declaration_param>delta</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_walltime" lang="c"><name>dispatch_walltime</name>
+<parsedparameterlist>
+<parsedparameter><type>const struct timespec *</type><name>when</name></parsedparameter>
+<parsedparameter><type>int64_t</type><name>delta</name></parsedparameter>
+</parsedparameterlist>
+<returntype> dispatch_time_t</returntype>
+<declaration><declaration_type>dispatch_time_t</declaration_type> <declaration_function>dispatch_walltime</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>timespec</declaration_type> <declaration_type>*</declaration_type><declaration_param>when</declaration_param>,
+    <declaration_type>int64_t</declaration_type> <declaration_param>delta</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_DISPATCH_TIME_H__" definetype="value" lang="c"><name>__XEOS_LIB_DISPATCH_TIME_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_DISPATCH_TIME_H__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DISPATCH_TIME_FOREVER" definetype="value" lang="c"><name>DISPATCH_TIME_FOREVER</name>
+<attributes><attribute><name>Value</name><value>0xffffffffffffffff (-1)</value></attribute>
+</attributes>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DISPATCH_TIME_FOREVER</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>~</declaration_preprocessor><declaration_preprocessor>0ull</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DISPATCH_TIME_NOW" definetype="value" lang="c"><name>DISPATCH_TIME_NOW</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DISPATCH_TIME_NOW</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/NSEC_PER_SEC" definetype="value" lang="c"><name>NSEC_PER_SEC</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>NSEC_PER_SEC</declaration_preprocessor> <declaration_preprocessor>1000000000ull</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/NSEC_PER_USEC" definetype="value" lang="c"><name>NSEC_PER_USEC</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>NSEC_PER_USEC</declaration_preprocessor> <declaration_preprocessor>1000ull</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/USEC_PER_SEC" definetype="value" lang="c"><name>USEC_PER_SEC</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>USEC_PER_SEC</declaration_preprocessor> <declaration_preprocessor>1000000ull</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

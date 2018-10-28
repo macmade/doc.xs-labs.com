@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/GitHubReleaseAsset.h" lang="c" filename="GitHubReleaseAsset.h" headerpath="/Users/macmade/Documents/Macmade/GitHub/GitHubUpdates/Documentation/../GitHubUpdates/GitHubReleaseAsset.h"><name>GitHubReleaseAsset.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Foundation.h">&lt;Foundation/Foundation.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<classes><class id="//xsdoc_ref/occ/cl/GitHubReleaseAsset" lang="occ"><name>GitHubReleaseAsset</name>
+<abstract><p>Represents a GitHub release's asset.
+</p></abstract>
+<attributes><attribute><name>Superclass</name><value><hd_link logicalPath="//xsdoc_ref/occ/cl/NSObject">NSObject</hd_link></value></attribute>
+</attributes>
+<declaration>@<declaration_type>interface</declaration_type> <declaration_type>GitHubReleaseAsset</declaration_type>: <declaration_type>NSObject</declaration_type>  <declaration_comment>/*!
+@property    url
+@abstract    The asset's URL.
+@discussion  This URL corresponds to the asset API feed URL.
+@see         downloadURL</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param>,
+        <declaration_param>strong</declaration_param>,
+        <declaration_param>nullable</declaration_param> ) <declaration_type>NSURL</declaration_type> <declaration_type>*</declaration_type><declaration_var>url</declaration_var>;   <declaration_comment>/*!
+@property    downloadURL
+@abstract    The asset's download URL.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param>,
+        <declaration_param>strong</declaration_param>,
+        <declaration_param>nullable</declaration_param> ) <declaration_type>NSURL</declaration_type> <declaration_type>*</declaration_type><declaration_var>downloadURL</declaration_var>;   <declaration_comment>/*!
+@property    name
+@abstract    The asset's name.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param>,
+        <declaration_param>strong</declaration_param>,
+        <declaration_param>nullable</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type><declaration_var>name</declaration_var>;   <declaration_comment>/*!
+@property    contentType
+@abstract    The asset's content type.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param>,
+        <declaration_param>strong</declaration_param>,
+        <declaration_param>nullable</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type><declaration_var>contentType</declaration_var>;   <declaration_comment>/*!
+@property    created
+@abstract    The asset's creation date.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param>,
+        <declaration_param>strong</declaration_param>,
+        <declaration_param>nullable</declaration_param> ) <declaration_type>NSDate</declaration_type> <declaration_type>*</declaration_type><declaration_var>created</declaration_var>;   <declaration_comment>/*!
+@property    updated
+@abstract    The asset's update date, if any.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param>,
+        <declaration_param>strong</declaration_param>,
+        <declaration_param>nullable</declaration_param> ) <declaration_type>NSDate</declaration_type> <declaration_type>*</declaration_type><declaration_var>updated</declaration_var>;   <declaration_comment>/*!
+@property    size
+@abstract    The asset's size.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>NSUInteger</declaration_type> <declaration_var>size</declaration_var>;   <declaration_comment>/*!
+@method      initWithDictionary:
+@abstract    Initializes an instance with properties from a dictionary.
+@param       dict    The dictionary containing the asset's properties
+@result      The initialized instance, or nil</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_type>nullable</declaration_type> <declaration_param>instancetype</declaration_param> )<declaration_type>initWithDictionary</declaration_type>: ( <declaration_type>NSDictionary</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>dict</declaration_var>;   
+    @@end </declaration>
+<desc><p/></desc>
+<methods><method id="//xsdoc_ref/occ/instm/GitHubReleaseAsset/initWithDictionary:" lang="occ" type="instm"><name>initWithDictionary:</name>
+<abstract><p>Initializes an instance with properties from a dictionary.
+</p></abstract>
+<parameterlist>
+<parameter><name>dict</name><desc><p>The dictionary containing the asset's properties</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSDictionary * )</type><name>dict</name></parsedparameter>
+</parsedparameterlist>
+<returntype> nullable instancetype </returntype>
+<result><p>The initialized instance, or nil
+</p></result>
+<declaration>- ( <declaration_type>nullable</declaration_type> <declaration_type>instancetype</declaration_type> )<declaration_function>initWithDictionary</declaration_function>: ( <declaration_type>NSDictionary</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>dict</declaration_var>; </declaration>
+<desc><p/></desc>
+</method></methods>
+<properties><property id="//xsdoc_ref/occ/instp/GitHubReleaseAsset/contentType" lang="occ"><name>contentType</name>
+<abstract><p>The asset's content type.
+</p></abstract>
+<returntype>NSString *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param>,
+    <declaration_param>strong</declaration_param>,
+    <declaration_param>nullable</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> <declaration_var>contentType</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/GitHubReleaseAsset/created" lang="occ"><name>created</name>
+<abstract><p>The asset's creation date.
+</p></abstract>
+<returntype>NSDate *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param>,
+    <declaration_param>strong</declaration_param>,
+    <declaration_param>nullable</declaration_param> ) <declaration_type>NSDate</declaration_type> <declaration_type>*</declaration_type> <declaration_var>created</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/GitHubReleaseAsset/downloadURL" lang="occ"><name>downloadURL</name>
+<abstract><p>The asset's download URL.
+</p></abstract>
+<returntype>NSURL *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param>,
+    <declaration_param>strong</declaration_param>,
+    <declaration_param>nullable</declaration_param> ) <declaration_type>NSURL</declaration_type> <declaration_type>*</declaration_type> <declaration_var>downloadURL</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/GitHubReleaseAsset/name" lang="occ"><name>name</name>
+<abstract><p>The asset's name.
+</p></abstract>
+<returntype>NSString *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param>,
+    <declaration_param>strong</declaration_param>,
+    <declaration_param>nullable</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> <declaration_var>name</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/GitHubReleaseAsset/size" lang="occ"><name>size</name>
+<abstract><p>The asset's size.
+</p></abstract>
+<returntype>NSUInteger</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>NSUInteger</declaration_type> <declaration_var>size</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/GitHubReleaseAsset/updated" lang="occ"><name>updated</name>
+<abstract><p>The asset's update date, if any.
+</p></abstract>
+<returntype>NSDate *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param>,
+    <declaration_param>strong</declaration_param>,
+    <declaration_param>nullable</declaration_param> ) <declaration_type>NSDate</declaration_type> <declaration_type>*</declaration_type> <declaration_var>updated</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/GitHubReleaseAsset/url" lang="occ"><name>url</name>
+<abstract><p>The asset's URL.
+</p></abstract>
+<attributelists><listattribute><name>See</name><list>
+<item><name>downloadURL</name><value><hd_link logicalPath="downloadURL" isseealso="yes">downloadURL</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype>NSURL *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param>,
+    <declaration_param>strong</declaration_param>,
+    <declaration_param>nullable</declaration_param> ) <declaration_type>NSURL</declaration_type> <declaration_type>*</declaration_type> <declaration_var>url</declaration_var>; </declaration>
+<desc><p>This URL corresponds to the asset API feed URL.
+</p></desc>
+</property></properties>
+<timestamp>Sunday, June 18, 2017</timestamp>
+</class></classes>
+<copyrightinfo>&#169; (c) 2017, Jean-David Gadina - www.xs-labs.com
+</copyrightinfo>
+<timestamp>Sunday, June 18, 2017</timestamp>
+</header>

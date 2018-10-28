@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/NSError+GitHubUpdates.h" lang="c" filename="NSError+GitHubUpdates.h" headerpath="/Users/macmade/Documents/Macmade/GitHub/GitHubUpdates/Documentation/../GitHubUpdates/NSError+GitHubUpdates.h"><name>NSError+GitHubUpdates.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Foundation.h">&lt;Foundation/Foundation.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<classes><category id="//xsdoc_ref/occ/cat/NSError(GitHubUpdates)" lang="occ"><name>NSError(GitHubUpdates)</name>
+<abstract><p>Additional methods for NSError.
+</p></abstract>
+<attributes><attribute><name>Extends Class</name><value><hd_link logicalPath="//xsdoc_ref/occ/cl/NSError">NSError</hd_link></value></attribute>
+</attributes>
+<declaration>@<declaration_type>interface</declaration_type> <declaration_function>NSError</declaration_function>(
+        <declaration_param>GitHubUpdates</declaration_param> )  <declaration_comment>/*!
+@method      errorWithException:
+@abstract    Creates an error object from an exception object.
+@param       exception   The exception object
+@result      The error object</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    + (
+            <declaration_param>instancetype</declaration_param> )<declaration_type>errorWithException</declaration_type>: (
+            <declaration_type>NSException</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>exception</declaration_var>;   @@end </declaration>
+<desc><p/></desc>
+<methods><method id="//xsdoc_ref/occ/clm/NSError(GitHubUpdates)/errorWithException:" lang="occ" type="clm" accessControl="private"><name>errorWithException:</name>
+<abstract><p>Creates an error object from an exception object.
+</p></abstract>
+<parameterlist>
+<parameter><name>exception</name><desc><p>The exception object</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSException * )</type><name>exception</name></parsedparameter>
+</parsedparameterlist>
+<returntype> instancetype </returntype>
+<result><p>The error object
+</p></result>
+<declaration>+ ( <declaration_type>instancetype</declaration_type> )<declaration_function>errorWithException</declaration_function>: ( <declaration_type>NSException</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>exception</declaration_var>; </declaration>
+<desc><p/></desc>
+</method></methods>
+<timestamp>Sunday, June 18, 2017</timestamp>
+</category></classes>
+<copyrightinfo>&#169; (c) 2017, Jean-David Gadina - www.xs-labs.com
+</copyrightinfo>
+<timestamp>Sunday, June 18, 2017</timestamp>
+</header>

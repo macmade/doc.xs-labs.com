@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/GitHubRelease.h" lang="c" filename="GitHubRelease.h" headerpath="/Users/macmade/Documents/Macmade/GitHub/GitHubUpdates/Documentation/../GitHubUpdates/GitHubRelease.h"><name>GitHubRelease.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Foundation.h">&lt;Foundation/Foundation.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<classes><class id="//xsdoc_ref/occ/cl/GitHubRelease" lang="occ"><name>GitHubRelease</name>
+<abstract><p>Represents a GitHub release.
+</p></abstract>
+<attributes><attribute><name>Superclass</name><value><hd_link logicalPath="//xsdoc_ref/occ/cl/NSObject">NSObject</hd_link></value></attribute>
+</attributes>
+<declaration>@<declaration_type>interface</declaration_type> <declaration_type>GitHubRelease</declaration_type>: <declaration_type>NSObject</declaration_type>  <declaration_comment>/*!
+@property    url
+@abstract    The release URL.
+@discussion  This URL corresponds to the release API feed URL.
+@see         htmlURL</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param>,
+        <declaration_param>strong</declaration_param>,
+        <declaration_param>nullable</declaration_param> ) <declaration_type>NSURL</declaration_type> <declaration_type>*</declaration_type><declaration_var>url</declaration_var>;   <declaration_comment>/*!
+@property    htmlURL
+@abstract    The web URL for the release.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param>,
+        <declaration_param>strong</declaration_param>,
+        <declaration_param>nullable</declaration_param> ) <declaration_type>NSURL</declaration_type> <declaration_type>*</declaration_type><declaration_var>htmlURL</declaration_var>;   <declaration_comment>/*!
+@property    tagName
+@abstract    The name of the release's tag.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param>,
+        <declaration_param>strong</declaration_param>,
+        <declaration_param>nullable</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type><declaration_var>tagName</declaration_var>;   <declaration_comment>/*!
+@property    draft
+@abstract    Whether this release is a draft.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>draft</declaration_var>;   <declaration_comment>/*!
+@property    draft
+@abstract    Whether this release is a prerelease.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>prerelease</declaration_var>;   <declaration_comment>/*!
+@property    created
+@abstract    The release's creation date.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param>,
+        <declaration_param>strong</declaration_param>,
+        <declaration_param>nullable</declaration_param> ) <declaration_type>NSDate</declaration_type> <declaration_type>*</declaration_type><declaration_var>created</declaration_var>;   <declaration_comment>/*!
+@property    published
+@abstract    The release's publication date.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param>,
+        <declaration_param>strong</declaration_param>,
+        <declaration_param>nullable</declaration_param> ) <declaration_type>NSDate</declaration_type> <declaration_type>*</declaration_type><declaration_var>published</declaration_var>;   <declaration_comment>/*!
+@property    tarballURL
+@abstract    The URL for the source code's TAR archive.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param>,
+        <declaration_param>strong</declaration_param>,
+        <declaration_param>nullable</declaration_param> ) <declaration_type>NSURL</declaration_type> <declaration_type>*</declaration_type><declaration_var>tarballURL</declaration_var>;   <declaration_comment>/*!
+@property    zipballURL
+@abstract    The URL for the source code's ZIP archive.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param>,
+        <declaration_param>strong</declaration_param>,
+        <declaration_param>nullable</declaration_param> ) <declaration_type>NSURL</declaration_type> <declaration_type>*</declaration_type><declaration_var>zipballURL</declaration_var>;   <declaration_comment>/*!
+@property    body
+@abstract    The release notes for the release.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param>,
+        <declaration_param>strong</declaration_param>,
+        <declaration_param>nullable</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type><declaration_var>body</declaration_var>;   <declaration_comment>/*!
+@property    assets
+@abstract    The assets contained in the release.
+@see         GitHubReleaseAsset</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param>,
+        <declaration_param>strong</declaration_param>,
+        <declaration_param>nullable</declaration_param> ) <declaration_type>NSArray</declaration_type>&lt; <declaration_template>GitHubReleaseAsset</declaration_template> <declaration_template>*</declaration_template> &gt; <declaration_type>*</declaration_type> <declaration_var>assets</declaration_var>;   <declaration_comment>/*!
+@method      releasesWithData:error:
+@abstract    Gets an array of releases from JSON data.
+@result      The initialized instance
+@param       data    The JSON data
+@param       error   An optional pointer to an error object</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    + ( <declaration_type>nullable</declaration_type> <declaration_type>NSArray</declaration_type>&lt; <declaration_template>GitHubRelease</declaration_template> <declaration_template>*</declaration_template> &gt; <declaration_type>*</declaration_type> )<declaration_type>releasesWithData</declaration_type>: ( <declaration_type>NSData</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>data</declaration_type> <declaration_type>error</declaration_type>: ( <declaration_type>NSError</declaration_type> <declaration_type>*</declaration_type> <declaration_type>__autoreleasing</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>error</declaration_var>;   
+    @@end </declaration>
+<desc><p/></desc>
+<methods><method id="//xsdoc_ref/occ/clm/GitHubRelease/releasesWithData:error:" lang="occ" type="clm"><name>releasesWithData:error:</name>
+<abstract><p>Gets an array of releases from JSON data.
+</p></abstract>
+<parameterlist>
+<parameter><name>data</name><desc><p>The JSON data</p></desc></parameter>
+<parameter><name>error</name><desc><p>An optional pointer to an error object</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSData * )</type><name>data</name></parsedparameter>
+<parsedparameter><type>( NSError * __autoreleasing * )</type><name>error</name></parsedparameter>
+</parsedparameterlist>
+<returntype> nullable NSArray&lt; GitHubRelease * &gt; * </returntype>
+<result><p>The initialized instance
+</p></result>
+<declaration>+ ( <declaration_type>nullable</declaration_type> <declaration_type>NSArray</declaration_type>&lt; <declaration_param>GitHubRelease</declaration_param> <declaration_param>*</declaration_param> &gt; <declaration_type>*</declaration_type> )<declaration_function>releasesWithData</declaration_function>: ( <declaration_type>NSData</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>data</declaration_param> 
+        <declaration_function>error</declaration_function>: ( <declaration_type>NSError</declaration_type> <declaration_type>*</declaration_type> <declaration_type>__autoreleasing</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>error</declaration_var>; </declaration>
+<desc><p/></desc>
+</method></methods>
+<properties><property id="//xsdoc_ref/occ/instp/GitHubRelease/assets" lang="occ"><name>assets</name>
+<abstract><p>The assets contained in the release.
+</p></abstract>
+<attributelists><listattribute><name>See</name><list>
+<item><name>GitHubReleaseAsset</name><value><hd_link logicalPath="GitHubReleaseAsset" isseealso="yes">GitHubReleaseAsset</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype>NSArray&lt; GitHubReleaseAsset *  &gt; *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param>,
+    <declaration_param>strong</declaration_param>,
+    <declaration_param>nullable</declaration_param> ) <declaration_type>NSArray</declaration_type>&lt; <declaration_template>GitHubReleaseAsset</declaration_template> <declaration_template>*</declaration_template> &gt; <declaration_type>*</declaration_type> <declaration_var>assets</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/GitHubRelease/body" lang="occ"><name>body</name>
+<abstract><p>The release notes for the release.
+</p></abstract>
+<returntype>NSString *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param>,
+    <declaration_param>strong</declaration_param>,
+    <declaration_param>nullable</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> <declaration_var>body</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/GitHubRelease/created" lang="occ"><name>created</name>
+<abstract><p>The release's creation date.
+</p></abstract>
+<returntype>NSDate *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param>,
+    <declaration_param>strong</declaration_param>,
+    <declaration_param>nullable</declaration_param> ) <declaration_type>NSDate</declaration_type> <declaration_type>*</declaration_type> <declaration_var>created</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/GitHubRelease/draft" lang="occ"><name>draft</name>
+<abstract><p>Whether this release is a draft.
+</p></abstract>
+<returntype>BOOL</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>draft</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/GitHubRelease/htmlURL" lang="occ"><name>htmlURL</name>
+<abstract><p>The web URL for the release.
+</p></abstract>
+<returntype>NSURL *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param>,
+    <declaration_param>strong</declaration_param>,
+    <declaration_param>nullable</declaration_param> ) <declaration_type>NSURL</declaration_type> <declaration_type>*</declaration_type> <declaration_var>htmlURL</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/GitHubRelease/prerelease" lang="occ"><name>prerelease</name>
+<abstract><p>Whether this release is a prerelease.
+</p></abstract>
+<returntype>BOOL</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>prerelease</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/GitHubRelease/published" lang="occ"><name>published</name>
+<abstract><p>The release's publication date.
+</p></abstract>
+<returntype>NSDate *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param>,
+    <declaration_param>strong</declaration_param>,
+    <declaration_param>nullable</declaration_param> ) <declaration_type>NSDate</declaration_type> <declaration_type>*</declaration_type> <declaration_var>published</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/GitHubRelease/tagName" lang="occ"><name>tagName</name>
+<abstract><p>The name of the release's tag.
+</p></abstract>
+<returntype>NSString *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param>,
+    <declaration_param>strong</declaration_param>,
+    <declaration_param>nullable</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> <declaration_var>tagName</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/GitHubRelease/tarballURL" lang="occ"><name>tarballURL</name>
+<abstract><p>The URL for the source code's TAR archive.
+</p></abstract>
+<returntype>NSURL *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param>,
+    <declaration_param>strong</declaration_param>,
+    <declaration_param>nullable</declaration_param> ) <declaration_type>NSURL</declaration_type> <declaration_type>*</declaration_type> <declaration_var>tarballURL</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/GitHubRelease/url" lang="occ"><name>url</name>
+<abstract><p>The release URL.
+</p></abstract>
+<attributelists><listattribute><name>See</name><list>
+<item><name>htmlURL</name><value><hd_link logicalPath="htmlURL" isseealso="yes">htmlURL</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype>NSURL *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param>,
+    <declaration_param>strong</declaration_param>,
+    <declaration_param>nullable</declaration_param> ) <declaration_type>NSURL</declaration_type> <declaration_type>*</declaration_type> <declaration_var>url</declaration_var>; </declaration>
+<desc><p>This URL corresponds to the release API feed URL.
+</p></desc>
+</property><property id="//xsdoc_ref/occ/instp/GitHubRelease/zipballURL" lang="occ"><name>zipballURL</name>
+<abstract><p>The URL for the source code's ZIP archive.
+</p></abstract>
+<returntype>NSURL *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param>,
+    <declaration_param>strong</declaration_param>,
+    <declaration_param>nullable</declaration_param> ) <declaration_type>NSURL</declaration_type> <declaration_type>*</declaration_type> <declaration_var>zipballURL</declaration_var>; </declaration>
+<desc><p/></desc>
+</property></properties>
+<timestamp>Sunday, June 18, 2017</timestamp>
+</class></classes>
+<copyrightinfo>&#169; (c) 2017, Jean-David Gadina - www.xs-labs.com
+</copyrightinfo>
+<timestamp>Sunday, June 18, 2017</timestamp>
+</header>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/struct_sched_param.h" lang="c" filename="struct_sched_param.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/system/include/system/types/struct_sched_param.h"><name>struct_sched_param.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdint.h">&lt;system/types/__private/stdint.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<structs_and_unions><struct id="//xsdoc_ref/c/tag/sched_param" lang="c"><name>sched_param</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>sched_priority</name></parsedparameter>
+</parsedparameterlist>
+<declaration> <declaration_keyword>struct</declaration_keyword> <declaration_type>sched_param</declaration_type> { 
+    <declaration_type>int</declaration_type> <declaration_var>sched_priority</declaration_var>; 
+};  </declaration>
+<desc><p/></desc>
+</struct></structs_and_unions><defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_SYSTEM_TYPES_STRUCT_SCHED_PARAM_H__" definetype="value" lang="c"><name>__XEOS_LIB_SYSTEM_TYPES_STRUCT_SCHED_PARAM_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_SYSTEM_TYPES_STRUCT_SCHED_PARAM_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

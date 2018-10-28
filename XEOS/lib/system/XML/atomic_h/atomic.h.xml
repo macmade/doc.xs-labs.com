@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/atomic.h" lang="c" filename="atomic.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/system/include/system/atomic.h"><name>atomic.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdint.h">&lt;stdint.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdbool.h">&lt;stdbool.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/System_Atomic_Add32" lang="c"><name>System_Atomic_Add32</name>
+<parsedparameterlist>
+<parsedparameter><type>int32_t</type><name>amount</name></parsedparameter>
+<parsedparameter><type>volatile int32_t *</type><name>value</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int32_t</returntype>
+<declaration><declaration_type>int32_t</declaration_type> <declaration_function>System_Atomic_Add32</declaration_function>(
+    <declaration_type>int32_t</declaration_type> <declaration_param>amount</declaration_param>,
+    <declaration_keyword>volatile</declaration_keyword> <declaration_type>int32_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>value</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Atomic_Add64" lang="c"><name>System_Atomic_Add64</name>
+<parsedparameterlist>
+<parsedparameter><type>int64_t</type><name>amount</name></parsedparameter>
+<parsedparameter><type>volatile int64_t *</type><name>value</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int64_t</returntype>
+<declaration><declaration_type>int64_t</declaration_type> <declaration_function>System_Atomic_Add64</declaration_function>(
+    <declaration_type>int64_t</declaration_type> <declaration_param>amount</declaration_param>,
+    <declaration_keyword>volatile</declaration_keyword> <declaration_type>int64_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>value</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Atomic_And32" lang="c"><name>System_Atomic_And32</name>
+<parsedparameterlist>
+<parsedparameter><type>uint32_t</type><name>mask</name></parsedparameter>
+<parsedparameter><type>volatile uint32_t *</type><name>value</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int32_t</returntype>
+<declaration><declaration_type>int32_t</declaration_type> <declaration_function>System_Atomic_And32</declaration_function>(
+    <declaration_type>uint32_t</declaration_type> <declaration_param>mask</declaration_param>,
+    <declaration_keyword>volatile</declaration_keyword> <declaration_type>uint32_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>value</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Atomic_CompareAndSwap16" lang="c"><name>System_Atomic_CompareAndSwap16</name>
+<parsedparameterlist>
+<parsedparameter><type>int16_t</type><name>oldValue</name></parsedparameter>
+<parsedparameter><type>int16_t</type><name>newValue</name></parsedparameter>
+<parsedparameter><type>volatile int16_t *</type><name>value</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>System_Atomic_CompareAndSwap16</declaration_function>(
+    <declaration_type>int16_t</declaration_type> <declaration_param>oldValue</declaration_param>,
+    <declaration_type>int16_t</declaration_type> <declaration_param>newValue</declaration_param>,
+    <declaration_keyword>volatile</declaration_keyword> <declaration_type>int16_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>value</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Atomic_CompareAndSwap32" lang="c"><name>System_Atomic_CompareAndSwap32</name>
+<parsedparameterlist>
+<parsedparameter><type>int32_t</type><name>oldValue</name></parsedparameter>
+<parsedparameter><type>int32_t</type><name>newValue</name></parsedparameter>
+<parsedparameter><type>volatile int32_t *</type><name>value</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>System_Atomic_CompareAndSwap32</declaration_function>(
+    <declaration_type>int32_t</declaration_type> <declaration_param>oldValue</declaration_param>,
+    <declaration_type>int32_t</declaration_type> <declaration_param>newValue</declaration_param>,
+    <declaration_keyword>volatile</declaration_keyword> <declaration_type>int32_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>value</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Atomic_CompareAndSwap64" lang="c"><name>System_Atomic_CompareAndSwap64</name>
+<parsedparameterlist>
+<parsedparameter><type>int64_t</type><name>oldValue</name></parsedparameter>
+<parsedparameter><type>int64_t</type><name>newValue</name></parsedparameter>
+<parsedparameter><type>volatile int64_t *</type><name>value</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>System_Atomic_CompareAndSwap64</declaration_function>(
+    <declaration_type>int64_t</declaration_type> <declaration_param>oldValue</declaration_param>,
+    <declaration_type>int64_t</declaration_type> <declaration_param>newValue</declaration_param>,
+    <declaration_keyword>volatile</declaration_keyword> <declaration_type>int64_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>value</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Atomic_CompareAndSwap8" lang="c"><name>System_Atomic_CompareAndSwap8</name>
+<parsedparameterlist>
+<parsedparameter><type>int8_t</type><name>oldValue</name></parsedparameter>
+<parsedparameter><type>int8_t</type><name>newValue</name></parsedparameter>
+<parsedparameter><type>volatile int8_t *</type><name>value</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>System_Atomic_CompareAndSwap8</declaration_function>(
+    <declaration_type>int8_t</declaration_type> <declaration_param>oldValue</declaration_param>,
+    <declaration_type>int8_t</declaration_type> <declaration_param>newValue</declaration_param>,
+    <declaration_keyword>volatile</declaration_keyword> <declaration_type>int8_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>value</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Atomic_CompareAndSwapChar" lang="c"><name>System_Atomic_CompareAndSwapChar</name>
+<parsedparameterlist>
+<parsedparameter><type>char</type><name>oldValue</name></parsedparameter>
+<parsedparameter><type>char</type><name>newValue</name></parsedparameter>
+<parsedparameter><type>volatile char *</type><name>value</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>System_Atomic_CompareAndSwapChar</declaration_function>(
+    <declaration_type>char</declaration_type> <declaration_param>oldValue</declaration_param>,
+    <declaration_type>char</declaration_type> <declaration_param>newValue</declaration_param>,
+    <declaration_keyword>volatile</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>value</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Atomic_CompareAndSwapInt" lang="c"><name>System_Atomic_CompareAndSwapInt</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>oldValue</name></parsedparameter>
+<parsedparameter><type>int</type><name>newValue</name></parsedparameter>
+<parsedparameter><type>volatile int *</type><name>value</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>System_Atomic_CompareAndSwapInt</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>oldValue</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>newValue</declaration_param>,
+    <declaration_keyword>volatile</declaration_keyword> <declaration_type>int</declaration_type> <declaration_type>*</declaration_type><declaration_param>value</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Atomic_CompareAndSwapLong" lang="c"><name>System_Atomic_CompareAndSwapLong</name>
+<parsedparameterlist>
+<parsedparameter><type>long</type><name>oldValue</name></parsedparameter>
+<parsedparameter><type>long</type><name>newValue</name></parsedparameter>
+<parsedparameter><type>volatile long *</type><name>value</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>System_Atomic_CompareAndSwapLong</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_param>oldValue</declaration_param>,
+    <declaration_type>long</declaration_type> <declaration_param>newValue</declaration_param>,
+    <declaration_keyword>volatile</declaration_keyword> <declaration_type>long</declaration_type> <declaration_type>*</declaration_type><declaration_param>value</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Atomic_CompareAndSwapPtr" lang="c"><name>System_Atomic_CompareAndSwapPtr</name>
+<parsedparameterlist>
+<parsedparameter><type>void *</type><name>oldValue</name></parsedparameter>
+<parsedparameter><type>void *</type><name>newValue</name></parsedparameter>
+<parsedparameter><type>void * volatile *</type><name>value</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>System_Atomic_CompareAndSwapPtr</declaration_function>(
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>oldValue</declaration_param>,
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>newValue</declaration_param>,
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_keyword>volatile</declaration_keyword> <declaration_type>*</declaration_type> <declaration_param>value</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Atomic_CompareAndSwapShort" lang="c"><name>System_Atomic_CompareAndSwapShort</name>
+<parsedparameterlist>
+<parsedparameter><type>short</type><name>oldValue</name></parsedparameter>
+<parsedparameter><type>short</type><name>newValue</name></parsedparameter>
+<parsedparameter><type>volatile short *</type><name>value</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>System_Atomic_CompareAndSwapShort</declaration_function>(
+    <declaration_type>short</declaration_type> <declaration_param>oldValue</declaration_param>,
+    <declaration_type>short</declaration_type> <declaration_param>newValue</declaration_param>,
+    <declaration_keyword>volatile</declaration_keyword> <declaration_type>short</declaration_type> <declaration_type>*</declaration_type><declaration_param>value</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Atomic_Decrement32" lang="c"><name>System_Atomic_Decrement32</name>
+<parsedparameterlist>
+<parsedparameter><type>volatile int32_t *</type><name>value</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int32_t</returntype>
+<declaration><declaration_type>int32_t</declaration_type> <declaration_function>System_Atomic_Decrement32</declaration_function>(
+    <declaration_keyword>volatile</declaration_keyword> <declaration_type>int32_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>value</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Atomic_Decrement64" lang="c"><name>System_Atomic_Decrement64</name>
+<parsedparameterlist>
+<parsedparameter><type>volatile int64_t *</type><name>value</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int64_t</returntype>
+<declaration><declaration_type>int64_t</declaration_type> <declaration_function>System_Atomic_Decrement64</declaration_function>(
+    <declaration_keyword>volatile</declaration_keyword> <declaration_type>int64_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>value</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Atomic_Increment32" lang="c"><name>System_Atomic_Increment32</name>
+<parsedparameterlist>
+<parsedparameter><type>volatile int32_t *</type><name>value</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int32_t</returntype>
+<declaration><declaration_type>int32_t</declaration_type> <declaration_function>System_Atomic_Increment32</declaration_function>(
+    <declaration_keyword>volatile</declaration_keyword> <declaration_type>int32_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>value</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Atomic_Increment64" lang="c"><name>System_Atomic_Increment64</name>
+<parsedparameterlist>
+<parsedparameter><type>volatile int64_t *</type><name>value</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int64_t</returntype>
+<declaration><declaration_type>int64_t</declaration_type> <declaration_function>System_Atomic_Increment64</declaration_function>(
+    <declaration_keyword>volatile</declaration_keyword> <declaration_type>int64_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>value</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Atomic_MemoryBarrier" lang="c"><name>System_Atomic_MemoryBarrier</name>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>System_Atomic_MemoryBarrier</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Atomic_Or32" lang="c"><name>System_Atomic_Or32</name>
+<parsedparameterlist>
+<parsedparameter><type>uint32_t</type><name>mask</name></parsedparameter>
+<parsedparameter><type>volatile uint32_t *</type><name>value</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int32_t</returntype>
+<declaration><declaration_type>int32_t</declaration_type> <declaration_function>System_Atomic_Or32</declaration_function>(
+    <declaration_type>uint32_t</declaration_type> <declaration_param>mask</declaration_param>,
+    <declaration_keyword>volatile</declaration_keyword> <declaration_type>uint32_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>value</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Atomic_SpinLockLock" lang="c"><name>System_Atomic_SpinLockLock</name>
+<parsedparameterlist>
+<parsedparameter><type>System_Atomic_SpinLock *</type><name>lock</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>System_Atomic_SpinLockLock</declaration_function>(
+    <declaration_type>System_Atomic_SpinLock</declaration_type> <declaration_type>*</declaration_type><declaration_param>lock</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Atomic_SpinLockTry" lang="c"><name>System_Atomic_SpinLockTry</name>
+<parsedparameterlist>
+<parsedparameter><type>System_Atomic_SpinLock *</type><name>lock</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>System_Atomic_SpinLockTry</declaration_function>(
+    <declaration_type>System_Atomic_SpinLock</declaration_type> <declaration_type>*</declaration_type><declaration_param>lock</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Atomic_SpinLockUnlock" lang="c"><name>System_Atomic_SpinLockUnlock</name>
+<parsedparameterlist>
+<parsedparameter><type>System_Atomic_SpinLock *</type><name>lock</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>System_Atomic_SpinLockUnlock</declaration_function>(
+    <declaration_type>System_Atomic_SpinLock</declaration_type> <declaration_type>*</declaration_type><declaration_param>lock</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Atomic_TestAndClear" lang="c"><name>System_Atomic_TestAndClear</name>
+<parsedparameterlist>
+<parsedparameter><type>uint32_t</type><name>n</name></parsedparameter>
+<parsedparameter><type>volatile void *</type><name>address</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>System_Atomic_TestAndClear</declaration_function>(
+    <declaration_type>uint32_t</declaration_type> <declaration_param>n</declaration_param>,
+    <declaration_keyword>volatile</declaration_keyword> <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>address</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Atomic_TestAndSet" lang="c"><name>System_Atomic_TestAndSet</name>
+<parsedparameterlist>
+<parsedparameter><type>uint32_t</type><name>n</name></parsedparameter>
+<parsedparameter><type>volatile void *</type><name>address</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>System_Atomic_TestAndSet</declaration_function>(
+    <declaration_type>uint32_t</declaration_type> <declaration_param>n</declaration_param>,
+    <declaration_keyword>volatile</declaration_keyword> <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>address</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/System_Atomic_Xor32" lang="c"><name>System_Atomic_Xor32</name>
+<parsedparameterlist>
+<parsedparameter><type>uint32_t</type><name>mask</name></parsedparameter>
+<parsedparameter><type>volatile uint32_t *</type><name>value</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int32_t</returntype>
+<declaration><declaration_type>int32_t</declaration_type> <declaration_function>System_Atomic_Xor32</declaration_function>(
+    <declaration_type>uint32_t</declaration_type> <declaration_param>mask</declaration_param>,
+    <declaration_keyword>volatile</declaration_keyword> <declaration_type>uint32_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>value</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<typedefs><typedef id="//xsdoc_ref/c/tdef/System_Atomic_SpinLock" lang="c" type="simple"><name>System_Atomic_SpinLock</name>
+<declaration> <declaration_keyword>typedef</declaration_keyword> <declaration_type>int32_t</declaration_type> <declaration_var>System_Atomic_SpinLock</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef></typedefs><defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_SYSTEM_ATOMIC_H__" definetype="value" lang="c"><name>__XEOS_LIB_SYSTEM_ATOMIC_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_SYSTEM_ATOMIC_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/NSDate+ShellKit.m" lang="occ" filename="NSDate+ShellKit.m" headerpath="/Users/macmade/Documents/Macmade/GitHub/ShellKit/Documentation/../ShellKit/Classes/ShellKit/NSDate+ShellKit.m"><name>NSDate+ShellKit.m</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/ShellKit.h">&lt;ShellKit/ShellKit.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<copyrightinfo>&#169; (c) 2017, Jean-David Gadina - www.xs-labs.com
+</copyrightinfo>
+<timestamp>Monday, May 15, 2017</timestamp>
+</header>

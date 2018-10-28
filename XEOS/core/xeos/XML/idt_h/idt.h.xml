@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/idt.h" lang="c" filename="idt.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/core/xeos/include/xeos/hal/idt.h"><name>idt.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/cpu.h">&lt;xeos/hal/cpu.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdint.h">&lt;stdint.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdbool.h">&lt;stdbool.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/XEOS_HAL_IDT_GetISREntry" lang="c"><name>XEOS_HAL_IDT_GetISREntry</name>
+<abstract><p>Gets an ISR entry
+</p></abstract>
+<parameterlist>
+<parameter><name>isr</name><desc><p>The ISR number</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>uint8_t</type><name>isr</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_HAL_IDT_ISREntryRef</returntype>
+<result><p>The ISR entry or NULL
+</p></result>
+<declaration><declaration_type>XEOS_HAL_IDT_ISREntryRef</declaration_type> <declaration_function>XEOS_HAL_IDT_GetISREntry</declaration_function>(
+    <declaration_type>uint8_t</declaration_type> <declaration_param>isr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_IDT_Init" lang="c"><name>XEOS_HAL_IDT_Init</name>
+<abstract><p>Initializes the Interrupt Descriptor Table (IDT)
+</p></abstract>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_IDT_Init</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_IDT_ISREntryGetHandler" lang="c"><name>XEOS_HAL_IDT_ISREntryGetHandler</name>
+<abstract><p>Gets the function handler of an ISR entry
+</p></abstract>
+<parameterlist>
+<parameter><name>entry</name><desc><p>The ISR entry</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_HAL_IDT_ISREntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_HAL_IDT_ISRHandler</returntype>
+<result><p>The function handler of the ISR entry or NULL
+</p></result>
+<declaration><declaration_type>XEOS_HAL_IDT_ISRHandler</declaration_type> <declaration_function>XEOS_HAL_IDT_ISREntryGetHandler</declaration_function>(
+    <declaration_type>XEOS_HAL_IDT_ISREntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_IDT_ISREntryGetIndex" lang="c"><name>XEOS_HAL_IDT_ISREntryGetIndex</name>
+<abstract><p>Gets the index of an ISR entry in the IDT
+</p></abstract>
+<parameterlist>
+<parameter><name>entry</name><desc><p>The ISR entry</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_HAL_IDT_ISREntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<result><p>THe ISR entry index
+</p></result>
+<declaration><declaration_type>int</declaration_type> <declaration_function>XEOS_HAL_IDT_ISREntryGetIndex</declaration_function>(
+    <declaration_type>XEOS_HAL_IDT_ISREntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_IDT_ISREntryGetPresent" lang="c"><name>XEOS_HAL_IDT_ISREntryGetPresent</name>
+<abstract><p>Gets the present flag of an ISR entry
+</p></abstract>
+<parameterlist>
+<parameter><name>entry</name><desc><p>The ISR entry</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_HAL_IDT_ISREntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<result><p>The present flag of the ISR entry
+</p></result>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>XEOS_HAL_IDT_ISREntryGetPresent</declaration_function>(
+    <declaration_type>XEOS_HAL_IDT_ISREntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_IDT_ISREntryGetPrivilegeLevel" lang="c"><name>XEOS_HAL_IDT_ISREntryGetPrivilegeLevel</name>
+<abstract><p>Gets the privilege level of an ISR entry
+</p></abstract>
+<parameterlist>
+<parameter><name>entry</name><desc><p>The ISR entry</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_HAL_IDT_ISREntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_HAL_IDT_ISREntryPrivilegeLevel</returntype>
+<result><p>The privilege level of the ISR entry
+</p></result>
+<declaration><declaration_type>XEOS_HAL_IDT_ISREntryPrivilegeLevel</declaration_type> <declaration_function>XEOS_HAL_IDT_ISREntryGetPrivilegeLevel</declaration_function>(
+    <declaration_type>XEOS_HAL_IDT_ISREntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_IDT_ISREntryGetSelector" lang="c"><name>XEOS_HAL_IDT_ISREntryGetSelector</name>
+<abstract><p>Gets the code segment selector of an ISR entry
+</p></abstract>
+<parameterlist>
+<parameter><name>entry</name><desc><p>The ISR entry</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_HAL_IDT_ISREntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uint16_t</returntype>
+<result><p>The code segment selector of the ISR entry
+</p></result>
+<declaration><declaration_type>uint16_t</declaration_type> <declaration_function>XEOS_HAL_IDT_ISREntryGetSelector</declaration_function>(
+    <declaration_type>XEOS_HAL_IDT_ISREntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_IDT_ISREntryGetType" lang="c"><name>XEOS_HAL_IDT_ISREntryGetType</name>
+<abstract><p>Gets the type of an ISR entry
+</p></abstract>
+<parameterlist>
+<parameter><name>entry</name><desc><p>The ISR entry</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_HAL_IDT_ISREntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_HAL_IDT_ISREntryType</returntype>
+<result><p>The type of the ISR entry
+</p></result>
+<declaration><declaration_type>XEOS_HAL_IDT_ISREntryType</declaration_type> <declaration_function>XEOS_HAL_IDT_ISREntryGetType</declaration_function>(
+    <declaration_type>XEOS_HAL_IDT_ISREntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/doc/title:func/XEOS_HAL_IDT_ISREntryPrivilegeLevel" lang="c"><name>XEOS_HAL_IDT_ISREntryPrivilegeLevel</name>
+<abstract><p>Gets the privilege level of an ISR entry
+</p></abstract>
+<parameterlist>
+<parameter><name>entry</name><desc><p>The ISR entry</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_HAL_IDT_ISREntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_HAL_IDT_ISREntryPrivilegeLevel</returntype>
+<result><p>The privilege level of the ISR entry
+</p></result>
+<declaration><declaration_type>XEOS_HAL_IDT_ISREntryPrivilegeLevel</declaration_type> <declaration_function>XEOS_HAL_IDT_ISREntryGetPrivilegeLevel</declaration_function>(
+    <declaration_type>XEOS_HAL_IDT_ISREntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_IDT_ISREntrySetHandler" lang="c"><name>XEOS_HAL_IDT_ISREntrySetHandler</name>
+<abstract><p>Sets the function handler for an ISR entry
+</p></abstract>
+<parameterlist>
+<parameter><name>entry</name><desc><p>The ISR entry</p></desc></parameter>
+<parameter><name>handler</name><desc><p>The ISR function handler</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_HAL_IDT_ISREntryRef</type><name>entry</name></parsedparameter>
+<parsedparameter><type>XEOS_HAL_IDT_ISRHandler</type><name>handler</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_IDT_ISREntrySetHandler</declaration_function>(
+    <declaration_type>XEOS_HAL_IDT_ISREntryRef</declaration_type> <declaration_param>entry</declaration_param>,
+    <declaration_type>XEOS_HAL_IDT_ISRHandler</declaration_type> <declaration_param>handler</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_IDT_ISREntrySetPresent" lang="c"><name>XEOS_HAL_IDT_ISREntrySetPresent</name>
+<abstract><p>Sets the present flag for an ISR entry
+</p></abstract>
+<parameterlist>
+<parameter><name>entry</name><desc><p>The ISR entry</p></desc></parameter>
+<parameter><name>present</name><desc><p>The present flag</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_HAL_IDT_ISREntryRef</type><name>entry</name></parsedparameter>
+<parsedparameter><type>bool</type><name>present</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_IDT_ISREntrySetPresent</declaration_function>(
+    <declaration_type>XEOS_HAL_IDT_ISREntryRef</declaration_type> <declaration_param>entry</declaration_param>,
+    <declaration_type>bool</declaration_type> <declaration_param>present</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_IDT_ISREntrySetPrivilegeLevel" lang="c"><name>XEOS_HAL_IDT_ISREntrySetPrivilegeLevel</name>
+<abstract><p>Sets the privilege level of an ISR entry
+</p></abstract>
+<parameterlist>
+<parameter><name>entry</name><desc><p>The ISR entry</p></desc></parameter>
+<parameter><name>level</name><desc><p>The privilege level</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_HAL_IDT_ISREntryRef</type><name>entry</name></parsedparameter>
+<parsedparameter><type>XEOS_HAL_IDT_ISREntryPrivilegeLevel</type><name>level</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_IDT_ISREntrySetPrivilegeLevel</declaration_function>(
+    <declaration_type>XEOS_HAL_IDT_ISREntryRef</declaration_type> <declaration_param>entry</declaration_param>,
+    <declaration_type>XEOS_HAL_IDT_ISREntryPrivilegeLevel</declaration_type> <declaration_param>level</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_IDT_ISREntrySetSelector" lang="c"><name>XEOS_HAL_IDT_ISREntrySetSelector</name>
+<abstract><p>Sets the code segment selector of an ISR entry
+</p></abstract>
+<parameterlist>
+<parameter><name>entry</name><desc><p>The ISR entry</p></desc></parameter>
+<parameter><name>selector</name><desc><p>The code segment selector</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_HAL_IDT_ISREntryRef</type><name>entry</name></parsedparameter>
+<parsedparameter><type>uint16_t</type><name>selector</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_IDT_ISREntrySetSelector</declaration_function>(
+    <declaration_type>XEOS_HAL_IDT_ISREntryRef</declaration_type> <declaration_param>entry</declaration_param>,
+    <declaration_type>uint16_t</declaration_type> <declaration_param>selector</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_IDT_ISREntrySetType" lang="c"><name>XEOS_HAL_IDT_ISREntrySetType</name>
+<abstract><p>Sets the type of an ISR entry
+</p></abstract>
+<parameterlist>
+<parameter><name>entry</name><desc><p>The ISR entry</p></desc></parameter>
+<parameter><name>type</name><desc><p>The ISR entry type</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_HAL_IDT_ISREntryRef</type><name>entry</name></parsedparameter>
+<parsedparameter><type>XEOS_HAL_IDT_ISREntryType</type><name>type</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_IDT_ISREntrySetType</declaration_function>(
+    <declaration_type>XEOS_HAL_IDT_ISREntryRef</declaration_type> <declaration_param>entry</declaration_param>,
+    <declaration_type>XEOS_HAL_IDT_ISREntryType</declaration_type> <declaration_param>type</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_IDT_Reload" lang="c"><name>XEOS_HAL_IDT_Reload</name>
+<abstract><p>Installs/Reload the Interrupt Descriptor Table (IDT)
+</p></abstract>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_IDT_Reload</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_IDT_SetISREntry" lang="c"><name>XEOS_HAL_IDT_SetISREntry</name>
+<abstract><p>Gets an ISR entry
+</p></abstract>
+<parameterlist>
+<parameter><name>isr</name><desc><p>The ISR number</p></desc></parameter>
+<parameter><name>selector</name><desc><p>The code segment selector</p></desc></parameter>
+<parameter><name>type</name><desc><p>The ISR entry type</p></desc></parameter>
+<parameter><name>level</name><desc><p>The privilege level</p></desc></parameter>
+<parameter><name>present</name><desc><p>The present flag</p></desc></parameter>
+<parameter><name>handler</name><desc><p>The ISR function handler</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>uint8_t</type><name>isr</name></parsedparameter>
+<parsedparameter><type>uint16_t</type><name>selector</name></parsedparameter>
+<parsedparameter><type>XEOS_HAL_IDT_ISREntryType</type><name>type</name></parsedparameter>
+<parsedparameter><type>XEOS_HAL_IDT_ISREntryPrivilegeLevel</type><name>level</name></parsedparameter>
+<parsedparameter><type>bool</type><name>present</name></parsedparameter>
+<parsedparameter><type>XEOS_HAL_IDT_ISRHandler</type><name>handler</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_IDT_SetISREntry</declaration_function>(
+    <declaration_type>uint8_t</declaration_type> <declaration_param>isr</declaration_param>,
+    <declaration_type>uint16_t</declaration_type> <declaration_param>selector</declaration_param>,
+    <declaration_type>XEOS_HAL_IDT_ISREntryType</declaration_type> <declaration_param>type</declaration_param>,
+    <declaration_type>XEOS_HAL_IDT_ISREntryPrivilegeLevel</declaration_type> <declaration_param>level</declaration_param>,
+    <declaration_type>bool</declaration_type> <declaration_param>present</declaration_param>,
+    <declaration_type>XEOS_HAL_IDT_ISRHandler</declaration_type> <declaration_param>handler</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<typedefs><typedef id="//xsdoc_ref/c/tdef/XEOS_HAL_IDT_ISREntryPrivilegeLevel" lang="c" type="simple"><name>XEOS_HAL_IDT_ISREntryPrivilegeLevel</name>
+<abstract><p>Privilege level of an ISR entry
+</p></abstract>
+<constantlist>
+<constant><name>XEOS_HAL_IDT_ISREntryPrivilegeLevelRing0</name><desc><p>Ring 0</p></desc></constant>
+<constant><name>XEOS_HAL_IDT_ISREntryPrivilegeLevelRing1</name><desc><p>Ring 1</p></desc></constant>
+<constant><name>XEOS_HAL_IDT_ISREntryPrivilegeLevelRing2</name><desc><p>Ring 2</p></desc></constant>
+<constant><name>XEOS_HAL_IDT_ISREntryPrivilegeLevelRing3</name><desc><p>Ring 3</p></desc></constant>
+</constantlist>
+<parsedparameterlist>
+<parsedparameter><type></type><name>XEOS_HAL_IDT_ISREntryPrivilegeLevelRing0</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_IDT_ISREntryPrivilegeLevelRing1</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_IDT_ISREntryPrivilegeLevelRing2</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_IDT_ISREntryPrivilegeLevelRing3</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>XEOS_HAL_IDT_ISREntryPrivilegeLevelRing0</declaration_var> = <declaration_number>0x00</declaration_number>, 
+    <declaration_var>XEOS_HAL_IDT_ISREntryPrivilegeLevelRing1</declaration_var> = <declaration_number>0x01</declaration_number>, 
+    <declaration_var>XEOS_HAL_IDT_ISREntryPrivilegeLevelRing2</declaration_var> = <declaration_number>0x02</declaration_number>, 
+    <declaration_var>XEOS_HAL_IDT_ISREntryPrivilegeLevelRing3</declaration_var> = <declaration_number>0x03</declaration_number> 
+} <declaration_var>XEOS_HAL_IDT_ISREntryPrivilegeLevel</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_HAL_IDT_ISREntryRef" lang="c" type="simple"><name>XEOS_HAL_IDT_ISREntryRef</name>
+<abstract><p>Opaque type for an ISR entry
+</p></abstract>
+<declaration><declaration_preprocessor>#ifdef</declaration_preprocessor> <declaration_preprocessor>__LP64__</declaration_preprocessor> 
+<declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>__XEOS_HAL_IDT_ISREntry64</declaration_type> <declaration_type>*</declaration_type> <declaration_var>XEOS_HAL_IDT_ISREntryRef</declaration_var>;  
+<declaration_preprocessor>#else</declaration_preprocessor> 
+<declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>__XEOS_HAL_IDT_ISREntry32</declaration_type> <declaration_type>*</declaration_type> <declaration_var>XEOS_HAL_IDT_ISREntryRef</declaration_var>;  
+<declaration_preprocessor>#endif</declaration_preprocessor>  
+</declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_HAL_IDT_ISREntryType" lang="c" type="simple"><name>XEOS_HAL_IDT_ISREntryType</name>
+<abstract><p>Type for an ISR entry
+</p></abstract>
+<constantlist>
+<constant><name>XEOS_HAL_IDT_ISREntryTypeUnknown</name><desc><p>Unknown ISR entry</p></desc></constant>
+<constant><name>XEOS_HAL_IDT_ISREntryTypeTask32</name><desc><p>32 bits task gate</p></desc></constant>
+<constant><name>XEOS_HAL_IDT_ISREntryTypeInterrupt16</name><desc><p>16 bits interrupt gate</p></desc></constant>
+<constant><name>XEOS_HAL_IDT_ISREntryTypeTrap16</name><desc><p>16 bits trap gate</p></desc></constant>
+<constant><name>XEOS_HAL_IDT_ISREntryTypeInterrupt32</name><desc><p>32 bits interrupt gate</p></desc></constant>
+<constant><name>XEOS_HAL_IDT_ISREntryTypeTrap32</name><desc><p>32 bits trap gate</p></desc></constant>
+</constantlist>
+<parsedparameterlist>
+<parsedparameter><type></type><name>XEOS_HAL_IDT_ISREntryTypeUnknown</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_IDT_ISREntryTypeTask32</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_IDT_ISREntryTypeInterrupt16</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_IDT_ISREntryTypeTrap16</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_IDT_ISREntryTypeInterrupt32</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_IDT_ISREntryTypeTrap32</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>XEOS_HAL_IDT_ISREntryTypeUnknown</declaration_var> = <declaration_number>0x00</declaration_number>, 
+    <declaration_var>XEOS_HAL_IDT_ISREntryTypeTask32</declaration_var> = <declaration_number>0x05</declaration_number>, 
+    <declaration_var>XEOS_HAL_IDT_ISREntryTypeInterrupt16</declaration_var> = <declaration_number>0x06</declaration_number>, 
+    <declaration_var>XEOS_HAL_IDT_ISREntryTypeTrap16</declaration_var> = <declaration_number>0x07</declaration_number>, 
+    <declaration_var>XEOS_HAL_IDT_ISREntryTypeInterrupt32</declaration_var> = <declaration_number>0x0E</declaration_number>, 
+    <declaration_var>XEOS_HAL_IDT_ISREntryTypeTrap32</declaration_var> = <declaration_number>0x0F</declaration_number> 
+} <declaration_var>XEOS_HAL_IDT_ISREntryType</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_HAL_IDT_ISRHandler" lang="c" type="funcPtr"><name>XEOS_HAL_IDT_ISRHandler</name>
+<abstract><p>Handler function for an ISR entry
+</p></abstract>
+<parameterlist>
+<parameter><name>isr</name><desc><p>The ISR number</p></desc></parameter>
+<parameter><name>registers</name><desc><p>The processor registers</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>uint8_t</type><name>isr</name></parsedparameter>
+<parsedparameter><type>XEOS_HAL_CPU_Registers *</type><name>registers</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_type>void</declaration_type> ( <declaration_type>*</declaration_type><declaration_function>XEOS_HAL_IDT_ISRHandler</declaration_function> )(
+    <declaration_type>uint8_t</declaration_type> <declaration_param>isr</declaration_param>,
+    <declaration_type>XEOS_HAL_CPU_Registers</declaration_type> <declaration_type>*</declaration_type><declaration_param>registers</declaration_param> );  </declaration>
+<desc><p/></desc>
+</typedef></typedefs><defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_HAL_IDT_H__" definetype="value" lang="c"><name>__XEOS_HAL_IDT_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_HAL_IDT_H__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/XEOS_HAL_IDT_MAX_DESCRIPTORS" definetype="value" lang="c"><name>XEOS_HAL_IDT_MAX_DESCRIPTORS</name>
+<abstract><p>The maximum number of descriptors in the IDT
+</p></abstract>
+<declaration> <declaration_comment>/*!</declaration_comment>
+    <declaration_comment>*/</declaration_comment>
+<declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>XEOS_HAL_IDT_MAX_DESCRIPTORS</declaration_preprocessor> <declaration_preprocessor>256</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

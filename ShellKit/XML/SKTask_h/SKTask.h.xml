@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/SKTask.h" lang="c" filename="SKTask.h" headerpath="/Users/macmade/Documents/Macmade/GitHub/ShellKit/Documentation/../ShellKit/Classes/ShellKit/SKTask.h"><name>SKTask.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Foundation.h">&lt;Foundation/Foundation.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/SKObject.h">&lt;ShellKit/SKObject.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/SKRunableObject.h">&lt;ShellKit/SKRunableObject.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<typedefs><typedef id="//xsdoc_ref/c/tdef/NS_ENUM" lang="c" type="funcPtr"><name>NS_ENUM</name>
+<abstract><p>The type of output of a task
+</p></abstract>
+<parameterlist>
+<parameter><name>SKTaskOutputTypeStandardOutput</name><desc><p>`stdout` output type</p></desc></parameter>
+<parameter><name>SKTaskOutputTypeStandardError</name><desc><p>`stderr` output type</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type></type><name>NSInteger</name></parsedparameter>
+<parsedparameter><type></type><name>SKTaskOutputType</name></parsedparameter>
+<parsedparameter><type>SKTaskOutputTypeStandardOutput,
+      SKTaskOutputTypeStandardError</type><name>SKTaskOutputTypeStandardOutput</name></parsedparameter>
+<parsedparameter><type>SKTaskOutputTypeStandardOutput,
+      SKTaskOutputTypeStandardError</type><name>SKTaskOutputTypeStandardError</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See Also</name><list>
+<item><name>SKTaskOutputType</name><value><hd_link logicalPath="//xsdoc_ref/doc/title:tdef/SKTaskOutputType" isseealso="yes">SKTaskOutputType</hd_link></value></item></list></listattribute>
+</attributelists>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_function>NS_ENUM</declaration_function>( <declaration_var>NSInteger</declaration_var>, <declaration_var>SKTaskOutputType</declaration_var> ) { 
+    <declaration_var>SKTaskOutputTypeStandardOutput</declaration_var>, <declaration_comment>/*! `stdout` output type */</declaration_comment>
+    <declaration_var>SKTaskOutputTypeStandardError</declaration_var> <declaration_comment>/*! `stderr` output type */</declaration_comment>
+};  </declaration>
+<desc><p>Used to differenciate output comming from a task's `stdout`
+or `stderr`.
+</p></desc>
+<autorelated>
+<relateduid>//xsdoc_ref/doc/title:tdef/SKTaskOutputType</relateduid>
+</autorelated>
+</typedef><typedef id="//xsdoc_ref/doc/title:tdef/SKTaskOutputType" lang="c" type="funcPtr"><name>SKTaskOutputType</name>
+<abstract><p>The type of output of a task
+</p></abstract>
+<parameterlist>
+<parameter><name>SKTaskOutputTypeStandardOutput</name><desc><p>`stdout` output type</p></desc></parameter>
+<parameter><name>SKTaskOutputTypeStandardError</name><desc><p>`stderr` output type</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type></type><name>NSInteger</name></parsedparameter>
+<parsedparameter><type></type><name>SKTaskOutputType</name></parsedparameter>
+<parsedparameter><type>SKTaskOutputTypeStandardOutput,
+      SKTaskOutputTypeStandardError</type><name>SKTaskOutputTypeStandardOutput</name></parsedparameter>
+<parsedparameter><type>SKTaskOutputTypeStandardOutput,
+      SKTaskOutputTypeStandardError</type><name>SKTaskOutputTypeStandardError</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See Also</name><list>
+<item><name>NS_ENUM</name><value><hd_link logicalPath="//xsdoc_ref/c/tdef/NS_ENUM" isseealso="yes">NS_ENUM</hd_link></value></item></list></listattribute>
+</attributelists>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_function>NS_ENUM</declaration_function>( <declaration_var>NSInteger</declaration_var>, <declaration_var>SKTaskOutputType</declaration_var> ) { 
+    <declaration_var>SKTaskOutputTypeStandardOutput</declaration_var>, <declaration_comment>/*! `stdout` output type */</declaration_comment>
+    <declaration_var>SKTaskOutputTypeStandardError</declaration_var> <declaration_comment>/*! `stderr` output type */</declaration_comment>
+};  </declaration>
+<desc><p>Used to differenciate output comming from a task's `stdout`
+or `stderr`.
+</p></desc>
+<autorelated>
+<relateduid>//xsdoc_ref/c/tdef/NS_ENUM</relateduid>
+</autorelated>
+</typedef></typedefs><classes><class id="//xsdoc_ref/occ/cl/SKTask" lang="occ"><name>SKTask</name>
+<attributes><attribute><name>Conforms to</name><value><hd_link logicalPath="//xsdoc_ref/occ/intf/SKRunableObject">SKRunableObject</hd_link></value></attribute>
+<attribute><name>Superclass</name><value><hd_link logicalPath="//xsdoc_ref/occ/cl/SKObject">SKObject</hd_link></value></attribute>
+</attributes>
+<attributelists><listattribute><name>See</name><list>
+<item><name>SKRunableObject</name><value><hd_link logicalPath="SKRunableObject" isseealso="yes">SKRunableObject</hd_link></value></item></list></listattribute>
+</attributelists>
+<declaration>@<declaration_type>interface</declaration_type> <declaration_type>SKTask</declaration_type>: <declaration_type>SKObject</declaration_type> &lt; <declaration_template>SKRunableObject</declaration_template> &gt;  <declaration_comment>/*!
+@property    delegate
+@abstract    The task's delegate
+@see         SKTaskDelegate</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readwrite</declaration_param>,
+        <declaration_param>weak</declaration_param> ) <declaration_type>id</declaration_type>&lt; <declaration_template>SKTaskDelegate</declaration_template> &gt; <declaration_var>delegate</declaration_var>;   <declaration_comment>/*!
+@method      taskWithShellScript:
+@abstract    Creates a task from a shell script
+@param       script  The shell script to execute when the task is run
+@result      The task object</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    + ( <declaration_param>instancetype</declaration_param> )<declaration_type>taskWithShellScript</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>script</declaration_var>;   
+    <declaration_comment>/*!
+@method      taskWithShellScript:recoverTask:
+@abstract    Creates a task from a shell script
+@discussion  If a recovery task is passed, it will be executed upon failure.
+If the recovery task then succeed, the primary task will also
+succeed.
+@param       script  The shell script to execute when the task is run
+@param       recover An optional task to execute as recovery if the task fails.
+@result      The task object</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    + ( <declaration_param>instancetype</declaration_param> )<declaration_type>taskWithShellScript</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>script</declaration_type> <declaration_type>recoverTask</declaration_type>: ( <declaration_type>nullable</declaration_type> <declaration_type>SKTask</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>recover</declaration_var>;   
+    <declaration_comment>/*!
+@method      taskWithShellScript:recoverTasks:
+@abstract    Creates a task from a shell script
+@discussion  If recovery tasks are passed, they will be executed upon
+failure, until one of them succeed.
+If a recovery task then succeed, the primary task will also
+succeed.
+@param       script  The shell script to execute when the task is run
+@param       recover An optional array of tasks to execute as recovery if the task fails.
+@result      The task object</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    + ( <declaration_param>instancetype</declaration_param> )<declaration_type>taskWithShellScript</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>script</declaration_type> <declaration_type>recoverTasks</declaration_type>: ( <declaration_type>nullable</declaration_type> <declaration_type>NSArray</declaration_type>&lt; <declaration_template>SKTask</declaration_template> <declaration_template>*</declaration_template> &gt; <declaration_type>*</declaration_type> )<declaration_var>recover</declaration_var>;   
+    <declaration_comment>/*!
+@method      initWithShellScript:
+@abstract    Creates a task from a shell script
+@param       script  The shell script to execute when the task is run
+@result      The task object</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>instancetype</declaration_param> )<declaration_type>initWithShellScript</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>script</declaration_var>;   
+    <declaration_comment>/*!
+@method      initWithShellScript:recoverTask:
+@abstract    Creates a task from a shell script
+@discussion  If a recovery task is passed, it will be executed upon failure.
+If the recovery task then succeed, the primary task will also
+succeed.
+@param       script  The shell script to execute when the task is run
+@param       recover An optional task to execute as recovery if the task fails.
+@result      The task object</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>instancetype</declaration_param> )<declaration_type>initWithShellScript</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>script</declaration_type> <declaration_type>recoverTask</declaration_type>: ( <declaration_type>nullable</declaration_type> <declaration_type>SKTask</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>recover</declaration_var>;   
+    <declaration_comment>/*!
+@method      initWithShellScript:recoverTasks:
+@abstract    Creates a task from a shell script
+@discussion  If recovery tasks are passed, they will be executed upon
+failure, until one of them succeed.
+If a recovery task then succeed, the primary task will also
+succeed.
+@param       script  The shell script to execute when the task is run
+@param       recover An optional array of tasks to execute as recovery if the task fails.
+@result      The task object</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>instancetype</declaration_param> )<declaration_type>initWithShellScript</declaration_type>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>script</declaration_type> <declaration_type>recoverTasks</declaration_type>: ( <declaration_type>nullable</declaration_type> <declaration_type>NSArray</declaration_type>&lt; <declaration_template>SKTask</declaration_template> <declaration_template>*</declaration_template> &gt; <declaration_type>*</declaration_type> )<declaration_type>recover</declaration_type> <declaration_var>NS_DESIGNATED_INITIALIZER</declaration_var>;   
+    @@end </declaration>
+<desc><p>Represents a shell task
+</p></desc>
+<methods><method id="//xsdoc_ref/occ/instm/SKTask/initWithShellScript:" lang="occ" type="instm" accessControl="private"><name>initWithShellScript:</name>
+<abstract><p>Creates a task from a shell script
+</p></abstract>
+<parameterlist>
+<parameter><name>script</name><desc><p>The shell script to execute when the task is run</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>script</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>script</name></parsedparameter>
+<parsedparameter><type>( nullable SKTask * )</type><name>recover</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>script</name></parsedparameter>
+<parsedparameter><type>( nullable NSArray&amp;lt; SKTask * &amp;gt; * )</type><name>recover</name></parsedparameter>
+</parsedparameterlist>
+<returntype> instancetype </returntype>
+<result><p>The task object
+</p></result>
+<declaration>- ( <declaration_type>instancetype</declaration_type> )<declaration_function>initWithShellScript</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>script</declaration_var>; </declaration>
+<desc><p/></desc>
+</method><method id="//xsdoc_ref/occ/instm/SKTask/initWithShellScript:recoverTask:" lang="occ" type="instm" accessControl="private"><name>initWithShellScript:recoverTask:</name>
+<abstract><p>Creates a task from a shell script
+</p></abstract>
+<parameterlist>
+<parameter><name>script</name><desc><p>The shell script to execute when the task is run</p></desc></parameter>
+<parameter><name>recover</name><desc><p>An optional task to execute as recovery if the task fails.</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>script</name></parsedparameter>
+<parsedparameter><type>( nullable SKTask * )</type><name>recover</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>script</name></parsedparameter>
+<parsedparameter><type>( nullable NSArray&amp;lt; SKTask * &amp;gt; * )</type><name>recover</name></parsedparameter>
+</parsedparameterlist>
+<returntype> instancetype </returntype>
+<result><p>The task object
+</p></result>
+<declaration>- ( <declaration_type>instancetype</declaration_type> )<declaration_function>initWithShellScript</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>script</declaration_param> 
+        <declaration_function>recoverTask</declaration_function>: ( <declaration_type>nullable</declaration_type> <declaration_type>SKTask</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>recover</declaration_var>; </declaration>
+<desc><p>If a recovery task is passed, it will be executed upon failure.
+If the recovery task then succeed, the primary task will also
+succeed.
+</p></desc>
+</method><method id="//xsdoc_ref/occ/instm/SKTask/initWithShellScript:recoverTasks:" lang="occ" type="instm" accessControl="private"><name>initWithShellScript:recoverTasks:</name>
+<abstract><p>Creates a task from a shell script
+</p></abstract>
+<parameterlist>
+<parameter><name>script</name><desc><p>The shell script to execute when the task is run</p></desc></parameter>
+<parameter><name>recover</name><desc><p>An optional array of tasks to execute as recovery if the task fails.</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>script</name></parsedparameter>
+<parsedparameter><type>( nullable NSArray&amp;lt; SKTask * &amp;gt; * )</type><name>recover</name></parsedparameter>
+</parsedparameterlist>
+<returntype> instancetype </returntype>
+<result><p>The task object
+</p></result>
+<declaration>- ( <declaration_type>instancetype</declaration_type> )<declaration_function>initWithShellScript</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>script</declaration_param> 
+        <declaration_function>recoverTasks</declaration_function>: ( <declaration_type>nullable</declaration_type> <declaration_type>NSArray</declaration_type>&lt; <declaration_param>SKTask</declaration_param> <declaration_param>*</declaration_param> &gt; <declaration_type>*</declaration_type> )<declaration_param>recover</declaration_param> <declaration_var>NS_DESIGNATED_INITIALIZER</declaration_var>; </declaration>
+<desc><p>If recovery tasks are passed, they will be executed upon
+failure, until one of them succeed.
+If a recovery task then succeed, the primary task will also
+succeed.
+</p></desc>
+</method><method id="//xsdoc_ref/occ/clm/SKTask/taskWithShellScript:" lang="occ" type="clm" accessControl="private"><name>taskWithShellScript:</name>
+<abstract><p>Creates a task from a shell script
+</p></abstract>
+<parameterlist>
+<parameter><name>script</name><desc><p>The shell script to execute when the task is run</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>script</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>script</name></parsedparameter>
+<parsedparameter><type>( nullable SKTask * )</type><name>recover</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>script</name></parsedparameter>
+<parsedparameter><type>( nullable NSArray&amp;lt; SKTask * &amp;gt; * )</type><name>recover</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>script</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>script</name></parsedparameter>
+<parsedparameter><type>( nullable SKTask * )</type><name>recover</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>script</name></parsedparameter>
+<parsedparameter><type>( nullable NSArray&amp;lt; SKTask * &amp;gt; * )</type><name>recover</name></parsedparameter>
+</parsedparameterlist>
+<returntype> instancetype </returntype>
+<result><p>The task object
+</p></result>
+<declaration>+ ( <declaration_type>instancetype</declaration_type> )<declaration_function>taskWithShellScript</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>script</declaration_var>; </declaration>
+<desc><p/></desc>
+</method><method id="//xsdoc_ref/occ/clm/SKTask/taskWithShellScript:recoverTask:" lang="occ" type="clm" accessControl="private"><name>taskWithShellScript:recoverTask:</name>
+<abstract><p>Creates a task from a shell script
+</p></abstract>
+<parameterlist>
+<parameter><name>script</name><desc><p>The shell script to execute when the task is run</p></desc></parameter>
+<parameter><name>recover</name><desc><p>An optional task to execute as recovery if the task fails.</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>script</name></parsedparameter>
+<parsedparameter><type>( nullable SKTask * )</type><name>recover</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>script</name></parsedparameter>
+<parsedparameter><type>( nullable NSArray&amp;lt; SKTask * &amp;gt; * )</type><name>recover</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>script</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>script</name></parsedparameter>
+<parsedparameter><type>( nullable SKTask * )</type><name>recover</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>script</name></parsedparameter>
+<parsedparameter><type>( nullable NSArray&amp;lt; SKTask * &amp;gt; * )</type><name>recover</name></parsedparameter>
+</parsedparameterlist>
+<returntype> instancetype </returntype>
+<result><p>The task object
+</p></result>
+<declaration>+ ( <declaration_type>instancetype</declaration_type> )<declaration_function>taskWithShellScript</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>script</declaration_param> 
+        <declaration_function>recoverTask</declaration_function>: ( <declaration_type>nullable</declaration_type> <declaration_type>SKTask</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>recover</declaration_var>; </declaration>
+<desc><p>If a recovery task is passed, it will be executed upon failure.
+If the recovery task then succeed, the primary task will also
+succeed.
+</p></desc>
+</method><method id="//xsdoc_ref/occ/clm/SKTask/taskWithShellScript:recoverTasks:" lang="occ" type="clm" accessControl="private"><name>taskWithShellScript:recoverTasks:</name>
+<abstract><p>Creates a task from a shell script
+</p></abstract>
+<parameterlist>
+<parameter><name>script</name><desc><p>The shell script to execute when the task is run</p></desc></parameter>
+<parameter><name>recover</name><desc><p>An optional array of tasks to execute as recovery if the task fails.</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( NSString * )</type><name>script</name></parsedparameter>
+<parsedparameter><type>( nullable NSArray&amp;lt; SKTask * &amp;gt; * )</type><name>recover</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>script</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>script</name></parsedparameter>
+<parsedparameter><type>( nullable SKTask * )</type><name>recover</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>script</name></parsedparameter>
+<parsedparameter><type>( nullable NSArray&amp;lt; SKTask * &amp;gt; * )</type><name>recover</name></parsedparameter>
+</parsedparameterlist>
+<returntype> instancetype </returntype>
+<result><p>The task object
+</p></result>
+<declaration>+ ( <declaration_type>instancetype</declaration_type> )<declaration_function>taskWithShellScript</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>script</declaration_param> 
+        <declaration_function>recoverTasks</declaration_function>: ( <declaration_type>nullable</declaration_type> <declaration_type>NSArray</declaration_type>&lt; <declaration_param>SKTask</declaration_param> <declaration_param>*</declaration_param> &gt; <declaration_type>*</declaration_type> )<declaration_var>recover</declaration_var>; </declaration>
+<desc><p>If recovery tasks are passed, they will be executed upon
+failure, until one of them succeed.
+If a recovery task then succeed, the primary task will also
+succeed.
+</p></desc>
+</method></methods>
+<properties><property id="//xsdoc_ref/occ/instp/SKTask/delegate" lang="occ" accessControl="private"><name>delegate</name>
+<abstract><p>The task's delegate
+</p></abstract>
+<attributelists><listattribute><name>See</name><list>
+<item><name>SKTaskDelegate</name><value><hd_link logicalPath="SKTaskDelegate" isseealso="yes">SKTaskDelegate</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype>id&lt; SKTaskDelegate  &gt;</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readwrite</declaration_param>,
+    <declaration_param>weak</declaration_param> ) <declaration_type>id</declaration_type>&lt; <declaration_template>SKTaskDelegate</declaration_template> &gt; <declaration_var>delegate</declaration_var>; </declaration>
+<desc><p/></desc>
+</property></properties>
+<timestamp>Monday, May 15, 2017</timestamp>
+</class><protocol id="//xsdoc_ref/occ/intf/SKTaskDelegate" lang="occ"><name>SKTaskDelegate</name>
+<abstract><p>Delegate for `SKTask` objects
+</p></abstract>
+<attributes><attribute><name>Extends Protocol</name><value><hd_link logicalPath="//xsdoc_ref/occ/intf/NSObject">NSObject</hd_link></value></attribute>
+</attributes>
+<attributelists><listattribute><name>See</name><list>
+<item><name>SKTask</name><value><hd_link logicalPath="SKTask" isseealso="yes">SKTask</hd_link></value></item></list></listattribute>
+</attributelists>
+<declaration>@<declaration_type>protocol</declaration_type> <declaration_type>SKTaskDelegate</declaration_type>&lt; <declaration_template>NSObject</declaration_template> &gt;  @optional  <declaration_comment>/*!
+@method      taskWillStart:
+@abstract    Called when a task is about to be run
+@dicussion   This method is optional.
+@param       task    The task object
+@see         SKTask</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - (
+            <declaration_param>void</declaration_param> )<declaration_type>taskWillStart</declaration_type>: (
+            <declaration_type>SKTask</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>task</declaration_var>;   <declaration_comment>/*!
+@method      task:didProduceOutput:
+@abstract    Called when a task has produced output on `stdout` or `stderr`
+@dicussion   This method is optional.
+Note that the output may not be whole/complete lines, as this
+method, if implemented by the delagete, will be called as
+output is captured.
+@param       task    The task object
+@param       output  The produced output string
+@param       type    The output type
+@see         SKTask
+@see         SKTaskOutputType</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - (
+            <declaration_param>void</declaration_param> )<declaration_type>task</declaration_type>: (
+            <declaration_type>SKTask</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>task</declaration_type> <declaration_type>didProduceOutput</declaration_type>: (
+            <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>output</declaration_type> <declaration_type>forType</declaration_type>: (
+            <declaration_param>SKTaskOutputType</declaration_param> )<declaration_var>type</declaration_var>;   <declaration_comment>/*!
+@method      task:didEndWithStatus:
+@abstract    Called when a task has finished running
+@dicussion   This method is optional.
+@param       task    The task object
+@param       status  The task's exit status
+@see         SKTask</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - (
+            <declaration_param>void</declaration_param> )<declaration_type>task</declaration_type>: (
+            <declaration_type>SKTask</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>task</declaration_type> <declaration_type>didEndWithStatus</declaration_type>: (
+            <declaration_param>int</declaration_param> )<declaration_var>status</declaration_var>;   @@end </declaration>
+<desc><p/></desc>
+<methods><method id="//xsdoc_ref/occ/intfm/SKTaskDelegate/task:didEndWithStatus:" lang="occ" type="intfm" optionalOrRequired="@optional"><name>task:didEndWithStatus:</name>
+<abstract><p>Called when a task has finished running
+@dicussion   This method is optional.
+</p></abstract>
+<parameterlist>
+<parameter><name>task</name><desc><p>The task object</p></desc></parameter>
+<parameter><name>status</name><desc><p>The task's exit status</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( SKTask * )</type><name>task</name></parsedparameter>
+<parsedparameter><type>( int )</type><name>status</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See</name><list>
+<item><name>SKTask</name><value><hd_link logicalPath="SKTask" isseealso="yes">SKTask</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_function>task</declaration_function>: ( <declaration_type>SKTask</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>task</declaration_param> <declaration_function>didEndWithStatus</declaration_function>: ( <declaration_type>int</declaration_type> )<declaration_var>status</declaration_var>; </declaration>
+<desc><p/></desc>
+</method><method id="//xsdoc_ref/doc/title:intfm/SKTaskDelegate/task:didProduceOutput:" lang="occ" type="intfm" optionalOrRequired="@optional"><name>task:didProduceOutput:</name>
+<abstract><p>Called when a task has produced output on `stdout` or `stderr`
+@dicussion   This method is optional.
+Note that the output may not be whole/complete lines, as this
+method, if implemented by the delagete, will be called as
+output is captured.
+</p></abstract>
+<parameterlist>
+<parameter><name>task</name><desc><p>The task object</p></desc></parameter>
+<parameter><name>output</name><desc><p>The produced output string</p></desc></parameter>
+<parameter><name>type</name><desc><p>The output type</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( SKTask * )</type><name>task</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>output</name></parsedparameter>
+<parsedparameter><type>( SKTaskOutputType )</type><name>type</name></parsedparameter>
+<parsedparameter><type>( SKTask * )</type><name>task</name></parsedparameter>
+<parsedparameter><type>( int )</type><name>status</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See</name><list>
+<item><name>SKTask</name><value><hd_link logicalPath="SKTask" isseealso="yes">SKTask</hd_link></value></item><item><name>SKTaskOutputType</name><value><hd_link logicalPath="SKTaskOutputType" isseealso="yes">SKTaskOutputType</hd_link></value></item></list></listattribute>
+<listattribute><name>See Also</name><list>
+<item><name>task:didProduceOutput:forType:</name><value><hd_link logicalPath="//xsdoc_ref/occ/intfm/SKTaskDelegate/task:didProduceOutput:forType:" isseealso="yes">task:didProduceOutput:forType:</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_function>task</declaration_function>: ( <declaration_type>SKTask</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>task</declaration_param> <declaration_function>didProduceOutput</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>output</declaration_param> 
+        <declaration_function>forType</declaration_function>: ( <declaration_type>SKTaskOutputType</declaration_type> )<declaration_var>type</declaration_var>; </declaration>
+<desc><p/></desc>
+<autorelated>
+<relateduid>//xsdoc_ref/occ/intfm/SKTaskDelegate/task:didProduceOutput:forType:</relateduid>
+</autorelated>
+</method><method id="//xsdoc_ref/occ/intfm/SKTaskDelegate/task:didProduceOutput:forType:" lang="occ" type="intfm" optionalOrRequired="@optional"><name>task:didProduceOutput:forType:</name>
+<abstract><p>Called when a task has produced output on `stdout` or `stderr`
+@dicussion   This method is optional.
+Note that the output may not be whole/complete lines, as this
+method, if implemented by the delagete, will be called as
+output is captured.
+</p></abstract>
+<parameterlist>
+<parameter><name>task</name><desc><p>The task object</p></desc></parameter>
+<parameter><name>output</name><desc><p>The produced output string</p></desc></parameter>
+<parameter><name>type</name><desc><p>The output type</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( SKTask * )</type><name>task</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>output</name></parsedparameter>
+<parsedparameter><type>( SKTaskOutputType )</type><name>type</name></parsedparameter>
+<parsedparameter><type>( SKTask * )</type><name>task</name></parsedparameter>
+<parsedparameter><type>( int )</type><name>status</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See Also</name><list>
+<item><name>task:didProduceOutput:</name><value><hd_link logicalPath="//xsdoc_ref/doc/title:intfm/SKTaskDelegate/task:didProduceOutput:" isseealso="yes">task:didProduceOutput:</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_function>task</declaration_function>: ( <declaration_type>SKTask</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>task</declaration_param> <declaration_function>didProduceOutput</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>output</declaration_param> 
+        <declaration_function>forType</declaration_function>: ( <declaration_type>SKTaskOutputType</declaration_type> )<declaration_var>type</declaration_var>; </declaration>
+<desc><p/></desc>
+<autorelated>
+<relateduid>//xsdoc_ref/doc/title:intfm/SKTaskDelegate/task:didProduceOutput:</relateduid>
+</autorelated>
+</method><method id="//xsdoc_ref/occ/intfm/SKTaskDelegate/taskWillStart:" lang="occ" type="intfm" optionalOrRequired="@optional"><name>taskWillStart:</name>
+<abstract><p>Called when a task is about to be run
+@dicussion   This method is optional.
+</p></abstract>
+<parameterlist>
+<parameter><name>task</name><desc><p>The task object</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( SKTask * )</type><name>task</name></parsedparameter>
+<parsedparameter><type>( SKTask * )</type><name>task</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>output</name></parsedparameter>
+<parsedparameter><type>( SKTaskOutputType )</type><name>type</name></parsedparameter>
+<parsedparameter><type>( SKTask * )</type><name>task</name></parsedparameter>
+<parsedparameter><type>( int )</type><name>status</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See</name><list>
+<item><name>SKTask</name><value><hd_link logicalPath="SKTask" isseealso="yes">SKTask</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_function>taskWillStart</declaration_function>: ( <declaration_type>SKTask</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>task</declaration_var>; </declaration>
+<desc><p/></desc>
+</method></methods>
+<timestamp>Monday, May 15, 2017</timestamp>
+</protocol></classes>
+<copyrightinfo>&#169; (c) 2017, Jean-David Gadina - www.xs-labs.com
+</copyrightinfo>
+<timestamp>Monday, May 15, 2017</timestamp>
+</header>

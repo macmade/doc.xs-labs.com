@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/signal.h" lang="c" filename="signal.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/c99/include/c99/signal.h"><name>signal.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/sig_atomic_t.h">&lt;system/types/sig_atomic_t.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/raise" lang="c"><name>raise</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>sig</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>raise</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>sig</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/signal" lang="c"><name>signal</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>sig</name></parsedparameter>
+<parsedparameter><type>void</type><name>func</name></parsedparameter>
+<parsedparameter><type> int</type><name></name></parsedparameter>
+</parsedparameterlist>
+<returntype>void</returntype>
+<declaration><declaration_type>void</declaration_type> ( <declaration_type>*</declaration_type><declaration_function>signal</declaration_function>(
+        <declaration_type>int</declaration_type> <declaration_param>sig</declaration_param>,
+        <declaration_type>void</declaration_type> ( <declaration_type>*</declaration_type> <declaration_param>func</declaration_param> )(
+            <declaration_param>int</declaration_param> ) ) )(
+    <declaration_param>int</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_C99_SIGNAL_H__" definetype="value" lang="c"><name>__XEOS_LIB_C99_SIGNAL_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_C99_SIGNAL_H__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIG_DFL" definetype="value" lang="c"><name>SIG_DFL</name>
+<attributes><attribute><name>Value</name><value>0x0 (0)</value></attribute>
+</attributes>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIG_DFL</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>void</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>*</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>int</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>0</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIG_ERR" definetype="value" lang="c"><name>SIG_ERR</name>
+<attributes><attribute><name>Value</name><value>0xffffffffffffffff (-1)</value></attribute>
+</attributes>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIG_ERR</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>void</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>*</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>int</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>-</declaration_preprocessor><declaration_preprocessor>1</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIG_IGN" definetype="value" lang="c"><name>SIG_IGN</name>
+<attributes><attribute><name>Value</name><value>0x1 (1)</value></attribute>
+</attributes>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIG_IGN</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>void</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>*</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>int</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>1</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGABRT" definetype="value" lang="c"><name>SIGABRT</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGABRT</declaration_preprocessor> <declaration_preprocessor>6</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGFPE" definetype="value" lang="c"><name>SIGFPE</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGFPE</declaration_preprocessor> <declaration_preprocessor>8</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGILL" definetype="value" lang="c"><name>SIGILL</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGILL</declaration_preprocessor> <declaration_preprocessor>4</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGINT" definetype="value" lang="c"><name>SIGINT</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGINT</declaration_preprocessor> <declaration_preprocessor>1</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGSEGV" definetype="value" lang="c"><name>SIGSEGV</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGSEGV</declaration_preprocessor> <declaration_preprocessor>11</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIGTERM" definetype="value" lang="c"><name>SIGTERM</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIGTERM</declaration_preprocessor> <declaration_preprocessor>15</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/stdint.h" lang="c" filename="stdint.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/c99/include/c99/stdint.h"><name>stdint.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/int8_t.h">&lt;system/types/int8_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/int16_t.h">&lt;system/types/int16_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/int32_t.h">&lt;system/types/int32_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/int64_t.h">&lt;system/types/int64_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/uint8_t.h">&lt;system/types/uint8_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/uint16_t.h">&lt;system/types/uint16_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/uint32_t.h">&lt;system/types/uint32_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/uint64_t.h">&lt;system/types/uint64_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/int_least8_t.h">&lt;system/types/int_least8_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/int_least16_t.h">&lt;system/types/int_least16_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/int_least32_t.h">&lt;system/types/int_least32_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/int_least64_t.h">&lt;system/types/int_least64_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/uint_least8_t.h">&lt;system/types/uint_least8_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/uint_least16_t.h">&lt;system/types/uint_least16_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/uint_least32_t.h">&lt;system/types/uint_least32_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/uint_least64_t.h">&lt;system/types/uint_least64_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/int_fast8_t.h">&lt;system/types/int_fast8_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/int_fast16_t.h">&lt;system/types/int_fast16_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/int_fast32_t.h">&lt;system/types/int_fast32_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/int_fast64_t.h">&lt;system/types/int_fast64_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/uint_fast8_t.h">&lt;system/types/uint_fast8_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/uint_fast16_t.h">&lt;system/types/uint_fast16_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/uint_fast32_t.h">&lt;system/types/uint_fast32_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/uint_fast64_t.h">&lt;system/types/uint_fast64_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/intptr_t.h">&lt;system/types/intptr_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/uintptr_t.h">&lt;system/types/uintptr_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/intmax_t.h">&lt;system/types/intmax_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/uintmax_t.h">&lt;system/types/uintmax_t.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_C99_STDINT_H__" definetype="value" lang="c"><name>__XEOS_LIB_C99_STDINT_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_C99_STDINT_H__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INT16_C" definetype="function" lang="c"><name>INT16_C</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_v_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INT16_C</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_v_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_v_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INT16_MAX" definetype="value" lang="c"><name>INT16_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INT16_MAX</declaration_preprocessor> <declaration_preprocessor>0x7FFF</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INT16_MIN" definetype="value" lang="c"><name>INT16_MIN</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INT16_MIN</declaration_preprocessor> <declaration_preprocessor>-</declaration_preprocessor><declaration_preprocessor>0x8000</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INT32_C" definetype="function" lang="c"><name>INT32_C</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_v_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INT32_C</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_v_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_v_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INT32_MAX" definetype="value" lang="c"><name>INT32_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INT32_MAX</declaration_preprocessor> <declaration_preprocessor>0x7FFFFFFF</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INT32_MIN" definetype="value" lang="c"><name>INT32_MIN</name>
+<attributes><attribute><name>Value</name><value>0xffffffff80000000 (-2147483648)</value></attribute>
+</attributes>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INT32_MIN</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>-</declaration_preprocessor><declaration_preprocessor>INT32_MAX</declaration_preprocessor> <declaration_preprocessor>-</declaration_preprocessor> <declaration_preprocessor>1</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INT64_C" definetype="function" lang="c"><name>INT64_C</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_v_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INT64_C</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_v_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_v_</declaration_preprocessor> <declaration_preprocessor>#</declaration_preprocessor><declaration_preprocessor>#</declaration_preprocessor> <declaration_preprocessor>LL</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INT64_MAX" definetype="value" lang="c"><name>INT64_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INT64_MAX</declaration_preprocessor> <declaration_preprocessor>0x7FFFFFFFFFFFFFFFLL</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INT64_MIN" definetype="value" lang="c"><name>INT64_MIN</name>
+<attributes><attribute><name>Value</name><value>0x0 (0)</value></attribute>
+</attributes>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INT64_MIN</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>-</declaration_preprocessor><declaration_preprocessor>INT64_MAX</declaration_preprocessor> <declaration_preprocessor>-</declaration_preprocessor> <declaration_preprocessor>1</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INT8_C" definetype="function" lang="c"><name>INT8_C</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_v_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INT8_C</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_v_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_v_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INT8_MAX" definetype="value" lang="c"><name>INT8_MAX</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INT8_MAX</declaration_preprocessor> <declaration_preprocessor>0x7F</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INT8_MIN" definetype="value" lang="c"><name>INT8_MIN</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INT8_MIN</declaration_preprocessor> <declaration_preprocessor>-</declaration_preprocessor><declaration_preprocessor>0x80</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INT_FAST16_MAX" definetype="value" lang="c"><name>INT_FAST16_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INT_FAST16_MAX</declaration_preprocessor> <declaration_preprocessor>INT16_MAX</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INT_FAST16_MIN" definetype="value" lang="c"><name>INT_FAST16_MIN</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INT_FAST16_MIN</declaration_preprocessor> <declaration_preprocessor>INT16_MIN</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INT_FAST32_MAX" definetype="value" lang="c"><name>INT_FAST32_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INT_FAST32_MAX</declaration_preprocessor> <declaration_preprocessor>INT32_MAX</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INT_FAST32_MIN" definetype="value" lang="c"><name>INT_FAST32_MIN</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INT_FAST32_MIN</declaration_preprocessor> <declaration_preprocessor>INT32_MIN</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INT_FAST64_MAX" definetype="value" lang="c"><name>INT_FAST64_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INT_FAST64_MAX</declaration_preprocessor> <declaration_preprocessor>INT64_MAX</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INT_FAST64_MIN" definetype="value" lang="c"><name>INT_FAST64_MIN</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INT_FAST64_MIN</declaration_preprocessor> <declaration_preprocessor>INT64_MIN</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INT_FAST8_MAX" definetype="value" lang="c"><name>INT_FAST8_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INT_FAST8_MAX</declaration_preprocessor> <declaration_preprocessor>INT8_MAX</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INT_FAST8_MIN" definetype="value" lang="c"><name>INT_FAST8_MIN</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INT_FAST8_MIN</declaration_preprocessor> <declaration_preprocessor>INT8_MIN</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INT_LEAST16_MAX" definetype="value" lang="c"><name>INT_LEAST16_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INT_LEAST16_MAX</declaration_preprocessor> <declaration_preprocessor>INT16_MAX</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INT_LEAST16_MIN" definetype="value" lang="c"><name>INT_LEAST16_MIN</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INT_LEAST16_MIN</declaration_preprocessor> <declaration_preprocessor>INT16_MIN</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INT_LEAST32_MAX" definetype="value" lang="c"><name>INT_LEAST32_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INT_LEAST32_MAX</declaration_preprocessor> <declaration_preprocessor>INT32_MAX</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INT_LEAST32_MIN" definetype="value" lang="c"><name>INT_LEAST32_MIN</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INT_LEAST32_MIN</declaration_preprocessor> <declaration_preprocessor>INT32_MIN</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INT_LEAST64_MAX" definetype="value" lang="c"><name>INT_LEAST64_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INT_LEAST64_MAX</declaration_preprocessor> <declaration_preprocessor>INT64_MAX</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INT_LEAST64_MIN" definetype="value" lang="c"><name>INT_LEAST64_MIN</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INT_LEAST64_MIN</declaration_preprocessor> <declaration_preprocessor>INT64_MIN</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INT_LEAST8_MAX" definetype="value" lang="c"><name>INT_LEAST8_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INT_LEAST8_MAX</declaration_preprocessor> <declaration_preprocessor>INT8_MAX</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INT_LEAST8_MIN" definetype="value" lang="c"><name>INT_LEAST8_MIN</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INT_LEAST8_MIN</declaration_preprocessor> <declaration_preprocessor>INT8_MIN</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INTMAX_C" definetype="function" lang="c"><name>INTMAX_C</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_v_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INTMAX_C</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_v_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_v_</declaration_preprocessor> <declaration_preprocessor>#</declaration_preprocessor><declaration_preprocessor>#</declaration_preprocessor> <declaration_preprocessor>LL</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INTMAX_MAX" definetype="value" lang="c"><name>INTMAX_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INTMAX_MAX</declaration_preprocessor> <declaration_preprocessor>INT64_MAX</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INTMAX_MIN" definetype="value" lang="c"><name>INTMAX_MIN</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INTMAX_MIN</declaration_preprocessor> <declaration_preprocessor>INT64_MIN</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INTPTR_MAX" definetype="value" lang="c"><name>INTPTR_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INTPTR_MAX</declaration_preprocessor> <declaration_preprocessor>INT64_MAX</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INTPTR_MAX_DONTLINK_1" definetype="value" lang="c"><name>INTPTR_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INTPTR_MAX</declaration_preprocessor> <declaration_preprocessor>INT32_MAX</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INTPTR_MIN" definetype="value" lang="c"><name>INTPTR_MIN</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INTPTR_MIN</declaration_preprocessor> <declaration_preprocessor>INT64_MIN</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INTPTR_MIN_DONTLINK_1" definetype="value" lang="c"><name>INTPTR_MIN</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INTPTR_MIN</declaration_preprocessor> <declaration_preprocessor>INT32_MIN</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/PTRDIFF_MAX" definetype="value" lang="c"><name>PTRDIFF_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>PTRDIFF_MAX</declaration_preprocessor> <declaration_preprocessor>INT64_MAX</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/PTRDIFF_MAX_DONTLINK_1" definetype="value" lang="c"><name>PTRDIFF_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>PTRDIFF_MAX</declaration_preprocessor> <declaration_preprocessor>INT32_MAX</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/PTRDIFF_MIN" definetype="value" lang="c"><name>PTRDIFF_MIN</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>PTRDIFF_MIN</declaration_preprocessor> <declaration_preprocessor>INT64_MIN</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/PTRDIFF_MIN_DONTLINK_1" definetype="value" lang="c"><name>PTRDIFF_MIN</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>PTRDIFF_MIN</declaration_preprocessor> <declaration_preprocessor>INT32_MIN</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIG_ATOMIC_MAX" definetype="value" lang="c"><name>SIG_ATOMIC_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIG_ATOMIC_MAX</declaration_preprocessor> <declaration_preprocessor>INT32_MAX</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIG_ATOMIC_MIN" definetype="value" lang="c"><name>SIG_ATOMIC_MIN</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIG_ATOMIC_MIN</declaration_preprocessor> <declaration_preprocessor>INT32_MIN</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIZE_MAX" definetype="value" lang="c"><name>SIZE_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIZE_MAX</declaration_preprocessor> <declaration_preprocessor>UINT64_MAX</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SIZE_MAX_DONTLINK_1" definetype="value" lang="c"><name>SIZE_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SIZE_MAX</declaration_preprocessor> <declaration_preprocessor>UINT32_MAX</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/UINT16_C" definetype="function" lang="c"><name>UINT16_C</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_v_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>UINT16_C</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_v_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_v_</declaration_preprocessor> <declaration_preprocessor>#</declaration_preprocessor><declaration_preprocessor>#</declaration_preprocessor> <declaration_preprocessor>U</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/UINT16_MAX" definetype="value" lang="c"><name>UINT16_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>UINT16_MAX</declaration_preprocessor> <declaration_preprocessor>0xFFFF</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/UINT32_C" definetype="function" lang="c"><name>UINT32_C</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_v_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>UINT32_C</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_v_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_v_</declaration_preprocessor> <declaration_preprocessor>#</declaration_preprocessor><declaration_preprocessor>#</declaration_preprocessor> <declaration_preprocessor>U</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/UINT32_MAX" definetype="value" lang="c"><name>UINT32_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>UINT32_MAX</declaration_preprocessor> <declaration_preprocessor>0xFFFFFFFFU</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/UINT64_C" definetype="function" lang="c"><name>UINT64_C</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_v_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>UINT64_C</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_v_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_v_</declaration_preprocessor> <declaration_preprocessor>#</declaration_preprocessor><declaration_preprocessor>#</declaration_preprocessor> <declaration_preprocessor>ULL</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/UINT64_MAX" definetype="value" lang="c"><name>UINT64_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>UINT64_MAX</declaration_preprocessor> <declaration_preprocessor>0xFFFFFFFFFFFFFFFFULL</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/UINT8_C" definetype="function" lang="c"><name>UINT8_C</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_v_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>UINT8_C</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_v_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_v_</declaration_preprocessor> <declaration_preprocessor>#</declaration_preprocessor><declaration_preprocessor>#</declaration_preprocessor> <declaration_preprocessor>U</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/UINT8_MAX" definetype="value" lang="c"><name>UINT8_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>UINT8_MAX</declaration_preprocessor> <declaration_preprocessor>0xFF</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/UINT_FAST16_MAX" definetype="value" lang="c"><name>UINT_FAST16_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>UINT_FAST16_MAX</declaration_preprocessor> <declaration_preprocessor>UINT16_MAX</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/UINT_FAST32_MAX" definetype="value" lang="c"><name>UINT_FAST32_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>UINT_FAST32_MAX</declaration_preprocessor> <declaration_preprocessor>UINT32_MAX</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/UINT_FAST64_MAX" definetype="value" lang="c"><name>UINT_FAST64_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>UINT_FAST64_MAX</declaration_preprocessor> <declaration_preprocessor>UINT64_MAX</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/UINT_FAST8_MAX" definetype="value" lang="c"><name>UINT_FAST8_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>UINT_FAST8_MAX</declaration_preprocessor> <declaration_preprocessor>UINT8_MAX</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/UINT_LEAST16_MAX" definetype="value" lang="c"><name>UINT_LEAST16_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>UINT_LEAST16_MAX</declaration_preprocessor> <declaration_preprocessor>UINT16_MAX</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/UINT_LEAST32_MAX" definetype="value" lang="c"><name>UINT_LEAST32_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>UINT_LEAST32_MAX</declaration_preprocessor> <declaration_preprocessor>UINT32_MAX</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/UINT_LEAST64_MAX" definetype="value" lang="c"><name>UINT_LEAST64_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>UINT_LEAST64_MAX</declaration_preprocessor> <declaration_preprocessor>UINT64_MAX</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/UINT_LEAST8_MAX" definetype="value" lang="c"><name>UINT_LEAST8_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>UINT_LEAST8_MAX</declaration_preprocessor> <declaration_preprocessor>UINT8_MAX</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/UINTMAX_C" definetype="function" lang="c"><name>UINTMAX_C</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_v_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>UINTMAX_C</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_v_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_v_</declaration_preprocessor> <declaration_preprocessor>#</declaration_preprocessor><declaration_preprocessor>#</declaration_preprocessor> <declaration_preprocessor>ULL</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/UINTMAX_MAX" definetype="value" lang="c"><name>UINTMAX_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>UINTMAX_MAX</declaration_preprocessor> <declaration_preprocessor>UINT64_MAX</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/UINTPTR_MAX" definetype="value" lang="c"><name>UINTPTR_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>UINTPTR_MAX</declaration_preprocessor> <declaration_preprocessor>UINT64_MAX</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/UINTPTR_MAX_DONTLINK_1" definetype="value" lang="c"><name>UINTPTR_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>UINTPTR_MAX</declaration_preprocessor> <declaration_preprocessor>UINT32_MAX</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/WCHAR_MAX" definetype="value" lang="c"><name>WCHAR_MAX</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>WCHAR_MAX</declaration_preprocessor> <declaration_preprocessor>__WCHAR_MAX__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/WCHAR_MAX_DONTLINK_1" definetype="value" lang="c"><name>WCHAR_MAX</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>WCHAR_MAX</declaration_preprocessor> <declaration_preprocessor>0x7FFFFFFF</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/WCHAR_MIN" definetype="value" lang="c"><name>WCHAR_MIN</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>WCHAR_MIN</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/WCHAR_MIN_DONTLINK_1" definetype="value" lang="c"><name>WCHAR_MIN</name>
+<attributes><attribute><name>Value</name><value>0xffffffff80000000 (-2147483648)</value></attribute>
+</attributes>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>WCHAR_MIN</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>-</declaration_preprocessor><declaration_preprocessor>WCHAR_MAX</declaration_preprocessor> <declaration_preprocessor>-</declaration_preprocessor> <declaration_preprocessor>1</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/WINT_MAX" definetype="value" lang="c"><name>WINT_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>WINT_MAX</declaration_preprocessor> <declaration_preprocessor>INT32_MAX</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/WINT_MIN" definetype="value" lang="c"><name>WINT_MIN</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>WINT_MIN</declaration_preprocessor> <declaration_preprocessor>INT32_MIN</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

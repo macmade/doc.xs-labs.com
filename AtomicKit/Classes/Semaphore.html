@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Semaphore Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Semaphore" class="dashAnchor"></a>
+    <a title="Semaphore Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">AtomicKit Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/macmade/AtomicKit"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">AtomicKit Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Semaphore Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:9AtomicKit0A0C">Atomic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DispatchedArrayController.html">DispatchedArrayController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DispatchedBool.html">DispatchedBool</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DispatchedDictionaryController.html">DispatchedDictionaryController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DispatchedMutableArray.html">DispatchedMutableArray</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DispatchedMutableDictionary.html">DispatchedMutableDictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DispatchedMutableSet.html">DispatchedMutableSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DispatchedNumber.html">DispatchedNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DispatchedObject.html">DispatchedObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DispatchedString.html">DispatchedString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DispatchedTreeController.html">DispatchedTreeController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DispatchedValue.html">DispatchedValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LockingValue.html">LockingValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Mutex.html">Mutex</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Mutex/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RWLock.html">RWLock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RWLock/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RWLock/Intent.html">– Intent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RecursiveMutex.html">RecursiveMutex</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RecursiveMutex/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Semaphore.html">Semaphore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Semaphore/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UnfairLock.html">UnfairLock</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/DispatchedValueWrapper.html">DispatchedValueWrapper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Lockable.html">Lockable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ThreadSafeValueWrapper.html">ThreadSafeValueWrapper</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Semaphore</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Semaphore</span></code></pre>
+
+                </div>
+              </div>
+            <p>Represents a semaphore object.<br>
+Note that named semaphores are shared accross different processes.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9AtomicKit9SemaphoreC17nameMaximumLengthSivZ"></a>
+                    <a name="//apple_ref/swift/Variable/nameMaximumLength" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9AtomicKit9SemaphoreC17nameMaximumLengthSivZ">nameMaximumLength</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The maximum length for a semaphore name.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">nameMaximumLength</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9AtomicKit9SemaphoreC7isNamedSbv"></a>
+                    <a name="//apple_ref/swift/Property/isNamed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9AtomicKit9SemaphoreC7isNamedSbv">isNamed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether the semaphore is named.<br>
+Note that named semaphores are shared accross different processes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">private( set )</span> <span class="k">var</span> <span class="nv">isNamed</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9AtomicKit9SemaphoreC4nameSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9AtomicKit9SemaphoreC4nameSSSgv">name</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the semaphore, if any.<br>
+Note that named semaphores are shared accross different processes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">private( set )</span> <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9AtomicKit9SemaphoreC5ErrorO"></a>
+                    <a name="//apple_ref/swift/Enum/Error" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9AtomicKit9SemaphoreC5ErrorO">Error</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code><a href="../Classes/Semaphore.html">Semaphore</a></code> errors.</p>
+
+                        <a href="../Classes/Semaphore/Error.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Error</span><span class="p">:</span> <span class="kt">Swift</span><span class="o">.</span><span class="kt">Error</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9AtomicKit9SemaphoreCACs5Int32V5count_SSSg4nametKcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(count:name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9AtomicKit9SemaphoreCACs5Int32V5count_SSSg4nametKcfc">init(count:name:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes a semaphore object.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <code><a href="../Classes/Semaphore/Error.html">Semaphore.Error</a></code> on failure.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span> <span class="nv">count</span><span class="p">:</span> <span class="kt">Int32</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span> <span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9AtomicKit9SemaphoreC4waityyF"></a>
+                    <a name="//apple_ref/swift/Method/wait()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9AtomicKit9SemaphoreC4waityyF">wait()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Locks the semaphore.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">wait</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9AtomicKit9SemaphoreC6signalyyF"></a>
+                    <a name="//apple_ref/swift/Method/signal()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9AtomicKit9SemaphoreC6signalyyF">signal()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Signals (unlocks) the semaphore.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">signal</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9AtomicKit9SemaphoreC7tryWaitSbyF"></a>
+                    <a name="//apple_ref/swift/Method/tryWait()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9AtomicKit9SemaphoreC7tryWaitSbyF">tryWait()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tries to lock the semaphore.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">tryWait</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> if the semaphore was successfully locked, otherwise <code>false</code>.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>(c) 2017 Jean-David Gadina - <a class="link" href="http://www.xs-labs.com" target="_blank" rel="external">www.xs-labs.com</a></p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

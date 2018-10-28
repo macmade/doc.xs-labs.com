@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/errno.h" lang="c" filename="errno.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/c99/include/c99/errno.h"><name>errno.h</name>
+<includes>
+</includes>
+<desc><p/></desc>
+<globals><variable id="//xsdoc_ref/c/data/errno" lang="c"><name>errno</name>
+<returntype>extern int</returntype>
+<declaration><declaration_keyword>extern</declaration_keyword> <declaration_type>int</declaration_type> <declaration_var>errno</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable></globals>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_C99_ERRNO_H__" definetype="value" lang="c"><name>__XEOS_LIB_C99_ERRNO_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_C99_ERRNO_H__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/EDOM" definetype="value" lang="c"><name>EDOM</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>EDOM</declaration_preprocessor> <declaration_preprocessor>0x01</declaration_preprocessor> <declaration_comment><declaration_comment>/*</declaration_comment> <declaration_comment>Numerical argument out of domain </declaration_comment><declaration_comment>*/</declaration_comment></declaration_comment></declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/EILSEQ" definetype="value" lang="c"><name>EILSEQ</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>EILSEQ</declaration_preprocessor> <declaration_preprocessor>0x02</declaration_preprocessor> <declaration_comment><declaration_comment>/*</declaration_comment> <declaration_comment>Illegal byte sequence </declaration_comment><declaration_comment>*/</declaration_comment></declaration_comment></declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/ERANGE" definetype="value" lang="c"><name>ERANGE</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>ERANGE</declaration_preprocessor> <declaration_preprocessor>0x03</declaration_preprocessor> <declaration_comment><declaration_comment>/*</declaration_comment> <declaration_comment>Result too large </declaration_comment><declaration_comment>*/</declaration_comment></declaration_comment></declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

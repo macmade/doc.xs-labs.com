@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/ctype.h" lang="c" filename="ctype.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/c99/include/c99/ctype.h"><name>ctype.h</name>
+<includes>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/isalnum" lang="c"><name>isalnum</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration> <declaration_type>int</declaration_type> <declaration_function>isalnum</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/isalpha" lang="c"><name>isalpha</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>isalpha</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/isblank" lang="c"><name>isblank</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>isblank</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/iscntrl" lang="c"><name>iscntrl</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>iscntrl</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/isdigit" lang="c"><name>isdigit</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>isdigit</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/isgraph" lang="c"><name>isgraph</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>isgraph</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/islower" lang="c"><name>islower</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>islower</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/isprint" lang="c"><name>isprint</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>isprint</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ispunct" lang="c"><name>ispunct</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>ispunct</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/isspace" lang="c"><name>isspace</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>isspace</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/isupper" lang="c"><name>isupper</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>isupper</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/isxdigit" lang="c"><name>isxdigit</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>isxdigit</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/tolower" lang="c"><name>tolower</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>tolower</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/toupper" lang="c"><name>toupper</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>toupper</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_C99_CTYPE_H__" definetype="value" lang="c"><name>__XEOS_LIB_C99_CTYPE_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_C99_CTYPE_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

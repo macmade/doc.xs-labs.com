@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/semaphore.h" lang="c" filename="semaphore.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/dispatch/include/dispatch/semaphore.h"><name>semaphore.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/dispatch_semaphore_t.h">&lt;dispatch/types/dispatch_semaphore_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/dispatch_time_t.h">&lt;dispatch/types/dispatch_time_t.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/dispatch_semaphore_create" lang="c"><name>dispatch_semaphore_create</name>
+<parsedparameterlist>
+<parsedparameter><type>long</type><name>value</name></parsedparameter>
+</parsedparameterlist>
+<returntype> dispatch_semaphore_t</returntype>
+<declaration> <declaration_type>dispatch_semaphore_t</declaration_type> <declaration_function>dispatch_semaphore_create</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_param>value</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_semaphore_signal" lang="c"><name>dispatch_semaphore_signal</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_semaphore_t</type><name>dsema</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_function>dispatch_semaphore_signal</declaration_function>(
+    <declaration_type>dispatch_semaphore_t</declaration_type> <declaration_param>dsema</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_semaphore_wait" lang="c"><name>dispatch_semaphore_wait</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_semaphore_t</type><name>dsema</name></parsedparameter>
+<parsedparameter><type>dispatch_time_t</type><name>timeout</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_function>dispatch_semaphore_wait</declaration_function>(
+    <declaration_type>dispatch_semaphore_t</declaration_type> <declaration_param>dsema</declaration_param>,
+    <declaration_type>dispatch_time_t</declaration_type> <declaration_param>timeout</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_DISPATCH_SEMAPHORE_H__" definetype="value" lang="c"><name>__XEOS_LIB_DISPATCH_SEMAPHORE_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_DISPATCH_SEMAPHORE_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

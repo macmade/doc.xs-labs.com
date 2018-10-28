@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DispatchedBool Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/DispatchedBool" class="dashAnchor"></a>
+    <a title="DispatchedBool Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">AtomicKit Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/macmade/AtomicKit"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">AtomicKit Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        DispatchedBool Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:9AtomicKit0A0C">Atomic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DispatchedArrayController.html">DispatchedArrayController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DispatchedBool.html">DispatchedBool</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DispatchedDictionaryController.html">DispatchedDictionaryController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DispatchedMutableArray.html">DispatchedMutableArray</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DispatchedMutableDictionary.html">DispatchedMutableDictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DispatchedMutableSet.html">DispatchedMutableSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DispatchedNumber.html">DispatchedNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DispatchedObject.html">DispatchedObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DispatchedString.html">DispatchedString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DispatchedTreeController.html">DispatchedTreeController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DispatchedValue.html">DispatchedValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LockingValue.html">LockingValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Mutex.html">Mutex</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Mutex/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RWLock.html">RWLock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RWLock/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RWLock/Intent.html">– Intent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RecursiveMutex.html">RecursiveMutex</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RecursiveMutex/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Semaphore.html">Semaphore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Semaphore/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UnfairLock.html">UnfairLock</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/DispatchedValueWrapper.html">DispatchedValueWrapper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Lockable.html">Lockable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ThreadSafeValueWrapper.html">ThreadSafeValueWrapper</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>DispatchedBool</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">DispatchedBool</span><span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt"><a href="../Protocols/DispatchedValueWrapper.html">DispatchedValueWrapper</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>Thread-safe value wrapper for <code>Bool</code>, using dispatch queues to achieve
+synchronization.<br>
+This class is KVO-compliant. You may observe its <code>value</code> property to be
+notified of changes. This is applicable to Cocoa bindings.</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    DispatchedValueWrapper
+
+</div>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9AtomicKit14DispatchedBoolC9ValueTypea"></a>
+                    <a name="//apple_ref/swift/Alias/ValueType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9AtomicKit14DispatchedBoolC9ValueTypea">ValueType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The wrapped value type, <code>Bool</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ValueType</span> <span class="o">=</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@AtomicKit@objc(cs)DispatchedBool(im)initWithValue:"></a>
+                    <a name="//apple_ref/swift/Method/init(value:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@AtomicKit@objc(cs)DispatchedBool(im)initWithValue:">init(value:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes a dispatched value object.<br>
+This initializer will use the main queue for synchronization.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">required</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span> <span class="nv">value</span><span class="p">:</span> <span class="kt"><a href="../Classes/DispatchedBool.html#/s:9AtomicKit14DispatchedBoolC9ValueTypea">ValueType</a></span> <span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@AtomicKit@objc(cs)DispatchedBool(im)initWithValue:queue:"></a>
+                    <a name="//apple_ref/swift/Method/init(value:queue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@AtomicKit@objc(cs)DispatchedBool(im)initWithValue:queue:">init(value:queue:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes a dispatched value object.  </p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">required</span> <span class="nf">init</span><span class="p">(</span> <span class="nv">value</span><span class="p">:</span> <span class="kt"><a href="../Classes/DispatchedBool.html#/s:9AtomicKit14DispatchedBoolC9ValueTypea">ValueType</a></span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span> <span class="o">=</span> <span class="kt">DispatchQueue</span><span class="o">.</span><span class="n">main</span> <span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@AtomicKit@objc(cs)DispatchedBool(py)value"></a>
+                    <a name="//apple_ref/swift/Property/value" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@AtomicKit@objc(cs)DispatchedBool(py)value">value</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The wrapped <code>Bool</code> value.<br>
+This property is KVO-compliant.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">value</span><span class="p">:</span> <span class="kt"><a href="../Classes/DispatchedBool.html#/s:9AtomicKit14DispatchedBoolC9ValueTypea">ValueType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@AtomicKit@objc(cs)DispatchedBool(im)get"></a>
+                    <a name="//apple_ref/swift/Method/get()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@AtomicKit@objc(cs)DispatchedBool(im)get">get()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Atomically gets the wrapped <code>Bool</code> value.<br>
+The getter will be executed on the queue specified in the initialzer.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">get</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/DispatchedBool.html#/s:9AtomicKit14DispatchedBoolC9ValueTypea">ValueType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The actual <code>Bool</code> value.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@AtomicKit@objc(cs)DispatchedBool(im)set:"></a>
+                    <a name="//apple_ref/swift/Method/set(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@AtomicKit@objc(cs)DispatchedBool(im)set:">set(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Atomically sets the wrapped <code>Bool</code> value.<br>
+The setter will be executed on the queue specified in the initialzer.</p>
+
+<p>-parameter value: The <code>Bool</code> value to set.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">set</span><span class="p">(</span> <span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt"><a href="../Classes/DispatchedBool.html#/s:9AtomicKit14DispatchedBoolC9ValueTypea">ValueType</a></span> <span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@AtomicKit@objc(cs)DispatchedBool(im)executeWithClosure:"></a>
+                    <a name="//apple_ref/swift/Method/execute(closure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@AtomicKit@objc(cs)DispatchedBool(im)executeWithClosure:">execute(closure:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Atomically executes a closure on the wrapped <code>Bool</code> value.<br>
+The closure will be passed the actual value of the wrapped <code>Bool</code> value,
+and is guaranteed to be executed atomically, on the queue specified in
+the initialzer.</p>
+
+<p>-parameter closure: The close to execute.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">execute</span><span class="p">(</span> <span class="nv">closure</span><span class="p">:</span> <span class="p">(</span> <span class="kt"><a href="../Classes/DispatchedBool.html#/s:9AtomicKit14DispatchedBoolC9ValueTypea">ValueType</a></span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Swift</span><span class="o">.</span><span class="kt">Void</span> <span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9AtomicKit14DispatchedBoolC7executexxSbc7closure_tlF"></a>
+                    <a name="//apple_ref/swift/Method/execute(closure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9AtomicKit14DispatchedBoolC7executexxSbc7closure_tlF">execute(closure:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Atomically executes a closure on the wrapped <code>Bool</code> value, returning some
+value.<br>
+The closure will be passed the actual value of the wrapped <code>Bool</code> value,
+and is guaranteed to be executed atomically, on the queue specified in
+the initialzer.</p>
+
+<p>-parameter closure: The close to execute, returning some value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">execute</span><span class="o">&lt;</span> <span class="kt">R</span> <span class="o">&gt;</span><span class="p">(</span> <span class="nv">closure</span><span class="p">:</span> <span class="p">(</span> <span class="kt"><a href="../Classes/DispatchedBool.html#/s:9AtomicKit14DispatchedBoolC9ValueTypea">ValueType</a></span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">R</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">R</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>(c) 2017 Jean-David Gadina - <a class="link" href="http://www.xs-labs.com" target="_blank" rel="external">www.xs-labs.com</a></p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/GitHubUpdaterDelegate.h" lang="c" filename="GitHubUpdaterDelegate.h" headerpath="/Users/macmade/Documents/Macmade/GitHub/GitHubUpdates/Documentation/../GitHubUpdates/GitHubUpdaterDelegate.h"><name>GitHubUpdaterDelegate.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Cocoa.h">&lt;Cocoa/Cocoa.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<classes><protocol id="//xsdoc_ref/occ/intf/GitHubUpdaterDelegate" lang="occ"><name>GitHubUpdaterDelegate</name>
+<abstract><p>Optional delegate for GitHubUpdater.
+</p></abstract>
+<attributes><attribute><name>Extends Protocol</name><value><hd_link logicalPath="//xsdoc_ref/occ/intf/NSObject">NSObject</hd_link></value></attribute>
+</attributes>
+<attributelists><listattribute><name>See</name><list>
+<item><name>GitHubUpdater</name><value><hd_link logicalPath="GitHubUpdater" isseealso="yes">GitHubUpdater</hd_link></value></item></list></listattribute>
+</attributelists>
+<declaration>@<declaration_type>protocol</declaration_type> <declaration_type>GitHubUpdaterDelegate</declaration_type>&lt; <declaration_template>NSObject</declaration_template> &gt;  @optional  <declaration_comment>/*!
+@method      updaterShouldCheckForDrafts:
+@abstract    Implement if you need to check for draft updates.
+@param       updater The updater object
+@result      YES if the updater should check for draft updates, otherwise NO</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - (
+            <declaration_param>BOOL</declaration_param> )<declaration_type>updaterShouldCheckForDrafts</declaration_type>: (
+            <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>updater</declaration_var>;   <declaration_comment>/*!
+@method      updaterShouldCheckForPrereleases:
+@abstract    Implement if you need to check for prerelease updates.
+@param       updater The updater object
+@result      YES if the updater should check for prerelease updates, otherwise NO</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - (
+            <declaration_param>BOOL</declaration_param> )<declaration_type>updaterShouldCheckForPrereleases</declaration_type>: (
+            <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>updater</declaration_var>;   <declaration_comment>/*!
+@method      updaterShouldCheckForUpdatesInBackground:
+@abstract    Whether the updater is allowed to check for updates in background.
+@discussion  By implementing this method, you can control if the updater can
+check for updates in background.
+This method has no effect on user-initiated update checks, using
+`- [ GitHubUpdater checkForUpdates: ]`. It will only be able to
+control `- [ GitHubUpdater checkForUpdatesInBackground ]`.
+@param       updater The updater object
+@result      YES if the updater should check for updates in background, otherwise NO</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - (
+            <declaration_param>BOOL</declaration_param> )<declaration_type>updaterShouldCheckForUpdatesInBackground</declaration_type>: (
+            <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>updater</declaration_var>;   <declaration_comment>/*!
+@method      classForUpdaterProgressWindowController:
+@abstract    Returns the class to use for the progress window controller.
+@discussion  This allows you to specify a custom class for the progress
+window controller, if you need customization.
+Note that the returned class must inherit from
+`GitHubProgressWindowController`.
+@param       updater The updater object
+@result      The class to use</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - (
+            <declaration_param>Class</declaration_param> )<declaration_type>classForUpdaterProgressWindowController</declaration_type>: (
+            <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>updater</declaration_var>;   <declaration_comment>/*!
+@method      classForUpdaterInstallWindowController:
+@abstract    Returns the class to use for the install window controller.
+@discussion  This allows you to specify a custom class for the install
+window controller, if you need customization.
+Note that the returned class must inherit from
+`GitHubInstallWindowController`.
+@param       updater The updater object
+@result      The class to use</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - (
+            <declaration_param>Class</declaration_param> )<declaration_type>classForUpdaterInstallWindowController</declaration_type>: (
+            <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>updater</declaration_var>;   <declaration_comment>/*!
+@method      updater:urlForUpdatesWithUser:repository:proposedURL:
+@abstract    Returns the URL for the update check.
+@discussion  You may implement this if you need to customize the update
+URL, for instance if you use another servcie than GitHub.
+@param       updater     The updater object
+@param       user        The user name
+@param       repository  The repository name
+@param       proposedURL The proposed, default URL</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - (
+            <declaration_type>NSURL</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>updater</declaration_type>: (
+            <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>updater</declaration_type> <declaration_type>urlForUpdatesWithUser</declaration_type>: (
+            <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>user</declaration_type> <declaration_type>repository</declaration_type>: (
+            <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>repository</declaration_type> <declaration_type>proposedURL</declaration_type>: (
+            <declaration_type>NSURL</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>proposedURL</declaration_var>;   <declaration_comment>/*!
+@method      updater:releasesWithData:error:
+@abstract    Gets releases from a data object
+@discussion  You may implement this method if you need to customize the
+parsing of updates data, with a different behaviour than
+using JSON data from GitHub releases.
+@param       updater The updater object
+@param       data    The data object fetched from the update URL
+@param       error   An optional pointer to an error object
+@result      An array of release objects, if any</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - (
+            <declaration_type>nullable</declaration_type> <declaration_type>NSArray</declaration_type>&lt; <declaration_template>GitHubRelease</declaration_template> <declaration_template>*</declaration_template> &gt; <declaration_type>*</declaration_type> )<declaration_type>updater</declaration_type>: (
+            <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>updater</declaration_type> <declaration_type>releasesWithData</declaration_type>: (
+            <declaration_type>NSData</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>data</declaration_type> <declaration_type>error</declaration_type>: (
+            <declaration_type>NSError</declaration_type> <declaration_type>*</declaration_type> <declaration_type>__autoreleasing</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>error</declaration_var>;   <declaration_comment>/*!
+@method      updater:versionForRelease:
+@abstract    Gets a version object for a release.
+@discussion  You may implement this method if you need to customize the
+way version numbers are created from releases.
+If not implemented, the tag name will be used as version
+number.
+@param       updater The updater object
+@param       release The release object
+@result      A version object for the release</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - (
+            <declaration_type>GitHubVersion</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>updater</declaration_type>: (
+            <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>updater</declaration_type> <declaration_type>versionForRelease</declaration_type>: (
+            <declaration_type>GitHubRelease</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>release</declaration_var>;   <declaration_comment>/*!
+@method      updater:version:isNewerThanVersion:
+@abstract    Determines if a version is newer than another version
+@discussion  You may implement this method if you need to customize the
+way versions are compared.
+@param       updater The updater object
+@param       v1      The first version
+@param       v2      The second version
+@result      YES if the first version is newer, otherwise NO</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - (
+            <declaration_param>BOOL</declaration_param> )<declaration_type>updater</declaration_type>: (
+            <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>updater</declaration_type> <declaration_type>version</declaration_type>: (
+            <declaration_type>GitHubVersion</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>v1</declaration_type> <declaration_type>isNewerThanVersion</declaration_type>: (
+            <declaration_type>GitHubVersion</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>v2</declaration_var>;   <declaration_comment>/*!
+@method      updater:willShowProgressWindowController:
+@abstract    Called when the updater is about to show a progress window.
+@param       updater     The updater object
+@param       controller  The window controller</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - (
+            <declaration_param>void</declaration_param> )<declaration_type>updater</declaration_type>: (
+            <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>updater</declaration_type> <declaration_type>willShowProgressWindowController</declaration_type>: (
+            <declaration_type>GitHubProgressWindowController</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>controller</declaration_var>;   <declaration_comment>/*!
+@method      updater:willShowInstallWindowController:
+@abstract    Called when the updater is about to show an install window.
+@param       updater     The updater object
+@param       controller  The window controller</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - (
+            <declaration_param>void</declaration_param> )<declaration_type>updater</declaration_type>: (
+            <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>updater</declaration_type> <declaration_type>willShowInstallWindowController</declaration_type>: (
+            <declaration_type>GitHubInstallWindowController</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>controller</declaration_var>;   <declaration_comment>/*!
+@method      updater:didShowProgressWindowController:
+@abstract    Called when the updater has shown a progress window.
+@param       updater     The updater object
+@param       controller  The window controller</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - (
+            <declaration_param>void</declaration_param> )<declaration_type>updater</declaration_type>: (
+            <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>updater</declaration_type> <declaration_type>didShowProgressWindowController</declaration_type>: (
+            <declaration_type>GitHubProgressWindowController</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>controller</declaration_var>;   <declaration_comment>/*!
+@method      updater:didShowProgressWindowController:
+@abstract    Called when the updater has shown an install window.
+@param       updater     The updater object
+@param       controller  The window controller</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - (
+            <declaration_param>void</declaration_param> )<declaration_type>updater</declaration_type>: (
+            <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>updater</declaration_type> <declaration_type>didShowInstallWindowController</declaration_type>: (
+            <declaration_type>GitHubInstallWindowController</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>controller</declaration_var>;   <declaration_comment>/*!
+@method      updater:willCloseProgressWindowController:
+@abstract    Called when the updater is about to close a progress window.
+@param       updater     The updater object
+@param       controller  The window controller</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - (
+            <declaration_param>void</declaration_param> )<declaration_type>updater</declaration_type>: (
+            <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>updater</declaration_type> <declaration_type>willCloseProgressWindowController</declaration_type>: (
+            <declaration_type>GitHubProgressWindowController</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>controller</declaration_var>;   <declaration_comment>/*!
+@method      updater:willCloseInstallWindowController:
+@abstract    Called when the updater is about to close an install window.
+@param       updater     The updater object
+@param       controller  The window controller</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - (
+            <declaration_param>void</declaration_param> )<declaration_type>updater</declaration_type>: (
+            <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>updater</declaration_type> <declaration_type>willCloseInstallWindowController</declaration_type>: (
+            <declaration_type>GitHubInstallWindowController</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>controller</declaration_var>;   <declaration_comment>/*!
+@method      updater:willDisplayAlert:withError:
+@abstract    Called when the updater is about to display an error alert.
+@param       updater The updater object
+@param       alert   The alert object
+@param       error   The error object</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - (
+            <declaration_param>void</declaration_param> )<declaration_type>updater</declaration_type>: (
+            <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>updater</declaration_type> <declaration_type>willDisplayAlert</declaration_type>: (
+            <declaration_type>NSAlert</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>alert</declaration_type> <declaration_type>withError</declaration_type>: (
+            <declaration_type>NSError</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>error</declaration_var>;   <declaration_comment>/*!
+@method      updater:willDisplayUpToDateAlert:
+@abstract    Called when the updater is about to display an up-to-date alert.
+@param       updater The updater object
+@param       alert   The alert object</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - (
+            <declaration_param>void</declaration_param> )<declaration_type>updater</declaration_type>: (
+            <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>updater</declaration_type> <declaration_type>willDisplayUpToDateAlert</declaration_type>: (
+            <declaration_type>NSAlert</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>alert</declaration_var>;   @@end </declaration>
+<desc><p/></desc>
+<methods><method id="//xsdoc_ref/occ/intfm/GitHubUpdaterDelegate/classForUpdaterInstallWindowController:" lang="occ" type="intfm" optionalOrRequired="@optional"><name>classForUpdaterInstallWindowController:</name>
+<abstract><p>Returns the class to use for the install window controller.
+</p></abstract>
+<parameterlist>
+<parameter><name>updater</name><desc><p>The updater object</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>user</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>repository</name></parsedparameter>
+<parsedparameter><type>( NSURL * )</type><name>proposedURL</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSData * )</type><name>data</name></parsedparameter>
+<parsedparameter><type>( NSError * __autoreleasing * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubRelease * )</type><name>release</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubVersion * )</type><name>v1</name></parsedparameter>
+<parsedparameter><type>( GitHubVersion * )</type><name>v2</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+<parsedparameter><type>( NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+</parsedparameterlist>
+<returntype> Class </returntype>
+<result><p>The class to use
+</p></result>
+<declaration>- ( <declaration_type>Class</declaration_type> )<declaration_function>classForUpdaterInstallWindowController</declaration_function>: ( <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>updater</declaration_var>; </declaration>
+<desc><p>This allows you to specify a custom class for the install
+window controller, if you need customization.
+Note that the returned class must inherit from
+`GitHubInstallWindowController`.
+</p></desc>
+</method><method id="//xsdoc_ref/occ/intfm/GitHubUpdaterDelegate/classForUpdaterProgressWindowController:" lang="occ" type="intfm" optionalOrRequired="@optional"><name>classForUpdaterProgressWindowController:</name>
+<abstract><p>Returns the class to use for the progress window controller.
+</p></abstract>
+<parameterlist>
+<parameter><name>updater</name><desc><p>The updater object</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>user</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>repository</name></parsedparameter>
+<parsedparameter><type>( NSURL * )</type><name>proposedURL</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSData * )</type><name>data</name></parsedparameter>
+<parsedparameter><type>( NSError * __autoreleasing * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubRelease * )</type><name>release</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubVersion * )</type><name>v1</name></parsedparameter>
+<parsedparameter><type>( GitHubVersion * )</type><name>v2</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+<parsedparameter><type>( NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+</parsedparameterlist>
+<returntype> Class </returntype>
+<result><p>The class to use
+</p></result>
+<declaration>- ( <declaration_type>Class</declaration_type> )<declaration_function>classForUpdaterProgressWindowController</declaration_function>: ( <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>updater</declaration_var>; </declaration>
+<desc><p>This allows you to specify a custom class for the progress
+window controller, if you need customization.
+Note that the returned class must inherit from
+`GitHubProgressWindowController`.
+</p></desc>
+</method><method id="//xsdoc_ref/occ/intfm/GitHubUpdaterDelegate/updater:didShowInstallWindowController:" lang="occ" type="intfm" optionalOrRequired="@optional"><name>updater:didShowInstallWindowController:</name>
+<abstract><p>Called when the updater has shown an install window.
+</p></abstract>
+<parameterlist>
+<parameter><name>updater</name><desc><p>The updater object</p></desc></parameter>
+<parameter><name>controller</name><desc><p>The window controller</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+<parsedparameter><type>( NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See Also</name><list>
+<item><name>updater:didShowProgressWindowController:</name><value><hd_link logicalPath="//xsdoc_ref/doc/title:intfm/GitHubUpdaterDelegate/updater:didShowProgressWindowController:" isseealso="yes">updater:didShowProgressWindowController:</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_function>updater</declaration_function>: ( <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>updater</declaration_param> 
+        <declaration_function>didShowInstallWindowController</declaration_function>: ( <declaration_type>GitHubInstallWindowController</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>controller</declaration_var>; </declaration>
+<desc><p/></desc>
+<autorelated>
+<relateduid>//xsdoc_ref/doc/title:intfm/GitHubUpdaterDelegate/updater:didShowProgressWindowController:</relateduid>
+</autorelated>
+</method><method id="//xsdoc_ref/occ/intfm/GitHubUpdaterDelegate/updater:didShowProgressWindowController:" lang="occ" type="intfm" optionalOrRequired="@optional"><name>updater:didShowProgressWindowController:</name>
+<abstract><p>Called when the updater has shown a progress window.
+</p></abstract>
+<parameterlist>
+<parameter><name>updater</name><desc><p>The updater object</p></desc></parameter>
+<parameter><name>controller</name><desc><p>The window controller</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+<parsedparameter><type>( NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_function>updater</declaration_function>: ( <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>updater</declaration_param> 
+        <declaration_function>didShowProgressWindowController</declaration_function>: ( <declaration_type>GitHubProgressWindowController</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>controller</declaration_var>; </declaration>
+<desc><p/></desc>
+</method><method id="//xsdoc_ref/doc/title:intfm/GitHubUpdaterDelegate/updater:didShowProgressWindowController:" lang="occ" type="intfm" optionalOrRequired="@optional"><name>updater:didShowProgressWindowController:</name>
+<abstract><p>Called when the updater has shown an install window.
+</p></abstract>
+<parameterlist>
+<parameter><name>updater</name><desc><p>The updater object</p></desc></parameter>
+<parameter><name>controller</name><desc><p>The window controller</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+<parsedparameter><type>( NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See Also</name><list>
+<item><name>updater:didShowInstallWindowController:</name><value><hd_link logicalPath="//xsdoc_ref/occ/intfm/GitHubUpdaterDelegate/updater:didShowInstallWindowController:" isseealso="yes">updater:didShowInstallWindowController:</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_function>updater</declaration_function>: ( <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>updater</declaration_param> 
+        <declaration_function>didShowInstallWindowController</declaration_function>: ( <declaration_type>GitHubInstallWindowController</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>controller</declaration_var>; </declaration>
+<desc><p/></desc>
+<autorelated>
+<relateduid>//xsdoc_ref/occ/intfm/GitHubUpdaterDelegate/updater:didShowInstallWindowController:</relateduid>
+</autorelated>
+</method><method id="//xsdoc_ref/occ/intfm/GitHubUpdaterDelegate/updater:releasesWithData:error:" lang="occ" type="intfm" optionalOrRequired="@optional"><name>updater:releasesWithData:error:</name>
+<abstract><p>Gets releases from a data object
+</p></abstract>
+<parameterlist>
+<parameter><name>updater</name><desc><p>The updater object</p></desc></parameter>
+<parameter><name>data</name><desc><p>The data object fetched from the update URL</p></desc></parameter>
+<parameter><name>error</name><desc><p>An optional pointer to an error object</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSData * )</type><name>data</name></parsedparameter>
+<parsedparameter><type>( NSError * __autoreleasing * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubRelease * )</type><name>release</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubVersion * )</type><name>v1</name></parsedparameter>
+<parsedparameter><type>( GitHubVersion * )</type><name>v2</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+<parsedparameter><type>( NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+</parsedparameterlist>
+<returntype> nullable NSArray&lt; GitHubRelease * &gt; * </returntype>
+<result><p>An array of release objects, if any
+</p></result>
+<declaration>- ( <declaration_type>nullable</declaration_type> <declaration_type>NSArray</declaration_type>&lt; <declaration_param>GitHubRelease</declaration_param> <declaration_param>*</declaration_param> &gt; <declaration_type>*</declaration_type> )<declaration_function>updater</declaration_function>: ( <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>updater</declaration_param> 
+        <declaration_function>releasesWithData</declaration_function>: ( <declaration_type>NSData</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>data</declaration_param> <declaration_function>error</declaration_function>: ( <declaration_type>NSError</declaration_type> <declaration_type>*</declaration_type> <declaration_type>__autoreleasing</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>error</declaration_var>; </declaration>
+<desc><p>You may implement this method if you need to customize the
+parsing of updates data, with a different behaviour than
+using JSON data from GitHub releases.
+</p></desc>
+</method><method id="//xsdoc_ref/occ/intfm/GitHubUpdaterDelegate/updater:urlForUpdatesWithUser:repository:proposedURL:" lang="occ" type="intfm" optionalOrRequired="@optional"><name>updater:urlForUpdatesWithUser:repository:proposedURL:</name>
+<abstract><p>Returns the URL for the update check.
+</p></abstract>
+<parameterlist>
+<parameter><name>updater</name><desc><p>The updater object</p></desc></parameter>
+<parameter><name>user</name><desc><p>The user name</p></desc></parameter>
+<parameter><name>repository</name><desc><p>The repository name</p></desc></parameter>
+<parameter><name>proposedURL</name><desc><p>The proposed, default URL</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>user</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>repository</name></parsedparameter>
+<parsedparameter><type>( NSURL * )</type><name>proposedURL</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSData * )</type><name>data</name></parsedparameter>
+<parsedparameter><type>( NSError * __autoreleasing * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubRelease * )</type><name>release</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubVersion * )</type><name>v1</name></parsedparameter>
+<parsedparameter><type>( GitHubVersion * )</type><name>v2</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+<parsedparameter><type>( NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+</parsedparameterlist>
+<returntype> NSURL * </returntype>
+<declaration>- ( <declaration_type>NSURL</declaration_type> <declaration_type>*</declaration_type> )<declaration_function>updater</declaration_function>: ( <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>updater</declaration_param> 
+        <declaration_function>urlForUpdatesWithUser</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>user</declaration_param> <declaration_function>repository</declaration_function>: ( <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>repository</declaration_param> 
+        <declaration_function>proposedURL</declaration_function>: ( <declaration_type>NSURL</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>proposedURL</declaration_var>; </declaration>
+<desc><p>You may implement this if you need to customize the update
+URL, for instance if you use another servcie than GitHub.
+</p></desc>
+</method><method id="//xsdoc_ref/occ/intfm/GitHubUpdaterDelegate/updater:version:isNewerThanVersion:" lang="occ" type="intfm" optionalOrRequired="@optional"><name>updater:version:isNewerThanVersion:</name>
+<abstract><p>Determines if a version is newer than another version
+</p></abstract>
+<parameterlist>
+<parameter><name>updater</name><desc><p>The updater object</p></desc></parameter>
+<parameter><name>v1</name><desc><p>The first version</p></desc></parameter>
+<parameter><name>v2</name><desc><p>The second version</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubVersion * )</type><name>v1</name></parsedparameter>
+<parsedparameter><type>( GitHubVersion * )</type><name>v2</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+<parsedparameter><type>( NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+</parsedparameterlist>
+<returntype> BOOL </returntype>
+<result><p>YES if the first version is newer, otherwise NO
+</p></result>
+<declaration>- ( <declaration_type>BOOL</declaration_type> )<declaration_function>updater</declaration_function>: ( <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>updater</declaration_param> <declaration_function>version</declaration_function>: ( <declaration_type>GitHubVersion</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>v1</declaration_param> 
+        <declaration_function>isNewerThanVersion</declaration_function>: ( <declaration_type>GitHubVersion</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>v2</declaration_var>; </declaration>
+<desc><p>You may implement this method if you need to customize the
+way versions are compared.
+</p></desc>
+</method><method id="//xsdoc_ref/occ/intfm/GitHubUpdaterDelegate/updater:versionForRelease:" lang="occ" type="intfm" optionalOrRequired="@optional"><name>updater:versionForRelease:</name>
+<abstract><p>Gets a version object for a release.
+</p></abstract>
+<parameterlist>
+<parameter><name>updater</name><desc><p>The updater object</p></desc></parameter>
+<parameter><name>release</name><desc><p>The release object</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubRelease * )</type><name>release</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubVersion * )</type><name>v1</name></parsedparameter>
+<parsedparameter><type>( GitHubVersion * )</type><name>v2</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+<parsedparameter><type>( NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+</parsedparameterlist>
+<returntype> GitHubVersion * </returntype>
+<result><p>A version object for the release
+</p></result>
+<declaration>- ( <declaration_type>GitHubVersion</declaration_type> <declaration_type>*</declaration_type> )<declaration_function>updater</declaration_function>: ( <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>updater</declaration_param> 
+        <declaration_function>versionForRelease</declaration_function>: ( <declaration_type>GitHubRelease</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>release</declaration_var>; </declaration>
+<desc><p>You may implement this method if you need to customize the
+way version numbers are created from releases.
+If not implemented, the tag name will be used as version
+number.
+</p></desc>
+</method><method id="//xsdoc_ref/occ/intfm/GitHubUpdaterDelegate/updater:willCloseInstallWindowController:" lang="occ" type="intfm" optionalOrRequired="@optional"><name>updater:willCloseInstallWindowController:</name>
+<abstract><p>Called when the updater is about to close an install window.
+</p></abstract>
+<parameterlist>
+<parameter><name>updater</name><desc><p>The updater object</p></desc></parameter>
+<parameter><name>controller</name><desc><p>The window controller</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+<parsedparameter><type>( NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_function>updater</declaration_function>: ( <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>updater</declaration_param> 
+        <declaration_function>willCloseInstallWindowController</declaration_function>: ( <declaration_type>GitHubInstallWindowController</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>controller</declaration_var>; </declaration>
+<desc><p/></desc>
+</method><method id="//xsdoc_ref/occ/intfm/GitHubUpdaterDelegate/updater:willCloseProgressWindowController:" lang="occ" type="intfm" optionalOrRequired="@optional"><name>updater:willCloseProgressWindowController:</name>
+<abstract><p>Called when the updater is about to close a progress window.
+</p></abstract>
+<parameterlist>
+<parameter><name>updater</name><desc><p>The updater object</p></desc></parameter>
+<parameter><name>controller</name><desc><p>The window controller</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+<parsedparameter><type>( NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_function>updater</declaration_function>: ( <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>updater</declaration_param> 
+        <declaration_function>willCloseProgressWindowController</declaration_function>: ( <declaration_type>GitHubProgressWindowController</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>controller</declaration_var>; </declaration>
+<desc><p/></desc>
+</method><method id="//xsdoc_ref/occ/intfm/GitHubUpdaterDelegate/updater:willDisplayAlert:withError:" lang="occ" type="intfm" optionalOrRequired="@optional"><name>updater:willDisplayAlert:withError:</name>
+<abstract><p>Called when the updater is about to display an error alert.
+</p></abstract>
+<parameterlist>
+<parameter><name>updater</name><desc><p>The updater object</p></desc></parameter>
+<parameter><name>alert</name><desc><p>The alert object</p></desc></parameter>
+<parameter><name>error</name><desc><p>The error object</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+<parsedparameter><type>( NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_function>updater</declaration_function>: ( <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>updater</declaration_param> 
+        <declaration_function>willDisplayAlert</declaration_function>: ( <declaration_type>NSAlert</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>alert</declaration_param> <declaration_function>withError</declaration_function>: ( <declaration_type>NSError</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>error</declaration_var>; </declaration>
+<desc><p/></desc>
+</method><method id="//xsdoc_ref/occ/intfm/GitHubUpdaterDelegate/updater:willDisplayUpToDateAlert:" lang="occ" type="intfm" optionalOrRequired="@optional"><name>updater:willDisplayUpToDateAlert:</name>
+<abstract><p>Called when the updater is about to display an up-to-date alert.
+</p></abstract>
+<parameterlist>
+<parameter><name>updater</name><desc><p>The updater object</p></desc></parameter>
+<parameter><name>alert</name><desc><p>The alert object</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_function>updater</declaration_function>: ( <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>updater</declaration_param> 
+        <declaration_function>willDisplayUpToDateAlert</declaration_function>: ( <declaration_type>NSAlert</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>alert</declaration_var>; </declaration>
+<desc><p/></desc>
+</method><method id="//xsdoc_ref/occ/intfm/GitHubUpdaterDelegate/updater:willShowInstallWindowController:" lang="occ" type="intfm" optionalOrRequired="@optional"><name>updater:willShowInstallWindowController:</name>
+<abstract><p>Called when the updater is about to show an install window.
+</p></abstract>
+<parameterlist>
+<parameter><name>updater</name><desc><p>The updater object</p></desc></parameter>
+<parameter><name>controller</name><desc><p>The window controller</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+<parsedparameter><type>( NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_function>updater</declaration_function>: ( <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>updater</declaration_param> 
+        <declaration_function>willShowInstallWindowController</declaration_function>: ( <declaration_type>GitHubInstallWindowController</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>controller</declaration_var>; </declaration>
+<desc><p/></desc>
+</method><method id="//xsdoc_ref/occ/intfm/GitHubUpdaterDelegate/updater:willShowProgressWindowController:" lang="occ" type="intfm" optionalOrRequired="@optional"><name>updater:willShowProgressWindowController:</name>
+<abstract><p>Called when the updater is about to show a progress window.
+</p></abstract>
+<parameterlist>
+<parameter><name>updater</name><desc><p>The updater object</p></desc></parameter>
+<parameter><name>controller</name><desc><p>The window controller</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+<parsedparameter><type>( NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void </returntype>
+<declaration>- ( <declaration_type>void</declaration_type> )<declaration_function>updater</declaration_function>: ( <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>updater</declaration_param> 
+        <declaration_function>willShowProgressWindowController</declaration_function>: ( <declaration_type>GitHubProgressWindowController</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>controller</declaration_var>; </declaration>
+<desc><p/></desc>
+</method><method id="//xsdoc_ref/occ/intfm/GitHubUpdaterDelegate/updaterShouldCheckForDrafts:" lang="occ" type="intfm" optionalOrRequired="@optional"><name>updaterShouldCheckForDrafts:</name>
+<abstract><p>Implement if you need to check for draft updates.
+</p></abstract>
+<parameterlist>
+<parameter><name>updater</name><desc><p>The updater object</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>user</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>repository</name></parsedparameter>
+<parsedparameter><type>( NSURL * )</type><name>proposedURL</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSData * )</type><name>data</name></parsedparameter>
+<parsedparameter><type>( NSError * __autoreleasing * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubRelease * )</type><name>release</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubVersion * )</type><name>v1</name></parsedparameter>
+<parsedparameter><type>( GitHubVersion * )</type><name>v2</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+<parsedparameter><type>( NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+</parsedparameterlist>
+<returntype> BOOL </returntype>
+<result><p>YES if the updater should check for draft updates, otherwise NO
+</p></result>
+<declaration>- ( <declaration_type>BOOL</declaration_type> )<declaration_function>updaterShouldCheckForDrafts</declaration_function>: ( <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>updater</declaration_var>; </declaration>
+<desc><p/></desc>
+</method><method id="//xsdoc_ref/occ/intfm/GitHubUpdaterDelegate/updaterShouldCheckForPrereleases:" lang="occ" type="intfm" optionalOrRequired="@optional"><name>updaterShouldCheckForPrereleases:</name>
+<abstract><p>Implement if you need to check for prerelease updates.
+</p></abstract>
+<parameterlist>
+<parameter><name>updater</name><desc><p>The updater object</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>user</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>repository</name></parsedparameter>
+<parsedparameter><type>( NSURL * )</type><name>proposedURL</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSData * )</type><name>data</name></parsedparameter>
+<parsedparameter><type>( NSError * __autoreleasing * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubRelease * )</type><name>release</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubVersion * )</type><name>v1</name></parsedparameter>
+<parsedparameter><type>( GitHubVersion * )</type><name>v2</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+<parsedparameter><type>( NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+</parsedparameterlist>
+<returntype> BOOL </returntype>
+<result><p>YES if the updater should check for prerelease updates, otherwise NO
+</p></result>
+<declaration>- ( <declaration_type>BOOL</declaration_type> )<declaration_function>updaterShouldCheckForPrereleases</declaration_function>: ( <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>updater</declaration_var>; </declaration>
+<desc><p/></desc>
+</method><method id="//xsdoc_ref/occ/intfm/GitHubUpdaterDelegate/updaterShouldCheckForUpdatesInBackground:" lang="occ" type="intfm" optionalOrRequired="@optional"><name>updaterShouldCheckForUpdatesInBackground:</name>
+<abstract><p>Whether the updater is allowed to check for updates in background.
+</p></abstract>
+<parameterlist>
+<parameter><name>updater</name><desc><p>The updater object</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>user</name></parsedparameter>
+<parsedparameter><type>( NSString * )</type><name>repository</name></parsedparameter>
+<parsedparameter><type>( NSURL * )</type><name>proposedURL</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSData * )</type><name>data</name></parsedparameter>
+<parsedparameter><type>( NSError * __autoreleasing * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubRelease * )</type><name>release</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubVersion * )</type><name>v1</name></parsedparameter>
+<parsedparameter><type>( GitHubVersion * )</type><name>v2</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubProgressWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( GitHubInstallWindowController * )</type><name>controller</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+<parsedparameter><type>( NSError * )</type><name>error</name></parsedparameter>
+<parsedparameter><type>( GitHubUpdater * )</type><name>updater</name></parsedparameter>
+<parsedparameter><type>( NSAlert * )</type><name>alert</name></parsedparameter>
+</parsedparameterlist>
+<returntype> BOOL </returntype>
+<result><p>YES if the updater should check for updates in background, otherwise NO
+</p></result>
+<declaration>- ( <declaration_type>BOOL</declaration_type> )<declaration_function>updaterShouldCheckForUpdatesInBackground</declaration_function>: ( <declaration_type>GitHubUpdater</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>updater</declaration_var>; </declaration>
+<desc><p>By implementing this method, you can control if the updater can
+check for updates in background.
+This method has no effect on user-initiated update checks, using
+`- [ GitHubUpdater checkForUpdates: ]`. It will only be able to
+control `- [ GitHubUpdater checkForUpdatesInBackground ]`.
+</p></desc>
+</method></methods>
+<timestamp>Sunday, June 18, 2017</timestamp>
+</protocol></classes>
+<copyrightinfo>&#169; (c) 2017, Jean-David Gadina - www.xs-labs.com
+</copyrightinfo>
+<timestamp>Sunday, June 18, 2017</timestamp>
+</header>

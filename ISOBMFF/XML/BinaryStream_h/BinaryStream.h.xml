@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/BinaryStream.h" lang="c" filename="BinaryStream.h" headerpath="/Users/macmade/Documents/Macmade/DigiDNA/GitHub/ISOBMFF/Documentation/tmp/include/ISOBMFF/BinaryStream.h"><name>BinaryStream.hpp</name>
+<attributes><attribute><name>Author</name><value>Jean-David Gadina - www.digidna.net</value></attribute>
+</attributes>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/string">&lt;string&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/iostream">&lt;iostream&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/cstdint">&lt;cstdint&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/vector">&lt;vector&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Object.hpp">&lt;XS/PIMPL/Object.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Macros.hpp">&lt;ISOBMFF/Macros.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Matrix.hpp">&lt;ISOBMFF/Matrix.hpp&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<classes><class id="//xsdoc_ref/cpp/cl/Object" lang="cpp"><name>Object</name>
+<abstract><p>Represents a stream of bytes, allowing reading/writing operations.
+</p></abstract>
+<declaration><declaration_keyword>class</declaration_keyword> <declaration_type>ISOBMFF_EXPORT</declaration_type> <declaration_type>BinaryStream</declaration_type>: <declaration_keyword>public</declaration_keyword> <declaration_type>XS</declaration_type>::<declaration_type>PIMPL</declaration_type>::<declaration_type>Object</declaration_type>&lt; <declaration_type>BinaryStream</declaration_type> &gt; { 
+    <declaration_keyword>public</declaration_keyword>:  <declaration_type>using</declaration_type> <declaration_type>XS</declaration_type>::<declaration_type>PIMPL</declaration_type>::<declaration_type>Object</declaration_type>&lt; <declaration_template>BinaryStream</declaration_template> &gt;::<declaration_var>impl</declaration_var>;  
+    <declaration_comment>/*!
+@function    BinaryStream
+@abstract    Default constructor - Creates an empty stream.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_function>BinaryStream</declaration_function>(
+        <declaration_param>void</declaration_param> );  
+    <declaration_comment>/*!
+@function    BinaryStream
+@abstract    Creates a stream representing an existing file.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_function>BinaryStream</declaration_function>(
+        <declaration_keyword>const</declaration_keyword> <declaration_type>std</declaration_type>::<declaration_type>string</declaration_type> &amp; <declaration_param>path</declaration_param> );  
+    <declaration_comment>/*!
+@function    BinaryStream
+@abstract    Creates a stream from data bytes.
+@param       bytes   The data bytes from which to create the stream.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_function>BinaryStream</declaration_function>(
+        <declaration_keyword>const</declaration_keyword> <declaration_type>std</declaration_type>::<declaration_type>vector</declaration_type>&lt; <declaration_template>uint8_t</declaration_template> &gt; &amp; <declaration_param>bytes</declaration_param> );  
+    <declaration_comment>/*!
+@function    BinaryStream
+@abstract    Creates a stream with data bytes from another stream.
+@param       stream  The source stream.
+@param       length  The number of bytes to read from the source stream.
+@discussion  Bytes from the source-stream will be consumed.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_function>BinaryStream</declaration_function>(
+        <declaration_type>BinaryStream</declaration_type> &amp; <declaration_param>stream</declaration_param>,
+        <declaration_type>uint64_t</declaration_type> <declaration_param>length</declaration_param> );  
+    <declaration_comment>/*!
+@function    HasBytesAvailable
+@abstract    Tests whether the stream has bytes available to read.
+@result      True if the stream has bytes available, otherwise false.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_type>bool</declaration_type> <declaration_function>HasBytesAvailable</declaration_function>(
+        <declaration_param>void</declaration_param> ) <declaration_keyword>const</declaration_keyword>;  
+    <declaration_comment>/*!
+@function    ReadUInt8
+@abstract    Reads an 8-bits unsigned integer value from the stream.
+@result      An 8-bits unsigned integer value.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_type>uint8_t</declaration_type> <declaration_function>ReadUInt8</declaration_function>(
+        <declaration_param>void</declaration_param> );  
+    <declaration_comment>/*!
+@function    ReadInt8
+@abstract    Reads an 8-bits signed integer value from the stream.
+@result      An 8-bits signed integer value.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_type>int8_t</declaration_type> <declaration_function>ReadInt8</declaration_function>(
+        <declaration_param>void</declaration_param> );  
+    <declaration_comment>/*!
+@function    ReadUInt16
+@abstract    Reads a 16-bits unsigned integer value from the stream.
+@result      A 16-bits unsigned integer value.
+@discussion  Byte order is platform-specific.
+@see         ReadBigEndianUInt16
+@see         ReadLittleEndianUInt16</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_type>uint16_t</declaration_type> <declaration_function>ReadUInt16</declaration_function>(
+        <declaration_param>void</declaration_param> );  
+    <declaration_comment>/*!
+@function    ReadInt16
+@abstract    Reads a 16-bits signed integer value from the stream.
+@result      A 16-bits signed integer value.
+@discussion  Byte order is platform-specific.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_type>int16_t</declaration_type> <declaration_function>ReadInt16</declaration_function>(
+        <declaration_param>void</declaration_param> );  
+    <declaration_comment>/*!
+* @function    ReadBigEndianUInt16
+* @abstract    Reads a 16-bits big-endian signed integer value from the stream.
+* @result      A 16-bits signed big-endian integer value.
+" @see         ReadLittleEndianUInt16</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_type>uint16_t</declaration_type> <declaration_function>ReadBigEndianUInt16</declaration_function>(
+        <declaration_param>void</declaration_param> );  
+    <declaration_comment>/*!
+* @function    ReadLittleEndianUInt16
+* @abstract    Reads a 16-bits little-endian signed integer value from the stream.
+* @result      A 16-bits signed little-endian integer value.
+" @see         ReadBigEndianUInt16</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_type>uint16_t</declaration_type> <declaration_function>ReadLittleEndianUInt16</declaration_function>(
+        <declaration_param>void</declaration_param> );  
+    <declaration_comment>/*!
+@function    ReadUInt32
+@abstract    Reads a 32-bits unsigned integer value from the stream.
+@result      A 32-bits unsigned integer value.
+@discussion  Byte order is platform-specific.
+@see         ReadBigEndianUInt32
+@see         ReadLittleEndianUInt32</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_type>uint32_t</declaration_type> <declaration_function>ReadUInt32</declaration_function>(
+        <declaration_param>void</declaration_param> );  
+    <declaration_comment>/*!
+@function    ReadInt32
+@abstract    Reads a 32-bits signed integer value from the stream.
+@result      A 32-bits signed integer value.
+@discussion  Byte order is platform-specific.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_type>int32_t</declaration_type> <declaration_function>ReadInt32</declaration_function>(
+        <declaration_param>void</declaration_param> );  
+    <declaration_comment>/*!
+@function    ReadBigEndianUInt32
+@abstract    Reads a 32-bits big-endian unsigned integer value from the stream.
+@result      A 32-bits unsigned integer value.
+@see         ReadLittleEndianUInt32</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_type>uint32_t</declaration_type> <declaration_function>ReadBigEndianUInt32</declaration_function>(
+        <declaration_param>void</declaration_param> );  
+    <declaration_comment>/*!
+@function    ReadLittleEndianUInt32
+@abstract    Reads a 32-bits little-endian unsigned integer value from the stream.
+@result      A 32-bits unsigned integer value.
+@see         ReadBigEndianUInt32</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_type>uint32_t</declaration_type> <declaration_function>ReadLittleEndianUInt32</declaration_function>(
+        <declaration_param>void</declaration_param> );  
+    <declaration_comment>/*!
+@function    ReadUInt64
+@abstract    Reads a 64-bits unsigned integer value from the stream.
+@result      A 64-bits unsigned integer value.
+@discussion  Byte order is platform-specific.
+@see         ReadBigEndianUInt64
+@see         ReadLittleEndianUInt64</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_type>uint64_t</declaration_type> <declaration_function>ReadUInt64</declaration_function>(
+        <declaration_param>void</declaration_param> );  
+    <declaration_comment>/*!
+@function    ReadInt64
+@abstract    Reads a 64-bits signed integer value from the stream.
+@result      A 64-bits signed integer value.
+@discussion  Byte order is platform-specific</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_type>int64_t</declaration_type> <declaration_function>ReadInt64</declaration_function>(
+        <declaration_param>void</declaration_param> );  
+    <declaration_comment>/*!
+@function    ReadBigEndianUInt64
+@abstract    Reads a 64-bits big-endian unsigned integer value from the stream.
+@result      A 64-bits unsigned integer value.
+@see         ReadLittleEndianUInt64</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_type>uint64_t</declaration_type> <declaration_function>ReadBigEndianUInt64</declaration_function>(
+        <declaration_param>void</declaration_param> );  
+    <declaration_comment>/*!
+@function    ReadLittleEndianUInt64
+@abstract    Reads a 64-bits little-endian unsigned integer value from the stream.
+@result      A 64-bits unsigned integer value.
+@see         ReadBigEndianUInt64</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_type>uint64_t</declaration_type> <declaration_function>ReadLittleEndianUInt64</declaration_function>(
+        <declaration_param>void</declaration_param> );  
+    <declaration_comment>/*!
+@function    ReadBigEndianFixedPoint
+@abstract    Reads a big-endian fixed-point value from the stream.
+@param       integerLength       The length of the integral part.
+@param       fractionalLength    The length of the fractional part.
+@result      The number as a floating-point value.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_type>float</declaration_type> <declaration_function>ReadBigEndianFixedPoint</declaration_function>(
+        <declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_param>integerLength</declaration_param>,
+        <declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_param>fractionalLength</declaration_param> );  
+    <declaration_comment>/*!
+@function    ReadLittleEndianFixedPoint
+@abstract    Reads a little-endian fixed-point value from the stream.
+@param       integerLength       The length of the integral part.
+@param       fractionalLength    The length of the fractional part.
+@result      The number as a floating-point value.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_type>float</declaration_type> <declaration_function>ReadLittleEndianFixedPoint</declaration_function>(
+        <declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_param>integerLength</declaration_param>,
+        <declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_param>fractionalLength</declaration_param> );  
+    <declaration_comment>/*!
+@function    ReadFourCC
+@abstract    Reads a four-character code from the stream.
+@result      The four-character code as a string.
+@discussion  Four-character codes are 32-bits.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_type>std</declaration_type>::<declaration_type>string</declaration_type> <declaration_function>ReadFourCC</declaration_function>(
+        <declaration_param>void</declaration_param> );  
+    <declaration_comment>/*!
+@function    ReadNULLTerminatedString
+@abstract    Reads a NULL-terminated string from the stream.
+@result      The string value.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_type>std</declaration_type>::<declaration_type>string</declaration_type> <declaration_function>ReadNULLTerminatedString</declaration_function>(
+        <declaration_param>void</declaration_param> );  
+    <declaration_comment>/*!
+@function    ReadPascalString
+@abstract    Reads a pascal string (length-prefixed) from the stream.
+@result      The string value.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_type>std</declaration_type>::<declaration_type>string</declaration_type> <declaration_function>ReadPascalString</declaration_function>(
+        <declaration_param>void</declaration_param> );  
+    <declaration_comment>/*!
+@function    ReadMatrix
+@abstract    Reads a Matrix object from the stream.
+@result      The Matrix object.
+@see         Matrix</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_type>Matrix</declaration_type> <declaration_function>ReadMatrix</declaration_function>(
+        <declaration_param>void</declaration_param> );  
+    <declaration_comment>/*!
+@function    ReadAllData
+@abstract    Reads all the data available in the stream.
+@result      A vector of bytes remaining in the stream.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_type>std</declaration_type>::<declaration_type>vector</declaration_type>&lt; <declaration_template>uint8_t</declaration_template> &gt; <declaration_function>ReadAllData</declaration_function>(
+        <declaration_param>void</declaration_param> );  
+    <declaration_comment>/*!
+@function    Read
+@abstract    Reads bytes from the stream.
+@param       buf     The byte buffer to fill.
+@param       length  The number of bytes to read from the stream.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_type>void</declaration_type> <declaration_function>Read</declaration_function>(
+        <declaration_type>uint8_t</declaration_type> <declaration_type>*</declaration_type> <declaration_param>buf</declaration_param>,
+        <declaration_type>uint64_t</declaration_type> <declaration_param>length</declaration_param> );  
+    <declaration_comment>/*!
+@function    Get
+@abstract    Gets bytes from the stream.
+@param       buf     The byte buffer to fill.
+@param       length  The number of bytes to get from the stream.
+@discussion  When using this method, bytes won't be consumed.
+If the stream is backed by a file stream, this
+will seek back to the stream position before the
+call.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_type>void</declaration_type> <declaration_function>Get</declaration_function>(
+        <declaration_type>uint8_t</declaration_type> <declaration_type>*</declaration_type> <declaration_param>buf</declaration_param>,
+        <declaration_type>uint64_t</declaration_type> <declaration_param>pos</declaration_param>,
+        <declaration_type>uint64_t</declaration_type> <declaration_param>length</declaration_param> );  
+    <declaration_comment>/*!
+@function    DeleteBytes
+@abstract    Removes bytes from the stream.
+@param       length  The number of bytes to remove.
+@discussion  If the stream is backed by a file stream, this
+will seek from the current positio.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_type>void</declaration_type> <declaration_function>DeleteBytes</declaration_function>(
+        <declaration_type>uint64_t</declaration_type> <declaration_param>length</declaration_param> ); 
+};  </declaration>
+<desc><p>Streams can either be backed by a standard C++ file stream,
+or by plain data.
+</p></desc>
+<functions><function id="//xsdoc_ref/cpp/instm/Object/BinaryStream//()" lang="cpp" accessControl="public"><name>BinaryStream()</name>
+<abstract><p>Default constructor - Creates an empty stream.
+</p></abstract>
+<declaration><declaration_function>BinaryStream</declaration_function>(
+    <declaration_param>void</declaration_param> ); </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/cpp/instm/Object/BinaryStream//(BinaryStream%26,uint64_t)" lang="cpp" accessControl="public"><name>BinaryStream(BinaryStream &amp;, uint64_t)</name>
+<abstract><p>Creates a stream with data bytes from another stream.
+</p></abstract>
+<parameterlist>
+<parameter><name>stream</name><desc><p>The source stream.</p></desc></parameter>
+<parameter><name>length</name><desc><p>The number of bytes to read from the source stream.</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>BinaryStream &amp;amp;</type><name>stream</name></parsedparameter>
+<parsedparameter><type>uint64_t</type><name>length</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_function>BinaryStream</declaration_function>(
+    <declaration_type>BinaryStream</declaration_type> &amp; <declaration_param>stream</declaration_param>,
+    <declaration_type>uint64_t</declaration_type> <declaration_param>length</declaration_param> ); </declaration>
+<desc><p>Bytes from the source-stream will be consumed.
+</p></desc>
+</function><function id="//xsdoc_ref/cpp/instm/Object/BinaryStream//(conststd::string%26)" lang="cpp" accessControl="public"><name>BinaryStream(const std :: string &amp;)</name>
+<abstract><p>Creates a stream representing an existing file.
+</p></abstract>
+<parsedparameterlist>
+<parsedparameter><type>const std :: string &amp;amp;</type><name>path</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_function>BinaryStream</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>std</declaration_type>::<declaration_type>string</declaration_type> &amp; <declaration_param>path</declaration_param> ); </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/cpp/instm/Object/BinaryStream//(conststd::vector%26)" lang="cpp" accessControl="public"><name>BinaryStream(const std :: vector &amp;)</name>
+<abstract><p>Creates a stream from data bytes.
+</p></abstract>
+<parameterlist>
+<parameter><name>bytes</name><desc><p>The data bytes from which to create the stream.</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>const std :: vector &amp;amp;</type><name>bytes</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_function>BinaryStream</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>std</declaration_type>::<declaration_type>vector</declaration_type>&lt; <declaration_template>uint8_t</declaration_template> &gt; &amp; <declaration_param>bytes</declaration_param> ); </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/cpp/instm/Object/DeleteBytes/void/(uint64_t)" lang="cpp" accessControl="public"><name>DeleteBytes</name>
+<abstract><p>Removes bytes from the stream.
+</p></abstract>
+<parameterlist>
+<parameter><name>length</name><desc><p>The number of bytes to remove.</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>uint64_t</type><name>length</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>DeleteBytes</declaration_function>(
+    <declaration_type>uint64_t</declaration_type> <declaration_param>length</declaration_param> ); </declaration>
+<desc><p>If the stream is backed by a file stream, this
+will seek from the current positio.
+</p></desc>
+</function><function id="//xsdoc_ref/cpp/instm/Object/Get/void/(uint8_t*,uint64_t,uint64_t)" lang="cpp" accessControl="public"><name>Get</name>
+<abstract><p>Gets bytes from the stream.
+</p></abstract>
+<parameterlist>
+<parameter><name>buf</name><desc><p>The byte buffer to fill.</p></desc></parameter>
+<parameter><name>length</name><desc><p>The number of bytes to get from the stream.</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>uint8_t *</type><name>buf</name></parsedparameter>
+<parsedparameter><type>uint64_t</type><name>pos</name></parsedparameter>
+<parsedparameter><type>uint64_t</type><name>length</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>Get</declaration_function>(
+    <declaration_type>uint8_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>buf</declaration_param>,
+    <declaration_type>uint64_t</declaration_type> <declaration_param>pos</declaration_param>,
+    <declaration_type>uint64_t</declaration_type> <declaration_param>length</declaration_param> ); </declaration>
+<desc><p>When using this method, bytes won't be consumed.
+If the stream is backed by a file stream, this
+will seek back to the stream position before the
+call.
+</p></desc>
+</function><function id="//xsdoc_ref/cpp/instm/Object/HasBytesAvailable/bool/()" lang="cpp" accessControl="public"><name>HasBytesAvailable</name>
+<abstract><p>Tests whether the stream has bytes available to read.
+</p></abstract>
+<returntype> bool</returntype>
+<result><p>True if the stream has bytes available, otherwise false.
+</p></result>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>HasBytesAvailable</declaration_function>(
+    <declaration_param>void</declaration_param> ) <declaration_keyword>const</declaration_keyword>; </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/cpp/instm/Object/Read/void/(uint8_t*,uint64_t)" lang="cpp" accessControl="public"><name>Read</name>
+<abstract><p>Reads bytes from the stream.
+</p></abstract>
+<parameterlist>
+<parameter><name>buf</name><desc><p>The byte buffer to fill.</p></desc></parameter>
+<parameter><name>length</name><desc><p>The number of bytes to read from the stream.</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>uint8_t *</type><name>buf</name></parsedparameter>
+<parsedparameter><type>uint64_t</type><name>length</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>Read</declaration_function>(
+    <declaration_type>uint8_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>buf</declaration_param>,
+    <declaration_type>uint64_t</declaration_type> <declaration_param>length</declaration_param> ); </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/cpp/instm/Object/ReadAllData/std::vector/()" lang="cpp" accessControl="public"><name>ReadAllData</name>
+<abstract><p>Reads all the data available in the stream.
+</p></abstract>
+<returntype> std :: vector</returntype>
+<result><p>A vector of bytes remaining in the stream.
+</p></result>
+<declaration><declaration_type>std</declaration_type>::<declaration_type>vector</declaration_type>&lt; <declaration_template>uint8_t</declaration_template> &gt; <declaration_function>ReadAllData</declaration_function>(
+    <declaration_param>void</declaration_param> ); </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/cpp/instm/Object/ReadBigEndianFixedPoint/float/(unsignedint,unsignedint)" lang="cpp" accessControl="public"><name>ReadBigEndianFixedPoint</name>
+<abstract><p>Reads a big-endian fixed-point value from the stream.
+</p></abstract>
+<parameterlist>
+<parameter><name>integerLength</name><desc><p>The length of the integral part.</p></desc></parameter>
+<parameter><name>fractionalLength</name><desc><p>The length of the fractional part.</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>unsigned int</type><name>integerLength</name></parsedparameter>
+<parsedparameter><type>unsigned int</type><name>fractionalLength</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<result><p>The number as a floating-point value.
+</p></result>
+<declaration><declaration_type>float</declaration_type> <declaration_function>ReadBigEndianFixedPoint</declaration_function>(
+    <declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_param>integerLength</declaration_param>,
+    <declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_param>fractionalLength</declaration_param> ); </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/cpp/instm/Object/ReadBigEndianUInt16/uint16_t/()" lang="cpp" accessControl="public"><name>ReadBigEndianUInt16</name>
+<abstract><p>Reads a 16-bits big-endian signed integer value from the stream.
+* </p></abstract>
+<attributelists><listattribute><name>See</name><list>
+<item><name>ReadLittleEndianUInt16</name><value><hd_link logicalPath="ReadLittleEndianUInt16" isseealso="yes">ReadLittleEndianUInt16</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> uint16_t</returntype>
+<result><p>A 16-bits signed big-endian integer value.
+" </p></result>
+<declaration><declaration_type>uint16_t</declaration_type> <declaration_function>ReadBigEndianUInt16</declaration_function>(
+    <declaration_param>void</declaration_param> ); </declaration>
+<desc><p>* </p></desc>
+</function><function id="//xsdoc_ref/cpp/instm/Object/ReadBigEndianUInt32/uint32_t/()" lang="cpp" accessControl="public"><name>ReadBigEndianUInt32</name>
+<abstract><p>Reads a 32-bits big-endian unsigned integer value from the stream.
+</p></abstract>
+<attributelists><listattribute><name>See</name><list>
+<item><name>ReadLittleEndianUInt32</name><value><hd_link logicalPath="ReadLittleEndianUInt32" isseealso="yes">ReadLittleEndianUInt32</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> uint32_t</returntype>
+<result><p>A 32-bits unsigned integer value.
+</p></result>
+<declaration><declaration_type>uint32_t</declaration_type> <declaration_function>ReadBigEndianUInt32</declaration_function>(
+    <declaration_param>void</declaration_param> ); </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/cpp/instm/Object/ReadBigEndianUInt64/uint64_t/()" lang="cpp" accessControl="public"><name>ReadBigEndianUInt64</name>
+<abstract><p>Reads a 64-bits big-endian unsigned integer value from the stream.
+</p></abstract>
+<attributelists><listattribute><name>See</name><list>
+<item><name>ReadLittleEndianUInt64</name><value><hd_link logicalPath="ReadLittleEndianUInt64" isseealso="yes">ReadLittleEndianUInt64</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> uint64_t</returntype>
+<result><p>A 64-bits unsigned integer value.
+</p></result>
+<declaration><declaration_type>uint64_t</declaration_type> <declaration_function>ReadBigEndianUInt64</declaration_function>(
+    <declaration_param>void</declaration_param> ); </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/cpp/instm/Object/ReadFourCC/std::string/()" lang="cpp" accessControl="public"><name>ReadFourCC</name>
+<abstract><p>Reads a four-character code from the stream.
+</p></abstract>
+<returntype> std :: string</returntype>
+<result><p>The four-character code as a string.
+</p></result>
+<declaration><declaration_type>std</declaration_type>::<declaration_type>string</declaration_type> <declaration_function>ReadFourCC</declaration_function>(
+    <declaration_param>void</declaration_param> ); </declaration>
+<desc><p>Four-character codes are 32-bits.
+</p></desc>
+</function><function id="//xsdoc_ref/cpp/instm/Object/ReadInt16/int16_t/()" lang="cpp" accessControl="public"><name>ReadInt16</name>
+<abstract><p>Reads a 16-bits signed integer value from the stream.
+</p></abstract>
+<returntype> int16_t</returntype>
+<result><p>A 16-bits signed integer value.
+</p></result>
+<declaration><declaration_type>int16_t</declaration_type> <declaration_function>ReadInt16</declaration_function>(
+    <declaration_param>void</declaration_param> ); </declaration>
+<desc><p>Byte order is platform-specific.
+</p></desc>
+</function><function id="//xsdoc_ref/cpp/instm/Object/ReadInt32/int32_t/()" lang="cpp" accessControl="public"><name>ReadInt32</name>
+<abstract><p>Reads a 32-bits signed integer value from the stream.
+</p></abstract>
+<returntype> int32_t</returntype>
+<result><p>A 32-bits signed integer value.
+</p></result>
+<declaration><declaration_type>int32_t</declaration_type> <declaration_function>ReadInt32</declaration_function>(
+    <declaration_param>void</declaration_param> ); </declaration>
+<desc><p>Byte order is platform-specific.
+</p></desc>
+</function><function id="//xsdoc_ref/cpp/instm/Object/ReadInt64/int64_t/()" lang="cpp" accessControl="public"><name>ReadInt64</name>
+<abstract><p>Reads a 64-bits signed integer value from the stream.
+</p></abstract>
+<returntype> int64_t</returntype>
+<result><p>A 64-bits signed integer value.
+</p></result>
+<declaration><declaration_type>int64_t</declaration_type> <declaration_function>ReadInt64</declaration_function>(
+    <declaration_param>void</declaration_param> ); </declaration>
+<desc><p>Byte order is platform-specific
+</p></desc>
+</function><function id="//xsdoc_ref/cpp/instm/Object/ReadInt8/int8_t/()" lang="cpp" accessControl="public"><name>ReadInt8</name>
+<abstract><p>Reads an 8-bits signed integer value from the stream.
+</p></abstract>
+<returntype> int8_t</returntype>
+<result><p>An 8-bits signed integer value.
+</p></result>
+<declaration><declaration_type>int8_t</declaration_type> <declaration_function>ReadInt8</declaration_function>(
+    <declaration_param>void</declaration_param> ); </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/cpp/instm/Object/ReadLittleEndianFixedPoint/float/(unsignedint,unsignedint)" lang="cpp" accessControl="public"><name>ReadLittleEndianFixedPoint</name>
+<abstract><p>Reads a little-endian fixed-point value from the stream.
+</p></abstract>
+<parameterlist>
+<parameter><name>integerLength</name><desc><p>The length of the integral part.</p></desc></parameter>
+<parameter><name>fractionalLength</name><desc><p>The length of the fractional part.</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>unsigned int</type><name>integerLength</name></parsedparameter>
+<parsedparameter><type>unsigned int</type><name>fractionalLength</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<result><p>The number as a floating-point value.
+</p></result>
+<declaration><declaration_type>float</declaration_type> <declaration_function>ReadLittleEndianFixedPoint</declaration_function>(
+    <declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_param>integerLength</declaration_param>,
+    <declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_param>fractionalLength</declaration_param> ); </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/cpp/instm/Object/ReadLittleEndianUInt16/uint16_t/()" lang="cpp" accessControl="public"><name>ReadLittleEndianUInt16</name>
+<abstract><p>Reads a 16-bits little-endian signed integer value from the stream.
+* </p></abstract>
+<attributelists><listattribute><name>See</name><list>
+<item><name>ReadBigEndianUInt16</name><value><hd_link logicalPath="ReadBigEndianUInt16" isseealso="yes">ReadBigEndianUInt16</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> uint16_t</returntype>
+<result><p>A 16-bits signed little-endian integer value.
+" </p></result>
+<declaration><declaration_type>uint16_t</declaration_type> <declaration_function>ReadLittleEndianUInt16</declaration_function>(
+    <declaration_param>void</declaration_param> ); </declaration>
+<desc><p>* </p></desc>
+</function><function id="//xsdoc_ref/cpp/instm/Object/ReadLittleEndianUInt32/uint32_t/()" lang="cpp" accessControl="public"><name>ReadLittleEndianUInt32</name>
+<abstract><p>Reads a 32-bits little-endian unsigned integer value from the stream.
+</p></abstract>
+<attributelists><listattribute><name>See</name><list>
+<item><name>ReadBigEndianUInt32</name><value><hd_link logicalPath="ReadBigEndianUInt32" isseealso="yes">ReadBigEndianUInt32</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> uint32_t</returntype>
+<result><p>A 32-bits unsigned integer value.
+</p></result>
+<declaration><declaration_type>uint32_t</declaration_type> <declaration_function>ReadLittleEndianUInt32</declaration_function>(
+    <declaration_param>void</declaration_param> ); </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/cpp/instm/Object/ReadLittleEndianUInt64/uint64_t/()" lang="cpp" accessControl="public"><name>ReadLittleEndianUInt64</name>
+<abstract><p>Reads a 64-bits little-endian unsigned integer value from the stream.
+</p></abstract>
+<attributelists><listattribute><name>See</name><list>
+<item><name>ReadBigEndianUInt64</name><value><hd_link logicalPath="ReadBigEndianUInt64" isseealso="yes">ReadBigEndianUInt64</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> uint64_t</returntype>
+<result><p>A 64-bits unsigned integer value.
+</p></result>
+<declaration><declaration_type>uint64_t</declaration_type> <declaration_function>ReadLittleEndianUInt64</declaration_function>(
+    <declaration_param>void</declaration_param> ); </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/cpp/instm/Object/ReadMatrix/Matrix/()" lang="cpp" accessControl="public"><name>ReadMatrix</name>
+<abstract><p>Reads a Matrix object from the stream.
+</p></abstract>
+<attributelists><listattribute><name>See</name><list>
+<item><name>Matrix</name><value><hd_link logicalPath="Matrix" isseealso="yes">Matrix</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> Matrix</returntype>
+<result><p>The Matrix object.
+</p></result>
+<declaration><declaration_type>Matrix</declaration_type> <declaration_function>ReadMatrix</declaration_function>(
+    <declaration_param>void</declaration_param> ); </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/cpp/instm/Object/ReadNULLTerminatedString/std::string/()" lang="cpp" accessControl="public"><name>ReadNULLTerminatedString</name>
+<abstract><p>Reads a NULL-terminated string from the stream.
+</p></abstract>
+<returntype> std :: string</returntype>
+<result><p>The string value.
+</p></result>
+<declaration><declaration_type>std</declaration_type>::<declaration_type>string</declaration_type> <declaration_function>ReadNULLTerminatedString</declaration_function>(
+    <declaration_param>void</declaration_param> ); </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/cpp/instm/Object/ReadPascalString/std::string/()" lang="cpp" accessControl="public"><name>ReadPascalString</name>
+<abstract><p>Reads a pascal string (length-prefixed) from the stream.
+</p></abstract>
+<returntype> std :: string</returntype>
+<result><p>The string value.
+</p></result>
+<declaration><declaration_type>std</declaration_type>::<declaration_type>string</declaration_type> <declaration_function>ReadPascalString</declaration_function>(
+    <declaration_param>void</declaration_param> ); </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/cpp/instm/Object/ReadUInt16/uint16_t/()" lang="cpp" accessControl="public"><name>ReadUInt16</name>
+<abstract><p>Reads a 16-bits unsigned integer value from the stream.
+</p></abstract>
+<attributelists><listattribute><name>See</name><list>
+<item><name>ReadBigEndianUInt16</name><value><hd_link logicalPath="ReadBigEndianUInt16" isseealso="yes">ReadBigEndianUInt16</hd_link></value></item><item><name>ReadLittleEndianUInt16</name><value><hd_link logicalPath="ReadLittleEndianUInt16" isseealso="yes">ReadLittleEndianUInt16</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> uint16_t</returntype>
+<result><p>A 16-bits unsigned integer value.
+</p></result>
+<declaration><declaration_type>uint16_t</declaration_type> <declaration_function>ReadUInt16</declaration_function>(
+    <declaration_param>void</declaration_param> ); </declaration>
+<desc><p>Byte order is platform-specific.
+</p></desc>
+</function><function id="//xsdoc_ref/cpp/instm/Object/ReadUInt32/uint32_t/()" lang="cpp" accessControl="public"><name>ReadUInt32</name>
+<abstract><p>Reads a 32-bits unsigned integer value from the stream.
+</p></abstract>
+<attributelists><listattribute><name>See</name><list>
+<item><name>ReadBigEndianUInt32</name><value><hd_link logicalPath="ReadBigEndianUInt32" isseealso="yes">ReadBigEndianUInt32</hd_link></value></item><item><name>ReadLittleEndianUInt32</name><value><hd_link logicalPath="ReadLittleEndianUInt32" isseealso="yes">ReadLittleEndianUInt32</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> uint32_t</returntype>
+<result><p>A 32-bits unsigned integer value.
+</p></result>
+<declaration><declaration_type>uint32_t</declaration_type> <declaration_function>ReadUInt32</declaration_function>(
+    <declaration_param>void</declaration_param> ); </declaration>
+<desc><p>Byte order is platform-specific.
+</p></desc>
+</function><function id="//xsdoc_ref/cpp/instm/Object/ReadUInt64/uint64_t/()" lang="cpp" accessControl="public"><name>ReadUInt64</name>
+<abstract><p>Reads a 64-bits unsigned integer value from the stream.
+</p></abstract>
+<attributelists><listattribute><name>See</name><list>
+<item><name>ReadBigEndianUInt64</name><value><hd_link logicalPath="ReadBigEndianUInt64" isseealso="yes">ReadBigEndianUInt64</hd_link></value></item><item><name>ReadLittleEndianUInt64</name><value><hd_link logicalPath="ReadLittleEndianUInt64" isseealso="yes">ReadLittleEndianUInt64</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> uint64_t</returntype>
+<result><p>A 64-bits unsigned integer value.
+</p></result>
+<declaration><declaration_type>uint64_t</declaration_type> <declaration_function>ReadUInt64</declaration_function>(
+    <declaration_param>void</declaration_param> ); </declaration>
+<desc><p>Byte order is platform-specific.
+</p></desc>
+</function><function id="//xsdoc_ref/cpp/instm/Object/ReadUInt8/uint8_t/()" lang="cpp" accessControl="public"><name>ReadUInt8</name>
+<abstract><p>Reads an 8-bits unsigned integer value from the stream.
+</p></abstract>
+<returntype> uint8_t</returntype>
+<result><p>An 8-bits unsigned integer value.
+</p></result>
+<declaration><declaration_type>uint8_t</declaration_type> <declaration_function>ReadUInt8</declaration_function>(
+    <declaration_param>void</declaration_param> ); </declaration>
+<desc><p/></desc>
+</function></functions>
+<timestamp>Wednesday, November 01, 2017</timestamp>
+</class></classes>
+<copyrightinfo>&#169; (c) 2017, DigiDNA - www.digidna.net
+</copyrightinfo>
+<timestamp>Wednesday, November 01, 2017</timestamp>
+</header>

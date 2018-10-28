@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/struct_timespec.h" lang="c" filename="struct_timespec.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/system/include/system/types/struct_timespec.h"><name>struct_timespec.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdint.h">&lt;system/types/__private/stdint.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/time_t.h">&lt;system/types/time_t.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<structs_and_unions><struct id="//xsdoc_ref/c/tag/timespec" lang="c"><name>timespec</name>
+<parsedparameterlist>
+<parsedparameter><type>time_t</type><name>tv_sec</name></parsedparameter>
+<parsedparameter><type>long</type><name>tv_nsec</name></parsedparameter>
+</parsedparameterlist>
+<declaration> <declaration_keyword>struct</declaration_keyword> <declaration_type>timespec</declaration_type> { 
+    <declaration_type>time_t</declaration_type> <declaration_var>tv_sec</declaration_var>; 
+    <declaration_type>long</declaration_type> <declaration_var>tv_nsec</declaration_var>; 
+};  </declaration>
+<desc><p/></desc>
+</struct></structs_and_unions><defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_SYSTEM_TYPES_STRUCT_TIMESPEC_H__" definetype="value" lang="c"><name>__XEOS_LIB_SYSTEM_TYPES_STRUCT_TIMESPEC_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_SYSTEM_TYPES_STRUCT_TIMESPEC_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

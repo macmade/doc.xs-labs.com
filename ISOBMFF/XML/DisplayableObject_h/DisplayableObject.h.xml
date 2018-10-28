@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/DisplayableObject.h" lang="c" filename="DisplayableObject.h" headerpath="/Users/macmade/Documents/Macmade/DigiDNA/GitHub/ISOBMFF/Documentation/tmp/include/ISOBMFF/DisplayableObject.h"><name>DisplayableObject.hpp</name>
+<attributes><attribute><name>Author</name><value>Jean-David Gadina - www.digidna.net</value></attribute>
+</attributes>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Macros.hpp">&lt;ISOBMFF/Macros.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Utils.hpp">&lt;ISOBMFF/Utils.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/ostream">&lt;ostream&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/sstream">&lt;sstream&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/vector">&lt;vector&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/utility">&lt;utility&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/string">&lt;string&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<classes><class id="//xsdoc_ref/cpp/cl/DisplayableObject" lang="cpp"><name>DisplayableObject</name>
+<abstract><p>Interface for displayable objects.
+</p></abstract>
+<attributes><attribute><name>Superclass</name><value><hd_link logicalPath="//xsdoc_ref/cpp/cl/class //xsdoc_ref/cpp/tdef/class //xsdoc_ref/cpp/tag/class //xsdoc_ref/cpp/struct/class //xsdoc_ref/cpp/intf/class //xsdoc_ref/cpp/econst/class //xsdoc_ref/cpp/data/class //xsdoc_ref/cpp/clconst/class //xsdoc_ref/cpp/instm/class //xsdoc_ref/cpp/clm/class //xsdoc_ref/cpp/intfcm/class //xsdoc_ref/cpp/intfm/class //xsdoc_ref/cpp/func/class //xsdoc_ref/cpp/ftmplt/class //xsdoc_ref/cpp/defn/class //xsdoc_ref/cpp/macro/class //xsdoc_ref/doc/com/intfm/class //xsdoc_ref/doc/anysymbol/class">class</hd_link></value></attribute>
+</attributes>
+<declaration><declaration_keyword>class</declaration_keyword> <declaration_type>ISOBMFF_EXPORT</declaration_type> <declaration_type>DisplayableObject</declaration_type> { 
+    <declaration_keyword>public</declaration_keyword>:  <declaration_comment>/*! 
+@function    ~DisplayableObject
+@abstarct    Destructor.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_keyword>virtual</declaration_keyword> ~<declaration_function>DisplayableObject</declaration_function>(
+        <declaration_param>void</declaration_param> );  
+    <declaration_comment>/*!
+@function    GetDisplayableProperties
+@abstract    Returns the object's displayable properties and values.
+@result      The object's properties/values.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_keyword>virtual</declaration_keyword> <declaration_type>std</declaration_type>::<declaration_type>vector</declaration_type>&lt; <declaration_template>std</declaration_template>::<declaration_template>pair</declaration_template>&lt; <declaration_template>std</declaration_template>::<declaration_template>string</declaration_template>, <declaration_template>std</declaration_template>::<declaration_template>string</declaration_template> &gt; &gt; <declaration_function>GetDisplayableProperties</declaration_function>(
+        <declaration_param>void</declaration_param> ) <declaration_keyword>const</declaration_keyword> = <declaration_number>0</declaration_number>;  
+    <declaration_comment>/*!
+@function    GetName
+@abstract    Returns the object's displayable name.
+@result      The object's name.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_keyword>virtual</declaration_keyword> <declaration_type>std</declaration_type>::<declaration_type>string</declaration_type> <declaration_function>GetName</declaration_function>(
+        <declaration_param>void</declaration_param> ) <declaration_keyword>const</declaration_keyword> = <declaration_number>0</declaration_number>;  
+    <declaration_comment>/*!
+@function    WriteDescription
+@abstract    Writes the object's description to an output stream.
+@param       os              The output stream in which to write the description.
+@param       indentLevel     The requested indent level.
+@discussion  This will write the object's name followed by its
+displayable properties.
+@see         GetName
+@see         GetDisplayableProperties</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_keyword>virtual</declaration_keyword> <declaration_type>void</declaration_type> <declaration_function>WriteDescription</declaration_function>(
+        <declaration_type>std</declaration_type>::<declaration_type>ostream</declaration_type> &amp; <declaration_param>os</declaration_param>,
+        <declaration_type>std</declaration_type>::<declaration_type>size_t</declaration_type> <declaration_param>indentLevel</declaration_param> ) <declaration_keyword>const</declaration_keyword>;  
+    <declaration_comment>/*!
+@function    ToString
+@abstract    Returns a string representation of the object.
+@result      A string representation of the object.
+@see         WriteDescription</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_keyword>virtual</declaration_keyword> <declaration_type>std</declaration_type>::<declaration_type>string</declaration_type> <declaration_function>ToString</declaration_function>(
+        <declaration_param>void</declaration_param> ) <declaration_keyword>const</declaration_keyword>;  
+    <declaration_comment>/*!
+@function    operator &lt;&lt;
+@abstract    Writes the description of an object to an output stream.
+@param       os  The output stream.
+@param       o   The object to write.
+@result      The output stream.
+@see         WriteDescription</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    <declaration_type>ISOBMFF_EXPORT</declaration_type> <declaration_keyword>friend</declaration_keyword> <declaration_type>std</declaration_type>::<declaration_type>ostream</declaration_type> &amp; <declaration_keyword>operator</declaration_keyword> &lt;&lt; (
+        <declaration_type>std</declaration_type>::<declaration_type>ostream</declaration_type> &amp; <declaration_param>os</declaration_param>,
+        <declaration_keyword>const</declaration_keyword> <declaration_type>DisplayableObject</declaration_type> &amp; <declaration_param>o</declaration_param> ); 
+};  </declaration>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/cpp/instm/DisplayableObject/GetDisplayableProperties/std::vector/()" lang="cpp" accessControl="public"><name>GetDisplayableProperties</name>
+<abstract><p>Returns the object's displayable properties and values.
+</p></abstract>
+<returntype> virtual std :: vector</returntype>
+<result><p>The object's properties/values.
+</p></result>
+<declaration><declaration_keyword>virtual</declaration_keyword> <declaration_type>std</declaration_type>::<declaration_type>vector</declaration_type>&lt; <declaration_template>std</declaration_template>::<declaration_template>pair</declaration_template>&lt; <declaration_template>std</declaration_template>::<declaration_template>string</declaration_template>, <declaration_template>std</declaration_template>::<declaration_template>string</declaration_template> &gt; &gt; <declaration_function>GetDisplayableProperties</declaration_function>(
+    <declaration_param>void</declaration_param> ) <declaration_keyword>const</declaration_keyword> = <declaration_number>0</declaration_number>; </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/cpp/instm/DisplayableObject/GetName/std::string/()" lang="cpp" accessControl="public"><name>GetName</name>
+<abstract><p>Returns the object's displayable name.
+</p></abstract>
+<returntype> virtual std :: string</returntype>
+<result><p>The object's name.
+</p></result>
+<declaration><declaration_keyword>virtual</declaration_keyword> <declaration_type>std</declaration_type>::<declaration_type>string</declaration_type> <declaration_function>GetName</declaration_function>(
+    <declaration_param>void</declaration_param> ) <declaration_keyword>const</declaration_keyword> = <declaration_number>0</declaration_number>; </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/cpp/instm/DisplayableObject/operator%3C%3C/ISOBMFF_EXPORTfriendstd::ostream%26/(std::ostream%26,constDisplayableObject%26)" lang="cpp" accessControl="public"><name>operator &lt;&lt;</name>
+<abstract><p>Writes the description of an object to an output stream.
+</p></abstract>
+<parameterlist>
+<parameter><name>os</name><desc><p>The output stream.</p></desc></parameter>
+<parameter><name>o</name><desc><p>The object to write.</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>std :: ostream &amp;amp;</type><name>os</name></parsedparameter>
+<parsedparameter><type>const DisplayableObject &amp;amp;</type><name>o</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See</name><list>
+<item><name>WriteDescription</name><value><hd_link logicalPath="WriteDescription" isseealso="yes">WriteDescription</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype>             ISOBMFF_EXPORT friend std :: ostream &amp;</returntype>
+<result><p>The output stream.
+</p></result>
+<declaration><declaration_type>ISOBMFF_EXPORT</declaration_type> <declaration_keyword>friend</declaration_keyword> <declaration_type>std</declaration_type>::<declaration_type>ostream</declaration_type> &amp; <declaration_keyword>operator</declaration_keyword> &lt;&lt; (
+    <declaration_type>std</declaration_type>::<declaration_type>ostream</declaration_type> &amp; <declaration_param>os</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>DisplayableObject</declaration_type> &amp; <declaration_param>o</declaration_param> ); </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/cpp/instm/DisplayableObject/ToString/std::string/()" lang="cpp" accessControl="public"><name>ToString</name>
+<abstract><p>Returns a string representation of the object.
+</p></abstract>
+<attributelists><listattribute><name>See</name><list>
+<item><name>WriteDescription</name><value><hd_link logicalPath="WriteDescription" isseealso="yes">WriteDescription</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> virtual std :: string</returntype>
+<result><p>A string representation of the object.
+</p></result>
+<declaration><declaration_keyword>virtual</declaration_keyword> <declaration_type>std</declaration_type>::<declaration_type>string</declaration_type> <declaration_function>ToString</declaration_function>(
+    <declaration_param>void</declaration_param> ) <declaration_keyword>const</declaration_keyword>; </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/cpp/instm/DisplayableObject/WriteDescription/void/(std::ostream%26,std::size_t)" lang="cpp" accessControl="public"><name>WriteDescription</name>
+<abstract><p>Writes the object's description to an output stream.
+</p></abstract>
+<parameterlist>
+<parameter><name>os</name><desc><p>The output stream in which to write the description.</p></desc></parameter>
+<parameter><name>indentLevel</name><desc><p>The requested indent level.</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>std :: ostream &amp;amp;</type><name>os</name></parsedparameter>
+<parsedparameter><type>std :: size_t</type><name>indentLevel</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See</name><list>
+<item><name>GetName</name><value><hd_link logicalPath="GetName" isseealso="yes">GetName</hd_link></value></item><item><name>GetDisplayableProperties</name><value><hd_link logicalPath="GetDisplayableProperties" isseealso="yes">GetDisplayableProperties</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> virtual void</returntype>
+<declaration><declaration_keyword>virtual</declaration_keyword> <declaration_type>void</declaration_type> <declaration_function>WriteDescription</declaration_function>(
+    <declaration_type>std</declaration_type>::<declaration_type>ostream</declaration_type> &amp; <declaration_param>os</declaration_param>,
+    <declaration_type>std</declaration_type>::<declaration_type>size_t</declaration_type> <declaration_param>indentLevel</declaration_param> ) <declaration_keyword>const</declaration_keyword>; </declaration>
+<desc><p>This will write the object's name followed by its
+displayable properties.
+</p></desc>
+</function><function id="//xsdoc_ref/doc/title:instm/DisplayableObject/~DisplayableObject//()" lang="cpp" accessControl="public"><name>~DisplayableObject</name>
+<returntype> virtual</returntype>
+<declaration><declaration_keyword>virtual</declaration_keyword> ~<declaration_function>DisplayableObject</declaration_function>(
+    <declaration_param>void</declaration_param> ); </declaration>
+<desc><p>@abstarct    Destructor.</p></desc>
+</function></functions>
+<timestamp>Wednesday, November 01, 2017</timestamp>
+</class></classes>
+<copyrightinfo>&#169; (c) 2017, DigiDNA - www.digidna.net
+</copyrightinfo>
+<timestamp>Wednesday, November 01, 2017</timestamp>
+</header>

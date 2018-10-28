@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/NSDate+ShellKit.h" lang="c" filename="NSDate+ShellKit.h" headerpath="/Users/macmade/Documents/Macmade/GitHub/ShellKit/Documentation/../ShellKit/Classes/ShellKit/NSDate+ShellKit.h"><name>NSDate+ShellKit.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Foundation.h">&lt;Foundation/Foundation.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<classes><category id="//xsdoc_ref/occ/cat/NSDate(ShellKit)" lang="occ"><name>NSDate(ShellKit)</name>
+<abstract><p>Additional NSDate methods for ShellKit
+</p></abstract>
+<attributes><attribute><name>Extends Class</name><value><hd_link logicalPath="//xsdoc_ref/occ/cl/NSDate">NSDate</hd_link></value></attribute>
+</attributes>
+<declaration>@<declaration_type>interface</declaration_type> <declaration_function>NSDate</declaration_function>(
+        <declaration_param>ShellKit</declaration_param> )  <declaration_comment>/*!
+@property    elapsedTimeStringSinceNow
+@abstract    Gets a string representing the elapsed time since now
+@discussion  If less than a second, the elapsed time will be represented
+in milliseconds (ms). If less that a minute, it will be
+represented in seconds (s). If less than an hour, it will
+be represented in minutes (m). Otherwise, it will be
+represented in hours (h).
+@result      A string representing the elasped time</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param>,
+        <declaration_param>nullable</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type><declaration_var>elapsedTimeStringSinceNow</declaration_var>;   @@end </declaration>
+<desc><p/></desc>
+<properties><property id="//xsdoc_ref/occ/instp/NSDate(ShellKit)/elapsedTimeStringSinceNow" lang="occ" accessControl="private"><name>elapsedTimeStringSinceNow</name>
+<abstract><p>Gets a string representing the elapsed time since now
+</p></abstract>
+<returntype>NSString *</returntype>
+<result><p>A string representing the elasped time
+</p></result>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param>,
+    <declaration_param>nullable</declaration_param> ) <declaration_type>NSString</declaration_type> <declaration_type>*</declaration_type> <declaration_var>elapsedTimeStringSinceNow</declaration_var>; </declaration>
+<desc><p>If less than a second, the elapsed time will be represented
+in milliseconds (ms). If less that a minute, it will be
+represented in seconds (s). If less than an hour, it will
+be represented in minutes (m). Otherwise, it will be
+represented in hours (h).
+</p></desc>
+</property></properties>
+<timestamp>Monday, May 15, 2017</timestamp>
+</category></classes>
+<copyrightinfo>&#169; (c) 2017, Jean-David Gadina - www.xs-labs.com
+</copyrightinfo>
+<timestamp>Monday, May 15, 2017</timestamp>
+</header>

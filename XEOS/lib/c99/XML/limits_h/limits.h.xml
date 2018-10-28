@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/limits.h" lang="c" filename="limits.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/c99/include/c99/limits.h"><name>limits.h</name>
+<includes>
+</includes>
+<desc><p/></desc>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_C99_LIMITS_H__" definetype="value" lang="c"><name>__XEOS_LIB_C99_LIMITS_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_C99_LIMITS_H__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/CHAR_BIT" definetype="value" lang="c"><name>CHAR_BIT</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>CHAR_BIT</declaration_preprocessor> <declaration_preprocessor>0x08</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/CHAR_MAX" definetype="value" lang="c"><name>CHAR_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>CHAR_MAX</declaration_preprocessor> <declaration_preprocessor>UCHAR_MAX</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/CHAR_MAX_DONTLINK_1" definetype="value" lang="c"><name>CHAR_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>CHAR_MAX</declaration_preprocessor> <declaration_preprocessor>SCHAR_MAX</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/CHAR_MIN" definetype="value" lang="c"><name>CHAR_MIN</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>CHAR_MIN</declaration_preprocessor> <declaration_preprocessor>0x00</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/CHAR_MIN_DONTLINK_1" definetype="value" lang="c"><name>CHAR_MIN</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>CHAR_MIN</declaration_preprocessor> <declaration_preprocessor>SCHAR_MIN</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INT_MAX" definetype="value" lang="c"><name>INT_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INT_MAX</declaration_preprocessor> <declaration_preprocessor>0x7FFFFFFF</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INT_MIN" definetype="value" lang="c"><name>INT_MIN</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INT_MIN</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>-</declaration_preprocessor><declaration_preprocessor>INT_MAX</declaration_preprocessor> <declaration_preprocessor>-</declaration_preprocessor> <declaration_preprocessor>1</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LLONG_MAX" definetype="value" lang="c"><name>LLONG_MAX</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LLONG_MAX</declaration_preprocessor> <declaration_preprocessor>0x7FFFFFFFFFFFFFFFL</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LLONG_MIN" definetype="value" lang="c"><name>LLONG_MIN</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LLONG_MIN</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>-</declaration_preprocessor><declaration_preprocessor>LLONG_MAX</declaration_preprocessor> <declaration_preprocessor>-</declaration_preprocessor> <declaration_preprocessor>1LL</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LONG_MAX" definetype="value" lang="c"><name>LONG_MAX</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LONG_MAX</declaration_preprocessor> <declaration_preprocessor>0x7FFFFFFFFFFFFFFFL</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LONG_MAX_DONTLINK_1" definetype="value" lang="c"><name>LONG_MAX</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LONG_MAX</declaration_preprocessor> <declaration_preprocessor>0x7FFFFFFF</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LONG_MIN" definetype="value" lang="c"><name>LONG_MIN</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LONG_MIN</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>-</declaration_preprocessor><declaration_preprocessor>LONG_MAX</declaration_preprocessor> <declaration_preprocessor>-</declaration_preprocessor> <declaration_preprocessor>1L</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/MB_LEN_MAX" definetype="value" lang="c"><name>MB_LEN_MAX</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>MB_LEN_MAX</declaration_preprocessor> <declaration_preprocessor>0x01</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SCHAR_MAX" definetype="value" lang="c"><name>SCHAR_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SCHAR_MAX</declaration_preprocessor> <declaration_preprocessor>0x7F</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SCHAR_MIN" definetype="value" lang="c"><name>SCHAR_MIN</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SCHAR_MIN</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>-</declaration_preprocessor><declaration_preprocessor>SCHAR_MAX</declaration_preprocessor> <declaration_preprocessor>-</declaration_preprocessor> <declaration_preprocessor>1</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SHRT_MAX" definetype="value" lang="c"><name>SHRT_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SHRT_MAX</declaration_preprocessor> <declaration_preprocessor>0x7FFF</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SHRT_MIN" definetype="value" lang="c"><name>SHRT_MIN</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SHRT_MIN</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>-</declaration_preprocessor><declaration_preprocessor>SHRT_MAX</declaration_preprocessor> <declaration_preprocessor>-</declaration_preprocessor> <declaration_preprocessor>1</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/UCHAR_MAX" definetype="value" lang="c"><name>UCHAR_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>UCHAR_MAX</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>SCHAR_MAX</declaration_preprocessor> <declaration_preprocessor>*</declaration_preprocessor> <declaration_preprocessor>2</declaration_preprocessor> <declaration_preprocessor>+</declaration_preprocessor> <declaration_preprocessor>1</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/UINT_MAX" definetype="value" lang="c"><name>UINT_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>UINT_MAX</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>INT_MAX</declaration_preprocessor> <declaration_preprocessor>*</declaration_preprocessor> <declaration_preprocessor>2U</declaration_preprocessor> <declaration_preprocessor>+</declaration_preprocessor> <declaration_preprocessor>1U</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/ULLONG_MAX" definetype="value" lang="c"><name>ULLONG_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>ULLONG_MAX</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>LLONG_MAX</declaration_preprocessor> <declaration_preprocessor>*</declaration_preprocessor> <declaration_preprocessor>2ULL</declaration_preprocessor> <declaration_preprocessor>+</declaration_preprocessor> <declaration_preprocessor>1ULL</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/ULONG_MAX" definetype="value" lang="c"><name>ULONG_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>ULONG_MAX</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>LONG_MAX</declaration_preprocessor> <declaration_preprocessor>*</declaration_preprocessor> <declaration_preprocessor>2UL</declaration_preprocessor> <declaration_preprocessor>+</declaration_preprocessor> <declaration_preprocessor>1UL</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/USHRT_MAX" definetype="value" lang="c"><name>USHRT_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>USHRT_MAX</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>SHRT_MAX</declaration_preprocessor> <declaration_preprocessor>*</declaration_preprocessor> <declaration_preprocessor>2</declaration_preprocessor> <declaration_preprocessor>+</declaration_preprocessor> <declaration_preprocessor>1</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

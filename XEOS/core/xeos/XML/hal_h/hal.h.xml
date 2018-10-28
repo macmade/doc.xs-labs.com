@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/hal.h" lang="c" filename="hal.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/core/xeos/include/xeos/hal.h"><name>hal.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/acpi.h">&lt;xeos/hal/acpi.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/cmos.h">&lt;xeos/hal/cmos.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/cpu.h">&lt;xeos/hal/cpu.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/crtc.h">&lt;xeos/hal/crtc.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/gdt.h">&lt;xeos/hal/gdt.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/idt.h">&lt;xeos/hal/idt.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/io.h">&lt;xeos/hal/io.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/nmi.h">&lt;xeos/hal/nmi.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pic.h">&lt;xeos/hal/pic.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pit.h">&lt;xeos/hal/pit.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/rtc.h">&lt;xeos/hal/rtc.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/smbios.h">&lt;xeos/hal/smbios.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/keyboard.h">&lt;xeos/hal/keyboard.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_HAL_H__" definetype="value" lang="c"><name>__XEOS_HAL_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_HAL_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

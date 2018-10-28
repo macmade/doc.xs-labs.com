@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/GitHubRelease.m" lang="occ" filename="GitHubRelease.m" headerpath="/Users/macmade/Documents/Macmade/GitHub/GitHubUpdates/Documentation/../GitHubUpdates/GitHubRelease.m"><name>GitHubRelease.m</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/GitHubRelease.h">"GitHubRelease.h"</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/GitHubReleaseAsset.h">"GitHubReleaseAsset.h"</hd_link></include>
+</includes>
+<desc><p/></desc>
+<copyrightinfo>&#169; (c) 2017, Jean-David Gadina - www.xs-labs.com
+</copyrightinfo>
+<timestamp>Sunday, June 18, 2017</timestamp>
+</header>

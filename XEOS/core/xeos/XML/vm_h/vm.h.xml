@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/vm.h" lang="c" filename="vm.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/core/xeos/include/xeos/vm.h"><name>vm.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/info.h">&lt;xeos/info.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdint.h">&lt;stdint.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdbool.h">&lt;stdbool.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/XEOS_VM_MemoryMapGetAddress" lang="c"><name>XEOS_VM_MemoryMapGetAddress</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_MemoryMapRef</type><name>object</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void *</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_function>XEOS_VM_MemoryMapGetAddress</declaration_function>(
+    <declaration_type>XEOS_VM_MemoryMapRef</declaration_type> <declaration_param>object</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_MemoryMapGetCR3" lang="c"><name>XEOS_VM_MemoryMapGetCR3</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_MemoryMapRef</type><name>object</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uint32_t</returntype>
+<declaration><declaration_type>uint32_t</declaration_type> <declaration_function>XEOS_VM_MemoryMapGetCR3</declaration_function>(
+    <declaration_type>XEOS_VM_MemoryMapRef</declaration_type> <declaration_param>object</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_MemoryMapGetLength" lang="c"><name>XEOS_VM_MemoryMapGetLength</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_MemoryMapRef</type><name>object</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uint64_t</returntype>
+<declaration><declaration_type>uint64_t</declaration_type> <declaration_function>XEOS_VM_MemoryMapGetLength</declaration_function>(
+    <declaration_type>XEOS_VM_MemoryMapRef</declaration_type> <declaration_param>object</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_MemoryMapGetPDPTCount" lang="c"><name>XEOS_VM_MemoryMapGetPDPTCount</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_MemoryMapRef</type><name>object</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uint64_t</returntype>
+<declaration><declaration_type>uint64_t</declaration_type> <declaration_function>XEOS_VM_MemoryMapGetPDPTCount</declaration_function>(
+    <declaration_type>XEOS_VM_MemoryMapRef</declaration_type> <declaration_param>object</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_MemoryMapGetPDTCount" lang="c"><name>XEOS_VM_MemoryMapGetPDTCount</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_MemoryMapRef</type><name>object</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uint64_t</returntype>
+<declaration><declaration_type>uint64_t</declaration_type> <declaration_function>XEOS_VM_MemoryMapGetPDTCount</declaration_function>(
+    <declaration_type>XEOS_VM_MemoryMapRef</declaration_type> <declaration_param>object</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_MemoryMapGetPML4TCount" lang="c"><name>XEOS_VM_MemoryMapGetPML4TCount</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_MemoryMapRef</type><name>object</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uint64_t</returntype>
+<declaration><declaration_type>uint64_t</declaration_type> <declaration_function>XEOS_VM_MemoryMapGetPML4TCount</declaration_function>(
+    <declaration_type>XEOS_VM_MemoryMapRef</declaration_type> <declaration_param>object</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_MemoryMapGetPTCount" lang="c"><name>XEOS_VM_MemoryMapGetPTCount</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_MemoryMapRef</type><name>object</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uint64_t</returntype>
+<declaration><declaration_type>uint64_t</declaration_type> <declaration_function>XEOS_VM_MemoryMapGetPTCount</declaration_function>(
+    <declaration_type>XEOS_VM_MemoryMapRef</declaration_type> <declaration_param>object</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_MemoryMapGetType" lang="c"><name>XEOS_VM_MemoryMapGetType</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_MemoryMapRef</type><name>object</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_VM_MemoryMapType</returntype>
+<declaration><declaration_type>XEOS_VM_MemoryMapType</declaration_type> <declaration_function>XEOS_VM_MemoryMapGetType</declaration_function>(
+    <declaration_type>XEOS_VM_MemoryMapRef</declaration_type> <declaration_param>object</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_MemoryMapSetAddress" lang="c"><name>XEOS_VM_MemoryMapSetAddress</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_MemoryMapRef</type><name>object</name></parsedparameter>
+<parsedparameter><type>void *</type><name>address</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_VM_MemoryMapSetAddress</declaration_function>(
+    <declaration_type>XEOS_VM_MemoryMapRef</declaration_type> <declaration_param>object</declaration_param>,
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>address</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_MemoryMapSetCR3" lang="c"><name>XEOS_VM_MemoryMapSetCR3</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_MemoryMapRef</type><name>object</name></parsedparameter>
+<parsedparameter><type>uint32_t</type><name>cr3</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_VM_MemoryMapSetCR3</declaration_function>(
+    <declaration_type>XEOS_VM_MemoryMapRef</declaration_type> <declaration_param>object</declaration_param>,
+    <declaration_type>uint32_t</declaration_type> <declaration_param>cr3</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_MemoryMapSetLength" lang="c"><name>XEOS_VM_MemoryMapSetLength</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_MemoryMapRef</type><name>object</name></parsedparameter>
+<parsedparameter><type>uint64_t</type><name>length</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_VM_MemoryMapSetLength</declaration_function>(
+    <declaration_type>XEOS_VM_MemoryMapRef</declaration_type> <declaration_param>object</declaration_param>,
+    <declaration_type>uint64_t</declaration_type> <declaration_param>length</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_MemoryMapSetPDPTCount" lang="c"><name>XEOS_VM_MemoryMapSetPDPTCount</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_MemoryMapRef</type><name>object</name></parsedparameter>
+<parsedparameter><type>uint64_t</type><name>count</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_VM_MemoryMapSetPDPTCount</declaration_function>(
+    <declaration_type>XEOS_VM_MemoryMapRef</declaration_type> <declaration_param>object</declaration_param>,
+    <declaration_type>uint64_t</declaration_type> <declaration_param>count</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_MemoryMapSetPDTCount" lang="c"><name>XEOS_VM_MemoryMapSetPDTCount</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_MemoryMapRef</type><name>object</name></parsedparameter>
+<parsedparameter><type>uint64_t</type><name>count</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_VM_MemoryMapSetPDTCount</declaration_function>(
+    <declaration_type>XEOS_VM_MemoryMapRef</declaration_type> <declaration_param>object</declaration_param>,
+    <declaration_type>uint64_t</declaration_type> <declaration_param>count</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_MemoryMapSetPML4TCount" lang="c"><name>XEOS_VM_MemoryMapSetPML4TCount</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_MemoryMapRef</type><name>object</name></parsedparameter>
+<parsedparameter><type>uint64_t</type><name>count</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_VM_MemoryMapSetPML4TCount</declaration_function>(
+    <declaration_type>XEOS_VM_MemoryMapRef</declaration_type> <declaration_param>object</declaration_param>,
+    <declaration_type>uint64_t</declaration_type> <declaration_param>count</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_MemoryMapSetPTCount" lang="c"><name>XEOS_VM_MemoryMapSetPTCount</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_MemoryMapRef</type><name>object</name></parsedparameter>
+<parsedparameter><type>uint64_t</type><name>count</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_VM_MemoryMapSetPTCount</declaration_function>(
+    <declaration_type>XEOS_VM_MemoryMapRef</declaration_type> <declaration_param>object</declaration_param>,
+    <declaration_type>uint64_t</declaration_type> <declaration_param>count</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_MemoryMapSetType" lang="c"><name>XEOS_VM_MemoryMapSetType</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_MemoryMapRef</type><name>object</name></parsedparameter>
+<parsedparameter><type>XEOS_VM_MemoryMapType</type><name>type</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_VM_MemoryMapSetType</declaration_function>(
+    <declaration_type>XEOS_VM_MemoryMapRef</declaration_type> <declaration_param>object</declaration_param>,
+    <declaration_type>XEOS_VM_MemoryMapType</declaration_type> <declaration_param>type</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_PDPTClear" lang="c"><name>XEOS_VM_PDPTClear</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_PDPTRef</type><name>object</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_VM_PDPTClear</declaration_function>(
+    <declaration_type>XEOS_VM_PDPTRef</declaration_type> <declaration_param>object</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_PDPTEntryClear" lang="c"><name>XEOS_VM_PDPTEntryClear</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_PDPTEntryRef</type><name>object</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_VM_PDPTEntryClear</declaration_function>(
+    <declaration_type>XEOS_VM_PDPTEntryRef</declaration_type> <declaration_param>object</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_PDPTEntryGetFlag" lang="c"><name>XEOS_VM_PDPTEntryGetFlag</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_PDPTEntryRef</type><name>object</name></parsedparameter>
+<parsedparameter><type>XEOS_VM_PDPTEntryFlag</type><name>flag</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>XEOS_VM_PDPTEntryGetFlag</declaration_function>(
+    <declaration_type>XEOS_VM_PDPTEntryRef</declaration_type> <declaration_param>object</declaration_param>,
+    <declaration_type>XEOS_VM_PDPTEntryFlag</declaration_type> <declaration_param>flag</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_PDPTEntryGetPDT" lang="c"><name>XEOS_VM_PDPTEntryGetPDT</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_PDPTEntryRef</type><name>object</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_VM_PDTRef</returntype>
+<declaration><declaration_type>XEOS_VM_PDTRef</declaration_type> <declaration_function>XEOS_VM_PDPTEntryGetPDT</declaration_function>(
+    <declaration_type>XEOS_VM_PDPTEntryRef</declaration_type> <declaration_param>object</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_PDPTEntrySetFlag" lang="c"><name>XEOS_VM_PDPTEntrySetFlag</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_PDPTEntryRef</type><name>object</name></parsedparameter>
+<parsedparameter><type>XEOS_VM_PDPTEntryFlag</type><name>flag</name></parsedparameter>
+<parsedparameter><type>bool</type><name>value</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_VM_PDPTEntrySetFlag</declaration_function>(
+    <declaration_type>XEOS_VM_PDPTEntryRef</declaration_type> <declaration_param>object</declaration_param>,
+    <declaration_type>XEOS_VM_PDPTEntryFlag</declaration_type> <declaration_param>flag</declaration_param>,
+    <declaration_type>bool</declaration_type> <declaration_param>value</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_PDPTEntrySetPDT" lang="c"><name>XEOS_VM_PDPTEntrySetPDT</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_PDPTEntryRef</type><name>object</name></parsedparameter>
+<parsedparameter><type>XEOS_VM_PDTRef</type><name>pdt</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_VM_PDPTEntrySetPDT</declaration_function>(
+    <declaration_type>XEOS_VM_PDPTEntryRef</declaration_type> <declaration_param>object</declaration_param>,
+    <declaration_type>XEOS_VM_PDTRef</declaration_type> <declaration_param>pdt</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_PDPTGetEntryAtIndex" lang="c"><name>XEOS_VM_PDPTGetEntryAtIndex</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_PDPTRef</type><name>object</name></parsedparameter>
+<parsedparameter><type>unsigned int</type><name>i</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_VM_PDPTEntryRef</returntype>
+<declaration><declaration_type>XEOS_VM_PDPTEntryRef</declaration_type> <declaration_function>XEOS_VM_PDPTGetEntryAtIndex</declaration_function>(
+    <declaration_type>XEOS_VM_PDPTRef</declaration_type> <declaration_param>object</declaration_param>,
+    <declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_param>i</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_PDTClear" lang="c"><name>XEOS_VM_PDTClear</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_PDTRef</type><name>object</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_VM_PDTClear</declaration_function>(
+    <declaration_type>XEOS_VM_PDTRef</declaration_type> <declaration_param>object</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_PDTEntryClear" lang="c"><name>XEOS_VM_PDTEntryClear</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_PDTEntryRef</type><name>object</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_VM_PDTEntryClear</declaration_function>(
+    <declaration_type>XEOS_VM_PDTEntryRef</declaration_type> <declaration_param>object</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_PDTEntryGetFlag" lang="c"><name>XEOS_VM_PDTEntryGetFlag</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_PTEntryRef</type><name>object</name></parsedparameter>
+<parsedparameter><type>XEOS_VM_PDTEntryFlag</type><name>flag</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>XEOS_VM_PDTEntryGetFlag</declaration_function>(
+    <declaration_type>XEOS_VM_PTEntryRef</declaration_type> <declaration_param>object</declaration_param>,
+    <declaration_type>XEOS_VM_PDTEntryFlag</declaration_type> <declaration_param>flag</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_PDTEntryGetPT" lang="c"><name>XEOS_VM_PDTEntryGetPT</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_PTEntryRef</type><name>object</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_VM_PTRef</returntype>
+<declaration><declaration_type>XEOS_VM_PTRef</declaration_type> <declaration_function>XEOS_VM_PDTEntryGetPT</declaration_function>(
+    <declaration_type>XEOS_VM_PTEntryRef</declaration_type> <declaration_param>object</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_PDTEntrySetFlag" lang="c"><name>XEOS_VM_PDTEntrySetFlag</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_PTEntryRef</type><name>object</name></parsedparameter>
+<parsedparameter><type>XEOS_VM_PDTEntryFlag</type><name>flag</name></parsedparameter>
+<parsedparameter><type>bool</type><name>value</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_VM_PDTEntrySetFlag</declaration_function>(
+    <declaration_type>XEOS_VM_PTEntryRef</declaration_type> <declaration_param>object</declaration_param>,
+    <declaration_type>XEOS_VM_PDTEntryFlag</declaration_type> <declaration_param>flag</declaration_param>,
+    <declaration_type>bool</declaration_type> <declaration_param>value</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_PDTEntrySetPT" lang="c"><name>XEOS_VM_PDTEntrySetPT</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_PTEntryRef</type><name>object</name></parsedparameter>
+<parsedparameter><type>XEOS_VM_PTRef</type><name>pt</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_VM_PDTEntrySetPT</declaration_function>(
+    <declaration_type>XEOS_VM_PTEntryRef</declaration_type> <declaration_param>object</declaration_param>,
+    <declaration_type>XEOS_VM_PTRef</declaration_type> <declaration_param>pt</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_PDTGetEntryAtIndex" lang="c"><name>XEOS_VM_PDTGetEntryAtIndex</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_PDTRef</type><name>object</name></parsedparameter>
+<parsedparameter><type>unsigned int</type><name>i</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_VM_PDTEntryRef</returntype>
+<declaration><declaration_type>XEOS_VM_PDTEntryRef</declaration_type> <declaration_function>XEOS_VM_PDTGetEntryAtIndex</declaration_function>(
+    <declaration_type>XEOS_VM_PDTRef</declaration_type> <declaration_param>object</declaration_param>,
+    <declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_param>i</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_PML4TClear" lang="c"><name>XEOS_VM_PML4TClear</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_PML4TRef</type><name>object</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_VM_PML4TClear</declaration_function>(
+    <declaration_type>XEOS_VM_PML4TRef</declaration_type> <declaration_param>object</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_PML4TEntryClear" lang="c"><name>XEOS_VM_PML4TEntryClear</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_PML4TEntryRef</type><name>object</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_VM_PML4TEntryClear</declaration_function>(
+    <declaration_type>XEOS_VM_PML4TEntryRef</declaration_type> <declaration_param>object</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_PML4TEntryGetFlag" lang="c"><name>XEOS_VM_PML4TEntryGetFlag</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_PML4TEntryRef</type><name>object</name></parsedparameter>
+<parsedparameter><type>XEOS_VM_PML4TEntryFlag</type><name>flag</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>XEOS_VM_PML4TEntryGetFlag</declaration_function>(
+    <declaration_type>XEOS_VM_PML4TEntryRef</declaration_type> <declaration_param>object</declaration_param>,
+    <declaration_type>XEOS_VM_PML4TEntryFlag</declaration_type> <declaration_param>flag</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_PML4TEntryGetPDPT" lang="c"><name>XEOS_VM_PML4TEntryGetPDPT</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_PML4TEntryRef</type><name>object</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_VM_PDPTRef</returntype>
+<declaration><declaration_type>XEOS_VM_PDPTRef</declaration_type> <declaration_function>XEOS_VM_PML4TEntryGetPDPT</declaration_function>(
+    <declaration_type>XEOS_VM_PML4TEntryRef</declaration_type> <declaration_param>object</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_PML4TEntrySetFlag" lang="c"><name>XEOS_VM_PML4TEntrySetFlag</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_PML4TEntryRef</type><name>object</name></parsedparameter>
+<parsedparameter><type>XEOS_VM_PML4TEntryFlag</type><name>flag</name></parsedparameter>
+<parsedparameter><type>bool</type><name>value</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_VM_PML4TEntrySetFlag</declaration_function>(
+    <declaration_type>XEOS_VM_PML4TEntryRef</declaration_type> <declaration_param>object</declaration_param>,
+    <declaration_type>XEOS_VM_PML4TEntryFlag</declaration_type> <declaration_param>flag</declaration_param>,
+    <declaration_type>bool</declaration_type> <declaration_param>value</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_PML4TEntrySetPDPT" lang="c"><name>XEOS_VM_PML4TEntrySetPDPT</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_PML4TEntryRef</type><name>object</name></parsedparameter>
+<parsedparameter><type>XEOS_VM_PDPTRef</type><name>pdpt</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_VM_PML4TEntrySetPDPT</declaration_function>(
+    <declaration_type>XEOS_VM_PML4TEntryRef</declaration_type> <declaration_param>object</declaration_param>,
+    <declaration_type>XEOS_VM_PDPTRef</declaration_type> <declaration_param>pdpt</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_PML4TGetEntryAtIndex" lang="c"><name>XEOS_VM_PML4TGetEntryAtIndex</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_PML4TRef</type><name>object</name></parsedparameter>
+<parsedparameter><type>unsigned int</type><name>i</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_VM_PML4TEntryRef</returntype>
+<declaration><declaration_type>XEOS_VM_PML4TEntryRef</declaration_type> <declaration_function>XEOS_VM_PML4TGetEntryAtIndex</declaration_function>(
+    <declaration_type>XEOS_VM_PML4TRef</declaration_type> <declaration_param>object</declaration_param>,
+    <declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_param>i</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_PTClear" lang="c"><name>XEOS_VM_PTClear</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_PTRef</type><name>object</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_VM_PTClear</declaration_function>(
+    <declaration_type>XEOS_VM_PTRef</declaration_type> <declaration_param>object</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_PTEntryClear" lang="c"><name>XEOS_VM_PTEntryClear</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_PTEntryRef</type><name>object</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_VM_PTEntryClear</declaration_function>(
+    <declaration_type>XEOS_VM_PTEntryRef</declaration_type> <declaration_param>object</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_PTEntryGetAddress" lang="c"><name>XEOS_VM_PTEntryGetAddress</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_PTEntryRef</type><name>object</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uint64_t</returntype>
+<declaration><declaration_type>uint64_t</declaration_type> <declaration_function>XEOS_VM_PTEntryGetAddress</declaration_function>(
+    <declaration_type>XEOS_VM_PTEntryRef</declaration_type> <declaration_param>object</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_PTEntryGetFlag" lang="c"><name>XEOS_VM_PTEntryGetFlag</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_PTEntryRef</type><name>object</name></parsedparameter>
+<parsedparameter><type>XEOS_VM_PTEntryFlag</type><name>flag</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>XEOS_VM_PTEntryGetFlag</declaration_function>(
+    <declaration_type>XEOS_VM_PTEntryRef</declaration_type> <declaration_param>object</declaration_param>,
+    <declaration_type>XEOS_VM_PTEntryFlag</declaration_type> <declaration_param>flag</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_PTEntrySetAddress" lang="c"><name>XEOS_VM_PTEntrySetAddress</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_PTEntryRef</type><name>object</name></parsedparameter>
+<parsedparameter><type>uint64_t</type><name>address</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_VM_PTEntrySetAddress</declaration_function>(
+    <declaration_type>XEOS_VM_PTEntryRef</declaration_type> <declaration_param>object</declaration_param>,
+    <declaration_type>uint64_t</declaration_type> <declaration_param>address</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_PTEntrySetFlag" lang="c"><name>XEOS_VM_PTEntrySetFlag</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_PTEntryRef</type><name>object</name></parsedparameter>
+<parsedparameter><type>XEOS_VM_PTEntryFlag</type><name>flag</name></parsedparameter>
+<parsedparameter><type>bool</type><name>value</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_VM_PTEntrySetFlag</declaration_function>(
+    <declaration_type>XEOS_VM_PTEntryRef</declaration_type> <declaration_param>object</declaration_param>,
+    <declaration_type>XEOS_VM_PTEntryFlag</declaration_type> <declaration_param>flag</declaration_param>,
+    <declaration_type>bool</declaration_type> <declaration_param>value</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_PTGetEntryAtIndex" lang="c"><name>XEOS_VM_PTGetEntryAtIndex</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_VM_PTRef</type><name>object</name></parsedparameter>
+<parsedparameter><type>unsigned int</type><name>i</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_VM_PTEntryRef</returntype>
+<declaration><declaration_type>XEOS_VM_PTEntryRef</declaration_type> <declaration_function>XEOS_VM_PTGetEntryAtIndex</declaration_function>(
+    <declaration_type>XEOS_VM_PTRef</declaration_type> <declaration_param>object</declaration_param>,
+    <declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_param>i</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_SystemMap" lang="c"><name>XEOS_VM_SystemMap</name>
+<returntype> XEOS_VM_MemoryMapRef</returntype>
+<declaration><declaration_type>XEOS_VM_MemoryMapRef</declaration_type> <declaration_function>XEOS_VM_SystemMap</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_VM_SystemMapInitialize" lang="c"><name>XEOS_VM_SystemMapInitialize</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>outputHandler</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_VM_SystemMapInitialize</declaration_function>(
+    <declaration_type>int</declaration_type> ( <declaration_type>*</declaration_type> <declaration_param>outputHandler</declaration_param> )(
+        <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_param>*</declaration_param>,
+        ... ) );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<typedefs><typedef id="//xsdoc_ref/c/tdef/XEOS_VM_MemoryMapRef" lang="c" type="simple"><name>XEOS_VM_MemoryMapRef</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>__XEOS_VM_MemoryMap</declaration_type> <declaration_type>*</declaration_type> <declaration_var>XEOS_VM_MemoryMapRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_VM_MemoryMapType" lang="c" type="simple"><name>XEOS_VM_MemoryMapType</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>XEOS_VM_MemoryMapTypeUnknown</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_VM_MemoryMapType32</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_VM_MemoryMapType32PAE</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_VM_MemoryMapType64</name></parsedparameter>
+</parsedparameterlist>
+<declaration> <declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>XEOS_VM_MemoryMapTypeUnknown</declaration_var> = <declaration_number>0x00</declaration_number>, 
+    <declaration_var>XEOS_VM_MemoryMapType32</declaration_var> = <declaration_number>0x01</declaration_number>, 
+    <declaration_var>XEOS_VM_MemoryMapType32PAE</declaration_var> = <declaration_number>0x02</declaration_number>, 
+    <declaration_var>XEOS_VM_MemoryMapType64</declaration_var> = <declaration_number>0x03</declaration_number> 
+} <declaration_var>XEOS_VM_MemoryMapType</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_VM_PDPTEntryFlag" lang="c" type="simple"><name>XEOS_VM_PDPTEntryFlag</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>XEOS_VM_PDPTEntryFlagPresent</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_VM_PDPTEntryFlagWriteable</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>XEOS_VM_PDPTEntryFlagPresent</declaration_var> = <declaration_number>1</declaration_number> &lt;&lt; <declaration_number>0</declaration_number>, 
+    <declaration_var>XEOS_VM_PDPTEntryFlagWriteable</declaration_var> = <declaration_number>1</declaration_number> &lt;&lt; <declaration_number>1</declaration_number>, 
+} <declaration_var>XEOS_VM_PDPTEntryFlag</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_VM_PDPTEntryRef" lang="c" type="simple"><name>XEOS_VM_PDPTEntryRef</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_var>XEOS_VM_PDPTEntryRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_VM_PDPTRef" lang="c" type="simple"><name>XEOS_VM_PDPTRef</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_var>XEOS_VM_PDPTRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_VM_PDTEntryFlag" lang="c" type="simple"><name>XEOS_VM_PDTEntryFlag</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>XEOS_VM_PDTEntryFlagPresent</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_VM_PDTEntryFlagWriteable</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_VM_PDTEntryFlagUser</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_VM_PDTEntryFlagWriteThrough</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_VM_PDTEntryFlagCacheDisbled</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_VM_PDTEntryFlagAccessed</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_VM_PDTEntryFlagPageSize</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_VM_PDTEntryFlagGLobal</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>XEOS_VM_PDTEntryFlagPresent</declaration_var> = <declaration_number>1</declaration_number> &lt;&lt; <declaration_number>0</declaration_number>, 
+    <declaration_var>XEOS_VM_PDTEntryFlagWriteable</declaration_var> = <declaration_number>1</declaration_number> &lt;&lt; <declaration_number>1</declaration_number>, 
+    <declaration_var>XEOS_VM_PDTEntryFlagUser</declaration_var> = <declaration_number>1</declaration_number> &lt;&lt; <declaration_number>2</declaration_number>, 
+    <declaration_var>XEOS_VM_PDTEntryFlagWriteThrough</declaration_var> = <declaration_number>1</declaration_number> &lt;&lt; <declaration_number>3</declaration_number>, 
+    <declaration_var>XEOS_VM_PDTEntryFlagCacheDisbled</declaration_var> = <declaration_number>1</declaration_number> &lt;&lt; <declaration_number>4</declaration_number>, 
+    <declaration_var>XEOS_VM_PDTEntryFlagAccessed</declaration_var> = <declaration_number>1</declaration_number> &lt;&lt; <declaration_number>5</declaration_number>, 
+    <declaration_var>XEOS_VM_PDTEntryFlagPageSize</declaration_var> = <declaration_number>1</declaration_number> &lt;&lt; <declaration_number>6</declaration_number>, 
+    <declaration_var>XEOS_VM_PDTEntryFlagGLobal</declaration_var> = <declaration_number>1</declaration_number> &lt;&lt; <declaration_number>8</declaration_number>, 
+} <declaration_var>XEOS_VM_PDTEntryFlag</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_VM_PDTEntryRef" lang="c" type="simple"><name>XEOS_VM_PDTEntryRef</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_var>XEOS_VM_PDTEntryRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_VM_PDTRef" lang="c" type="simple"><name>XEOS_VM_PDTRef</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_var>XEOS_VM_PDTRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_VM_PML4TEntryFlag" lang="c" type="simple"><name>XEOS_VM_PML4TEntryFlag</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>XEOS_VM_PML4TEntryFlagPresent</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_VM_PML4TEntryFlagWriteable</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>XEOS_VM_PML4TEntryFlagPresent</declaration_var> = <declaration_number>1</declaration_number> &lt;&lt; <declaration_number>0</declaration_number>, 
+    <declaration_var>XEOS_VM_PML4TEntryFlagWriteable</declaration_var> = <declaration_number>1</declaration_number> &lt;&lt; <declaration_number>1</declaration_number>, 
+} <declaration_var>XEOS_VM_PML4TEntryFlag</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_VM_PML4TEntryRef" lang="c" type="simple"><name>XEOS_VM_PML4TEntryRef</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_var>XEOS_VM_PML4TEntryRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_VM_PML4TRef" lang="c" type="simple"><name>XEOS_VM_PML4TRef</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_var>XEOS_VM_PML4TRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_VM_PTEntryFlag" lang="c" type="simple"><name>XEOS_VM_PTEntryFlag</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>XEOS_VM_PTEntryFlagPresent</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_VM_PTEntryFlagWriteable</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_VM_PTEntryFlagUser</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_VM_PTEntryFlagWriteThrough</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_VM_PTEntryFlagCacheDisbled</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_VM_PTEntryFlagAccessed</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_VM_PTEntryFlagDirty</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_VM_PTEntryFlagGLobal</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>XEOS_VM_PTEntryFlagPresent</declaration_var> = <declaration_number>1</declaration_number> &lt;&lt; <declaration_number>0</declaration_number>, 
+    <declaration_var>XEOS_VM_PTEntryFlagWriteable</declaration_var> = <declaration_number>1</declaration_number> &lt;&lt; <declaration_number>1</declaration_number>, 
+    <declaration_var>XEOS_VM_PTEntryFlagUser</declaration_var> = <declaration_number>1</declaration_number> &lt;&lt; <declaration_number>2</declaration_number>, 
+    <declaration_var>XEOS_VM_PTEntryFlagWriteThrough</declaration_var> = <declaration_number>1</declaration_number> &lt;&lt; <declaration_number>3</declaration_number>, 
+    <declaration_var>XEOS_VM_PTEntryFlagCacheDisbled</declaration_var> = <declaration_number>1</declaration_number> &lt;&lt; <declaration_number>4</declaration_number>, 
+    <declaration_var>XEOS_VM_PTEntryFlagAccessed</declaration_var> = <declaration_number>1</declaration_number> &lt;&lt; <declaration_number>5</declaration_number>, 
+    <declaration_var>XEOS_VM_PTEntryFlagDirty</declaration_var> = <declaration_number>1</declaration_number> &lt;&lt; <declaration_number>6</declaration_number>, 
+    <declaration_var>XEOS_VM_PTEntryFlagGLobal</declaration_var> = <declaration_number>1</declaration_number> &lt;&lt; <declaration_number>8</declaration_number>, 
+} <declaration_var>XEOS_VM_PTEntryFlag</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_VM_PTEntryRef" lang="c" type="simple"><name>XEOS_VM_PTEntryRef</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_var>XEOS_VM_PTEntryRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_VM_PTRef" lang="c" type="simple"><name>XEOS_VM_PTRef</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_var>XEOS_VM_PTRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef></typedefs><defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_VM_H__" definetype="value" lang="c"><name>__XEOS_VM_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_VM_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

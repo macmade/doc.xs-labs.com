@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/GitHubInstallWindowController.h" lang="c" filename="GitHubInstallWindowController.h" headerpath="/Users/macmade/Documents/Macmade/GitHub/GitHubUpdates/Documentation/../GitHubUpdates/GitHubInstallWindowController.h"><name>GitHubInstallWindowController.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Cocoa.h">&lt;Cocoa/Cocoa.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<classes><class id="//xsdoc_ref/occ/cl/GitHubInstallWindowController" lang="occ"><name>GitHubInstallWindowController</name>
+<abstract><p>Window controller for the install window.
+</p></abstract>
+<attributes><attribute><name>Superclass</name><value><hd_link logicalPath="//xsdoc_ref/occ/cl/NSWindowController">NSWindowController</hd_link></value></attribute>
+</attributes>
+<declaration>@<declaration_type>interface</declaration_type> <declaration_type>GitHubInstallWindowController</declaration_type>: <declaration_type>NSWindowController</declaration_type>  <declaration_comment>/*!
+@property    asset
+@abstract    The asset proposed to be installed.
+@see         GitHubReleaseAsset</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param>,
+        <declaration_param>strong</declaration_param>,
+        <declaration_param>nullable</declaration_param> ) <declaration_type>GitHubReleaseAsset</declaration_type> <declaration_type>*</declaration_type><declaration_var>asset</declaration_var>;   <declaration_comment>/*!
+@property    githubRelease
+@abstract    The release proposed to be installed .
+@see         GitHubRelease</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param>,
+        <declaration_param>strong</declaration_param>,
+        <declaration_param>nullable</declaration_param> ) <declaration_type>GitHubRelease</declaration_type> <declaration_type>*</declaration_type><declaration_var>githubRelease</declaration_var>;   <declaration_comment>/*!
+@property    installingUpdate
+@abstract    Whether an update is currently beeing installed.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>installingUpdate</declaration_var>;   <declaration_comment>/*!
+@method      initWithAsset:release:
+@abstract    Initializes an instance with an asset and a release.
+@discussion  Although not marked as so, this method acts as the class'
+designated initializer.
+@param       asset   The proposed asset
+@param       release The proposed release
+@result      The initialized instance
+@see         GitHubReleaseAsset
+@see         GitHubRelease</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>instancetype</declaration_param> )<declaration_type>initWithAsset</declaration_type>: ( <declaration_type>GitHubReleaseAsset</declaration_type> <declaration_type>*</declaration_type> )<declaration_type>asset</declaration_type> <declaration_type>release</declaration_type>: ( <declaration_type>GitHubRelease</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>release</declaration_var>;   
+    @@end </declaration>
+<desc><p>This window controller is used when an update is found, to
+propose the user to install it.
+</p></desc>
+<methods><method id="//xsdoc_ref/occ/instm/GitHubInstallWindowController/initWithAsset:release:" lang="occ" type="instm"><name>initWithAsset:release:</name>
+<abstract><p>Initializes an instance with an asset and a release.
+</p></abstract>
+<parameterlist>
+<parameter><name>asset</name><desc><p>The proposed asset</p></desc></parameter>
+<parameter><name>release</name><desc><p>The proposed release</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( GitHubReleaseAsset * )</type><name>asset</name></parsedparameter>
+<parsedparameter><type>( GitHubRelease * )</type><name>release</name></parsedparameter>
+</parsedparameterlist>
+<attributelists><listattribute><name>See</name><list>
+<item><name>GitHubReleaseAsset</name><value><hd_link logicalPath="GitHubReleaseAsset" isseealso="yes">GitHubReleaseAsset</hd_link></value></item><item><name>GitHubRelease</name><value><hd_link logicalPath="GitHubRelease" isseealso="yes">GitHubRelease</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype> instancetype </returntype>
+<result><p>The initialized instance
+</p></result>
+<declaration>- ( <declaration_type>instancetype</declaration_type> )<declaration_function>initWithAsset</declaration_function>: ( <declaration_type>GitHubReleaseAsset</declaration_type> <declaration_type>*</declaration_type> )<declaration_param>asset</declaration_param> 
+        <declaration_function>release</declaration_function>: ( <declaration_type>GitHubRelease</declaration_type> <declaration_type>*</declaration_type> )<declaration_var>release</declaration_var>; </declaration>
+<desc><p>Although not marked as so, this method acts as the class'
+designated initializer.
+</p></desc>
+</method></methods>
+<properties><property id="//xsdoc_ref/occ/instp/GitHubInstallWindowController/asset" lang="occ"><name>asset</name>
+<abstract><p>The asset proposed to be installed.
+</p></abstract>
+<attributelists><listattribute><name>See</name><list>
+<item><name>GitHubReleaseAsset</name><value><hd_link logicalPath="GitHubReleaseAsset" isseealso="yes">GitHubReleaseAsset</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype>GitHubReleaseAsset *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param>,
+    <declaration_param>strong</declaration_param>,
+    <declaration_param>nullable</declaration_param> ) <declaration_type>GitHubReleaseAsset</declaration_type> <declaration_type>*</declaration_type> <declaration_var>asset</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/GitHubInstallWindowController/githubRelease" lang="occ"><name>githubRelease</name>
+<abstract><p>The release proposed to be installed .
+</p></abstract>
+<attributelists><listattribute><name>See</name><list>
+<item><name>GitHubRelease</name><value><hd_link logicalPath="GitHubRelease" isseealso="yes">GitHubRelease</hd_link></value></item></list></listattribute>
+</attributelists>
+<returntype>GitHubRelease *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param>,
+    <declaration_param>strong</declaration_param>,
+    <declaration_param>nullable</declaration_param> ) <declaration_type>GitHubRelease</declaration_type> <declaration_type>*</declaration_type> <declaration_var>githubRelease</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/GitHubInstallWindowController/installingUpdate" lang="occ"><name>installingUpdate</name>
+<abstract><p>Whether an update is currently beeing installed.
+</p></abstract>
+<returntype>BOOL</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>installingUpdate</declaration_var>; </declaration>
+<desc><p/></desc>
+</property></properties>
+<timestamp>Sunday, June 18, 2017</timestamp>
+</class></classes>
+<copyrightinfo>&#169; (c) 2017, Jean-David Gadina - www.xs-labs.com
+</copyrightinfo>
+<timestamp>Sunday, June 18, 2017</timestamp>
+</header>

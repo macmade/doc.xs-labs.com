@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/io.h" lang="c" filename="io.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/dispatch/include/dispatch/io.h"><name>io.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdbool.h">&lt;stdbool.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/size_t.h">&lt;system/types/size_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/mode_t.h">&lt;system/types/mode_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/off_t.h">&lt;system/types/off_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/uint64_t.h">&lt;system/types/uint64_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/dispatch_fd_t.h">&lt;dispatch/types/dispatch_fd_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/dispatch_io_t.h">&lt;dispatch/types/dispatch_io_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/dispatch_io_handler_t.h">&lt;dispatch/types/dispatch_io_handler_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/dispatch_io_type_t.h">&lt;dispatch/types/dispatch_io_type_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/dispatch_io_close_flags_t.h">&lt;dispatch/types/dispatch_io_close_flags_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/dispatch_io_interval_flags_t.h">&lt;dispatch/types/dispatch_io_interval_flags_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/dispatch_queue_t.h">&lt;dispatch/types/dispatch_queue_t.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/dispatch_io_close" lang="c"><name>dispatch_io_close</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_io_t</type><name>channel</name></parsedparameter>
+<parsedparameter><type>dispatch_io_close_flags_t</type><name>flags</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>dispatch_io_close</declaration_function>(
+    <declaration_type>dispatch_io_t</declaration_type> <declaration_param>channel</declaration_param>,
+    <declaration_type>dispatch_io_close_flags_t</declaration_type> <declaration_param>flags</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_io_create" lang="c"><name>dispatch_io_create</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_io_type_t</type><name>type</name></parsedparameter>
+<parsedparameter><type>dispatch_fd_t</type><name>fd</name></parsedparameter>
+<parsedparameter><type>dispatch_queue_t</type><name>queue</name></parsedparameter>
+<parsedparameter><type>void</type><name>cleanup_handler</name></parsedparameter>
+</parsedparameterlist>
+<returntype> dispatch_io_t</returntype>
+<declaration><declaration_type>dispatch_io_t</declaration_type> <declaration_function>dispatch_io_create</declaration_function>(
+    <declaration_type>dispatch_io_type_t</declaration_type> <declaration_param>type</declaration_param>,
+    <declaration_type>dispatch_fd_t</declaration_type> <declaration_param>fd</declaration_param>,
+    <declaration_type>dispatch_queue_t</declaration_type> <declaration_param>queue</declaration_param>,
+    <declaration_type>void</declaration_type> ( ^ <declaration_param>cleanup_handler</declaration_param> )(
+        <declaration_type>int</declaration_type> <declaration_param>error</declaration_param> ) );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_io_create_with_path" lang="c"><name>dispatch_io_create_with_path</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_io_type_t</type><name>type</name></parsedparameter>
+<parsedparameter><type>const char *</type><name>path</name></parsedparameter>
+<parsedparameter><type>int</type><name>oflag</name></parsedparameter>
+<parsedparameter><type>mode_t</type><name>mode</name></parsedparameter>
+<parsedparameter><type>dispatch_queue_t</type><name>queue</name></parsedparameter>
+<parsedparameter><type>void</type><name>cleanup_handler</name></parsedparameter>
+</parsedparameterlist>
+<returntype> dispatch_io_t</returntype>
+<declaration><declaration_type>dispatch_io_t</declaration_type> <declaration_function>dispatch_io_create_with_path</declaration_function>(
+    <declaration_type>dispatch_io_type_t</declaration_type> <declaration_param>type</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>path</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>oflag</declaration_param>,
+    <declaration_type>mode_t</declaration_type> <declaration_param>mode</declaration_param>,
+    <declaration_type>dispatch_queue_t</declaration_type> <declaration_param>queue</declaration_param>,
+    <declaration_type>void</declaration_type> ( ^ <declaration_param>cleanup_handler</declaration_param> )(
+        <declaration_type>int</declaration_type> <declaration_param>error</declaration_param> ) );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_io_read" lang="c"><name>dispatch_io_read</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_io_t</type><name>channel</name></parsedparameter>
+<parsedparameter><type>off_t</type><name>offset</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>length</name></parsedparameter>
+<parsedparameter><type>dispatch_queue_t</type><name>queue</name></parsedparameter>
+<parsedparameter><type>dispatch_io_handler_t</type><name>io_handler</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>dispatch_io_read</declaration_function>(
+    <declaration_type>dispatch_io_t</declaration_type> <declaration_param>channel</declaration_param>,
+    <declaration_type>off_t</declaration_type> <declaration_param>offset</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>length</declaration_param>,
+    <declaration_type>dispatch_queue_t</declaration_type> <declaration_param>queue</declaration_param>,
+    <declaration_type>dispatch_io_handler_t</declaration_type> <declaration_param>io_handler</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_io_set_high_water" lang="c"><name>dispatch_io_set_high_water</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_io_t</type><name>channel</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>high_water</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>dispatch_io_set_high_water</declaration_function>(
+    <declaration_type>dispatch_io_t</declaration_type> <declaration_param>channel</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>high_water</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_io_set_interval" lang="c"><name>dispatch_io_set_interval</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_io_t</type><name>channel</name></parsedparameter>
+<parsedparameter><type>uint64_t</type><name>interval</name></parsedparameter>
+<parsedparameter><type>dispatch_io_interval_flags_t</type><name>flags</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>dispatch_io_set_interval</declaration_function>(
+    <declaration_type>dispatch_io_t</declaration_type> <declaration_param>channel</declaration_param>,
+    <declaration_type>uint64_t</declaration_type> <declaration_param>interval</declaration_param>,
+    <declaration_type>dispatch_io_interval_flags_t</declaration_type> <declaration_param>flags</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_io_set_low_water" lang="c"><name>dispatch_io_set_low_water</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_io_t</type><name>channel</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>low_water</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>dispatch_io_set_low_water</declaration_function>(
+    <declaration_type>dispatch_io_t</declaration_type> <declaration_param>channel</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>low_water</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_io_write" lang="c"><name>dispatch_io_write</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_io_t</type><name>channel</name></parsedparameter>
+<parsedparameter><type>off_t</type><name>offset</name></parsedparameter>
+<parsedparameter><type>dispatch_data_t</type><name>data</name></parsedparameter>
+<parsedparameter><type>dispatch_queue_t</type><name>queue</name></parsedparameter>
+<parsedparameter><type>dispatch_io_handler_t</type><name>io_handler</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>dispatch_io_write</declaration_function>(
+    <declaration_type>dispatch_io_t</declaration_type> <declaration_param>channel</declaration_param>,
+    <declaration_type>off_t</declaration_type> <declaration_param>offset</declaration_param>,
+    <declaration_type>dispatch_data_t</declaration_type> <declaration_param>data</declaration_param>,
+    <declaration_type>dispatch_queue_t</declaration_type> <declaration_param>queue</declaration_param>,
+    <declaration_type>dispatch_io_handler_t</declaration_type> <declaration_param>io_handler</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_read" lang="c"><name>dispatch_read</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_fd_t</type><name>fd</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>length</name></parsedparameter>
+<parsedparameter><type>dispatch_queue_t</type><name>queue</name></parsedparameter>
+<parsedparameter><type>void</type><name>handler</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>dispatch_read</declaration_function>(
+    <declaration_type>dispatch_fd_t</declaration_type> <declaration_param>fd</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>length</declaration_param>,
+    <declaration_type>dispatch_queue_t</declaration_type> <declaration_param>queue</declaration_param>,
+    <declaration_type>void</declaration_type> ( ^ <declaration_param>handler</declaration_param> )(
+        <declaration_type>dispatch_data_t</declaration_type> <declaration_param>data</declaration_param>,
+        <declaration_type>int</declaration_type> <declaration_param>error</declaration_param> ) );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_write" lang="c"><name>dispatch_write</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_fd_t</type><name>fd</name></parsedparameter>
+<parsedparameter><type>dispatch_data_t</type><name>data</name></parsedparameter>
+<parsedparameter><type>dispatch_queue_t</type><name>queue</name></parsedparameter>
+<parsedparameter><type>void</type><name>handler</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>dispatch_write</declaration_function>(
+    <declaration_type>dispatch_fd_t</declaration_type> <declaration_param>fd</declaration_param>,
+    <declaration_type>dispatch_data_t</declaration_type> <declaration_param>data</declaration_param>,
+    <declaration_type>dispatch_queue_t</declaration_type> <declaration_param>queue</declaration_param>,
+    <declaration_type>void</declaration_type> ( ^ <declaration_param>handler</declaration_param> )(
+        <declaration_type>dispatch_data_t</declaration_type> <declaration_param>data</declaration_param>,
+        <declaration_type>int</declaration_type> <declaration_param>error</declaration_param> ) );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_DISPATCH_IO_H__" definetype="value" lang="c"><name>__XEOS_LIB_DISPATCH_IO_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_DISPATCH_IO_H__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DISPATCH_IO_RANDOM" definetype="value" lang="c"><name>DISPATCH_IO_RANDOM</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DISPATCH_IO_RANDOM</declaration_preprocessor> <declaration_preprocessor>0x01</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DISPATCH_IO_STOP" definetype="value" lang="c"><name>DISPATCH_IO_STOP</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DISPATCH_IO_STOP</declaration_preprocessor> <declaration_preprocessor>0x01</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DISPATCH_IO_STREAM" definetype="value" lang="c"><name>DISPATCH_IO_STREAM</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DISPATCH_IO_STREAM</declaration_preprocessor> <declaration_preprocessor>0x00</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DISPATCH_IO_STRICT_INTERVAL" definetype="value" lang="c"><name>DISPATCH_IO_STRICT_INTERVAL</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DISPATCH_IO_STRICT_INTERVAL</declaration_preprocessor> <declaration_preprocessor>0x01</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

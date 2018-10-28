@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/stdlib.h" lang="c" filename="stdlib.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/c99/include/c99/stdlib.h"><name>stdlib.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/null.h">&lt;system/types/null.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/size_t.h">&lt;system/types/size_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/wchar_t.h">&lt;system/types/wchar_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/div_t.h">&lt;system/types/div_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/ldiv_t.h">&lt;system/types/ldiv_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/lldiv_t.h">&lt;system/types/lldiv_t.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/_Exit" lang="c"><name>_Exit</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>status</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>_Exit</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>status</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/abort" lang="c"><name>abort</name>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>abort</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/abs" lang="c"><name>abs</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>j</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>abs</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>j</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/atexit" lang="c"><name>atexit</name>
+<parsedparameterlist>
+<parsedparameter><type>void</type><name>func</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>atexit</declaration_function>(
+    <declaration_type>void</declaration_type> ( <declaration_type>*</declaration_type> <declaration_param>func</declaration_param> )(
+        <declaration_param>void</declaration_param> ) );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/atof" lang="c"><name>atof</name>
+<parsedparameterlist>
+<parsedparameter><type>const char *</type><name>nptr</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>atof</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>nptr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/atoi" lang="c"><name>atoi</name>
+<parsedparameterlist>
+<parsedparameter><type>const char *</type><name>nptr</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>atoi</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>nptr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/atol" lang="c"><name>atol</name>
+<parsedparameterlist>
+<parsedparameter><type>const char *</type><name>nptr</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long int</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>int</declaration_type> <declaration_function>atol</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>nptr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/atoll" lang="c"><name>atoll</name>
+<parsedparameterlist>
+<parsedparameter><type>const char *</type><name>nptr</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long long int</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>long</declaration_type> <declaration_type>int</declaration_type> <declaration_function>atoll</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>nptr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/bsearch" lang="c"><name>bsearch</name>
+<parsedparameterlist>
+<parsedparameter><type>const void *</type><name>key</name></parsedparameter>
+<parsedparameter><type>const void *</type><name>base</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>nmemb</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>size</name></parsedparameter>
+<parsedparameter><type>int</type><name>compar</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void *</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_function>bsearch</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>key</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>base</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>nmemb</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>size</declaration_param>,
+    <declaration_type>int</declaration_type> ( <declaration_type>*</declaration_type> <declaration_param>compar</declaration_param> )(
+        <declaration_keyword>const</declaration_keyword> <declaration_type>void</declaration_type> <declaration_param>*</declaration_param>,
+        <declaration_keyword>const</declaration_keyword> <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> ) );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/calloc" lang="c"><name>calloc</name>
+<parsedparameterlist>
+<parsedparameter><type>size_t</type><name>nmemb</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>size</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void *</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_function>calloc</declaration_function>(
+    <declaration_type>size_t</declaration_type> <declaration_param>nmemb</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>size</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/div" lang="c"><name>div</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>numer</name></parsedparameter>
+<parsedparameter><type>int</type><name>denom</name></parsedparameter>
+</parsedparameterlist>
+<returntype> div_t</returntype>
+<declaration><declaration_type>div_t</declaration_type> <declaration_function>div</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>numer</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>denom</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/exit" lang="c"><name>exit</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>status</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>exit</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>status</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/free" lang="c"><name>free</name>
+<parsedparameterlist>
+<parsedparameter><type>void *</type><name>ptr</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>free</declaration_function>(
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>ptr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/getenv" lang="c"><name>getenv</name>
+<parsedparameterlist>
+<parsedparameter><type>const char *</type><name>name</name></parsedparameter>
+</parsedparameterlist>
+<returntype> char *</returntype>
+<declaration><declaration_type>char</declaration_type> <declaration_type>*</declaration_type> <declaration_function>getenv</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>name</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/labs" lang="c"><name>labs</name>
+<parsedparameterlist>
+<parsedparameter><type>long int</type><name>j</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long int</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>int</declaration_type> <declaration_function>labs</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>int</declaration_type> <declaration_param>j</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ldiv" lang="c"><name>ldiv</name>
+<parsedparameterlist>
+<parsedparameter><type>long int</type><name>numer</name></parsedparameter>
+<parsedparameter><type>long int</type><name>denom</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ldiv_t</returntype>
+<declaration><declaration_type>ldiv_t</declaration_type> <declaration_function>ldiv</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>int</declaration_type> <declaration_param>numer</declaration_param>,
+    <declaration_type>long</declaration_type> <declaration_type>int</declaration_type> <declaration_param>denom</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/llabs" lang="c"><name>llabs</name>
+<parsedparameterlist>
+<parsedparameter><type>long long int</type><name>j</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long long int</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>long</declaration_type> <declaration_type>int</declaration_type> <declaration_function>llabs</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>long</declaration_type> <declaration_type>int</declaration_type> <declaration_param>j</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/lldiv" lang="c"><name>lldiv</name>
+<parsedparameterlist>
+<parsedparameter><type>long long int</type><name>numer</name></parsedparameter>
+<parsedparameter><type>long long int</type><name>denom</name></parsedparameter>
+</parsedparameterlist>
+<returntype> lldiv_t</returntype>
+<declaration><declaration_type>lldiv_t</declaration_type> <declaration_function>lldiv</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>long</declaration_type> <declaration_type>int</declaration_type> <declaration_param>numer</declaration_param>,
+    <declaration_type>long</declaration_type> <declaration_type>long</declaration_type> <declaration_type>int</declaration_type> <declaration_param>denom</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/malloc" lang="c"><name>malloc</name>
+<parsedparameterlist>
+<parsedparameter><type>size_t</type><name>size</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void *</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_function>malloc</declaration_function>(
+    <declaration_type>size_t</declaration_type> <declaration_param>size</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/mblen" lang="c"><name>mblen</name>
+<parsedparameterlist>
+<parsedparameter><type>const char *</type><name>s</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>n</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>mblen</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>s</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>n</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/mbstowcs" lang="c"><name>mbstowcs</name>
+<parsedparameterlist>
+<parsedparameter><type>wchar_t * restrict</type><name>pwcs</name></parsedparameter>
+<parsedparameter><type>const char * restrict</type><name>s</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>n</name></parsedparameter>
+</parsedparameterlist>
+<returntype> size_t</returntype>
+<declaration><declaration_type>size_t</declaration_type> <declaration_function>mbstowcs</declaration_function>(
+    <declaration_type>wchar_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>pwcs</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>s</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>n</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/mbtowc" lang="c"><name>mbtowc</name>
+<parsedparameterlist>
+<parsedparameter><type>wchar_t * restrict</type><name>pwc</name></parsedparameter>
+<parsedparameter><type>const char * restrict</type><name>s</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>n</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>mbtowc</declaration_function>(
+    <declaration_type>wchar_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>pwc</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>s</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>n</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/qsort" lang="c"><name>qsort</name>
+<parsedparameterlist>
+<parsedparameter><type>void *</type><name>base</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>nmemb</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>size</name></parsedparameter>
+<parsedparameter><type>int</type><name>compar</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>qsort</declaration_function>(
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>base</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>nmemb</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>size</declaration_param>,
+    <declaration_type>int</declaration_type> ( <declaration_type>*</declaration_type> <declaration_param>compar</declaration_param> )(
+        <declaration_keyword>const</declaration_keyword> <declaration_type>void</declaration_type> <declaration_param>*</declaration_param>,
+        <declaration_keyword>const</declaration_keyword> <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> ) );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/rand" lang="c"><name>rand</name>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>rand</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/realloc" lang="c"><name>realloc</name>
+<parsedparameterlist>
+<parsedparameter><type>void *</type><name>ptr</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>size</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void *</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_function>realloc</declaration_function>(
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>ptr</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>size</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/srand" lang="c"><name>srand</name>
+<parsedparameterlist>
+<parsedparameter><type>unsigned int</type><name>seed</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>srand</declaration_function>(
+    <declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_param>seed</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/strtod" lang="c"><name>strtod</name>
+<parsedparameterlist>
+<parsedparameter><type>const char * restrict</type><name>nptr</name></parsedparameter>
+<parsedparameter><type>char ** restrict</type><name>endptr</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>strtod</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>nptr</declaration_param>,
+    <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>endptr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/strtof" lang="c"><name>strtof</name>
+<parsedparameterlist>
+<parsedparameter><type>const char * restrict</type><name>nptr</name></parsedparameter>
+<parsedparameter><type>char ** restrict</type><name>endptr</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>strtof</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>nptr</declaration_param>,
+    <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>endptr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/strtol" lang="c"><name>strtol</name>
+<parsedparameterlist>
+<parsedparameter><type>const char * restrict</type><name>nptr</name></parsedparameter>
+<parsedparameter><type>char ** restrict</type><name>endptr</name></parsedparameter>
+<parsedparameter><type>int</type><name>base</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long int</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>int</declaration_type> <declaration_function>strtol</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>nptr</declaration_param>,
+    <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>endptr</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>base</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/strtold" lang="c"><name>strtold</name>
+<parsedparameterlist>
+<parsedparameter><type>const char * restrict</type><name>nptr</name></parsedparameter>
+<parsedparameter><type>char ** restrict</type><name>endptr</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>strtold</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>nptr</declaration_param>,
+    <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>endptr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/strtoll" lang="c"><name>strtoll</name>
+<parsedparameterlist>
+<parsedparameter><type>const char * restrict</type><name>nptr</name></parsedparameter>
+<parsedparameter><type>char ** restrict</type><name>endptr</name></parsedparameter>
+<parsedparameter><type>int</type><name>base</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long long int</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>long</declaration_type> <declaration_type>int</declaration_type> <declaration_function>strtoll</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>nptr</declaration_param>,
+    <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>endptr</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>base</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/strtoul" lang="c"><name>strtoul</name>
+<parsedparameterlist>
+<parsedparameter><type>const char * restrict</type><name>nptr</name></parsedparameter>
+<parsedparameter><type>char ** restrict</type><name>endptr</name></parsedparameter>
+<parsedparameter><type>int</type><name>base</name></parsedparameter>
+</parsedparameterlist>
+<returntype> unsigned long int</returntype>
+<declaration><declaration_keyword>unsigned</declaration_keyword> <declaration_type>long</declaration_type> <declaration_type>int</declaration_type> <declaration_function>strtoul</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>nptr</declaration_param>,
+    <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>endptr</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>base</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/strtoull" lang="c"><name>strtoull</name>
+<parsedparameterlist>
+<parsedparameter><type>const char * restrict</type><name>nptr</name></parsedparameter>
+<parsedparameter><type>char ** restrict</type><name>endptr</name></parsedparameter>
+<parsedparameter><type>int</type><name>base</name></parsedparameter>
+</parsedparameterlist>
+<returntype> unsigned long long int</returntype>
+<declaration><declaration_keyword>unsigned</declaration_keyword> <declaration_type>long</declaration_type> <declaration_type>long</declaration_type> <declaration_type>int</declaration_type> <declaration_function>strtoull</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>nptr</declaration_param>,
+    <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>endptr</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>base</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/system" lang="c"><name>system</name>
+<parsedparameterlist>
+<parsedparameter><type>const char *</type><name>string</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>system</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>string</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/wcstombs" lang="c"><name>wcstombs</name>
+<parsedparameterlist>
+<parsedparameter><type>char * restrict</type><name>s</name></parsedparameter>
+<parsedparameter><type>const wchar_t * restrict</type><name>pwcs</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>n</name></parsedparameter>
+</parsedparameterlist>
+<returntype> size_t</returntype>
+<declaration><declaration_type>size_t</declaration_type> <declaration_function>wcstombs</declaration_function>(
+    <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>s</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>wchar_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>pwcs</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>n</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/wctomb" lang="c"><name>wctomb</name>
+<parsedparameterlist>
+<parsedparameter><type>char *</type><name>s</name></parsedparameter>
+<parsedparameter><type>wchar_t</type><name>wc</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>wctomb</declaration_function>(
+    <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>s</declaration_param>,
+    <declaration_type>wchar_t</declaration_type> <declaration_param>wc</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<globals><variable id="//xsdoc_ref/c/data/__XEOS_LIB_C99_MB_CUR_MAX" lang="c"><name>__XEOS_LIB_C99_MB_CUR_MAX</name>
+<returntype>extern int</returntype>
+<declaration><declaration_keyword>extern</declaration_keyword> <declaration_type>int</declaration_type> <declaration_var>__XEOS_LIB_C99_MB_CUR_MAX</declaration_var>;  </declaration>
+<desc><p/></desc>
+</variable></globals>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_C99_STDLIB_H__" definetype="value" lang="c"><name>__XEOS_LIB_C99_STDLIB_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_C99_STDLIB_H__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/EXIT_FAILURE" definetype="value" lang="c"><name>EXIT_FAILURE</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>EXIT_FAILURE</declaration_preprocessor> <declaration_preprocessor>1</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/EXIT_SUCCESS" definetype="value" lang="c"><name>EXIT_SUCCESS</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>EXIT_SUCCESS</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/MB_CUR_MAX" definetype="value" lang="c"><name>MB_CUR_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>MB_CUR_MAX</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_C99_MB_CUR_MAX</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/RAND_MAX" definetype="value" lang="c"><name>RAND_MAX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>RAND_MAX</declaration_preprocessor> <declaration_preprocessor>0x7FFFFFFF</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

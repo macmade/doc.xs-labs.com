@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/threads.h" lang="c" filename="threads.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/c11/include/c11/threads.h"><name>threads.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/time.h">&lt;time.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/cnd_t.h">&lt;system/types/cnd_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/thrd_t.h">&lt;system/types/thrd_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/tss_t.h">&lt;system/types/tss_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/mtx_t.h">&lt;system/types/mtx_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/tss_dtor_t.h">&lt;system/types/tss_dtor_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/thrd_start_t.h">&lt;system/types/thrd_start_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/once_flag.h">&lt;system/types/once_flag.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/call_once" lang="c"><name>call_once</name>
+<parsedparameterlist>
+<parsedparameter><type>once_flag *</type><name>flag</name></parsedparameter>
+<parsedparameter><type>void</type><name>func</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>call_once</declaration_function>(
+    <declaration_type>once_flag</declaration_type> <declaration_type>*</declaration_type><declaration_param>flag</declaration_param>,
+    <declaration_type>void</declaration_type> ( <declaration_type>*</declaration_type> <declaration_param>func</declaration_param> )(
+        <declaration_param>void</declaration_param> ) );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/cnd_broadcast" lang="c"><name>cnd_broadcast</name>
+<parsedparameterlist>
+<parsedparameter><type>cnd_t *</type><name>cond</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>cnd_broadcast</declaration_function>(
+    <declaration_type>cnd_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>cond</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/cnd_destroy" lang="c"><name>cnd_destroy</name>
+<parsedparameterlist>
+<parsedparameter><type>cnd_t *</type><name>cond</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>cnd_destroy</declaration_function>(
+    <declaration_type>cnd_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>cond</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/cnd_init" lang="c"><name>cnd_init</name>
+<parsedparameterlist>
+<parsedparameter><type>cnd_t *</type><name>cond</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>cnd_init</declaration_function>(
+    <declaration_type>cnd_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>cond</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/cnd_signal" lang="c"><name>cnd_signal</name>
+<parsedparameterlist>
+<parsedparameter><type>cnd_t *</type><name>cond</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>cnd_signal</declaration_function>(
+    <declaration_type>cnd_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>cond</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/cnd_timedwait" lang="c"><name>cnd_timedwait</name>
+<parsedparameterlist>
+<parsedparameter><type>cnd_t * restrict</type><name>cond</name></parsedparameter>
+<parsedparameter><type>mtx_t * restrict</type><name>mtx</name></parsedparameter>
+<parsedparameter><type>const struct timespec *</type><name>restrict</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>cnd_timedwait</declaration_function>(
+    <declaration_type>cnd_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>cond</declaration_param>,
+    <declaration_type>mtx_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>mtx</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>timespec</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>ts</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/cnd_wait" lang="c"><name>cnd_wait</name>
+<parsedparameterlist>
+<parsedparameter><type>cnd_t *</type><name>cond</name></parsedparameter>
+<parsedparameter><type>mtx_t *</type><name>mtx</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>cnd_wait</declaration_function>(
+    <declaration_type>cnd_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>cond</declaration_param>,
+    <declaration_type>mtx_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>mtx</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/mtx_destroy" lang="c"><name>mtx_destroy</name>
+<parsedparameterlist>
+<parsedparameter><type>mtx_t *</type><name>mtx</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>mtx_destroy</declaration_function>(
+    <declaration_type>mtx_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>mtx</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/mtx_init" lang="c"><name>mtx_init</name>
+<parsedparameterlist>
+<parsedparameter><type>mtx_t *</type><name>mtx</name></parsedparameter>
+<parsedparameter><type>int</type><name>type</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>mtx_init</declaration_function>(
+    <declaration_type>mtx_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>mtx</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>type</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/mtx_lock" lang="c"><name>mtx_lock</name>
+<parsedparameterlist>
+<parsedparameter><type>mtx_t *</type><name>mtx</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>mtx_lock</declaration_function>(
+    <declaration_type>mtx_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>mtx</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/mtx_timedlock" lang="c"><name>mtx_timedlock</name>
+<parsedparameterlist>
+<parsedparameter><type>mtx_t * restrict</type><name>mtx</name></parsedparameter>
+<parsedparameter><type>const struct timespec *</type><name>restrict</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>mtx_timedlock</declaration_function>(
+    <declaration_type>mtx_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>mtx</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>timespec</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>ts</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/mtx_trylock" lang="c"><name>mtx_trylock</name>
+<parsedparameterlist>
+<parsedparameter><type>mtx_t *</type><name>mtx</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>mtx_trylock</declaration_function>(
+    <declaration_type>mtx_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>mtx</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/mtx_unlock" lang="c"><name>mtx_unlock</name>
+<parsedparameterlist>
+<parsedparameter><type>mtx_t *</type><name>mtx</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>mtx_unlock</declaration_function>(
+    <declaration_type>mtx_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>mtx</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/thrd_create" lang="c"><name>thrd_create</name>
+<parsedparameterlist>
+<parsedparameter><type>thrd_t *</type><name>thr</name></parsedparameter>
+<parsedparameter><type>thrd_start_t</type><name>func</name></parsedparameter>
+<parsedparameter><type>void *</type><name>arg</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>thrd_create</declaration_function>(
+    <declaration_type>thrd_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>thr</declaration_param>,
+    <declaration_type>thrd_start_t</declaration_type> <declaration_param>func</declaration_param>,
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>arg</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/thrd_current" lang="c"><name>thrd_current</name>
+<returntype> thrd_t</returntype>
+<declaration><declaration_type>thrd_t</declaration_type> <declaration_function>thrd_current</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/thrd_detach" lang="c"><name>thrd_detach</name>
+<parsedparameterlist>
+<parsedparameter><type>thrd_t</type><name>thr</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>thrd_detach</declaration_function>(
+    <declaration_type>thrd_t</declaration_type> <declaration_param>thr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/thrd_equal" lang="c"><name>thrd_equal</name>
+<parsedparameterlist>
+<parsedparameter><type>thrd_t</type><name>thr0</name></parsedparameter>
+<parsedparameter><type>thrd_t</type><name>thr1</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>thrd_equal</declaration_function>(
+    <declaration_type>thrd_t</declaration_type> <declaration_param>thr0</declaration_param>,
+    <declaration_type>thrd_t</declaration_type> <declaration_param>thr1</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/thrd_exit" lang="c"><name>thrd_exit</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>res</name></parsedparameter>
+</parsedparameterlist>
+<returntype> _Noreturn void</returntype>
+<declaration><declaration_type>_Noreturn</declaration_type> <declaration_type>void</declaration_type> <declaration_function>thrd_exit</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>res</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/thrd_join" lang="c"><name>thrd_join</name>
+<parsedparameterlist>
+<parsedparameter><type>thrd_t</type><name>thr</name></parsedparameter>
+<parsedparameter><type>int *</type><name>res</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>thrd_join</declaration_function>(
+    <declaration_type>thrd_t</declaration_type> <declaration_param>thr</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_type>*</declaration_type><declaration_param>res</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/thrd_sleep" lang="c"><name>thrd_sleep</name>
+<parsedparameterlist>
+<parsedparameter><type>const struct timespec *</type><name>duration</name></parsedparameter>
+<parsedparameter><type>struct timespec *</type><name>remaining</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>thrd_sleep</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>timespec</declaration_type> <declaration_type>*</declaration_type><declaration_param>duration</declaration_param>,
+    <declaration_keyword>struct</declaration_keyword> <declaration_type>timespec</declaration_type> <declaration_type>*</declaration_type><declaration_param>remaining</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/thrd_yield" lang="c"><name>thrd_yield</name>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>thrd_yield</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/tss_create" lang="c"><name>tss_create</name>
+<parsedparameterlist>
+<parsedparameter><type>tss_t *</type><name>key</name></parsedparameter>
+<parsedparameter><type>tss_dtor_t</type><name>dtor</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>tss_create</declaration_function>(
+    <declaration_type>tss_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>key</declaration_param>,
+    <declaration_type>tss_dtor_t</declaration_type> <declaration_param>dtor</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/tss_delete" lang="c"><name>tss_delete</name>
+<parsedparameterlist>
+<parsedparameter><type>tss_t</type><name>key</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>tss_delete</declaration_function>(
+    <declaration_type>tss_t</declaration_type> <declaration_param>key</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/tss_get" lang="c"><name>tss_get</name>
+<parsedparameterlist>
+<parsedparameter><type>tss_t</type><name>key</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void *</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_function>tss_get</declaration_function>(
+    <declaration_type>tss_t</declaration_type> <declaration_param>key</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/tss_set" lang="c"><name>tss_set</name>
+<parsedparameterlist>
+<parsedparameter><type>tss_t</type><name>key</name></parsedparameter>
+<parsedparameter><type>void *</type><name>val</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>tss_set</declaration_function>(
+    <declaration_type>tss_t</declaration_type> <declaration_param>key</declaration_param>,
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>val</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<enums><enum id="//xsdoc_ref/c/tag/mtx_plain" lang="c"><name>mtx_plain</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>mtx_plain</name></parsedparameter>
+<parsedparameter><type></type><name>mtx_recursive</name></parsedparameter>
+<parsedparameter><type></type><name>mtx_timed</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>mtx_plain</declaration_var> = <declaration_number>0x01</declaration_number>, 
+    <declaration_var>mtx_recursive</declaration_var> = <declaration_number>0x02</declaration_number>, 
+    <declaration_var>mtx_timed</declaration_var> = <declaration_number>0x04</declaration_number> 
+};  </declaration>
+<desc><p/></desc>
+</enum><enum id="//xsdoc_ref/c/tag/thrd_success" lang="c"><name>thrd_success</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>thrd_success</name></parsedparameter>
+<parsedparameter><type></type><name>thrd_error</name></parsedparameter>
+<parsedparameter><type></type><name>thrd_timedout</name></parsedparameter>
+<parsedparameter><type></type><name>thrd_busy</name></parsedparameter>
+<parsedparameter><type></type><name>thrd_nomem</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>thrd_success</declaration_var> = <declaration_number>0x00</declaration_number>, 
+    <declaration_var>thrd_error</declaration_var> = <declaration_number>0x01</declaration_number>, 
+    <declaration_var>thrd_timedout</declaration_var> = <declaration_number>0x02</declaration_number>, 
+    <declaration_var>thrd_busy</declaration_var> = <declaration_number>0x03</declaration_number>, 
+    <declaration_var>thrd_nomem</declaration_var> = <declaration_number>0x04</declaration_number> 
+};  </declaration>
+<desc><p/></desc>
+</enum></enums><defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_C11_THREADS_H__" definetype="value" lang="c"><name>__XEOS_LIB_C11_THREADS_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_C11_THREADS_H__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/thread_local" definetype="value" lang="c"><name>thread_local</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>thread_local</declaration_preprocessor> <declaration_preprocessor>_Thread_local</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/TSS_DTOR_ITERATIONS" definetype="value" lang="c"><name>TSS_DTOR_ITERATIONS</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>TSS_DTOR_ITERATIONS</declaration_preprocessor> <declaration_preprocessor>1</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

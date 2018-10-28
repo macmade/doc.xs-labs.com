@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/locale.h" lang="c" filename="locale.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/posix/include/posix/locale.h"><name>locale.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/locale.h">&lt;c99/locale.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/locale_t.h">&lt;system/types/locale_t.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/duplocale" lang="c"><name>duplocale</name>
+<parsedparameterlist>
+<parsedparameter><type>locale_t</type><name>locobj</name></parsedparameter>
+</parsedparameterlist>
+<returntype> locale_t</returntype>
+<declaration><declaration_type>locale_t</declaration_type> <declaration_function>duplocale</declaration_function>(
+    <declaration_type>locale_t</declaration_type> <declaration_param>locobj</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/freelocale" lang="c"><name>freelocale</name>
+<parsedparameterlist>
+<parsedparameter><type>locale_t</type><name>locobj</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>freelocale</declaration_function>(
+    <declaration_type>locale_t</declaration_type> <declaration_param>locobj</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/newlocale" lang="c"><name>newlocale</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>category_mask</name></parsedparameter>
+<parsedparameter><type>const char *</type><name>locale</name></parsedparameter>
+<parsedparameter><type>locale_t</type><name>base</name></parsedparameter>
+</parsedparameterlist>
+<returntype> locale_t</returntype>
+<declaration><declaration_type>locale_t</declaration_type> <declaration_function>newlocale</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>category_mask</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>locale</declaration_param>,
+    <declaration_type>locale_t</declaration_type> <declaration_param>base</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/uselocale" lang="c"><name>uselocale</name>
+<parsedparameterlist>
+<parsedparameter><type>locale_t</type><name>ocobj</name></parsedparameter>
+</parsedparameterlist>
+<returntype> locale_t</returntype>
+<declaration><declaration_type>locale_t</declaration_type> <declaration_function>uselocale</declaration_function>(
+    <declaration_type>locale_t</declaration_type> <declaration_param>ocobj</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_POSIX_LOCALE_H__" definetype="value" lang="c"><name>__XEOS_LIB_POSIX_LOCALE_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_POSIX_LOCALE_H__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LC_ALL_MASK" definetype="value" lang="c"><name>LC_ALL_MASK</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LC_ALL_MASK</declaration_preprocessor> <declaration_preprocessor>0x3F</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LC_COLLATE_MASK" definetype="value" lang="c"><name>LC_COLLATE_MASK</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LC_COLLATE_MASK</declaration_preprocessor> <declaration_preprocessor>0x01</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LC_CTYPE_MASK" definetype="value" lang="c"><name>LC_CTYPE_MASK</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LC_CTYPE_MASK</declaration_preprocessor> <declaration_preprocessor>0x02</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LC_GLOBAL_LOCALE" definetype="value" lang="c"><name>LC_GLOBAL_LOCALE</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LC_GLOBAL_LOCALE</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>locale_t</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>-</declaration_preprocessor><declaration_preprocessor>1</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LC_MESSAGES" definetype="value" lang="c"><name>LC_MESSAGES</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LC_MESSAGES</declaration_preprocessor> <declaration_preprocessor>6</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LC_MESSAGES_MASK" definetype="value" lang="c"><name>LC_MESSAGES_MASK</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LC_MESSAGES_MASK</declaration_preprocessor> <declaration_preprocessor>0x04</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LC_MONETARY_MASK" definetype="value" lang="c"><name>LC_MONETARY_MASK</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LC_MONETARY_MASK</declaration_preprocessor> <declaration_preprocessor>0x08</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LC_NUMERIC_MASK" definetype="value" lang="c"><name>LC_NUMERIC_MASK</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LC_NUMERIC_MASK</declaration_preprocessor> <declaration_preprocessor>0x10</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LC_TIME_MASK" definetype="value" lang="c"><name>LC_TIME_MASK</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LC_TIME_MASK</declaration_preprocessor> <declaration_preprocessor>0x20</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

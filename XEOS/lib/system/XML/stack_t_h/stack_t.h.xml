@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/stack_t.h" lang="c" filename="stack_t.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/system/include/system/types/stack_t.h"><name>stack_t.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdint.h">&lt;system/types/__private/stdint.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/size_t.h">&lt;system/types/size_t.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<typedefs><typedef id="//xsdoc_ref/c/tdef/stack_t" lang="c" type="simple"><name>stack_t</name>
+<parsedparameterlist>
+<parsedparameter><type>size_t</type><name>ss_size</name></parsedparameter>
+<parsedparameter><type>void *</type><name>ss_sp</name></parsedparameter>
+<parsedparameter><type>int</type><name>ss_flags</name></parsedparameter>
+<parsedparameter><type>char</type><name>__pad_0</name></parsedparameter>
+</parsedparameterlist>
+<declaration> <declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> { 
+    <declaration_type>size_t</declaration_type> <declaration_var>ss_size</declaration_var>; 
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_var>ss_sp</declaration_var>; 
+    <declaration_type>int</declaration_type> <declaration_var>ss_flags</declaration_var>;  
+    <declaration_type>char</declaration_type> <declaration_type>__pad_0</declaration_type>[ <declaration_number>4</declaration_number> ]; 
+} <declaration_var>stack_t</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef></typedefs><defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_SYSTEM_TYPES_STACK_T_H__" definetype="value" lang="c"><name>__XEOS_LIB_SYSTEM_TYPES_STACK_T_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_SYSTEM_TYPES_STACK_T_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

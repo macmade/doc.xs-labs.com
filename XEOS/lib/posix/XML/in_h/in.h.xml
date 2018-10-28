@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/in.h" lang="c" filename="in.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/posix/include/posix/netinet/in.h"><name>in.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/inet.h">&lt;arpa/inet.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/inttypes.h">&lt;inttypes.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/socket.h">&lt;sys/socket.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/in_port_t.h">&lt;system/types/in_port_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/in_addr_t.h">&lt;system/types/in_addr_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/sa_family_t.h">&lt;system/types/sa_family_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/uint8_t.h">&lt;system/types/uint8_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/uint32_t.h">&lt;system/types/uint32_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/struct_in_addr.h">&lt;system/types/struct_in_addr.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/struct_sockaddr_in.h">&lt;system/types/struct_sockaddr_in.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/struct_in6_addr.h">&lt;system/types/struct_in6_addr.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/struct_sockaddr_in6.h">&lt;system/types/struct_sockaddr_in6.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/struct_ipv6_mreq.h">&lt;system/types/struct_ipv6_mreq.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/inet_addrstrlen.h">&lt;system/types/inet_addrstrlen.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/inet6_addrstrlen.h">&lt;system/types/inet6_addrstrlen.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<constants><constant id="//xsdoc_ref/c/data/in6addr_any" lang="c"><name>in6addr_any</name>
+<returntype>extern const struct in6_addr</returntype>
+<declaration> <declaration_keyword>extern</declaration_keyword> <declaration_keyword>const</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>in6_addr</declaration_type> <declaration_var>in6addr_any</declaration_var>;  </declaration>
+<desc><p/></desc>
+</constant><constant id="//xsdoc_ref/c/data/in6addr_loopback" lang="c"><name>in6addr_loopback</name>
+<returntype>extern const struct in6_addr</returntype>
+<declaration><declaration_keyword>extern</declaration_keyword> <declaration_keyword>const</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>in6_addr</declaration_type> <declaration_var>in6addr_loopback</declaration_var>;  </declaration>
+<desc><p/></desc>
+</constant></constants>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_POSIX_NETINET_IN_H__" definetype="value" lang="c"><name>__XEOS_LIB_POSIX_NETINET_IN_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_POSIX_NETINET_IN_H__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/IN6_IS_ADDR_LINKLOCAL" definetype="function" lang="c"><name>IN6_IS_ADDR_LINKLOCAL</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_s_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>IN6_IS_ADDR_LINKLOCAL</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_s_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/IN6_IS_ADDR_LOOPBACK" definetype="function" lang="c"><name>IN6_IS_ADDR_LOOPBACK</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_s_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>IN6_IS_ADDR_LOOPBACK</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_s_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/IN6_IS_ADDR_MC_GLOBAL" definetype="function" lang="c"><name>IN6_IS_ADDR_MC_GLOBAL</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_s_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>IN6_IS_ADDR_MC_GLOBAL</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_s_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/IN6_IS_ADDR_MC_LINKLOCAL" definetype="function" lang="c"><name>IN6_IS_ADDR_MC_LINKLOCAL</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_s_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>IN6_IS_ADDR_MC_LINKLOCAL</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_s_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/IN6_IS_ADDR_MC_NODELOCAL" definetype="function" lang="c"><name>IN6_IS_ADDR_MC_NODELOCAL</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_s_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>IN6_IS_ADDR_MC_NODELOCAL</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_s_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/IN6_IS_ADDR_MC_ORGLOCAL" definetype="function" lang="c"><name>IN6_IS_ADDR_MC_ORGLOCAL</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_s_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>IN6_IS_ADDR_MC_ORGLOCAL</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_s_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/IN6_IS_ADDR_MC_SITELOCAL" definetype="function" lang="c"><name>IN6_IS_ADDR_MC_SITELOCAL</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_s_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>IN6_IS_ADDR_MC_SITELOCAL</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_s_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/IN6_IS_ADDR_MULTICAST" definetype="function" lang="c"><name>IN6_IS_ADDR_MULTICAST</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_s_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>IN6_IS_ADDR_MULTICAST</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_s_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/IN6_IS_ADDR_SITELOCAL" definetype="function" lang="c"><name>IN6_IS_ADDR_SITELOCAL</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_s_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>IN6_IS_ADDR_SITELOCAL</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_s_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/IN6_IS_ADDR_UNSPECIFIED" definetype="function" lang="c"><name>IN6_IS_ADDR_UNSPECIFIED</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_s_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>IN6_IS_ADDR_UNSPECIFIED</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_s_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/IN6_IS_ADDR_V4COMPAT" definetype="function" lang="c"><name>IN6_IS_ADDR_V4COMPAT</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_s_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>IN6_IS_ADDR_V4COMPAT</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_s_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/IN6_IS_ADDR_V4MAPPED" definetype="function" lang="c"><name>IN6_IS_ADDR_V4MAPPED</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_s_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>IN6_IS_ADDR_V4MAPPED</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_s_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/IN6ADDR_ANY_INIT" definetype="value" lang="c"><name>IN6ADDR_ANY_INIT</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>IN6ADDR_ANY_INIT</declaration_preprocessor> <declaration_preprocessor>{</declaration_preprocessor><declaration_preprocessor>{</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>0x00</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>0x00</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>0x00</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>0x00</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>0x00</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>0x00</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>0x00</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>0x00</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>0x00</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>0x00</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>0x00</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>0x00</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>0x00</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>0x00</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>0x00</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>0x00</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>}</declaration_preprocessor><declaration_preprocessor>}</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/IN6ADDR_LOOPBACK_INIT" definetype="value" lang="c"><name>IN6ADDR_LOOPBACK_INIT</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>IN6ADDR_LOOPBACK_INIT</declaration_preprocessor> <declaration_preprocessor>{</declaration_preprocessor><declaration_preprocessor>{</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>0x00</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>0x00</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>0x00</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>0x00</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>0x00</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>0x00</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>0x00</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>0x00</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>0x00</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>0x00</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>0x00</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>0x00</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>0x00</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>0x00</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>0x00</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>0x01</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>}</declaration_preprocessor><declaration_preprocessor>}</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INADDR_ANY" definetype="value" lang="c"><name>INADDR_ANY</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INADDR_ANY</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>in_addr_t</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>0x00000000</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INADDR_BROADCAST" definetype="value" lang="c"><name>INADDR_BROADCAST</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INADDR_BROADCAST</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>in_addr_t</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>0xFFFFFFFF</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/IPPROTO_ICMP" definetype="value" lang="c"><name>IPPROTO_ICMP</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>IPPROTO_ICMP</declaration_preprocessor> <declaration_preprocessor>3</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/IPPROTO_IP" definetype="value" lang="c"><name>IPPROTO_IP</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>IPPROTO_IP</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/IPPROTO_IPV6" definetype="value" lang="c"><name>IPPROTO_IPV6</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>IPPROTO_IPV6</declaration_preprocessor> <declaration_preprocessor>2</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/IPPROTO_RAW" definetype="value" lang="c"><name>IPPROTO_RAW</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>IPPROTO_RAW</declaration_preprocessor> <declaration_preprocessor>4</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/IPPROTO_TCP" definetype="value" lang="c"><name>IPPROTO_TCP</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>IPPROTO_TCP</declaration_preprocessor> <declaration_preprocessor>5</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/IPPROTO_UDP" definetype="value" lang="c"><name>IPPROTO_UDP</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>IPPROTO_UDP</declaration_preprocessor> <declaration_preprocessor>6</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/IPV6_JOIN_GROUP" definetype="value" lang="c"><name>IPV6_JOIN_GROUP</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>IPV6_JOIN_GROUP</declaration_preprocessor> <declaration_preprocessor>1</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/IPV6_LEAVE_GROUP" definetype="value" lang="c"><name>IPV6_LEAVE_GROUP</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>IPV6_LEAVE_GROUP</declaration_preprocessor> <declaration_preprocessor>2</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/IPV6_MULTICAST_HOPS" definetype="value" lang="c"><name>IPV6_MULTICAST_HOPS</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>IPV6_MULTICAST_HOPS</declaration_preprocessor> <declaration_preprocessor>3</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/IPV6_MULTICAST_IF" definetype="value" lang="c"><name>IPV6_MULTICAST_IF</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>IPV6_MULTICAST_IF</declaration_preprocessor> <declaration_preprocessor>4</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/IPV6_MULTICAST_LOOP" definetype="value" lang="c"><name>IPV6_MULTICAST_LOOP</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>IPV6_MULTICAST_LOOP</declaration_preprocessor> <declaration_preprocessor>5</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/IPV6_UNICAST_HOPS" definetype="value" lang="c"><name>IPV6_UNICAST_HOPS</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>IPV6_UNICAST_HOPS</declaration_preprocessor> <declaration_preprocessor>6</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/IPV6_V6ONLY" definetype="value" lang="c"><name>IPV6_V6ONLY</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>IPV6_V6ONLY</declaration_preprocessor> <declaration_preprocessor>7</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

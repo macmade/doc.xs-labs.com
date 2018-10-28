@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/aio.h" lang="c" filename="aio.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/posix/include/posix/aio.h"><name>aio.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/fcntl.h">&lt;fcntl.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/signal.h">&lt;signal.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/time.h">&lt;time.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/struct_aiocb.h">&lt;system/types/struct_aiocb.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/off_t.h">&lt;system/types/off_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pthread_attr_t.h">&lt;system/types/pthread_attr_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/size_t.h">&lt;system/types/size_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/ssize_t.h">&lt;system/types/ssize_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/struct_timespec.h">&lt;system/types/struct_timespec.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/aio_cancel" lang="c"><name>aio_cancel</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>fildes</name></parsedparameter>
+<parsedparameter><type>struct aiocb *</type><name>aiocbp</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>aio_cancel</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>fildes</declaration_param>,
+    <declaration_keyword>struct</declaration_keyword> <declaration_type>aiocb</declaration_type> <declaration_type>*</declaration_type><declaration_param>aiocbp</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/aio_error" lang="c"><name>aio_error</name>
+<parsedparameterlist>
+<parsedparameter><type>const struct aiocb *</type><name>aiocbp</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>aio_error</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>aiocb</declaration_type> <declaration_type>*</declaration_type><declaration_param>aiocbp</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/aio_fsync" lang="c"><name>aio_fsync</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>op</name></parsedparameter>
+<parsedparameter><type>struct aiocb *</type><name>aiocbp</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>aio_fsync</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>op</declaration_param>,
+    <declaration_keyword>struct</declaration_keyword> <declaration_type>aiocb</declaration_type> <declaration_type>*</declaration_type><declaration_param>aiocbp</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/aio_read" lang="c"><name>aio_read</name>
+<parsedparameterlist>
+<parsedparameter><type>struct aiocb *</type><name>aiocbp</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>aio_read</declaration_function>(
+    <declaration_keyword>struct</declaration_keyword> <declaration_type>aiocb</declaration_type> <declaration_type>*</declaration_type><declaration_param>aiocbp</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/aio_return" lang="c"><name>aio_return</name>
+<parsedparameterlist>
+<parsedparameter><type>struct aiocb *</type><name>aiocbp</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ssize_t</returntype>
+<declaration><declaration_type>ssize_t</declaration_type> <declaration_function>aio_return</declaration_function>(
+    <declaration_keyword>struct</declaration_keyword> <declaration_type>aiocb</declaration_type> <declaration_type>*</declaration_type><declaration_param>aiocbp</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/aio_suspend" lang="c"><name>aio_suspend</name>
+<parsedparameterlist>
+<parsedparameter><type>const struct aiocb *</type><name>const</name></parsedparameter>
+<parsedparameter><type>int</type><name>nent</name></parsedparameter>
+<parsedparameter><type>const struct timespec *</type><name>timeout</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>aio_suspend</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>aiocb</declaration_type> <declaration_type>*</declaration_type><declaration_keyword>const</declaration_keyword> <declaration_type>list</declaration_type>[],
+    <declaration_type>int</declaration_type> <declaration_param>nent</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>timespec</declaration_type> <declaration_type>*</declaration_type><declaration_param>timeout</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/aio_write" lang="c"><name>aio_write</name>
+<parsedparameterlist>
+<parsedparameter><type>struct aiocb *</type><name>aiocbp</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>aio_write</declaration_function>(
+    <declaration_keyword>struct</declaration_keyword> <declaration_type>aiocb</declaration_type> <declaration_type>*</declaration_type><declaration_param>aiocbp</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/lio_listio" lang="c"><name>lio_listio</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>mode</name></parsedparameter>
+<parsedparameter><type>struct aiocb *</type><name>restrict</name></parsedparameter>
+<parsedparameter><type>int</type><name>nent</name></parsedparameter>
+<parsedparameter><type>struct sigevent *</type><name>restrict</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>lio_listio</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>mode</declaration_param>,
+    <declaration_keyword>struct</declaration_keyword> <declaration_type>aiocb</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_keyword>const</declaration_keyword> <declaration_type>list</declaration_type>[ <declaration_type>restrict</declaration_type> ],
+    <declaration_type>int</declaration_type> <declaration_param>nent</declaration_param>,
+    <declaration_keyword>struct</declaration_keyword> <declaration_type>sigevent</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>sig</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<structs_and_unions><struct id="//xsdoc_ref/c/tag/sigevent" lang="c"><name>sigevent</name>
+<declaration> <declaration_keyword>struct</declaration_keyword> <declaration_var>sigevent</declaration_var>;  </declaration>
+<desc><p/></desc>
+</struct></structs_and_unions><defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_POSIX_AIO_H__" definetype="value" lang="c"><name>__XEOS_LIB_POSIX_AIO_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_POSIX_AIO_H__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/AIO_ALLDONE" definetype="value" lang="c"><name>AIO_ALLDONE</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>AIO_ALLDONE</declaration_preprocessor> <declaration_preprocessor>0x01</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/AIO_CANCELED" definetype="value" lang="c"><name>AIO_CANCELED</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>AIO_CANCELED</declaration_preprocessor> <declaration_preprocessor>0x02</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/AIO_NOTCANCELED" definetype="value" lang="c"><name>AIO_NOTCANCELED</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>AIO_NOTCANCELED</declaration_preprocessor> <declaration_preprocessor>0x04</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LIO_NOP" definetype="value" lang="c"><name>LIO_NOP</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LIO_NOP</declaration_preprocessor> <declaration_preprocessor>0x00</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LIO_NOWAIT" definetype="value" lang="c"><name>LIO_NOWAIT</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LIO_NOWAIT</declaration_preprocessor> <declaration_preprocessor>0x02</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LIO_READ" definetype="value" lang="c"><name>LIO_READ</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LIO_READ</declaration_preprocessor> <declaration_preprocessor>0x01</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LIO_WAIT" definetype="value" lang="c"><name>LIO_WAIT</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LIO_WAIT</declaration_preprocessor> <declaration_preprocessor>0x01</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/LIO_WRITE" definetype="value" lang="c"><name>LIO_WRITE</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>LIO_WRITE</declaration_preprocessor> <declaration_preprocessor>0x02</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

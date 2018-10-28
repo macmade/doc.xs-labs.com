@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/union_sigval.h" lang="c" filename="union_sigval.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/system/include/system/types/union_sigval.h"><name>union_sigval.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdint.h">&lt;system/types/__private/stdint.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<structs_and_unions><union id="//xsdoc_ref/c/tag/sigval" lang="c"><name>sigval</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>sival_int</name></parsedparameter>
+<parsedparameter><type>void *</type><name>sival_ptr</name></parsedparameter>
+</parsedparameterlist>
+<declaration> <declaration_keyword>union</declaration_keyword> <declaration_type>sigval</declaration_type> { 
+    <declaration_type>int</declaration_type> <declaration_var>sival_int</declaration_var>; 
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_var>sival_ptr</declaration_var>; 
+};  </declaration>
+<desc><p/></desc>
+</union></structs_and_unions><defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_SYSTEM_TYPES_UNION_SIGVAL_H__" definetype="value" lang="c"><name>__XEOS_LIB_SYSTEM_TYPES_UNION_SIGVAL_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_SYSTEM_TYPES_UNION_SIGVAL_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/WIN32.h" lang="c" filename="WIN32.h" headerpath="/Users/macmade/Documents/Macmade/DigiDNA/GitHub/ISOBMFF/Documentation/tmp/include/ISOBMFF/WIN32.h"><name>WIN32.hpp</name>
+<attributes><attribute><name>Author</name><value>Jean-David Gadina - www.digidna.net</value></attribute>
+</attributes>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/string">&lt;string&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Macros.hpp">&lt;ISOBMFF/Macros.hpp&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/StringToWideString" lang="c"><name>StringToWideString</name>
+<abstract><p>Converts a string to a wide-string.
+</p></abstract>
+<parameterlist>
+<parameter><name>ws</name><desc><p>The string to convert.</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>const std :: string &amp;amp;</type><name>s</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ISOBMFF_EXPORT std :: wstring</returntype>
+<result><p>The converted wide-string.
+</p></result>
+<declaration><declaration_type>ISOBMFF_EXPORT</declaration_type> <declaration_type>std</declaration_type>::<declaration_type>wstring</declaration_type> <declaration_function>StringToWideString</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>std</declaration_type>::<declaration_type>string</declaration_type> &amp; <declaration_param>s</declaration_param> );  </declaration>
+<desc><p>Windows only, as conversion is necessary for file streams.
+</p></desc>
+</function><function id="//xsdoc_ref/c/func/WideStringToString" lang="c"><name>WideStringToString</name>
+<abstract><p>Converts a wide-string to a string.
+</p></abstract>
+<parameterlist>
+<parameter><name>ws</name><desc><p>The wide-string to convert.</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>const std :: wstring &amp;amp;</type><name>ws</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ISOBMFF_EXPORT std :: string</returntype>
+<result><p>The converted string.
+</p></result>
+<declaration><declaration_type>ISOBMFF_EXPORT</declaration_type> <declaration_type>std</declaration_type>::<declaration_type>string</declaration_type> <declaration_function>WideStringToString</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>std</declaration_type>::<declaration_type>wstring</declaration_type> &amp; <declaration_param>ws</declaration_param> );  </declaration>
+<desc><p>Windows only, as conversion is necessary for file streams.
+</p></desc>
+</function></functions>
+<copyrightinfo>&#169; (c) 2017, DigiDNA - www.digidna.net
+</copyrightinfo>
+<timestamp>Wednesday, November 01, 2017</timestamp>
+</header>

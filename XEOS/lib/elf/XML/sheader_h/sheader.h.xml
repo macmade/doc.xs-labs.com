@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/sheader.h" lang="c" filename="sheader.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/elf/include/elf/sheader.h"><name>sheader.h</name>
+<includes>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/ELF64_SectionHeaderEntryGetAddressAlignmentBoundary" lang="c"><name>ELF64_SectionHeaderEntryGetAddressAlignmentBoundary</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_SectionHeaderEntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_XWord</returntype>
+<declaration><declaration_type>ELF64_XWord</declaration_type> <declaration_function>ELF64_SectionHeaderEntryGetAddressAlignmentBoundary</declaration_function>(
+    <declaration_type>ELF64_SectionHeaderEntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_SectionHeaderEntryGetAttributes" lang="c"><name>ELF64_SectionHeaderEntryGetAttributes</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_SectionHeaderEntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_XWord</returntype>
+<declaration><declaration_type>ELF64_XWord</declaration_type> <declaration_function>ELF64_SectionHeaderEntryGetAttributes</declaration_function>(
+    <declaration_type>ELF64_SectionHeaderEntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_SectionHeaderEntryGetAttributesString" lang="c"><name>ELF64_SectionHeaderEntryGetAttributesString</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_SectionHeaderEntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> const char *</returntype>
+<declaration><declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type> <declaration_function>ELF64_SectionHeaderEntryGetAttributesString</declaration_function>(
+    <declaration_type>ELF64_SectionHeaderEntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_SectionHeaderEntryGetEntrySize" lang="c"><name>ELF64_SectionHeaderEntryGetEntrySize</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_SectionHeaderEntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_XWord</returntype>
+<declaration><declaration_type>ELF64_XWord</declaration_type> <declaration_function>ELF64_SectionHeaderEntryGetEntrySize</declaration_function>(
+    <declaration_type>ELF64_SectionHeaderEntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_SectionHeaderEntryGetFileOffset" lang="c"><name>ELF64_SectionHeaderEntryGetFileOffset</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_SectionHeaderEntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_Off</returntype>
+<declaration><declaration_type>ELF64_Off</declaration_type> <declaration_function>ELF64_SectionHeaderEntryGetFileOffset</declaration_function>(
+    <declaration_type>ELF64_SectionHeaderEntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_SectionHeaderEntryGetLinkedSectionIndex" lang="c"><name>ELF64_SectionHeaderEntryGetLinkedSectionIndex</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_SectionHeaderEntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_Word</returntype>
+<declaration><declaration_type>ELF64_Word</declaration_type> <declaration_function>ELF64_SectionHeaderEntryGetLinkedSectionIndex</declaration_function>(
+    <declaration_type>ELF64_SectionHeaderEntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_SectionHeaderEntryGetMemoryVirtualAddress" lang="c"><name>ELF64_SectionHeaderEntryGetMemoryVirtualAddress</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_SectionHeaderEntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_Addr</returntype>
+<declaration><declaration_type>ELF64_Addr</declaration_type> <declaration_function>ELF64_SectionHeaderEntryGetMemoryVirtualAddress</declaration_function>(
+    <declaration_type>ELF64_SectionHeaderEntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_SectionHeaderEntryGetMiscInfo" lang="c"><name>ELF64_SectionHeaderEntryGetMiscInfo</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_SectionHeaderEntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_Word</returntype>
+<declaration><declaration_type>ELF64_Word</declaration_type> <declaration_function>ELF64_SectionHeaderEntryGetMiscInfo</declaration_function>(
+    <declaration_type>ELF64_SectionHeaderEntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_SectionHeaderEntryGetNameOffset" lang="c"><name>ELF64_SectionHeaderEntryGetNameOffset</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_SectionHeaderEntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_Word</returntype>
+<declaration> <declaration_type>ELF64_Word</declaration_type> <declaration_function>ELF64_SectionHeaderEntryGetNameOffset</declaration_function>(
+    <declaration_type>ELF64_SectionHeaderEntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_SectionHeaderEntryGetSectionSize" lang="c"><name>ELF64_SectionHeaderEntryGetSectionSize</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_SectionHeaderEntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_XWord</returntype>
+<declaration><declaration_type>ELF64_XWord</declaration_type> <declaration_function>ELF64_SectionHeaderEntryGetSectionSize</declaration_function>(
+    <declaration_type>ELF64_SectionHeaderEntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_SectionHeaderEntryGetSymbolTableEntryCount" lang="c"><name>ELF64_SectionHeaderEntryGetSymbolTableEntryCount</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_SectionHeaderEntryRef</type><name>section</name></parsedparameter>
+</parsedparameterlist>
+<returntype> unsigned int</returntype>
+<declaration><declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_function>ELF64_SectionHeaderEntryGetSymbolTableEntryCount</declaration_function>(
+    <declaration_type>ELF64_SectionHeaderEntryRef</declaration_type> <declaration_param>section</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_SectionHeaderEntryGetType" lang="c"><name>ELF64_SectionHeaderEntryGetType</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_SectionHeaderEntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_SectionType</returntype>
+<declaration><declaration_type>ELF64_SectionType</declaration_type> <declaration_function>ELF64_SectionHeaderEntryGetType</declaration_function>(
+    <declaration_type>ELF64_SectionHeaderEntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_SectionHeaderEntryGetTypeString" lang="c"><name>ELF64_SectionHeaderEntryGetTypeString</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_SectionHeaderEntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> const char *</returntype>
+<declaration><declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type> <declaration_function>ELF64_SectionHeaderEntryGetTypeString</declaration_function>(
+    <declaration_type>ELF64_SectionHeaderEntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_ELF_SHEADER_H__" definetype="value" lang="c"><name>__XEOS_LIB_ELF_SHEADER_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_ELF_SHEADER_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

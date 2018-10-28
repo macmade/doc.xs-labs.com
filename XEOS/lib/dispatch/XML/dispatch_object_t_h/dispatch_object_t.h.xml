@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/dispatch_object_t.h" lang="c" filename="dispatch_object_t.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/dispatch/include/dispatch/types/dispatch_object_t.h"><name>dispatch_object_t.h</name>
+<includes>
+</includes>
+<desc><p/></desc>
+<typedefs><typedef id="//xsdoc_ref/c/tdef/dispatch_object_t" lang="c" type="simple"><name>dispatch_object_t</name>
+<parsedparameterlist>
+<parsedparameter><type>struct __dispatch_object_s        *</type><name>object</name></parsedparameter>
+<parsedparameter><type>struct __dispatch_continuation_s  *</type><name>continuation</name></parsedparameter>
+<parsedparameter><type>struct __dispatch_queue_s         *</type><name>queue</name></parsedparameter>
+<parsedparameter><type>struct __dispatch_queue_attr_s    *</type><name>queue_attr</name></parsedparameter>
+<parsedparameter><type>struct __dispatch_group_s         *</type><name>group</name></parsedparameter>
+<parsedparameter><type>struct __dispatch_source_s        *</type><name>source</name></parsedparameter>
+<parsedparameter><type>struct __dispatch_source_attr_s   *</type><name>source_attr</name></parsedparameter>
+<parsedparameter><type>struct __dispatch_semaphore_s     *</type><name>semaphore</name></parsedparameter>
+<parsedparameter><type>struct __dispatch_data_s          *</type><name>data</name></parsedparameter>
+<parsedparameter><type>struct __dispatch_io_s            *</type><name>io</name></parsedparameter>
+<parsedparameter><type>struct __dispatch_operation_s     *</type><name>operation</name></parsedparameter>
+<parsedparameter><type>struct __dispatch_fld_s           *</type><name>fld</name></parsedparameter>
+</parsedparameterlist>
+<declaration> <declaration_keyword>typedef</declaration_keyword> <declaration_keyword>union</declaration_keyword> { 
+    <declaration_keyword>struct</declaration_keyword> <declaration_type>__dispatch_object_s</declaration_type> <declaration_type>*</declaration_type><declaration_var>object</declaration_var>; 
+    <declaration_keyword>struct</declaration_keyword> <declaration_type>__dispatch_continuation_s</declaration_type> <declaration_type>*</declaration_type><declaration_var>continuation</declaration_var>; 
+    <declaration_keyword>struct</declaration_keyword> <declaration_type>__dispatch_queue_s</declaration_type> <declaration_type>*</declaration_type><declaration_var>queue</declaration_var>; 
+    <declaration_keyword>struct</declaration_keyword> <declaration_type>__dispatch_queue_attr_s</declaration_type> <declaration_type>*</declaration_type><declaration_var>queue_attr</declaration_var>; 
+    <declaration_keyword>struct</declaration_keyword> <declaration_type>__dispatch_group_s</declaration_type> <declaration_type>*</declaration_type><declaration_var>group</declaration_var>; 
+    <declaration_keyword>struct</declaration_keyword> <declaration_type>__dispatch_source_s</declaration_type> <declaration_type>*</declaration_type><declaration_var>source</declaration_var>; 
+    <declaration_keyword>struct</declaration_keyword> <declaration_type>__dispatch_source_attr_s</declaration_type> <declaration_type>*</declaration_type><declaration_var>source_attr</declaration_var>; 
+    <declaration_keyword>struct</declaration_keyword> <declaration_type>__dispatch_semaphore_s</declaration_type> <declaration_type>*</declaration_type><declaration_var>semaphore</declaration_var>; 
+    <declaration_keyword>struct</declaration_keyword> <declaration_type>__dispatch_data_s</declaration_type> <declaration_type>*</declaration_type><declaration_var>data</declaration_var>; 
+    <declaration_keyword>struct</declaration_keyword> <declaration_type>__dispatch_io_s</declaration_type> <declaration_type>*</declaration_type><declaration_var>io</declaration_var>; 
+    <declaration_keyword>struct</declaration_keyword> <declaration_type>__dispatch_operation_s</declaration_type> <declaration_type>*</declaration_type><declaration_var>operation</declaration_var>; 
+    <declaration_keyword>struct</declaration_keyword> <declaration_type>__dispatch_fld_s</declaration_type> <declaration_type>*</declaration_type><declaration_var>fld</declaration_var>; 
+} <declaration_type>dispatch_object_t</declaration_type> <declaration_keyword>__attribute__</declaration_keyword>( ( <declaration_var>transparent_union</declaration_var> ) );  </declaration>
+<desc><p/></desc>
+</typedef></typedefs><defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_DISPATCH_TYPES_DISPATCH_OBJECT_T_H__" definetype="value" lang="c"><name>__XEOS_LIB_DISPATCH_TYPES_DISPATCH_OBJECT_T_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_DISPATCH_TYPES_DISPATCH_OBJECT_T_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

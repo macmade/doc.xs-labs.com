@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/dispatch.h" lang="c" filename="dispatch.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/dispatch/include/dispatch.h"><name>dispatch.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/base.h">&lt;dispatch/base.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/data.h">&lt;dispatch/data.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/group.h">&lt;dispatch/group.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/io.h">&lt;dispatch/io.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/object.h">&lt;dispatch/object.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/once.h">&lt;dispatch/once.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/queue.h">&lt;dispatch/queue.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/semaphore.h">&lt;dispatch/semaphore.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/source.h">&lt;dispatch/source.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/time.h">&lt;dispatch/time.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_DISPATCH_H__" definetype="value" lang="c"><name>__XEOS_LIB_DISPATCH_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_DISPATCH_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

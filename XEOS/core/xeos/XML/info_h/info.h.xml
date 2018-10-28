@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/info.h" lang="c" filename="info.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/core/xeos/include/xeos/info.h"><name>info.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdint.h">&lt;stdint.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/XEOS_Info_GetKernelBSSSectionEndAddress" lang="c"><name>XEOS_Info_GetKernelBSSSectionEndAddress</name>
+<abstract><p>Gets the end address of the .bss kernel section
+</p></abstract>
+<returntype> uintptr_t</returntype>
+<result><p>The end address of the .bss kernel kernel
+</p></result>
+<declaration><declaration_type>uintptr_t</declaration_type> <declaration_function>XEOS_Info_GetKernelBSSSectionEndAddress</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Info_GetKernelBSSSectionStartAddress" lang="c"><name>XEOS_Info_GetKernelBSSSectionStartAddress</name>
+<abstract><p>Gets the start address of the .bss kernel section
+</p></abstract>
+<returntype> uintptr_t</returntype>
+<result><p>The start address of the .bss kernel kernel
+</p></result>
+<declaration><declaration_type>uintptr_t</declaration_type> <declaration_function>XEOS_Info_GetKernelBSSSectionStartAddress</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Info_GetKernelDataSectionEndAddress" lang="c"><name>XEOS_Info_GetKernelDataSectionEndAddress</name>
+<abstract><p>Gets the end address of the .data kernel section
+</p></abstract>
+<returntype> uintptr_t</returntype>
+<result><p>The end address of the .data kernel kernel
+</p></result>
+<declaration><declaration_type>uintptr_t</declaration_type> <declaration_function>XEOS_Info_GetKernelDataSectionEndAddress</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Info_GetKernelDataSectionStartAddress" lang="c"><name>XEOS_Info_GetKernelDataSectionStartAddress</name>
+<abstract><p>Gets the start address of the .data kernel section
+</p></abstract>
+<returntype> uintptr_t</returntype>
+<result><p>The start address of the .data kernel kernel
+</p></result>
+<declaration><declaration_type>uintptr_t</declaration_type> <declaration_function>XEOS_Info_GetKernelDataSectionStartAddress</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Info_GetKernelEndAddress" lang="c"><name>XEOS_Info_GetKernelEndAddress</name>
+<abstract><p>Gets the end address of the kernel
+</p></abstract>
+<returntype> uintptr_t</returntype>
+<result><p>The end address of the kernel
+</p></result>
+<declaration><declaration_type>uintptr_t</declaration_type> <declaration_function>XEOS_Info_GetKernelEndAddress</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Info_GetKernelRODataSectionEndAddress" lang="c"><name>XEOS_Info_GetKernelRODataSectionEndAddress</name>
+<abstract><p>Gets the end address of the .rodata kernel section
+</p></abstract>
+<returntype> uintptr_t</returntype>
+<result><p>The end address of the .rodata kernel kernel
+</p></result>
+<declaration><declaration_type>uintptr_t</declaration_type> <declaration_function>XEOS_Info_GetKernelRODataSectionEndAddress</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Info_GetKernelRODataSectionStartAddress" lang="c"><name>XEOS_Info_GetKernelRODataSectionStartAddress</name>
+<abstract><p>Gets the start address of the .rodata kernel section
+</p></abstract>
+<returntype> uintptr_t</returntype>
+<result><p>The start address of the .rodata kernel kernel
+</p></result>
+<declaration><declaration_type>uintptr_t</declaration_type> <declaration_function>XEOS_Info_GetKernelRODataSectionStartAddress</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Info_GetKernelStartAddress" lang="c"><name>XEOS_Info_GetKernelStartAddress</name>
+<abstract><p>Gets the start address of the kernel
+</p></abstract>
+<returntype> uintptr_t</returntype>
+<result><p>The start address of the kernel
+</p></result>
+<declaration><declaration_type>uintptr_t</declaration_type> <declaration_function>XEOS_Info_GetKernelStartAddress</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Info_GetKernelTextSectionEndAddress" lang="c"><name>XEOS_Info_GetKernelTextSectionEndAddress</name>
+<abstract><p>Gets the end address of the .text kernel section
+</p></abstract>
+<returntype> uintptr_t</returntype>
+<result><p>The end address of the .text kernel kernel
+</p></result>
+<declaration><declaration_type>uintptr_t</declaration_type> <declaration_function>XEOS_Info_GetKernelTextSectionEndAddress</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Info_GetKernelTextSectionStartAddress" lang="c"><name>XEOS_Info_GetKernelTextSectionStartAddress</name>
+<abstract><p>Gets the start address of the .text kernel section
+</p></abstract>
+<returntype> uintptr_t</returntype>
+<result><p>The start address of the .text kernel kernel
+</p></result>
+<declaration><declaration_type>uintptr_t</declaration_type> <declaration_function>XEOS_Info_GetKernelTextSectionStartAddress</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Info_GetMemory" lang="c"><name>XEOS_Info_GetMemory</name>
+<abstract><p>Gets the memory info object
+</p></abstract>
+<parameterlist>
+<parameter><name>info</name><desc><p>The info object</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_InfoRef</type><name>info</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_Info_MemoryRef</returntype>
+<result><p>The memory info object
+</p></result>
+<declaration><declaration_type>XEOS_Info_MemoryRef</declaration_type> <declaration_function>XEOS_Info_GetMemory</declaration_function>(
+    <declaration_type>XEOS_InfoRef</declaration_type> <declaration_param>info</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/doc/title:func/XEOS_Info_MemoryEntryGetAddress_DONTLINK_2" lang="c"><name>XEOS_Info_MemoryEntryGetAddress</name>
+<abstract><p>Gets the type of a memory entry info entry
+</p></abstract>
+<parameterlist>
+<parameter><name>entry</name><desc><p>The memory entry info object</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_Info_MemoryEntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_Info_MemoryEntryType</returntype>
+<result><p>The type of the memory entry info object
+</p></result>
+<declaration><declaration_type>XEOS_Info_MemoryEntryType</declaration_type> <declaration_function>XEOS_Info_MemoryEntryGetType</declaration_function>(
+    <declaration_type>XEOS_Info_MemoryEntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Info_MemoryEntryGetAddress" lang="c"><name>XEOS_Info_MemoryEntryGetAddress(XEOS_Info_MemoryEntryRef)</name>
+<abstract><p>Gets the start address of a memory entry info entry
+</p></abstract>
+<parameterlist>
+<parameter><name>entry</name><desc><p>The memory entry info object</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_Info_MemoryEntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uint64_t</returntype>
+<result><p>The start address of the memory entry info object
+</p></result>
+<declaration><declaration_type>uint64_t</declaration_type> <declaration_function>XEOS_Info_MemoryEntryGetAddress</declaration_function>(
+    <declaration_type>XEOS_Info_MemoryEntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/doc/title:func/XEOS_Info_MemoryEntryGetAddress" lang="c"><name>XEOS_Info_MemoryEntryGetAddress(XEOS_Info_MemoryEntryRef)</name>
+<abstract><p>Gets the length (in bytes) of a memory entry info entry
+</p></abstract>
+<parameterlist>
+<parameter><name>entry</name><desc><p>The memory entry info object</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_Info_MemoryEntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uint64_t</returntype>
+<result><p>The length (in bytes) of the memory entry info entry
+</p></result>
+<declaration><declaration_type>uint64_t</declaration_type> <declaration_function>XEOS_Info_MemoryEntryGetLength</declaration_function>(
+    <declaration_type>XEOS_Info_MemoryEntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Info_MemoryEntryGetLength" lang="c"><name>XEOS_Info_MemoryEntryGetLength</name>
+<abstract><p>Gets the length (in bytes) of a memory entry info entry
+</p></abstract>
+<parameterlist>
+<parameter><name>entry</name><desc><p>The memory entry info object</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_Info_MemoryEntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uint64_t</returntype>
+<result><p>The length (in bytes) of the memory entry info entry
+</p></result>
+<declaration><declaration_type>uint64_t</declaration_type> <declaration_function>XEOS_Info_MemoryEntryGetLength</declaration_function>(
+    <declaration_type>XEOS_Info_MemoryEntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Info_MemoryEntryGetType" lang="c"><name>XEOS_Info_MemoryEntryGetType</name>
+<abstract><p>Gets the type of a memory entry info entry
+</p></abstract>
+<parameterlist>
+<parameter><name>entry</name><desc><p>The memory entry info object</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_Info_MemoryEntryRef</type><name>entry</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_Info_MemoryEntryType</returntype>
+<result><p>The type of the memory entry info object
+</p></result>
+<declaration><declaration_type>XEOS_Info_MemoryEntryType</declaration_type> <declaration_function>XEOS_Info_MemoryEntryGetType</declaration_function>(
+    <declaration_type>XEOS_Info_MemoryEntryRef</declaration_type> <declaration_param>entry</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Info_MemoryGetEntryAtIndex" lang="c"><name>XEOS_Info_MemoryGetEntryAtIndex</name>
+<abstract><p>Gets a specific memory entry info object
+</p></abstract>
+<parameterlist>
+<parameter><name>memory</name><desc><p>The memory info object</p></desc></parameter>
+<parameter><name>index</name><desc><p>The index of the memory info object</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_Info_MemoryRef</type><name>memory</name></parsedparameter>
+<parsedparameter><type>unsigned int</type><name>index</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_Info_MemoryEntryRef</returntype>
+<result><p>The memory entry info object
+</p></result>
+<declaration><declaration_type>XEOS_Info_MemoryEntryRef</declaration_type> <declaration_function>XEOS_Info_MemoryGetEntryAtIndex</declaration_function>(
+    <declaration_type>XEOS_Info_MemoryRef</declaration_type> <declaration_param>memory</declaration_param>,
+    <declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_param>index</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Info_MemoryGetNumberOfEntries" lang="c"><name>XEOS_Info_MemoryGetNumberOfEntries</name>
+<abstract><p>Gets the number of memory info entries
+</p></abstract>
+<parameterlist>
+<parameter><name>memory</name><desc><p>The memory info object</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_Info_MemoryRef</type><name>memory</name></parsedparameter>
+</parsedparameterlist>
+<returntype> unsigned int</returntype>
+<result><p>The number of memory info entries
+</p></result>
+<declaration><declaration_keyword>unsigned</declaration_keyword> <declaration_type>int</declaration_type> <declaration_function>XEOS_Info_MemoryGetNumberOfEntries</declaration_function>(
+    <declaration_type>XEOS_Info_MemoryRef</declaration_type> <declaration_param>memory</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Info_MemoryGetTotalBytes" lang="c"><name>XEOS_Info_MemoryGetTotalBytes</name>
+<abstract><p>Gets the number of memory bytes available on the system
+</p></abstract>
+<parameterlist>
+<parameter><name>memory</name><desc><p>The memory info object</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_Info_MemoryRef</type><name>memory</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uint64_t</returntype>
+<result><p>The number of memory bytes available on the system
+</p></result>
+<declaration><declaration_type>uint64_t</declaration_type> <declaration_function>XEOS_Info_MemoryGetTotalBytes</declaration_function>(
+    <declaration_type>XEOS_Info_MemoryRef</declaration_type> <declaration_param>memory</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<typedefs><typedef id="//xsdoc_ref/c/tdef/XEOS_Info_MemoryEntryRef" lang="c" type="simple"><name>XEOS_Info_MemoryEntryRef</name>
+<abstract><p>Opaque type for a memory entry info object
+</p></abstract>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>__XEOS_Info_MemoryEntry</declaration_type> <declaration_type>*</declaration_type> <declaration_var>XEOS_Info_MemoryEntryRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_Info_MemoryEntryType" lang="c" type="simple"><name>XEOS_Info_MemoryEntryType</name>
+<abstract><p>Type of a memory entry
+</p></abstract>
+<constantlist>
+<constant><name>XEOS_Info_MemoryEntryTypeUnknown</name><desc><p>Unknown entry type</p></desc></constant>
+<constant><name>XEOS_Info_MemoryEntryTypeUsable</name><desc><p>Usable (free) memory region</p></desc></constant>
+<constant><name>XEOS_Info_MemoryEntryTypeReserved</name><desc><p>Reserved (unusable) memory region</p></desc></constant>
+<constant><name>XEOS_Info_MemoryEntryTypeACPIReclaimable</name><desc><p>ACPI reclaimable memory region</p></desc></constant>
+<constant><name>XEOS_Info_MemoryEntryTypeACPINVS</name><desc><p>ACPI NVS memory regions</p></desc></constant>
+<constant><name>XEOS_Info_MemoryEntryTypeBad</name><desc><p>Bad memory region</p></desc></constant>
+</constantlist>
+<parsedparameterlist>
+<parsedparameter><type></type><name>XEOS_Info_MemoryEntryTypeUnknown</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_Info_MemoryEntryTypeUsable</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_Info_MemoryEntryTypeReserved</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_Info_MemoryEntryTypeACPIReclaimable</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_Info_MemoryEntryTypeACPINVS</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_Info_MemoryEntryTypeBad</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>XEOS_Info_MemoryEntryTypeUnknown</declaration_var> = <declaration_number>0x00</declaration_number>, 
+    <declaration_var>XEOS_Info_MemoryEntryTypeUsable</declaration_var> = <declaration_number>0x01</declaration_number>, 
+    <declaration_var>XEOS_Info_MemoryEntryTypeReserved</declaration_var> = <declaration_number>0x02</declaration_number>, 
+    <declaration_var>XEOS_Info_MemoryEntryTypeACPIReclaimable</declaration_var> = <declaration_number>0x03</declaration_number>, 
+    <declaration_var>XEOS_Info_MemoryEntryTypeACPINVS</declaration_var> = <declaration_number>0x04</declaration_number>, 
+    <declaration_var>XEOS_Info_MemoryEntryTypeBad</declaration_var> = <declaration_number>0x05</declaration_number> 
+} <declaration_var>XEOS_Info_MemoryEntryType</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_Info_MemoryRef" lang="c" type="simple"><name>XEOS_Info_MemoryRef</name>
+<abstract><p>Opaque type for the memory info object
+</p></abstract>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>__XEOS_Info_Memory</declaration_type> <declaration_type>*</declaration_type> <declaration_var>XEOS_Info_MemoryRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_InfoRef" lang="c" type="simple"><name>XEOS_InfoRef</name>
+<abstract><p>Opaque type for the info object (passed by the bootloader)
+</p></abstract>
+<declaration> <declaration_comment>/*!</declaration_comment>
+    <declaration_comment>*/</declaration_comment>
+<declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>__XEOS_Info</declaration_type> <declaration_type>*</declaration_type> <declaration_var>XEOS_InfoRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef></typedefs><defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_INFO_H__" definetype="value" lang="c"><name>__XEOS_INFO_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_INFO_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/data.h" lang="c" filename="data.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/dispatch/include/dispatch/data.h"><name>data.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/null.h">&lt;system/types/null.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/size_t.h">&lt;system/types/size_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdbool.h">&lt;stdbool.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/dispatch_data_t.h">&lt;dispatch/types/dispatch_data_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/dispatch_data_applier_t.h">&lt;dispatch/types/dispatch_data_applier_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/dispatch_queue_t.h">&lt;dispatch/types/dispatch_queue_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/dispatch_block_t.h">&lt;dispatch/types/dispatch_block_t.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/dispatch_data_apply" lang="c"><name>dispatch_data_apply</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_data_t</type><name>data</name></parsedparameter>
+<parsedparameter><type>dispatch_data_applier_t</type><name>applier</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>dispatch_data_apply</declaration_function>(
+    <declaration_type>dispatch_data_t</declaration_type> <declaration_param>data</declaration_param>,
+    <declaration_type>dispatch_data_applier_t</declaration_type> <declaration_param>applier</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_data_copy_region" lang="c"><name>dispatch_data_copy_region</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_data_t</type><name>data</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>location</name></parsedparameter>
+<parsedparameter><type>size_t *</type><name>offset_ptr</name></parsedparameter>
+</parsedparameterlist>
+<returntype> dispatch_data_t</returntype>
+<declaration><declaration_type>dispatch_data_t</declaration_type> <declaration_function>dispatch_data_copy_region</declaration_function>(
+    <declaration_type>dispatch_data_t</declaration_type> <declaration_param>data</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>location</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>offset_ptr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_data_create" lang="c"><name>dispatch_data_create</name>
+<parsedparameterlist>
+<parsedparameter><type>const void *</type><name>buffer</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>size</name></parsedparameter>
+<parsedparameter><type>dispatch_queue_t</type><name>queue</name></parsedparameter>
+<parsedparameter><type>dispatch_block_t</type><name>destructor</name></parsedparameter>
+</parsedparameterlist>
+<returntype> dispatch_data_t</returntype>
+<declaration><declaration_type>dispatch_data_t</declaration_type> <declaration_function>dispatch_data_create</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>buffer</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>size</declaration_param>,
+    <declaration_type>dispatch_queue_t</declaration_type> <declaration_param>queue</declaration_param>,
+    <declaration_type>dispatch_block_t</declaration_type> <declaration_param>destructor</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_data_create_concat" lang="c"><name>dispatch_data_create_concat</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_data_t</type><name>data1</name></parsedparameter>
+<parsedparameter><type>dispatch_data_t</type><name>data2</name></parsedparameter>
+</parsedparameterlist>
+<returntype> dispatch_data_t</returntype>
+<declaration><declaration_type>dispatch_data_t</declaration_type> <declaration_function>dispatch_data_create_concat</declaration_function>(
+    <declaration_type>dispatch_data_t</declaration_type> <declaration_param>data1</declaration_param>,
+    <declaration_type>dispatch_data_t</declaration_type> <declaration_param>data2</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_data_create_map" lang="c"><name>dispatch_data_create_map</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_data_t</type><name>data</name></parsedparameter>
+<parsedparameter><type>const void **</type><name>buffer_ptr</name></parsedparameter>
+<parsedparameter><type>size_t *</type><name>size_ptr</name></parsedparameter>
+</parsedparameterlist>
+<returntype> dispatch_data_t</returntype>
+<declaration><declaration_type>dispatch_data_t</declaration_type> <declaration_function>dispatch_data_create_map</declaration_function>(
+    <declaration_type>dispatch_data_t</declaration_type> <declaration_param>data</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_type>*</declaration_type><declaration_param>buffer_ptr</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>size_ptr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_data_create_subrange" lang="c"><name>dispatch_data_create_subrange</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_data_t</type><name>data</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>offset</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>length</name></parsedparameter>
+</parsedparameterlist>
+<returntype> dispatch_data_t</returntype>
+<declaration><declaration_type>dispatch_data_t</declaration_type> <declaration_function>dispatch_data_create_subrange</declaration_function>(
+    <declaration_type>dispatch_data_t</declaration_type> <declaration_param>data</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>offset</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>length</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/dispatch_data_get_size" lang="c"><name>dispatch_data_get_size</name>
+<parsedparameterlist>
+<parsedparameter><type>dispatch_data_t</type><name>data</name></parsedparameter>
+</parsedparameterlist>
+<returntype> size_t</returntype>
+<declaration><declaration_type>size_t</declaration_type> <declaration_function>dispatch_data_get_size</declaration_function>(
+    <declaration_type>dispatch_data_t</declaration_type> <declaration_param>data</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_DISPATCH_DATA_H__" definetype="value" lang="c"><name>__XEOS_LIB_DISPATCH_DATA_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_DISPATCH_DATA_H__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DISPATCH_DATA_DESTRUCTOR_DEFAULT" definetype="value" lang="c"><name>DISPATCH_DATA_DESTRUCTOR_DEFAULT</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DISPATCH_DATA_DESTRUCTOR_DEFAULT</declaration_preprocessor> <declaration_preprocessor>NULL</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/DISPATCH_DATA_DESTRUCTOR_FREE" definetype="value" lang="c"><name>DISPATCH_DATA_DESTRUCTOR_FREE</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>DISPATCH_DATA_DESTRUCTOR_FREE</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/dispatch_data_empty" definetype="value" lang="c"><name>dispatch_data_empty</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>dispatch_data_empty</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

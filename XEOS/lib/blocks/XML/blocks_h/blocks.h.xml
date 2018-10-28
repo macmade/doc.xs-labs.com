@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/blocks.h" lang="c" filename="blocks.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/blocks/include/blocks.h"><name>blocks.h</name>
+<includes>
+</includes>
+<desc><p/></desc>
+<typedefs><typedef id="//xsdoc_ref/c/tdef/Block_Descriptor" lang="c" type="simple"><name>Block_Descriptor</name>
+<parsedparameterlist>
+<parsedparameter><type>unsigned long int</type><name>reserved</name></parsedparameter>
+<parsedparameter><type>unsigned long int</type><name>size</name></parsedparameter>
+<parsedparameter><type>void</type><name>copy_helper</name></parsedparameter>
+<parsedparameter><type>void</type><name>dispose_helper</name></parsedparameter>
+<parsedparameter><type>const char *</type><name>signature</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> { 
+    <declaration_keyword>unsigned</declaration_keyword> <declaration_type>long</declaration_type> <declaration_type>int</declaration_type> <declaration_var>reserved</declaration_var>; 
+    <declaration_keyword>unsigned</declaration_keyword> <declaration_type>long</declaration_type> <declaration_type>int</declaration_type> <declaration_var>size</declaration_var>; 
+    <declaration_type>void</declaration_type> ( <declaration_type>*</declaration_type> <declaration_function>copy_helper</declaration_function>)(
+        <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_param>dst</declaration_param>,
+        <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_param>src</declaration_param> ); 
+    <declaration_type>void</declaration_type> ( <declaration_type>*</declaration_type> <declaration_function>dispose_helper</declaration_function>)(
+        <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_param>src</declaration_param> ); 
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_var>signature</declaration_var>; 
+} <declaration_var>Block_Descriptor</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/Block_Literal" lang="c" type="simple"><name>Block_Literal</name>
+<parsedparameterlist>
+<parsedparameter><type>void *</type><name>isa</name></parsedparameter>
+<parsedparameter><type>int</type><name>flags</name></parsedparameter>
+<parsedparameter><type>int</type><name>reserved</name></parsedparameter>
+<parsedparameter><type>void</type><name>invoke</name></parsedparameter>
+<parsedparameter><type>Block_Descriptor *</type><name>descriptor</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> { 
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_var>isa</declaration_var>; 
+    <declaration_type>int</declaration_type> <declaration_var>flags</declaration_var>; 
+    <declaration_type>int</declaration_type> <declaration_var>reserved</declaration_var>; 
+    <declaration_type>void</declaration_type> ( <declaration_type>*</declaration_type> <declaration_function>invoke</declaration_function> )(
+        <declaration_type>void</declaration_type> <declaration_param>*</declaration_param>,
+        ... ); 
+    <declaration_type>Block_Descriptor</declaration_type> <declaration_type>*</declaration_type><declaration_var>descriptor</declaration_var>; 
+} <declaration_var>Block_Literal</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef></typedefs><enums><enum id="//xsdoc_ref/c/tag/BLOCK_HAS_COPY_DISPOSE" lang="c"><name>BLOCK_HAS_COPY_DISPOSE</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>BLOCK_HAS_COPY_DISPOSE</name></parsedparameter>
+<parsedparameter><type></type><name>BLOCK_HAS_CTOR</name></parsedparameter>
+<parsedparameter><type></type><name>BLOCK_IS_GLOBAL</name></parsedparameter>
+<parsedparameter><type></type><name>BLOCK_HAS_STRET</name></parsedparameter>
+<parsedparameter><type></type><name>BLOCK_HAS_SIGNATURE</name></parsedparameter>
+</parsedparameterlist>
+<declaration> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>BLOCK_HAS_COPY_DISPOSE</declaration_var> = (
+        <declaration_number>1</declaration_number> &lt;&lt; <declaration_number>25</declaration_number> ), 
+    <declaration_var>BLOCK_HAS_CTOR</declaration_var> = (
+        <declaration_number>1</declaration_number> &lt;&lt; <declaration_number>26</declaration_number> ), 
+    <declaration_var>BLOCK_IS_GLOBAL</declaration_var> = (
+        <declaration_number>1</declaration_number> &lt;&lt; <declaration_number>28</declaration_number> ), 
+    <declaration_var>BLOCK_HAS_STRET</declaration_var> = (
+        <declaration_number>1</declaration_number> &lt;&lt; <declaration_number>29</declaration_number> ), 
+    <declaration_var>BLOCK_HAS_SIGNATURE</declaration_var> = (
+        <declaration_number>1</declaration_number> &lt;&lt; <declaration_number>30</declaration_number> ) 
+};  </declaration>
+<desc><p/></desc>
+</enum></enums><defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_BLOCKS_H__" definetype="value" lang="c"><name>__XEOS_LIB_BLOCKS_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_BLOCKS_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/gui.h" lang="c" filename="gui.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/core/xeos/include/xeos/gui.h"><name>gui.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/macros.h">&lt;system/macros.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdint.h">&lt;stdint.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdarg.h">&lt;stdarg.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdbool.h">&lt;stdbool.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/size_t.h">&lt;system/types/size_t.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/XEOS_GUI_BitmapFontGetBitmapFont" lang="c"><name>XEOS_GUI_BitmapFontGetBitmapFont</name>
+<parsedparameterlist>
+<parsedparameter><type>const char *</type><name>name</name></parsedparameter>
+<parsedparameter><type>uint32_t</type><name>size</name></parsedparameter>
+<parsedparameter><type>uint32_t</type><name>traits</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_GUI_BitmapFontRef</returntype>
+<declaration><declaration_type>XEOS_GUI_BitmapFontRef</declaration_type> <declaration_function>XEOS_GUI_BitmapFontGetBitmapFont</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>name</declaration_param>,
+    <declaration_type>uint32_t</declaration_type> <declaration_param>size</declaration_param>,
+    <declaration_type>uint32_t</declaration_type> <declaration_param>traits</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_GUI_BitmapFontGetGlyphAtIndex" lang="c"><name>XEOS_GUI_BitmapFontGetGlyphAtIndex</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_GUI_BitmapFontRef</type><name>font</name></parsedparameter>
+<parsedparameter><type>uint32_t</type><name>index</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_GUI_BitmapFontGlyphRef</returntype>
+<declaration><declaration_type>XEOS_GUI_BitmapFontGlyphRef</declaration_type> <declaration_function>XEOS_GUI_BitmapFontGetGlyphAtIndex</declaration_function>(
+    <declaration_type>XEOS_GUI_BitmapFontRef</declaration_type> <declaration_param>font</declaration_param>,
+    <declaration_type>uint32_t</declaration_type> <declaration_param>index</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_GUI_BitmapFontGetGlyphCount" lang="c"><name>XEOS_GUI_BitmapFontGetGlyphCount</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_GUI_BitmapFontRef</type><name>font</name></parsedparameter>
+</parsedparameterlist>
+<returntype> size_t</returntype>
+<declaration><declaration_type>size_t</declaration_type> <declaration_function>XEOS_GUI_BitmapFontGetGlyphCount</declaration_function>(
+    <declaration_type>XEOS_GUI_BitmapFontRef</declaration_type> <declaration_param>font</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_GUI_BitmapFontGetGlyphHeight" lang="c"><name>XEOS_GUI_BitmapFontGetGlyphHeight</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_GUI_BitmapFontRef</type><name>font</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uint32_t</returntype>
+<declaration><declaration_type>uint32_t</declaration_type> <declaration_function>XEOS_GUI_BitmapFontGetGlyphHeight</declaration_function>(
+    <declaration_type>XEOS_GUI_BitmapFontRef</declaration_type> <declaration_param>font</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_GUI_BitmapFontGetMonospaceSystemBitmapFont" lang="c"><name>XEOS_GUI_BitmapFontGetMonospaceSystemBitmapFont</name>
+<returntype> XEOS_GUI_BitmapFontRef</returntype>
+<declaration><declaration_type>XEOS_GUI_BitmapFontRef</declaration_type> <declaration_function>XEOS_GUI_BitmapFontGetMonospaceSystemBitmapFont</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_GUI_BitmapFontGetName" lang="c"><name>XEOS_GUI_BitmapFontGetName</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_GUI_BitmapFontRef</type><name>font</name></parsedparameter>
+</parsedparameterlist>
+<returntype> const char *</returntype>
+<declaration><declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type> <declaration_function>XEOS_GUI_BitmapFontGetName</declaration_function>(
+    <declaration_type>XEOS_GUI_BitmapFontRef</declaration_type> <declaration_param>font</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_GUI_BitmapFontGetSize" lang="c"><name>XEOS_GUI_BitmapFontGetSize</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_GUI_BitmapFontRef</type><name>font</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uint32_t</returntype>
+<declaration><declaration_type>uint32_t</declaration_type> <declaration_function>XEOS_GUI_BitmapFontGetSize</declaration_function>(
+    <declaration_type>XEOS_GUI_BitmapFontRef</declaration_type> <declaration_param>font</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_GUI_BitmapFontGetSystemBitmapFont" lang="c"><name>XEOS_GUI_BitmapFontGetSystemBitmapFont</name>
+<returntype> XEOS_GUI_BitmapFontRef</returntype>
+<declaration><declaration_type>XEOS_GUI_BitmapFontRef</declaration_type> <declaration_function>XEOS_GUI_BitmapFontGetSystemBitmapFont</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_GUI_BitmapFontGetSystemBitmapFontSize" lang="c"><name>XEOS_GUI_BitmapFontGetSystemBitmapFontSize</name>
+<returntype> uint32_t</returntype>
+<declaration><declaration_type>uint32_t</declaration_type> <declaration_function>XEOS_GUI_BitmapFontGetSystemBitmapFontSize</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_GUI_BitmapFontGetTraits" lang="c"><name>XEOS_GUI_BitmapFontGetTraits</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_GUI_BitmapFontRef</type><name>font</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uint32_t</returntype>
+<declaration><declaration_type>uint32_t</declaration_type> <declaration_function>XEOS_GUI_BitmapFontGetTraits</declaration_function>(
+    <declaration_type>XEOS_GUI_BitmapFontRef</declaration_type> <declaration_param>font</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_GUI_BitmapFontGlyphGetData" lang="c"><name>XEOS_GUI_BitmapFontGlyphGetData</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_GUI_BitmapFontGlyphRef</type><name>glyph</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void *</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_function>XEOS_GUI_BitmapFontGlyphGetData</declaration_function>(
+    <declaration_type>XEOS_GUI_BitmapFontGlyphRef</declaration_type> <declaration_param>glyph</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_GUI_BitmapFontGlyphGetWidth" lang="c"><name>XEOS_GUI_BitmapFontGlyphGetWidth</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_GUI_BitmapFontGlyphRef</type><name>glyph</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uint32_t</returntype>
+<declaration><declaration_type>uint32_t</declaration_type> <declaration_function>XEOS_GUI_BitmapFontGlyphGetWidth</declaration_function>(
+    <declaration_type>XEOS_GUI_BitmapFontGlyphRef</declaration_type> <declaration_param>glyph</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_GUI_ClearScreen" lang="c"><name>XEOS_GUI_ClearScreen</name>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_GUI_ClearScreen</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_GUI_GetCursorPosition" lang="c"><name>XEOS_GUI_GetCursorPosition</name>
+<returntype> XEOS_GUI_Point</returntype>
+<declaration><declaration_type>XEOS_GUI_Point</declaration_type> <declaration_function>XEOS_GUI_GetCursorPosition</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_GUI_GetPredefinedColor" lang="c"><name>XEOS_GUI_GetPredefinedColor</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_GUI_PredefinedColor</type><name>colorStyle</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_GUI_Color</returntype>
+<declaration><declaration_type>XEOS_GUI_Color</declaration_type> <declaration_function>XEOS_GUI_GetPredefinedColor</declaration_function>(
+    <declaration_type>XEOS_GUI_PredefinedColor</declaration_type> <declaration_param>colorStyle</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_GUI_MakePoint" lang="c"><name>XEOS_GUI_MakePoint</name>
+<parsedparameterlist>
+<parsedparameter><type>uint32_t</type><name>x</name></parsedparameter>
+<parsedparameter><type>uint32_t</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_GUI_Point</returntype>
+<declaration><declaration_type>XEOS_GUI_Point</declaration_type> <declaration_function>XEOS_GUI_MakePoint</declaration_function>(
+    <declaration_type>uint32_t</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>uint32_t</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_GUI_MakeRect" lang="c"><name>XEOS_GUI_MakeRect</name>
+<parsedparameterlist>
+<parsedparameter><type>uint32_t</type><name>x</name></parsedparameter>
+<parsedparameter><type>uint32_t</type><name>y</name></parsedparameter>
+<parsedparameter><type>uint32_t</type><name>width</name></parsedparameter>
+<parsedparameter><type>uint32_t</type><name>height</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_GUI_Rect</returntype>
+<declaration><declaration_type>XEOS_GUI_Rect</declaration_type> <declaration_function>XEOS_GUI_MakeRect</declaration_function>(
+    <declaration_type>uint32_t</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>uint32_t</declaration_type> <declaration_param>y</declaration_param>,
+    <declaration_type>uint32_t</declaration_type> <declaration_param>width</declaration_param>,
+    <declaration_type>uint32_t</declaration_type> <declaration_param>height</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_GUI_MakeSize" lang="c"><name>XEOS_GUI_MakeSize</name>
+<parsedparameterlist>
+<parsedparameter><type>uint32_t</type><name>width</name></parsedparameter>
+<parsedparameter><type>uint32_t</type><name>height</name></parsedparameter>
+</parsedparameterlist>
+<returntype> XEOS_GUI_Size</returntype>
+<declaration><declaration_type>XEOS_GUI_Size</declaration_type> <declaration_function>XEOS_GUI_MakeSize</declaration_function>(
+    <declaration_type>uint32_t</declaration_type> <declaration_param>width</declaration_param>,
+    <declaration_type>uint32_t</declaration_type> <declaration_param>height</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_GUI_Prompt" lang="c"><name>XEOS_GUI_Prompt</name>
+<parsedparameterlist>
+<parsedparameter><type>const char *</type><name>s</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>XEOS_GUI_Prompt</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>s</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_GUI_SetCursorPosition" lang="c"><name>XEOS_GUI_SetCursorPosition</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_GUI_Point</type><name>point</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_GUI_SetCursorPosition</declaration_function>(
+    <declaration_type>XEOS_GUI_Point</declaration_type> <declaration_param>point</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_GUI_SetPredefinedColor" lang="c"><name>XEOS_GUI_SetPredefinedColor</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_GUI_PredefinedColor</type><name>colorStyle</name></parsedparameter>
+<parsedparameter><type>XEOS_GUI_Color</type><name>color</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_GUI_SetPredefinedColor</declaration_function>(
+    <declaration_type>XEOS_GUI_PredefinedColor</declaration_type> <declaration_param>colorStyle</declaration_param>,
+    <declaration_type>XEOS_GUI_Color</declaration_type> <declaration_param>color</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Video_Print" lang="c"><name>XEOS_Video_Print</name>
+<parsedparameterlist>
+<parsedparameter><type>const char *</type><name>s</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>XEOS_Video_Print</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>s</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Video_Printf" lang="c"><name>XEOS_Video_Printf</name>
+<parsedparameterlist>
+<parsedparameter><type> printf</type><name></name></parsedparameter>
+<parsedparameter><type> 1</type><name></name></parsedparameter>
+<parsedparameter><type> 2</type><name></name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>XEOS_Video_Printf</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>format</declaration_param>,
+    ... ) <declaration_function>FORMAT_ATTRIBUTE</declaration_function>(
+    <declaration_param>printf</declaration_param>,
+    <declaration_number>1</declaration_number>,
+    <declaration_number>2</declaration_number> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Video_Promptf" lang="c"><name>XEOS_Video_Promptf</name>
+<parsedparameterlist>
+<parsedparameter><type> printf</type><name></name></parsedparameter>
+<parsedparameter><type> 1</type><name></name></parsedparameter>
+<parsedparameter><type> 2</type><name></name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>XEOS_Video_Promptf</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>format</declaration_param>,
+    ... ) <declaration_function>FORMAT_ATTRIBUTE</declaration_function>(
+    <declaration_param>printf</declaration_param>,
+    <declaration_number>1</declaration_number>,
+    <declaration_number>2</declaration_number> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Video_Putc" lang="c"><name>XEOS_Video_Putc</name>
+<parsedparameterlist>
+<parsedparameter><type>char</type><name>c</name></parsedparameter>
+<parsedparameter><type>bool</type><name>updateCursor</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_Video_Putc</declaration_function>(
+    <declaration_type>char</declaration_type> <declaration_param>c</declaration_param>,
+    <declaration_type>bool</declaration_type> <declaration_param>updateCursor</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Video_Scroll" lang="c"><name>XEOS_Video_Scroll</name>
+<parsedparameterlist>
+<parsedparameter><type>uint32_t</type><name>lines</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_Video_Scroll</declaration_function>(
+    <declaration_type>uint32_t</declaration_type> <declaration_param>lines</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_Video_VPrintf" lang="c"><name>XEOS_Video_VPrintf</name>
+<parsedparameterlist>
+<parsedparameter><type>const char *</type><name>format</name></parsedparameter>
+<parsedparameter><type>va_list</type><name>arg</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>XEOS_Video_VPrintf</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>format</declaration_param>,
+    <declaration_type>va_list</declaration_type> <declaration_param>arg</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<typedefs><typedef id="//xsdoc_ref/c/tdef/XEOS_GUI_BitmapFontGlyphRef" lang="c" type="simple"><name>XEOS_GUI_BitmapFontGlyphRef</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>__XEOS_GUI_BitmapFontGlyph</declaration_type> <declaration_type>*</declaration_type> <declaration_var>XEOS_GUI_BitmapFontGlyphRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_GUI_BitmapFontRef" lang="c" type="simple"><name>XEOS_GUI_BitmapFontRef</name>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>__XEOS_GUI_BitmapFont</declaration_type> <declaration_type>*</declaration_type> <declaration_var>XEOS_GUI_BitmapFontRef</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_GUI_BitmapFontTraits" lang="c" type="simple"><name>XEOS_GUI_BitmapFontTraits</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>XEOS_GUI_BitmapFontTraitsNormal</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_GUI_BitmapFontTraitsMonospace</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>XEOS_GUI_BitmapFontTraitsNormal</declaration_var> = <declaration_number>0x00</declaration_number>, 
+    <declaration_var>XEOS_GUI_BitmapFontTraitsMonospace</declaration_var> = <declaration_number>0x01</declaration_number> 
+} <declaration_var>XEOS_GUI_BitmapFontTraits</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_GUI_Color" lang="c" type="simple"><name>XEOS_GUI_Color</name>
+<parsedparameterlist>
+<parsedparameter><type>uint8_t</type><name>red</name></parsedparameter>
+<parsedparameter><type>uint8_t</type><name>green</name></parsedparameter>
+<parsedparameter><type>uint8_t</type><name>blue</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> { 
+    <declaration_type>uint8_t</declaration_type> <declaration_var>red</declaration_var>; 
+    <declaration_type>uint8_t</declaration_type> <declaration_var>green</declaration_var>; 
+    <declaration_type>uint8_t</declaration_type> <declaration_var>blue</declaration_var>; 
+} <declaration_var>XEOS_GUI_Color</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_GUI_Point" lang="c" type="simple"><name>XEOS_GUI_Point</name>
+<parsedparameterlist>
+<parsedparameter><type>uint32_t</type><name>x</name></parsedparameter>
+<parsedparameter><type>uint32_t</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<declaration> <declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> { 
+    <declaration_type>uint32_t</declaration_type> <declaration_var>x</declaration_var>; 
+    <declaration_type>uint32_t</declaration_type> <declaration_var>y</declaration_var>; 
+} <declaration_var>XEOS_GUI_Point</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_GUI_PredefinedColor" lang="c" type="simple"><name>XEOS_GUI_PredefinedColor</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>XEOS_GUI_PredefinedColorBlack</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_GUI_PredefinedColorWhite</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_GUI_PredefinedColorGray</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_GUI_PredefinedColorLightGray</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_GUI_PredefinedColorRed</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_GUI_PredefinedColorGreen</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_GUI_PredefinedColorBlue</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_GUI_PredefinedColorMagenta</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_GUI_PredefinedColorCyan</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_GUI_PredefinedColorYellow</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_GUI_PredefinedColorScreenBackground</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_GUI_PredefinedColorWindowBackground</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>XEOS_GUI_PredefinedColorBlack</declaration_var> = <declaration_number>0x00</declaration_number>, 
+    <declaration_var>XEOS_GUI_PredefinedColorWhite</declaration_var> = <declaration_number>0x01</declaration_number>, 
+    <declaration_var>XEOS_GUI_PredefinedColorGray</declaration_var> = <declaration_number>0x02</declaration_number>, 
+    <declaration_var>XEOS_GUI_PredefinedColorLightGray</declaration_var> = <declaration_number>0x03</declaration_number>, 
+    <declaration_var>XEOS_GUI_PredefinedColorRed</declaration_var> = <declaration_number>0x04</declaration_number>, 
+    <declaration_var>XEOS_GUI_PredefinedColorGreen</declaration_var> = <declaration_number>0x05</declaration_number>, 
+    <declaration_var>XEOS_GUI_PredefinedColorBlue</declaration_var> = <declaration_number>0x06</declaration_number>, 
+    <declaration_var>XEOS_GUI_PredefinedColorMagenta</declaration_var> = <declaration_number>0x07</declaration_number>, 
+    <declaration_var>XEOS_GUI_PredefinedColorCyan</declaration_var> = <declaration_number>0x08</declaration_number>, 
+    <declaration_var>XEOS_GUI_PredefinedColorYellow</declaration_var> = <declaration_number>0x09</declaration_number>, 
+    <declaration_var>XEOS_GUI_PredefinedColorScreenBackground</declaration_var> = <declaration_number>0x0A</declaration_number>, 
+    <declaration_var>XEOS_GUI_PredefinedColorWindowBackground</declaration_var> = <declaration_number>0x0B</declaration_number> 
+} <declaration_var>XEOS_GUI_PredefinedColor</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_GUI_Rect" lang="c" type="simple"><name>XEOS_GUI_Rect</name>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_GUI_Point</type><name>origin</name></parsedparameter>
+<parsedparameter><type>XEOS_GUI_Size</type><name>size</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> { 
+    <declaration_type>XEOS_GUI_Point</declaration_type> <declaration_var>origin</declaration_var>; 
+    <declaration_type>XEOS_GUI_Size</declaration_type> <declaration_var>size</declaration_var>; 
+} <declaration_var>XEOS_GUI_Rect</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_GUI_Size" lang="c" type="simple"><name>XEOS_GUI_Size</name>
+<parsedparameterlist>
+<parsedparameter><type>uint32_t</type><name>width</name></parsedparameter>
+<parsedparameter><type>uint32_t</type><name>height</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> { 
+    <declaration_type>uint32_t</declaration_type> <declaration_var>width</declaration_var>; 
+    <declaration_type>uint32_t</declaration_type> <declaration_var>height</declaration_var>; 
+} <declaration_var>XEOS_GUI_Size</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef></typedefs><defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_GUI_H__" definetype="value" lang="c"><name>__XEOS_GUI_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_GUI_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

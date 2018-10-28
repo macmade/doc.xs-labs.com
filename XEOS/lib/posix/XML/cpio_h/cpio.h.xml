@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/cpio.h" lang="c" filename="cpio.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/posix/include/posix/cpio.h"><name>cpio.h</name>
+<includes>
+</includes>
+<desc><p/></desc>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_POSIX_CPIO_H__" definetype="value" lang="c"><name>__XEOS_LIB_POSIX_CPIO_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_POSIX_CPIO_H__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/C_IRGRP" definetype="value" lang="c"><name>C_IRGRP</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>C_IRGRP</declaration_preprocessor> <declaration_preprocessor>0x0000040</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/C_IROTH" definetype="value" lang="c"><name>C_IROTH</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>C_IROTH</declaration_preprocessor> <declaration_preprocessor>0x0000004</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/C_IRUSR" definetype="value" lang="c"><name>C_IRUSR</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>C_IRUSR</declaration_preprocessor> <declaration_preprocessor>0x0000400</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/C_ISBLK" definetype="value" lang="c"><name>C_ISBLK</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>C_ISBLK</declaration_preprocessor> <declaration_preprocessor>0x0060000</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/C_ISCHR" definetype="value" lang="c"><name>C_ISCHR</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>C_ISCHR</declaration_preprocessor> <declaration_preprocessor>0x0020000</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/C_ISCTG" definetype="value" lang="c"><name>C_ISCTG</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>C_ISCTG</declaration_preprocessor> <declaration_preprocessor>0x0110000</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/C_ISDIR" definetype="value" lang="c"><name>C_ISDIR</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>C_ISDIR</declaration_preprocessor> <declaration_preprocessor>0x0040000</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/C_ISFIFO" definetype="value" lang="c"><name>C_ISFIFO</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>C_ISFIFO</declaration_preprocessor> <declaration_preprocessor>0x0010000</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/C_ISGID" definetype="value" lang="c"><name>C_ISGID</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>C_ISGID</declaration_preprocessor> <declaration_preprocessor>0x0002000</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/C_ISLNK" definetype="value" lang="c"><name>C_ISLNK</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>C_ISLNK</declaration_preprocessor> <declaration_preprocessor>0x0120000</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/C_ISREG" definetype="value" lang="c"><name>C_ISREG</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>C_ISREG</declaration_preprocessor> <declaration_preprocessor>0x0100000</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/C_ISSOCK" definetype="value" lang="c"><name>C_ISSOCK</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>C_ISSOCK</declaration_preprocessor> <declaration_preprocessor>0x0140000</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/C_ISUID" definetype="value" lang="c"><name>C_ISUID</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>C_ISUID</declaration_preprocessor> <declaration_preprocessor>0x0004000</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/C_ISVTX" definetype="value" lang="c"><name>C_ISVTX</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>C_ISVTX</declaration_preprocessor> <declaration_preprocessor>0x0001000</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/C_IWGRP" definetype="value" lang="c"><name>C_IWGRP</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>C_IWGRP</declaration_preprocessor> <declaration_preprocessor>0x0000020</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/C_IWOTH" definetype="value" lang="c"><name>C_IWOTH</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>C_IWOTH</declaration_preprocessor> <declaration_preprocessor>0x0000002</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/C_IWUSR" definetype="value" lang="c"><name>C_IWUSR</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>C_IWUSR</declaration_preprocessor> <declaration_preprocessor>0x0000200</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/C_IXGRP" definetype="value" lang="c"><name>C_IXGRP</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>C_IXGRP</declaration_preprocessor> <declaration_preprocessor>0x0000010</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/C_IXOTH" definetype="value" lang="c"><name>C_IXOTH</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>C_IXOTH</declaration_preprocessor> <declaration_preprocessor>0x0000001</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/C_IXUSR" definetype="value" lang="c"><name>C_IXUSR</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>C_IXUSR</declaration_preprocessor> <declaration_preprocessor>0x0000100</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/MAGIC" definetype="value" lang="c"><name>MAGIC</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>MAGIC</declaration_preprocessor> <declaration_preprocessor>"</declaration_preprocessor><declaration_preprocessor>070707</declaration_preprocessor><declaration_preprocessor>"</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/ISOBMFF.h" lang="c" filename="ISOBMFF.h" headerpath="/Users/macmade/Documents/Macmade/DigiDNA/GitHub/ISOBMFF/Documentation/tmp/include/ISOBMFF.h"><name>ISOBMFF.hpp</name>
+<attributes><attribute><name>Author</name><value>Jean-David Gadina - www.digidna.net</value></attribute>
+</attributes>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Macros.hpp">&lt;ISOBMFF/Macros.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Utils.hpp">&lt;ISOBMFF/Utils.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Parser.hpp">&lt;ISOBMFF/Parser.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/BinaryStream.hpp">&lt;ISOBMFF/BinaryStream.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/DisplayableObject.hpp">&lt;ISOBMFF/DisplayableObject.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/DisplayableObjectContainer.hpp">&lt;ISOBMFF/DisplayableObjectContainer.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Box.hpp">&lt;ISOBMFF/Box.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/FullBox.hpp">&lt;ISOBMFF/FullBox.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Container.hpp">&lt;ISOBMFF/Container.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/ContainerBox.hpp">&lt;ISOBMFF/ContainerBox.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/File.hpp">&lt;ISOBMFF/File.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Matrix.hpp">&lt;ISOBMFF/Matrix.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/FTYP.hpp">&lt;ISOBMFF/FTYP.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/MVHD.hpp">&lt;ISOBMFF/MVHD.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/TKHD.hpp">&lt;ISOBMFF/TKHD.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/META.hpp">&lt;ISOBMFF/META.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/HDLR.hpp">&lt;ISOBMFF/HDLR.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/PITM.hpp">&lt;ISOBMFF/PITM.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/IINF.hpp">&lt;ISOBMFF/IINF.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/DREF.hpp">&lt;ISOBMFF/DREF.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/URL.hpp">&lt;ISOBMFF/URL.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/URN.hpp">&lt;ISOBMFF/URN.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/ILOC.hpp">&lt;ISOBMFF/ILOC.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/IREF.hpp">&lt;ISOBMFF/IREF.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/INFE.hpp">&lt;ISOBMFF/INFE.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/IROT.hpp">&lt;ISOBMFF/IROT.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/HVCC.hpp">&lt;ISOBMFF/HVCC.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/SingleItemTypeReferenceBox.hpp">&lt;ISOBMFF/SingleItemTypeReferenceBox.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/DIMG.hpp">&lt;ISOBMFF/DIMG.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/THMB.hpp">&lt;ISOBMFF/THMB.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/CDSC.hpp">&lt;ISOBMFF/CDSC.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/COLR.hpp">&lt;ISOBMFF/COLR.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/ISPE.hpp">&lt;ISOBMFF/ISPE.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/IPMA.hpp">&lt;ISOBMFF/IPMA.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/PIXI.hpp">&lt;ISOBMFF/PIXI.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/IPCO.hpp">&lt;ISOBMFF/IPCO.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/ImageGrid.hpp">&lt;ISOBMFF/ImageGrid.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/STSD.hpp">&lt;ISOBMFF/STSD.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/FRMA.hpp">&lt;ISOBMFF/FRMA.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/SCHM.hpp">&lt;ISOBMFF/SCHM.hpp&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/WIN32.hpp">&lt;ISOBMFF/WIN32.hpp&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<copyrightinfo>&#169; (c) 2017, DigiDNA - www.digidna.net
+</copyrightinfo>
+<timestamp>Wednesday, November 01, 2017</timestamp>
+</header>

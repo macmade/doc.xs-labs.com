@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/iso646.h" lang="c" filename="iso646.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/c99/include/c99/iso646.h"><name>iso646.h</name>
+<includes>
+</includes>
+<desc><p/></desc>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_C99_ISO646_H__" definetype="value" lang="c"><name>__XEOS_LIB_C99_ISO646_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_C99_ISO646_H__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/and" definetype="value" lang="c"><name>and</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>and</declaration_preprocessor> <declaration_preprocessor>&amp;</declaration_preprocessor><declaration_preprocessor>&amp;</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/and_eq" definetype="value" lang="c"><name>and_eq</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>and_eq</declaration_preprocessor> <declaration_preprocessor>&amp;</declaration_preprocessor><declaration_preprocessor>=</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/bitand" definetype="value" lang="c"><name>bitand</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>bitand</declaration_preprocessor> <declaration_preprocessor>&amp;</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/bitor" definetype="value" lang="c"><name>bitor</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>bitor</declaration_preprocessor> <declaration_preprocessor>|</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/compl" definetype="value" lang="c"><name>compl</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>compl</declaration_preprocessor> <declaration_preprocessor>~</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/not" definetype="value" lang="c"><name>not</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>not</declaration_preprocessor> <declaration_preprocessor>!</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/not_eq" definetype="value" lang="c"><name>not_eq</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>not_eq</declaration_preprocessor> <declaration_preprocessor>!=</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/or" definetype="value" lang="c"><name>or</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>or</declaration_preprocessor> <declaration_preprocessor>|</declaration_preprocessor><declaration_preprocessor>|</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/or_eq" definetype="value" lang="c"><name>or_eq</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>or_eq</declaration_preprocessor> <declaration_preprocessor>|</declaration_preprocessor><declaration_preprocessor>=</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/xor" definetype="value" lang="c"><name>xor</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>xor</declaration_preprocessor> <declaration_preprocessor>^</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/xor_eq" definetype="value" lang="c"><name>xor_eq</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>xor_eq</declaration_preprocessor> <declaration_preprocessor>^</declaration_preprocessor><declaration_preprocessor>=</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

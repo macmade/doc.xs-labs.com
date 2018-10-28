@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/Pair.h" lang="c" filename="Pair.h" headerpath="/Users/macmade/Documents/Macmade/GitHub/GitHubUpdates/Documentation/../GitHubUpdates/Pair.h"><name>Pair.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Foundation.h">&lt;Foundation/Foundation.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<classes><class id="//xsdoc_ref/occ/cl/PairFirstType,SecondType" lang="occ"><name>PairFirstType,SecondType</name>
+<abstract><p>Represents an object pair.
+</p></abstract>
+<attributes><attribute><name>Conforms to</name><value><hd_link logicalPath="//xsdoc_ref/occ/intf/FirstType">FirstType</hd_link><hd_link logicalPath="//xsdoc_ref/occ/intf/SecondType">SecondType</hd_link></value></attribute>
+<attribute><name>Superclass</name><value><hd_link logicalPath="//xsdoc_ref/occ/cl/Pair">Pair</hd_link></value></attribute>
+</attributes>
+<declaration>@<declaration_type>interface</declaration_type> <declaration_type>Pair</declaration_type>&lt; <declaration_template>FirstType</declaration_template>, <declaration_template>SecondType</declaration_template> &gt;: <declaration_type>NSObject</declaration_type>  <declaration_comment>/*!
+@property    first
+@abstract    The first object in the pair.</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readwrite</declaration_param>,
+        <declaration_param>strong</declaration_param>,
+        <declaration_param>nullable</declaration_param> ) <declaration_type>FirstType</declaration_type> <declaration_var>first</declaration_var>;   <declaration_comment>/*!</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readwrite</declaration_param>,
+        <declaration_param>strong</declaration_param>,
+        <declaration_param>nullable</declaration_param> ) <declaration_type>SecondType</declaration_type> <declaration_var>second</declaration_var>;   <declaration_comment>/*!</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>instancetype</declaration_param> )<declaration_type>initWithFirstValue</declaration_type>: ( <declaration_type>nullable</declaration_type> <declaration_param>FirstType</declaration_param> )<declaration_type>v1</declaration_type> <declaration_type>secondValue</declaration_type>: ( <declaration_type>nullable</declaration_type> <declaration_param>SecondType</declaration_param> )<declaration_type>v2</declaration_type> <declaration_var>NS_DESIGNATED_INITIALIZER</declaration_var>;   
+    @@end </declaration>
+<desc><p/></desc>
+<properties><property id="//xsdoc_ref/occ/instp/PairFirstType,SecondType/second" lang="occ" accessControl="private"><name>initWithFirstValue:secondValue:</name>
+<abstract><p>Initialized an instance of this class.
+</p></abstract>
+<fieldlist>
+<field><name>v1</name><desc><p>The first object</p></desc></field>
+<field><name>v2</name><desc><p>The second object</p></desc></field>
+</fieldlist>
+<returntype>SecondType</returntype>
+<result><p>The initialized instance
+</p></result>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readwrite</declaration_param>,
+    <declaration_param>strong</declaration_param>,
+    <declaration_param>nullable</declaration_param> ) <declaration_type>FirstType</declaration_type> <declaration_var>first</declaration_var>;   <declaration_comment>/*!</declaration_comment>
+    <declaration_comment>*/</declaration_comment>
+@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readwrite</declaration_param>,
+    <declaration_param>strong</declaration_param>,
+    <declaration_param>nullable</declaration_param> ) <declaration_type>SecondType</declaration_type> <declaration_var>second</declaration_var>;   <declaration_comment>/*!</declaration_comment>
+    <declaration_comment>*/</declaration_comment>
+- ( <declaration_param>instancetype</declaration_param> )<declaration_type>initWithFirstValue</declaration_type>: ( <declaration_type>nullable</declaration_type> <declaration_param>FirstType</declaration_param> )<declaration_type>v1</declaration_type> <declaration_type>secondValue</declaration_type>: ( <declaration_type>nullable</declaration_type> <declaration_param>SecondType</declaration_param> )<declaration_type>v2</declaration_type> <declaration_var>NS_DESIGNATED_INITIALIZER</declaration_var>;   
+@@end</declaration>
+<desc><p>This is the class's designated initializer.
+</p></desc>
+</property></properties>
+<timestamp>Sunday, June 18, 2017</timestamp>
+</class></classes>
+<copyrightinfo>&#169; (c) 2017, Jean-David Gadina - www.xs-labs.com
+</copyrightinfo>
+<timestamp>Sunday, June 18, 2017</timestamp>
+</header>

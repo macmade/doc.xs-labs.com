@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/struct_lconv.h" lang="c" filename="struct_lconv.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/system/include/system/types/struct_lconv.h"><name>struct_lconv.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdint.h">&lt;system/types/__private/stdint.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<structs_and_unions><struct id="//xsdoc_ref/c/tag/lconv" lang="c"><name>lconv</name>
+<parsedparameterlist>
+<parsedparameter><type>char *</type><name>decimal_point</name></parsedparameter>
+<parsedparameter><type>char *</type><name>thousands_sep</name></parsedparameter>
+<parsedparameter><type>char *</type><name>grouping</name></parsedparameter>
+<parsedparameter><type>char *</type><name>mon_decimal_point</name></parsedparameter>
+<parsedparameter><type>char *</type><name>mon_thousands_sep</name></parsedparameter>
+<parsedparameter><type>char *</type><name>mon_grouping</name></parsedparameter>
+<parsedparameter><type>char *</type><name>positive_sign</name></parsedparameter>
+<parsedparameter><type>char *</type><name>negative_sign</name></parsedparameter>
+<parsedparameter><type>char *</type><name>currency_symbol</name></parsedparameter>
+<parsedparameter><type>char *</type><name>int_curr_symbol</name></parsedparameter>
+<parsedparameter><type>char</type><name>frac_digits</name></parsedparameter>
+<parsedparameter><type>char</type><name>p_cs_precedes</name></parsedparameter>
+<parsedparameter><type>char</type><name>n_cs_precedes</name></parsedparameter>
+<parsedparameter><type>char</type><name>p_sep_by_space</name></parsedparameter>
+<parsedparameter><type>char</type><name>n_sep_by_space</name></parsedparameter>
+<parsedparameter><type>char</type><name>p_sign_posn</name></parsedparameter>
+<parsedparameter><type>char</type><name>n_sign_posn</name></parsedparameter>
+<parsedparameter><type>char</type><name>int_frac_digits</name></parsedparameter>
+<parsedparameter><type>char</type><name>int_p_cs_precedes</name></parsedparameter>
+<parsedparameter><type>char</type><name>int_n_cs_precedes</name></parsedparameter>
+<parsedparameter><type>char</type><name>int_p_sep_by_space</name></parsedparameter>
+<parsedparameter><type>char</type><name>int_n_sep_by_space</name></parsedparameter>
+<parsedparameter><type>char</type><name>int_p_sign_posn</name></parsedparameter>
+<parsedparameter><type>char</type><name>int_n_sign_posn</name></parsedparameter>
+<parsedparameter><type>char</type><name>__pad_0</name></parsedparameter>
+</parsedparameterlist>
+<declaration> <declaration_keyword>struct</declaration_keyword> <declaration_type>lconv</declaration_type> { 
+    <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_var>decimal_point</declaration_var>; 
+    <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_var>thousands_sep</declaration_var>; 
+    <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_var>grouping</declaration_var>; 
+    <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_var>mon_decimal_point</declaration_var>; 
+    <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_var>mon_thousands_sep</declaration_var>; 
+    <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_var>mon_grouping</declaration_var>; 
+    <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_var>positive_sign</declaration_var>; 
+    <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_var>negative_sign</declaration_var>; 
+    <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_var>currency_symbol</declaration_var>; 
+    <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_var>int_curr_symbol</declaration_var>; 
+    <declaration_type>char</declaration_type> <declaration_var>frac_digits</declaration_var>; 
+    <declaration_type>char</declaration_type> <declaration_var>p_cs_precedes</declaration_var>; 
+    <declaration_type>char</declaration_type> <declaration_var>n_cs_precedes</declaration_var>; 
+    <declaration_type>char</declaration_type> <declaration_var>p_sep_by_space</declaration_var>; 
+    <declaration_type>char</declaration_type> <declaration_var>n_sep_by_space</declaration_var>; 
+    <declaration_type>char</declaration_type> <declaration_var>p_sign_posn</declaration_var>; 
+    <declaration_type>char</declaration_type> <declaration_var>n_sign_posn</declaration_var>; 
+    <declaration_type>char</declaration_type> <declaration_var>int_frac_digits</declaration_var>; 
+    <declaration_type>char</declaration_type> <declaration_var>int_p_cs_precedes</declaration_var>; 
+    <declaration_type>char</declaration_type> <declaration_var>int_n_cs_precedes</declaration_var>; 
+    <declaration_type>char</declaration_type> <declaration_var>int_p_sep_by_space</declaration_var>; 
+    <declaration_type>char</declaration_type> <declaration_var>int_n_sep_by_space</declaration_var>; 
+    <declaration_type>char</declaration_type> <declaration_var>int_p_sign_posn</declaration_var>; 
+    <declaration_type>char</declaration_type> <declaration_var>int_n_sign_posn</declaration_var>;  
+    <declaration_type>char</declaration_type> <declaration_type>__pad_0</declaration_type>[ <declaration_number>2</declaration_number> ]; 
+};  </declaration>
+<desc><p/></desc>
+</struct></structs_and_unions><defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_SYSTEM_TYPES_STRUCT_LCONV_H__" definetype="value" lang="c"><name>__XEOS_LIB_SYSTEM_TYPES_STRUCT_LCONV_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_SYSTEM_TYPES_STRUCT_LCONV_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/pic.h" lang="c" filename="pic.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/core/xeos/include/xeos/hal/pic.h"><name>pic.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdint.h">&lt;stdint.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdbool.h">&lt;stdbool.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/XEOS_HAL_PIC_GetRegister" lang="c"><name>XEOS_HAL_PIC_GetRegister</name>
+<abstract><p>Gets the register number for a PIC register
+</p></abstract>
+<parameterlist>
+<parameter><name>c</name><desc><p>The PIC</p></desc></parameter>
+<parameter><name>r</name><desc><p>The PIC register</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_HAL_PIC_Controller</type><name>c</name></parsedparameter>
+<parsedparameter><type>XEOS_HAL_PIC_Register</type><name>r</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uint8_t</returntype>
+<result><p>The register number
+</p></result>
+<declaration><declaration_type>uint8_t</declaration_type> <declaration_function>XEOS_HAL_PIC_GetRegister</declaration_function>(
+    <declaration_type>XEOS_HAL_PIC_Controller</declaration_type> <declaration_param>c</declaration_param>,
+    <declaration_type>XEOS_HAL_PIC_Register</declaration_type> <declaration_param>r</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_PIC_IRQLineMasked" lang="c"><name>XEOS_HAL_PIC_IRQLineMasked</name>
+<abstract><p>Checks if an IRQ line is masked
+</p></abstract>
+<parameterlist>
+<parameter><name>irq</name><desc><p>The IRQ line to unmask (0-15)</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_HAL_PIC_IRQ</type><name>irq</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<result><p>True if the IRQ line is masked, otherwise false
+</p></result>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>XEOS_HAL_PIC_IRQLineMasked</declaration_function>(
+    <declaration_type>XEOS_HAL_PIC_IRQ</declaration_type> <declaration_param>irq</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_PIC_MaskIRQLine" lang="c"><name>XEOS_HAL_PIC_MaskIRQLine</name>
+<abstract><p>Masks an IRQ line
+</p></abstract>
+<parameterlist>
+<parameter><name>irq</name><desc><p>The IRQ line to mask (0-15)</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_HAL_PIC_IRQ</type><name>irq</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_PIC_MaskIRQLine</declaration_function>(
+    <declaration_type>XEOS_HAL_PIC_IRQ</declaration_type> <declaration_param>irq</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_PIC_ReadData" lang="c"><name>XEOS_HAL_PIC_ReadData</name>
+<abstract><p>Reads data from a PIC
+</p></abstract>
+<parameterlist>
+<parameter><name>c</name><desc><p>The PIC</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_HAL_PIC_Controller</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uint8_t</returntype>
+<result><p>The data read
+</p></result>
+<declaration><declaration_type>uint8_t</declaration_type> <declaration_function>XEOS_HAL_PIC_ReadData</declaration_function>(
+    <declaration_type>XEOS_HAL_PIC_Controller</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_PIC_Remap" lang="c"><name>XEOS_HAL_PIC_Remap</name>
+<abstract><p>Remaps the PIC (Programmable Interrupt Controller)
+</p></abstract>
+<parameterlist>
+<parameter><name>masterBase</name><desc><p>The base IRQ number for the master controller</p></desc></parameter>
+<parameter><name>slaveBase</name><desc><p>The base IRQ number for the slave controller</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>uint8_t</type><name>masterBase</name></parsedparameter>
+<parsedparameter><type>uint8_t</type><name>slaveBase</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_PIC_Remap</declaration_function>(
+    <declaration_type>uint8_t</declaration_type> <declaration_param>masterBase</declaration_param>,
+    <declaration_type>uint8_t</declaration_type> <declaration_param>slaveBase</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_PIC_SendCommand" lang="c"><name>XEOS_HAL_PIC_SendCommand</name>
+<abstract><p>Sends a command to a PIC
+</p></abstract>
+<parameterlist>
+<parameter><name>c</name><desc><p>The PIC</p></desc></parameter>
+<parameter><name>command</name><desc><p>The command to send</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_HAL_PIC_Controller</type><name>c</name></parsedparameter>
+<parsedparameter><type>uint8_t</type><name>command</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_PIC_SendCommand</declaration_function>(
+    <declaration_type>XEOS_HAL_PIC_Controller</declaration_type> <declaration_param>c</declaration_param>,
+    <declaration_type>uint8_t</declaration_type> <declaration_param>command</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_PIC_SendData" lang="c"><name>XEOS_HAL_PIC_SendData</name>
+<abstract><p>Sends data to a PIC
+</p></abstract>
+<parameterlist>
+<parameter><name>c</name><desc><p>The PIC</p></desc></parameter>
+<parameter><name>data</name><desc><p>The data to send</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_HAL_PIC_Controller</type><name>c</name></parsedparameter>
+<parsedparameter><type>uint8_t</type><name>data</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_PIC_SendData</declaration_function>(
+    <declaration_type>XEOS_HAL_PIC_Controller</declaration_type> <declaration_param>c</declaration_param>,
+    <declaration_type>uint8_t</declaration_type> <declaration_param>data</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_PIC_SendEOI" lang="c"><name>XEOS_HAL_PIC_SendEOI</name>
+<abstract><p>Sends EOI (End Of Interrupt)
+</p></abstract>
+<parameterlist>
+<parameter><name>c</name><desc><p>The PIC</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_HAL_PIC_Controller</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_PIC_SendEOI</declaration_function>(
+    <declaration_type>XEOS_HAL_PIC_Controller</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_PIC_UnmaskIRQLine" lang="c"><name>XEOS_HAL_PIC_UnmaskIRQLine</name>
+<abstract><p>Unmasks an IRQ line
+</p></abstract>
+<parameterlist>
+<parameter><name>irq</name><desc><p>The IRQ line to unmask (0-15)</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_HAL_PIC_IRQ</type><name>irq</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_PIC_UnmaskIRQLine</declaration_function>(
+    <declaration_type>XEOS_HAL_PIC_IRQ</declaration_type> <declaration_param>irq</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<typedefs><typedef id="//xsdoc_ref/c/tdef/XEOS_HAL_PIC_Controller" lang="c" type="simple"><name>XEOS_HAL_PIC_Controller</name>
+<abstract><p>Programmable Interrupt Controller
+</p></abstract>
+<constantlist>
+<constant><name>XEOS_HAL_PIC_Controller1</name><desc><p>Master PIC</p></desc></constant>
+<constant><name>XEOS_HAL_PIC_Controller2</name><desc><p>Slave PIC</p></desc></constant>
+</constantlist>
+<parsedparameterlist>
+<parsedparameter><type></type><name>XEOS_HAL_PIC_Controller1</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIC_Controller2</name></parsedparameter>
+</parsedparameterlist>
+<declaration> <declaration_comment>/*!</declaration_comment>
+    <declaration_comment>*/</declaration_comment>
+<declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>XEOS_HAL_PIC_Controller1</declaration_var> = <declaration_number>0x00</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIC_Controller2</declaration_var> = <declaration_number>0x01</declaration_number> 
+} <declaration_var>XEOS_HAL_PIC_Controller</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_HAL_PIC_ICW1" lang="c" type="simple"><name>XEOS_HAL_PIC_ICW1</name>
+<abstract><p>PIC Initialization Command Word (ICW) 1
+</p></abstract>
+<constantlist>
+<constant><name>XEOS_HAL_PIC_ICW1None</name><desc><p>No value</p></desc></constant>
+<constant><name>XEOS_HAL_PIC_ICW1IC4</name><desc><p>PIC expects to recieve IC4 during initialization</p></desc></constant>
+<constant><name>XEOS_HAL_PIC_ICW1SNGL</name><desc><p>Only one PIC in system</p></desc></constant>
+<constant><name>XEOS_HAL_PIC_ICW1ADI</name><desc><p>CALL address interval is 4</p></desc></constant>
+<constant><name>XEOS_HAL_PIC_ICW1LTIM</name><desc><p>Operate in Level Triggered Mode</p></desc></constant>
+<constant><name>XEOS_HAL_PIC_ICW1Init</name><desc><p>PIC needs to be initialized</p></desc></constant>
+</constantlist>
+<parsedparameterlist>
+<parsedparameter><type></type><name>XEOS_HAL_PIC_ICW1None</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIC_ICW1IC4</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIC_ICW1SNGL</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIC_ICW1ADI</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIC_ICW1LTIM</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIC_ICW1Init</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>XEOS_HAL_PIC_ICW1None</declaration_var> = <declaration_number>0x00</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIC_ICW1IC4</declaration_var> = <declaration_number>0x01</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIC_ICW1SNGL</declaration_var> = <declaration_number>0x02</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIC_ICW1ADI</declaration_var> = <declaration_number>0x04</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIC_ICW1LTIM</declaration_var> = <declaration_number>0x08</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIC_ICW1Init</declaration_var> = <declaration_number>0x10</declaration_number> 
+} <declaration_var>XEOS_HAL_PIC_ICW1</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_HAL_PIC_ICW4" lang="c" type="simple"><name>XEOS_HAL_PIC_ICW4</name>
+<abstract><p>PIC Initialization Command Word (ICW) 4
+</p></abstract>
+<constantlist>
+<constant><name>XEOS_HAL_PIC_ICW4None</name><desc><p>No value</p></desc></constant>
+<constant><name>XEOS_HAL_PIC_ICW4UPM</name><desc><p>80x86 mode</p></desc></constant>
+<constant><name>XEOS_HAL_PIC_ICW4AEOI</name><desc><p>Performs EOI (End Of Interrupt) on the last interrupt acknowledge pulse</p></desc></constant>
+<constant><name>XEOS_HAL_PIC_ICW4MS</name><desc><p>Selects buffer master</p></desc></constant>
+<constant><name>XEOS_HAL_PIC_ICW4BUF</name><desc><p>Operates in buffered mode</p></desc></constant>
+<constant><name>XEOS_HAL_PIC_ICW4SFNM</name><desc><p>Special fully nested mode</p></desc></constant>
+</constantlist>
+<parsedparameterlist>
+<parsedparameter><type></type><name>XEOS_HAL_PIC_ICW4None</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIC_ICW4UPM</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIC_ICW4AEOI</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIC_ICW4MS</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIC_ICW4BUF</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIC_ICW4SFNM</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>XEOS_HAL_PIC_ICW4None</declaration_var> = <declaration_number>0x00</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIC_ICW4UPM</declaration_var> = <declaration_number>0x01</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIC_ICW4AEOI</declaration_var> = <declaration_number>0x02</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIC_ICW4MS</declaration_var> = <declaration_number>0x04</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIC_ICW4BUF</declaration_var> = <declaration_number>0x08</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIC_ICW4SFNM</declaration_var> = <declaration_number>0x10</declaration_number> 
+} <declaration_var>XEOS_HAL_PIC_ICW4</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_HAL_PIC_IRQ" lang="c" type="simple"><name>XEOS_HAL_PIC_IRQ</name>
+<abstract><p>IRQ lines
+</p></abstract>
+<constantlist>
+<constant><name>XEOS_HAL_PIC_IRQ0</name><desc><p>IRQ line 0 (master PIC)</p></desc></constant>
+<constant><name>XEOS_HAL_PIC_IRQ1</name><desc><p>IRQ line 1 (master PIC)</p></desc></constant>
+<constant><name>XEOS_HAL_PIC_IRQ2</name><desc><p>IRQ line 2 (master PIC)</p></desc></constant>
+<constant><name>XEOS_HAL_PIC_IRQ3</name><desc><p>IRQ line 3 (master PIC)</p></desc></constant>
+<constant><name>XEOS_HAL_PIC_IRQ4</name><desc><p>IRQ line 4 (master PIC)</p></desc></constant>
+<constant><name>XEOS_HAL_PIC_IRQ5</name><desc><p>IRQ line 5 (master PIC)</p></desc></constant>
+<constant><name>XEOS_HAL_PIC_IRQ6</name><desc><p>IRQ line 6 (master PIC)</p></desc></constant>
+<constant><name>XEOS_HAL_PIC_IRQ7</name><desc><p>IRQ line 7 (master PIC)</p></desc></constant>
+<constant><name>XEOS_HAL_PIC_IRQ8</name><desc><p>IRQ line 8 (slave PIC)</p></desc></constant>
+<constant><name>XEOS_HAL_PIC_IRQ9</name><desc><p>IRQ line 9 (slave PIC)</p></desc></constant>
+<constant><name>XEOS_HAL_PIC_IRQ10</name><desc><p>IRQ line 10 (slave PIC)</p></desc></constant>
+<constant><name>XEOS_HAL_PIC_IRQ11</name><desc><p>IRQ line 11 (slave PIC)</p></desc></constant>
+<constant><name>XEOS_HAL_PIC_IRQ12</name><desc><p>IRQ line 12 (slave PIC)</p></desc></constant>
+<constant><name>XEOS_HAL_PIC_IRQ13</name><desc><p>IRQ line 13 (slave PIC)</p></desc></constant>
+<constant><name>XEOS_HAL_PIC_IRQ14</name><desc><p>IRQ line 14 (slave PIC)</p></desc></constant>
+<constant><name>XEOS_HAL_PIC_IRQ15</name><desc><p>IRQ line 15 (slave PIC)</p></desc></constant>
+</constantlist>
+<parsedparameterlist>
+<parsedparameter><type></type><name>XEOS_HAL_PIC_IRQ0</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIC_IRQ1</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIC_IRQ2</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIC_IRQ3</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIC_IRQ4</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIC_IRQ5</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIC_IRQ6</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIC_IRQ7</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIC_IRQ8</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIC_IRQ9</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIC_IRQ10</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIC_IRQ11</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIC_IRQ12</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIC_IRQ13</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIC_IRQ14</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIC_IRQ15</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>XEOS_HAL_PIC_IRQ0</declaration_var> = <declaration_number>0x00</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIC_IRQ1</declaration_var> = <declaration_number>0x01</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIC_IRQ2</declaration_var> = <declaration_number>0x02</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIC_IRQ3</declaration_var> = <declaration_number>0x03</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIC_IRQ4</declaration_var> = <declaration_number>0x04</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIC_IRQ5</declaration_var> = <declaration_number>0x05</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIC_IRQ6</declaration_var> = <declaration_number>0x06</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIC_IRQ7</declaration_var> = <declaration_number>0x07</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIC_IRQ8</declaration_var> = <declaration_number>0x08</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIC_IRQ9</declaration_var> = <declaration_number>0x09</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIC_IRQ10</declaration_var> = <declaration_number>0x0A</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIC_IRQ11</declaration_var> = <declaration_number>0x0B</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIC_IRQ12</declaration_var> = <declaration_number>0x0C</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIC_IRQ13</declaration_var> = <declaration_number>0x0D</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIC_IRQ14</declaration_var> = <declaration_number>0x0E</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIC_IRQ15</declaration_var> = <declaration_number>0x0F</declaration_number> 
+} <declaration_var>XEOS_HAL_PIC_IRQ</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_HAL_PIC_Register" lang="c" type="simple"><name>XEOS_HAL_PIC_Register</name>
+<abstract><p>PIC register
+</p></abstract>
+<constantlist>
+<constant><name>XEOS_HAL_PIC_RegisterCommand</name><desc><p>PIC command register</p></desc></constant>
+<constant><name>XEOS_HAL_PIC_RegisterStatus</name><desc><p>PIC status register</p></desc></constant>
+<constant><name>XEOS_HAL_PIC_RegisterData</name><desc><p>PIC data register</p></desc></constant>
+</constantlist>
+<parsedparameterlist>
+<parsedparameter><type></type><name>XEOS_HAL_PIC_RegisterCommand</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIC_RegisterStatus</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_PIC_RegisterData</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>XEOS_HAL_PIC_RegisterCommand</declaration_var> = <declaration_number>0x00</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIC_RegisterStatus</declaration_var> = <declaration_number>0x01</declaration_number>, 
+    <declaration_var>XEOS_HAL_PIC_RegisterData</declaration_var> = <declaration_number>0x02</declaration_number>, 
+} <declaration_var>XEOS_HAL_PIC_Register</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef></typedefs><defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_HAL_PIC_H__" definetype="value" lang="c"><name>__XEOS_HAL_PIC_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_HAL_PIC_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

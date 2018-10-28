@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/header.h" lang="c" filename="header.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/elf/include/elf/header.h"><name>header.h</name>
+<includes>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/ELF64_HeaderGetDataEncoding" lang="c"><name>ELF64_HeaderGetDataEncoding</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_HeaderRef</type><name>header</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_DataEncoding</returntype>
+<declaration><declaration_type>ELF64_DataEncoding</declaration_type> <declaration_function>ELF64_HeaderGetDataEncoding</declaration_function>(
+    <declaration_type>ELF64_HeaderRef</declaration_type> <declaration_param>header</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_HeaderGetDataEncodingString" lang="c"><name>ELF64_HeaderGetDataEncodingString</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_HeaderRef</type><name>header</name></parsedparameter>
+</parsedparameterlist>
+<returntype> const char *</returntype>
+<declaration><declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type> <declaration_function>ELF64_HeaderGetDataEncodingString</declaration_function>(
+    <declaration_type>ELF64_HeaderRef</declaration_type> <declaration_param>header</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_HeaderGetEntryPointAddress" lang="c"><name>ELF64_HeaderGetEntryPointAddress</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_HeaderRef</type><name>header</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_Addr</returntype>
+<declaration><declaration_type>ELF64_Addr</declaration_type> <declaration_function>ELF64_HeaderGetEntryPointAddress</declaration_function>(
+    <declaration_type>ELF64_HeaderRef</declaration_type> <declaration_param>header</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_HeaderGetFileVersion" lang="c"><name>ELF64_HeaderGetFileVersion</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_HeaderRef</type><name>header</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_UChar</returntype>
+<declaration><declaration_type>ELF64_UChar</declaration_type> <declaration_function>ELF64_HeaderGetFileVersion</declaration_function>(
+    <declaration_type>ELF64_HeaderRef</declaration_type> <declaration_param>header</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_HeaderGetHeaderSize" lang="c"><name>ELF64_HeaderGetHeaderSize</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_HeaderRef</type><name>header</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_Half</returntype>
+<declaration><declaration_type>ELF64_Half</declaration_type> <declaration_function>ELF64_HeaderGetHeaderSize</declaration_function>(
+    <declaration_type>ELF64_HeaderRef</declaration_type> <declaration_param>header</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_HeaderGetMachine" lang="c"><name>ELF64_HeaderGetMachine</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_HeaderRef</type><name>header</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_Half</returntype>
+<declaration><declaration_type>ELF64_Half</declaration_type> <declaration_function>ELF64_HeaderGetMachine</declaration_function>(
+    <declaration_type>ELF64_HeaderRef</declaration_type> <declaration_param>header</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_HeaderGetMachineType" lang="c"><name>ELF64_HeaderGetMachineType</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_HeaderRef</type><name>header</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_MachineType</returntype>
+<declaration><declaration_type>ELF64_MachineType</declaration_type> <declaration_function>ELF64_HeaderGetMachineType</declaration_function>(
+    <declaration_type>ELF64_HeaderRef</declaration_type> <declaration_param>header</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_HeaderGetMachineTypeString" lang="c"><name>ELF64_HeaderGetMachineTypeString</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_HeaderRef</type><name>header</name></parsedparameter>
+</parsedparameterlist>
+<returntype> const char *</returntype>
+<declaration><declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type> <declaration_function>ELF64_HeaderGetMachineTypeString</declaration_function>(
+    <declaration_type>ELF64_HeaderRef</declaration_type> <declaration_param>header</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_HeaderGetObjectFileClass" lang="c"><name>ELF64_HeaderGetObjectFileClass</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_HeaderRef</type><name>header</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_ObjectFileClass</returntype>
+<declaration> <declaration_type>ELF64_ObjectFileClass</declaration_type> <declaration_function>ELF64_HeaderGetObjectFileClass</declaration_function>(
+    <declaration_type>ELF64_HeaderRef</declaration_type> <declaration_param>header</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_HeaderGetObjectFileClassString" lang="c"><name>ELF64_HeaderGetObjectFileClassString</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_HeaderRef</type><name>header</name></parsedparameter>
+</parsedparameterlist>
+<returntype> const char *</returntype>
+<declaration><declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type> <declaration_function>ELF64_HeaderGetObjectFileClassString</declaration_function>(
+    <declaration_type>ELF64_HeaderRef</declaration_type> <declaration_param>header</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_HeaderGetObjectFileType" lang="c"><name>ELF64_HeaderGetObjectFileType</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_HeaderRef</type><name>header</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_ObjectFileType</returntype>
+<declaration><declaration_type>ELF64_ObjectFileType</declaration_type> <declaration_function>ELF64_HeaderGetObjectFileType</declaration_function>(
+    <declaration_type>ELF64_HeaderRef</declaration_type> <declaration_param>header</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_HeaderGetObjectFileTypeString" lang="c"><name>ELF64_HeaderGetObjectFileTypeString</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_HeaderRef</type><name>header</name></parsedparameter>
+</parsedparameterlist>
+<returntype> const char *</returntype>
+<declaration><declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type> <declaration_function>ELF64_HeaderGetObjectFileTypeString</declaration_function>(
+    <declaration_type>ELF64_HeaderRef</declaration_type> <declaration_param>header</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_HeaderGetOSABI" lang="c"><name>ELF64_HeaderGetOSABI</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_HeaderRef</type><name>header</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_OSABI</returntype>
+<declaration><declaration_type>ELF64_OSABI</declaration_type> <declaration_function>ELF64_HeaderGetOSABI</declaration_function>(
+    <declaration_type>ELF64_HeaderRef</declaration_type> <declaration_param>header</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_HeaderGetOSABIString" lang="c"><name>ELF64_HeaderGetOSABIString</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_HeaderRef</type><name>header</name></parsedparameter>
+</parsedparameterlist>
+<returntype> const char *</returntype>
+<declaration><declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type> <declaration_function>ELF64_HeaderGetOSABIString</declaration_function>(
+    <declaration_type>ELF64_HeaderRef</declaration_type> <declaration_param>header</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_HeaderGetProcessorSpecificFlags" lang="c"><name>ELF64_HeaderGetProcessorSpecificFlags</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_HeaderRef</type><name>header</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_Word</returntype>
+<declaration><declaration_type>ELF64_Word</declaration_type> <declaration_function>ELF64_HeaderGetProcessorSpecificFlags</declaration_function>(
+    <declaration_type>ELF64_HeaderRef</declaration_type> <declaration_param>header</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_HeaderGetProgramHeaderEntryCount" lang="c"><name>ELF64_HeaderGetProgramHeaderEntryCount</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_HeaderRef</type><name>header</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_Half</returntype>
+<declaration><declaration_type>ELF64_Half</declaration_type> <declaration_function>ELF64_HeaderGetProgramHeaderEntryCount</declaration_function>(
+    <declaration_type>ELF64_HeaderRef</declaration_type> <declaration_param>header</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_HeaderGetProgramHeaderEntrySize" lang="c"><name>ELF64_HeaderGetProgramHeaderEntrySize</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_HeaderRef</type><name>header</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_Half</returntype>
+<declaration><declaration_type>ELF64_Half</declaration_type> <declaration_function>ELF64_HeaderGetProgramHeaderEntrySize</declaration_function>(
+    <declaration_type>ELF64_HeaderRef</declaration_type> <declaration_param>header</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_HeaderGetProgramHeaderOffset" lang="c"><name>ELF64_HeaderGetProgramHeaderOffset</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_HeaderRef</type><name>header</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_Off</returntype>
+<declaration><declaration_type>ELF64_Off</declaration_type> <declaration_function>ELF64_HeaderGetProgramHeaderOffset</declaration_function>(
+    <declaration_type>ELF64_HeaderRef</declaration_type> <declaration_param>header</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_HeaderGetSectionHeaderEntryCount" lang="c"><name>ELF64_HeaderGetSectionHeaderEntryCount</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_HeaderRef</type><name>header</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_Half</returntype>
+<declaration><declaration_type>ELF64_Half</declaration_type> <declaration_function>ELF64_HeaderGetSectionHeaderEntryCount</declaration_function>(
+    <declaration_type>ELF64_HeaderRef</declaration_type> <declaration_param>header</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_HeaderGetSectionHeaderEntrySize" lang="c"><name>ELF64_HeaderGetSectionHeaderEntrySize</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_HeaderRef</type><name>header</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_Half</returntype>
+<declaration><declaration_type>ELF64_Half</declaration_type> <declaration_function>ELF64_HeaderGetSectionHeaderEntrySize</declaration_function>(
+    <declaration_type>ELF64_HeaderRef</declaration_type> <declaration_param>header</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_HeaderGetSectionHeaderOffset" lang="c"><name>ELF64_HeaderGetSectionHeaderOffset</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_HeaderRef</type><name>header</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_Off</returntype>
+<declaration><declaration_type>ELF64_Off</declaration_type> <declaration_function>ELF64_HeaderGetSectionHeaderOffset</declaration_function>(
+    <declaration_type>ELF64_HeaderRef</declaration_type> <declaration_param>header</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_HeaderGetSectionNameStringTableIndex" lang="c"><name>ELF64_HeaderGetSectionNameStringTableIndex</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_HeaderRef</type><name>header</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_Half</returntype>
+<declaration><declaration_type>ELF64_Half</declaration_type> <declaration_function>ELF64_HeaderGetSectionNameStringTableIndex</declaration_function>(
+    <declaration_type>ELF64_HeaderRef</declaration_type> <declaration_param>header</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ELF64_HeaderGetVersion" lang="c"><name>ELF64_HeaderGetVersion</name>
+<parsedparameterlist>
+<parsedparameter><type>ELF64_HeaderRef</type><name>header</name></parsedparameter>
+</parsedparameterlist>
+<returntype> ELF64_Word</returntype>
+<declaration><declaration_type>ELF64_Word</declaration_type> <declaration_function>ELF64_HeaderGetVersion</declaration_function>(
+    <declaration_type>ELF64_HeaderRef</declaration_type> <declaration_param>header</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_ELF_HEADER_H__" definetype="value" lang="c"><name>__XEOS_LIB_ELF_HEADER_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_ELF_HEADER_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

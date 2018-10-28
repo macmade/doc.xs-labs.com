@@ -1,0 +1,1825 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/math.h" lang="c" filename="math.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/c99/include/c99/math.h"><name>math.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/flt_eval_method.h">&lt;system/types/flt_eval_method.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/float_t.h">&lt;system/types/float_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/double_t.h">&lt;system/types/double_t.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/__XEOS_Lib_C99_Math_errhandling" lang="c"><name>__XEOS_Lib_C99_Math_errhandling</name>
+<returntype> extern int</returntype>
+<declaration><declaration_keyword>extern</declaration_keyword> <declaration_type>int</declaration_type> <declaration_function>__XEOS_Lib_C99_Math_errhandling</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/__XEOS_Lib_C99_Math_fpclassify_d" lang="c"><name>__XEOS_Lib_C99_Math_fpclassify_d</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> extern int</returntype>
+<declaration><declaration_keyword>extern</declaration_keyword> <declaration_type>int</declaration_type> <declaration_function>__XEOS_Lib_C99_Math_fpclassify_d</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/__XEOS_Lib_C99_Math_fpclassify_f" lang="c"><name>__XEOS_Lib_C99_Math_fpclassify_f</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> extern int</returntype>
+<declaration><declaration_keyword>extern</declaration_keyword> <declaration_type>int</declaration_type> <declaration_function>__XEOS_Lib_C99_Math_fpclassify_f</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/__XEOS_Lib_C99_Math_fpclassify_l" lang="c"><name>__XEOS_Lib_C99_Math_fpclassify_l</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> extern int</returntype>
+<declaration><declaration_keyword>extern</declaration_keyword> <declaration_type>int</declaration_type> <declaration_function>__XEOS_Lib_C99_Math_fpclassify_l</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/__XEOS_Lib_C99_Math_isfinite_d" lang="c"><name>__XEOS_Lib_C99_Math_isfinite_d</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> extern int</returntype>
+<declaration><declaration_keyword>extern</declaration_keyword> <declaration_type>int</declaration_type> <declaration_function>__XEOS_Lib_C99_Math_isfinite_d</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/__XEOS_Lib_C99_Math_isfinite_f" lang="c"><name>__XEOS_Lib_C99_Math_isfinite_f</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> extern int</returntype>
+<declaration><declaration_keyword>extern</declaration_keyword> <declaration_type>int</declaration_type> <declaration_function>__XEOS_Lib_C99_Math_isfinite_f</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/__XEOS_Lib_C99_Math_isfinite_l" lang="c"><name>__XEOS_Lib_C99_Math_isfinite_l</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> extern int</returntype>
+<declaration><declaration_keyword>extern</declaration_keyword> <declaration_type>int</declaration_type> <declaration_function>__XEOS_Lib_C99_Math_isfinite_l</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/__XEOS_Lib_C99_Math_isgreater" lang="c"><name>__XEOS_Lib_C99_Math_isgreater</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+<parsedparameter><type>long double</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> extern int</returntype>
+<declaration><declaration_keyword>extern</declaration_keyword> <declaration_type>int</declaration_type> <declaration_function>__XEOS_Lib_C99_Math_isgreater</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/__XEOS_Lib_C99_Math_isinf_d" lang="c"><name>__XEOS_Lib_C99_Math_isinf_d</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> extern int</returntype>
+<declaration><declaration_keyword>extern</declaration_keyword> <declaration_type>int</declaration_type> <declaration_function>__XEOS_Lib_C99_Math_isinf_d</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/__XEOS_Lib_C99_Math_isinf_f" lang="c"><name>__XEOS_Lib_C99_Math_isinf_f</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> extern int</returntype>
+<declaration><declaration_keyword>extern</declaration_keyword> <declaration_type>int</declaration_type> <declaration_function>__XEOS_Lib_C99_Math_isinf_f</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/__XEOS_Lib_C99_Math_isinf_l" lang="c"><name>__XEOS_Lib_C99_Math_isinf_l</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> extern int</returntype>
+<declaration><declaration_keyword>extern</declaration_keyword> <declaration_type>int</declaration_type> <declaration_function>__XEOS_Lib_C99_Math_isinf_l</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/__XEOS_Lib_C99_Math_isless" lang="c"><name>__XEOS_Lib_C99_Math_isless</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+<parsedparameter><type>long double</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> extern int</returntype>
+<declaration><declaration_keyword>extern</declaration_keyword> <declaration_type>int</declaration_type> <declaration_function>__XEOS_Lib_C99_Math_isless</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/__XEOS_Lib_C99_Math_islessequal" lang="c"><name>__XEOS_Lib_C99_Math_islessequal</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+<parsedparameter><type>long double</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> extern int</returntype>
+<declaration><declaration_keyword>extern</declaration_keyword> <declaration_type>int</declaration_type> <declaration_function>__XEOS_Lib_C99_Math_islessequal</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/__XEOS_Lib_C99_Math_islessgreater" lang="c"><name>__XEOS_Lib_C99_Math_islessgreater</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+<parsedparameter><type>long double</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> extern int</returntype>
+<declaration><declaration_keyword>extern</declaration_keyword> <declaration_type>int</declaration_type> <declaration_function>__XEOS_Lib_C99_Math_islessgreater</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/__XEOS_Lib_C99_Math_isnan_d" lang="c"><name>__XEOS_Lib_C99_Math_isnan_d</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> extern int</returntype>
+<declaration><declaration_keyword>extern</declaration_keyword> <declaration_type>int</declaration_type> <declaration_function>__XEOS_Lib_C99_Math_isnan_d</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/__XEOS_Lib_C99_Math_isnan_f" lang="c"><name>__XEOS_Lib_C99_Math_isnan_f</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> extern int</returntype>
+<declaration><declaration_keyword>extern</declaration_keyword> <declaration_type>int</declaration_type> <declaration_function>__XEOS_Lib_C99_Math_isnan_f</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/__XEOS_Lib_C99_Math_isnan_l" lang="c"><name>__XEOS_Lib_C99_Math_isnan_l</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> extern int</returntype>
+<declaration><declaration_keyword>extern</declaration_keyword> <declaration_type>int</declaration_type> <declaration_function>__XEOS_Lib_C99_Math_isnan_l</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/__XEOS_Lib_C99_Math_isnormal_d" lang="c"><name>__XEOS_Lib_C99_Math_isnormal_d</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> extern int</returntype>
+<declaration><declaration_keyword>extern</declaration_keyword> <declaration_type>int</declaration_type> <declaration_function>__XEOS_Lib_C99_Math_isnormal_d</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/__XEOS_Lib_C99_Math_isnormal_f" lang="c"><name>__XEOS_Lib_C99_Math_isnormal_f</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> extern int</returntype>
+<declaration><declaration_keyword>extern</declaration_keyword> <declaration_type>int</declaration_type> <declaration_function>__XEOS_Lib_C99_Math_isnormal_f</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/__XEOS_Lib_C99_Math_isnormal_l" lang="c"><name>__XEOS_Lib_C99_Math_isnormal_l</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> extern int</returntype>
+<declaration><declaration_keyword>extern</declaration_keyword> <declaration_type>int</declaration_type> <declaration_function>__XEOS_Lib_C99_Math_isnormal_l</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/__XEOS_Lib_C99_Math_isunordered" lang="c"><name>__XEOS_Lib_C99_Math_isunordered</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+<parsedparameter><type>long double</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> extern int</returntype>
+<declaration><declaration_keyword>extern</declaration_keyword> <declaration_type>int</declaration_type> <declaration_function>__XEOS_Lib_C99_Math_isunordered</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/__XEOS_Lib_C99_Math_signbit_d" lang="c"><name>__XEOS_Lib_C99_Math_signbit_d</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> extern int</returntype>
+<declaration><declaration_keyword>extern</declaration_keyword> <declaration_type>int</declaration_type> <declaration_function>__XEOS_Lib_C99_Math_signbit_d</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/__XEOS_Lib_C99_Math_signbit_f" lang="c"><name>__XEOS_Lib_C99_Math_signbit_f</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> extern int</returntype>
+<declaration><declaration_keyword>extern</declaration_keyword> <declaration_type>int</declaration_type> <declaration_function>__XEOS_Lib_C99_Math_signbit_f</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/__XEOS_Lib_C99_Math_signbit_l" lang="c"><name>__XEOS_Lib_C99_Math_signbit_l</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> extern int</returntype>
+<declaration><declaration_keyword>extern</declaration_keyword> <declaration_type>int</declaration_type> <declaration_function>__XEOS_Lib_C99_Math_signbit_l</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/acos" lang="c"><name>acos</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>acos</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/acosf" lang="c"><name>acosf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>acosf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/acosh" lang="c"><name>acosh</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>acosh</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/acoshf" lang="c"><name>acoshf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>acoshf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/acoshl" lang="c"><name>acoshl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>acoshl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/acosl" lang="c"><name>acosl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>acosl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/asin" lang="c"><name>asin</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>asin</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/asinf" lang="c"><name>asinf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>asinf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/asinh" lang="c"><name>asinh</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>asinh</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/asinhf" lang="c"><name>asinhf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>asinhf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/asinhl" lang="c"><name>asinhl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>asinhl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/asinl" lang="c"><name>asinl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>asinl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/atan" lang="c"><name>atan</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>atan</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/atan2" lang="c"><name>atan2</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>y</name></parsedparameter>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>atan2</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>y</declaration_param>,
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/atan2f" lang="c"><name>atan2f</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>y</name></parsedparameter>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>atan2f</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>y</declaration_param>,
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/atan2l" lang="c"><name>atan2l</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>y</name></parsedparameter>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>atan2l</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>y</declaration_param>,
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/atanf" lang="c"><name>atanf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>atanf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/atanh" lang="c"><name>atanh</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>atanh</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/atanhf" lang="c"><name>atanhf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>atanhf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/atanhl" lang="c"><name>atanhl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>atanhl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/atanl" lang="c"><name>atanl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>atanl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/cbrt" lang="c"><name>cbrt</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>cbrt</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/cbrtf" lang="c"><name>cbrtf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>cbrtf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/cbrtl" lang="c"><name>cbrtl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>cbrtl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ceil" lang="c"><name>ceil</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>ceil</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ceilf" lang="c"><name>ceilf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>ceilf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ceill" lang="c"><name>ceill</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>ceill</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/copysign" lang="c"><name>copysign</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+<parsedparameter><type>double</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>copysign</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>double</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/copysignf" lang="c"><name>copysignf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+<parsedparameter><type>float</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>copysignf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>float</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/copysignl" lang="c"><name>copysignl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+<parsedparameter><type>long double</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>copysignl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/cos" lang="c"><name>cos</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>cos</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/cosf" lang="c"><name>cosf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>cosf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/cosh" lang="c"><name>cosh</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>cosh</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/coshf" lang="c"><name>coshf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>coshf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/coshl" lang="c"><name>coshl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>coshl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/cosl" lang="c"><name>cosl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>cosl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/erf" lang="c"><name>erf</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>erf</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/erfc" lang="c"><name>erfc</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>erfc</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/erfcf" lang="c"><name>erfcf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>erfcf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/erfcl" lang="c"><name>erfcl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>erfcl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/erff" lang="c"><name>erff</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>erff</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/erfl" lang="c"><name>erfl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>erfl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/exp" lang="c"><name>exp</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>exp</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/exp2" lang="c"><name>exp2</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>exp2</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/exp2f" lang="c"><name>exp2f</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>exp2f</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/exp2l" lang="c"><name>exp2l</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>exp2l</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/expf" lang="c"><name>expf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>expf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/expl" lang="c"><name>expl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>expl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/expm1" lang="c"><name>expm1</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>expm1</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/expm1f" lang="c"><name>expm1f</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>expm1f</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/expm1l" lang="c"><name>expm1l</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>expm1l</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fabs" lang="c"><name>fabs</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>fabs</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fabsf" lang="c"><name>fabsf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>fabsf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fabsl" lang="c"><name>fabsl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>fabsl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fdim" lang="c"><name>fdim</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+<parsedparameter><type>double</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>fdim</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>double</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fdimf" lang="c"><name>fdimf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+<parsedparameter><type>float</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>fdimf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>float</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fdiml" lang="c"><name>fdiml</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+<parsedparameter><type>long double</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>fdiml</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/floor" lang="c"><name>floor</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>floor</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/floorf" lang="c"><name>floorf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>floorf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/floorl" lang="c"><name>floorl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>floorl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fma" lang="c"><name>fma</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+<parsedparameter><type>double</type><name>y</name></parsedparameter>
+<parsedparameter><type>double</type><name>z</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>fma</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>double</declaration_type> <declaration_param>y</declaration_param>,
+    <declaration_type>double</declaration_type> <declaration_param>z</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fmaf" lang="c"><name>fmaf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+<parsedparameter><type>float</type><name>y</name></parsedparameter>
+<parsedparameter><type>float</type><name>z</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>fmaf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>float</declaration_type> <declaration_param>y</declaration_param>,
+    <declaration_type>float</declaration_type> <declaration_param>z</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fmal" lang="c"><name>fmal</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+<parsedparameter><type>long double</type><name>y</name></parsedparameter>
+<parsedparameter><type>long double</type><name>z</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>fmal</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>y</declaration_param>,
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>z</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fmax" lang="c"><name>fmax</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+<parsedparameter><type>double</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>fmax</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>double</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fmaxf" lang="c"><name>fmaxf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+<parsedparameter><type>float</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>fmaxf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>float</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fmaxl" lang="c"><name>fmaxl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+<parsedparameter><type>long double</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>fmaxl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fmin" lang="c"><name>fmin</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+<parsedparameter><type>double</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>fmin</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>double</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fminf" lang="c"><name>fminf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+<parsedparameter><type>float</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>fminf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>float</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fminl" lang="c"><name>fminl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+<parsedparameter><type>long double</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>fminl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fmod" lang="c"><name>fmod</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+<parsedparameter><type>double</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>fmod</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>double</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fmodf" lang="c"><name>fmodf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+<parsedparameter><type>float</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>fmodf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>float</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fmodl" lang="c"><name>fmodl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+<parsedparameter><type>long double</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>fmodl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/frexp" lang="c"><name>frexp</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>value</name></parsedparameter>
+<parsedparameter><type>int *</type><name>exp</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>frexp</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>value</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_type>*</declaration_type><declaration_param>exp</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/frexpf" lang="c"><name>frexpf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>value</name></parsedparameter>
+<parsedparameter><type>int *</type><name>exp</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>frexpf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>value</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_type>*</declaration_type><declaration_param>exp</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/frexpl" lang="c"><name>frexpl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>value</name></parsedparameter>
+<parsedparameter><type>int *</type><name>exp</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>frexpl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>value</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_type>*</declaration_type><declaration_param>exp</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/hypot" lang="c"><name>hypot</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+<parsedparameter><type>double</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>hypot</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>double</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/hypotf" lang="c"><name>hypotf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+<parsedparameter><type>float</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>hypotf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>float</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/hypotl" lang="c"><name>hypotl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+<parsedparameter><type>long double</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>hypotl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ilogb" lang="c"><name>ilogb</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>ilogb</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ilogbf" lang="c"><name>ilogbf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>ilogbf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ilogbl" lang="c"><name>ilogbl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>ilogbl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ldexp" lang="c"><name>ldexp</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+<parsedparameter><type>int</type><name>exp</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>ldexp</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>exp</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ldexpf" lang="c"><name>ldexpf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+<parsedparameter><type>int</type><name>exp</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>ldexpf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>exp</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ldexpl" lang="c"><name>ldexpl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+<parsedparameter><type>int</type><name>exp</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>ldexpl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>exp</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/lgamma" lang="c"><name>lgamma</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>lgamma</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/lgammaf" lang="c"><name>lgammaf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>lgammaf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/lgammal" lang="c"><name>lgammal</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>lgammal</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/llrint" lang="c"><name>llrint</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long long int</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>long</declaration_type> <declaration_type>int</declaration_type> <declaration_function>llrint</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/llrintf" lang="c"><name>llrintf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long long int</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>long</declaration_type> <declaration_type>int</declaration_type> <declaration_function>llrintf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/llrintl" lang="c"><name>llrintl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long long int</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>long</declaration_type> <declaration_type>int</declaration_type> <declaration_function>llrintl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/llround" lang="c"><name>llround</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long long int</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>long</declaration_type> <declaration_type>int</declaration_type> <declaration_function>llround</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/llroundf" lang="c"><name>llroundf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long long int</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>long</declaration_type> <declaration_type>int</declaration_type> <declaration_function>llroundf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/llroundl" lang="c"><name>llroundl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long long int</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>long</declaration_type> <declaration_type>int</declaration_type> <declaration_function>llroundl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/log" lang="c"><name>log</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>log</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/log10" lang="c"><name>log10</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>log10</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/log10f" lang="c"><name>log10f</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>log10f</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/log10l" lang="c"><name>log10l</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>log10l</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/log1p" lang="c"><name>log1p</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>log1p</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/log1pf" lang="c"><name>log1pf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>log1pf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/log1pl" lang="c"><name>log1pl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>log1pl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/log2" lang="c"><name>log2</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>log2</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/log2f" lang="c"><name>log2f</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>log2f</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/log2l" lang="c"><name>log2l</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>log2l</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/logb" lang="c"><name>logb</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>logb</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/logbf" lang="c"><name>logbf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>logbf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/logbl" lang="c"><name>logbl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>logbl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/logf" lang="c"><name>logf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>logf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/logl" lang="c"><name>logl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>logl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/lrint" lang="c"><name>lrint</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long int</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>int</declaration_type> <declaration_function>lrint</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/lrintf" lang="c"><name>lrintf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long int</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>int</declaration_type> <declaration_function>lrintf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/lrintl" lang="c"><name>lrintl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long int</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>int</declaration_type> <declaration_function>lrintl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/lround" lang="c"><name>lround</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long int</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>int</declaration_type> <declaration_function>lround</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/lroundf" lang="c"><name>lroundf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long int</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>int</declaration_type> <declaration_function>lroundf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/lroundl" lang="c"><name>lroundl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long int</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>int</declaration_type> <declaration_function>lroundl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/modf" lang="c"><name>modf</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>value</name></parsedparameter>
+<parsedparameter><type>double *</type><name>iptr</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>modf</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>value</declaration_param>,
+    <declaration_type>double</declaration_type> <declaration_type>*</declaration_type><declaration_param>iptr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/modff" lang="c"><name>modff</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>value</name></parsedparameter>
+<parsedparameter><type>float *</type><name>iptr</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>modff</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>value</declaration_param>,
+    <declaration_type>float</declaration_type> <declaration_type>*</declaration_type><declaration_param>iptr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/modfl" lang="c"><name>modfl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>value</name></parsedparameter>
+<parsedparameter><type>long double *</type><name>iptr</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>modfl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>value</declaration_param>,
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_type>*</declaration_type><declaration_param>iptr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/nan" lang="c"><name>nan</name>
+<parsedparameterlist>
+<parsedparameter><type>const char *</type><name>tagp</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>nan</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>tagp</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/nanf" lang="c"><name>nanf</name>
+<parsedparameterlist>
+<parsedparameter><type>const char *</type><name>tagp</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>nanf</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>tagp</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/nanl" lang="c"><name>nanl</name>
+<parsedparameterlist>
+<parsedparameter><type>const char *</type><name>tagp</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>nanl</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>tagp</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/nearbyint" lang="c"><name>nearbyint</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>nearbyint</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/nearbyintf" lang="c"><name>nearbyintf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>nearbyintf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/nearbyintl" lang="c"><name>nearbyintl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>nearbyintl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/nextafter" lang="c"><name>nextafter</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+<parsedparameter><type>double</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>nextafter</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>double</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/nextafterf" lang="c"><name>nextafterf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+<parsedparameter><type>float</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>nextafterf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>float</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/nextafterl" lang="c"><name>nextafterl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+<parsedparameter><type>long double</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>nextafterl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/nexttoward" lang="c"><name>nexttoward</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+<parsedparameter><type>long double</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>nexttoward</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/nexttowardf" lang="c"><name>nexttowardf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+<parsedparameter><type>long double</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>nexttowardf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/nexttowardl" lang="c"><name>nexttowardl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+<parsedparameter><type>long double</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>nexttowardl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pow" lang="c"><name>pow</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+<parsedparameter><type>double</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>pow</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>double</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/powf" lang="c"><name>powf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+<parsedparameter><type>float</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>powf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>float</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/powl" lang="c"><name>powl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+<parsedparameter><type>long double</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>powl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/remainder" lang="c"><name>remainder</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+<parsedparameter><type>double</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>remainder</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>double</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/remainderf" lang="c"><name>remainderf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+<parsedparameter><type>float</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>remainderf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>float</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/remainderl" lang="c"><name>remainderl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+<parsedparameter><type>long double</type><name>y</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>remainderl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>y</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/remquo" lang="c"><name>remquo</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+<parsedparameter><type>double</type><name>y</name></parsedparameter>
+<parsedparameter><type>int *</type><name>quo</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>remquo</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>double</declaration_type> <declaration_param>y</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_type>*</declaration_type><declaration_param>quo</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/remquof" lang="c"><name>remquof</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+<parsedparameter><type>float</type><name>y</name></parsedparameter>
+<parsedparameter><type>int *</type><name>quo</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>remquof</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>float</declaration_type> <declaration_param>y</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_type>*</declaration_type><declaration_param>quo</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/remquol" lang="c"><name>remquol</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+<parsedparameter><type>long double</type><name>y</name></parsedparameter>
+<parsedparameter><type>int *</type><name>quo</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>remquol</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>y</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_type>*</declaration_type><declaration_param>quo</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/rint" lang="c"><name>rint</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>rint</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/rintf" lang="c"><name>rintf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>rintf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/rintl" lang="c"><name>rintl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>rintl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/round" lang="c"><name>round</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>round</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/roundf" lang="c"><name>roundf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>roundf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/roundl" lang="c"><name>roundl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>roundl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/scalbln" lang="c"><name>scalbln</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+<parsedparameter><type>long int</type><name>n</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>scalbln</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>long</declaration_type> <declaration_type>int</declaration_type> <declaration_param>n</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/scalblnf" lang="c"><name>scalblnf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+<parsedparameter><type>long int</type><name>n</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>scalblnf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>long</declaration_type> <declaration_type>int</declaration_type> <declaration_param>n</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/scalblnl" lang="c"><name>scalblnl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+<parsedparameter><type>long int</type><name>n</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>scalblnl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>long</declaration_type> <declaration_type>int</declaration_type> <declaration_param>n</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/scalbn" lang="c"><name>scalbn</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+<parsedparameter><type>int</type><name>n</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>scalbn</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>n</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/scalbnf" lang="c"><name>scalbnf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+<parsedparameter><type>int</type><name>n</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>scalbnf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>n</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/scalbnl" lang="c"><name>scalbnl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+<parsedparameter><type>int</type><name>n</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>scalbnl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>n</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sin" lang="c"><name>sin</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>sin</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sinf" lang="c"><name>sinf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>sinf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sinh" lang="c"><name>sinh</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>sinh</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sinhf" lang="c"><name>sinhf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>sinhf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sinhl" lang="c"><name>sinhl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>sinhl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sinl" lang="c"><name>sinl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>sinl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sqrt" lang="c"><name>sqrt</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>sqrt</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sqrtf" lang="c"><name>sqrtf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>sqrtf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sqrtl" lang="c"><name>sqrtl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>sqrtl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/tan" lang="c"><name>tan</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>tan</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/tanf" lang="c"><name>tanf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>tanf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/tanh" lang="c"><name>tanh</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>tanh</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/tanhf" lang="c"><name>tanhf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>tanhf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/tanhl" lang="c"><name>tanhl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>tanhl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/tanl" lang="c"><name>tanl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>tanl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/tgamma" lang="c"><name>tgamma</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>tgamma</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/tgammaf" lang="c"><name>tgammaf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>tgammaf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/tgammal" lang="c"><name>tgammal</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>tgammal</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/trunc" lang="c"><name>trunc</name>
+<parsedparameterlist>
+<parsedparameter><type>double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>trunc</declaration_function>(
+    <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/truncf" lang="c"><name>truncf</name>
+<parsedparameterlist>
+<parsedparameter><type>float</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> float</returntype>
+<declaration><declaration_type>float</declaration_type> <declaration_function>truncf</declaration_function>(
+    <declaration_type>float</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/truncl" lang="c"><name>truncl</name>
+<parsedparameterlist>
+<parsedparameter><type>long double</type><name>x</name></parsedparameter>
+</parsedparameterlist>
+<returntype> long double</returntype>
+<declaration><declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_function>truncl</declaration_function>(
+    <declaration_type>long</declaration_type> <declaration_type>double</declaration_type> <declaration_param>x</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_C99_MATH_H__" definetype="value" lang="c"><name>__XEOS_LIB_C99_MATH_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_C99_MATH_H__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FP_ILOGB0" definetype="value" lang="c"><name>FP_ILOGB0</name>
+<attributes><attribute><name>Value</name><value>0xffffffff80000000 (-2147483648)</value></attribute>
+</attributes>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FP_ILOGB0</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>-</declaration_preprocessor><declaration_preprocessor>2147483647</declaration_preprocessor> <declaration_preprocessor>-</declaration_preprocessor> <declaration_preprocessor>1</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FP_ILOGBNAN" definetype="value" lang="c"><name>FP_ILOGBNAN</name>
+<attributes><attribute><name>Value</name><value>0xffffffff80000000 (-2147483648)</value></attribute>
+</attributes>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FP_ILOGBNAN</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>-</declaration_preprocessor><declaration_preprocessor>2147483647</declaration_preprocessor> <declaration_preprocessor>-</declaration_preprocessor> <declaration_preprocessor>1</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FP_INFINITE" definetype="value" lang="c"><name>FP_INFINITE</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FP_INFINITE</declaration_preprocessor> <declaration_preprocessor>1</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FP_NAN" definetype="value" lang="c"><name>FP_NAN</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FP_NAN</declaration_preprocessor> <declaration_preprocessor>2</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FP_NORMAL" definetype="value" lang="c"><name>FP_NORMAL</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FP_NORMAL</declaration_preprocessor> <declaration_preprocessor>3</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FP_SUBNORMAL" definetype="value" lang="c"><name>FP_SUBNORMAL</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FP_SUBNORMAL</declaration_preprocessor> <declaration_preprocessor>4</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FP_ZERO" definetype="value" lang="c"><name>FP_ZERO</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FP_ZERO</declaration_preprocessor> <declaration_preprocessor>5</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/fpclassify" definetype="function" lang="c"><name>fpclassify</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_x_</name></parsedparameter>
+</parsedparameterlist>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>fpclassify</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>sizeof</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>==</declaration_preprocessor> <declaration_preprocessor>sizeof</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>float</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>?</declaration_preprocessor> <declaration_preprocessor>__XEOS_Lib_C99_Math_fpclassify_f</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>:</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>sizeof</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>==</declaration_preprocessor> <declaration_preprocessor>sizeof</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>double</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>?</declaration_preprocessor> <declaration_preprocessor>__XEOS_Lib_C99_Math_fpclassify_d</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>:</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>__XEOS_Lib_C99_Math_fpclassify_l</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/HUGE_VAL" definetype="value" lang="c"><name>HUGE_VAL</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>HUGE_VAL</declaration_preprocessor> <declaration_preprocessor>1e500</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/HUGE_VALF" definetype="value" lang="c"><name>HUGE_VALF</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>HUGE_VALF</declaration_preprocessor> <declaration_preprocessor>1e50f</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/HUGE_VALL" definetype="value" lang="c"><name>HUGE_VALL</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>HUGE_VALL</declaration_preprocessor> <declaration_preprocessor>1e5000L</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/INFINITY" definetype="value" lang="c"><name>INFINITY</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>INFINITY</declaration_preprocessor> <declaration_preprocessor>HUGE_VALF</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/isfinite" definetype="function" lang="c"><name>isfinite</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_x_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>isfinite</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>sizeof</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>==</declaration_preprocessor> <declaration_preprocessor>sizeof</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>float</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>?</declaration_preprocessor> <declaration_preprocessor>__XEOS_Lib_C99_Math_isfinite_f</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>:</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>sizeof</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>==</declaration_preprocessor> <declaration_preprocessor>sizeof</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>double</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>?</declaration_preprocessor> <declaration_preprocessor>__XEOS_Lib_C99_Math_isfinite_d</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>:</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>__XEOS_Lib_C99_Math_isfinite_l</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/isgreater" definetype="function" lang="c"><name>isgreater</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_x_</name></parsedparameter>
+<parsedparameter><type></type><name>_y_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>isgreater</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>_y_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>__XEOS_Lib_C99_Math_isgreater</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>long</declaration_preprocessor> <declaration_preprocessor>double</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>long</declaration_preprocessor> <declaration_preprocessor>double</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_y_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/isinf" definetype="function" lang="c"><name>isinf</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_x_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>isinf</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>sizeof</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>==</declaration_preprocessor> <declaration_preprocessor>sizeof</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>float</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>?</declaration_preprocessor> <declaration_preprocessor>__XEOS_Lib_C99_Math_isinf_f</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>:</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>sizeof</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>==</declaration_preprocessor> <declaration_preprocessor>sizeof</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>double</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>?</declaration_preprocessor> <declaration_preprocessor>__XEOS_Lib_C99_Math_isinf_d</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>:</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>__XEOS_Lib_C99_Math_isinf_l</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/isless" definetype="function" lang="c"><name>isless</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_x_</name></parsedparameter>
+<parsedparameter><type></type><name>_y_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>isless</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>_y_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>__XEOS_Lib_C99_Math_isless</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>long</declaration_preprocessor> <declaration_preprocessor>double</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>long</declaration_preprocessor> <declaration_preprocessor>double</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_y_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/islessequal" definetype="function" lang="c"><name>islessequal</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_x_</name></parsedparameter>
+<parsedparameter><type></type><name>_y_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>islessequal</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>_y_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>__XEOS_Lib_C99_Math_islessequal</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>long</declaration_preprocessor> <declaration_preprocessor>double</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>long</declaration_preprocessor> <declaration_preprocessor>double</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_y_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/islessgreater" definetype="function" lang="c"><name>islessgreater</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_x_</name></parsedparameter>
+<parsedparameter><type></type><name>_y_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>islessgreater</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>_y_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>__XEOS_Lib_C99_Math_islessgreater</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>long</declaration_preprocessor> <declaration_preprocessor>double</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>long</declaration_preprocessor> <declaration_preprocessor>double</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_y_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/isnan" definetype="function" lang="c"><name>isnan</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_x_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>isnan</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>sizeof</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>==</declaration_preprocessor> <declaration_preprocessor>sizeof</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>float</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>?</declaration_preprocessor> <declaration_preprocessor>__XEOS_Lib_C99_Math_isnan_f</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>:</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>sizeof</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>==</declaration_preprocessor> <declaration_preprocessor>sizeof</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>double</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>?</declaration_preprocessor> <declaration_preprocessor>__XEOS_Lib_C99_Math_isnan_d</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>:</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>__XEOS_Lib_C99_Math_isnan_l</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/isnormal" definetype="function" lang="c"><name>isnormal</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_x_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>isnormal</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>sizeof</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>==</declaration_preprocessor> <declaration_preprocessor>sizeof</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>float</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>?</declaration_preprocessor> <declaration_preprocessor>__XEOS_Lib_C99_Math_isnormal_f</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>:</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>sizeof</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>==</declaration_preprocessor> <declaration_preprocessor>sizeof</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>double</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>?</declaration_preprocessor> <declaration_preprocessor>__XEOS_Lib_C99_Math_isnormal_d</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>:</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>__XEOS_Lib_C99_Math_isnormal_l</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/isunordered" definetype="function" lang="c"><name>isunordered</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_x_</name></parsedparameter>
+<parsedparameter><type></type><name>_y_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>isunordered</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>_y_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>__XEOS_Lib_C99_Math_isunordered</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>long</declaration_preprocessor> <declaration_preprocessor>double</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>,</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>long</declaration_preprocessor> <declaration_preprocessor>double</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_y_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/MATH_ERREXCEPT" definetype="value" lang="c"><name>MATH_ERREXCEPT</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>MATH_ERREXCEPT</declaration_preprocessor> <declaration_preprocessor>2</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/math_errhandling" definetype="value" lang="c"><name>math_errhandling</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>math_errhandling</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>__XEOS_Lib_C99_Math_errhandling</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor><declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/MATH_ERRNO" definetype="value" lang="c"><name>MATH_ERRNO</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>MATH_ERRNO</declaration_preprocessor> <declaration_preprocessor>1</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/NAN" definetype="value" lang="c"><name>NAN</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>NAN</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>nanf</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor><declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/signbit" definetype="function" lang="c"><name>signbit</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_x_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>signbit</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>sizeof</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>==</declaration_preprocessor> <declaration_preprocessor>sizeof</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>float</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>?</declaration_preprocessor> <declaration_preprocessor>__XEOS_Lib_C99_Math_signbit_f</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>:</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>sizeof</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>==</declaration_preprocessor> <declaration_preprocessor>sizeof</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>double</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>?</declaration_preprocessor> <declaration_preprocessor>__XEOS_Lib_C99_Math_signbit_d</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>:</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>__XEOS_Lib_C99_Math_signbit_l</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_x_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>\</declaration_preprocessor> 
+    <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/SKRunableObject.h" lang="c" filename="SKRunableObject.h" headerpath="/Users/macmade/Documents/Macmade/GitHub/ShellKit/Documentation/../ShellKit/Classes/ShellKit/SKRunableObject.h"><name>SKRunableObject.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Foundation.h">&lt;Foundation/Foundation.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<classes><protocol id="//xsdoc_ref/occ/intf/SKRunableObject" lang="occ"><name>SKRunableObject</name>
+<abstract><p>Protocol for runnable objects
+</p></abstract>
+<attributes><attribute><name>Extends Protocol</name><value><hd_link logicalPath="//xsdoc_ref/occ/intf/NSObject">NSObject</hd_link></value></attribute>
+</attributes>
+<declaration>@<declaration_type>protocol</declaration_type> <declaration_type>SKRunableObject</declaration_type>&lt; <declaration_template>NSObject</declaration_template> &gt;  @required  <declaration_comment>/*!
+@property    running
+@abstract    Set when the runnable object is currently running</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>running</declaration_var>;   <declaration_comment>/*!
+@property    error
+@abstract    An optional error, possibly set after the task has run</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    @property( <declaration_param>atomic</declaration_param>,
+        <declaration_param>readonly</declaration_param>,
+        <declaration_param>nullable</declaration_param> ) <declaration_type>NSError</declaration_type> <declaration_type>*</declaration_type><declaration_var>error</declaration_var>;   <declaration_comment>/*!
+@method      run
+@abstract    Runs the task (synchronously)
+@result      YES if the runnable object has run successfully, otherwise NO</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>BOOL</declaration_param> )<declaration_var>run</declaration_var>;   <declaration_comment>/*!
+@method      run
+@abstract    Runs the task with variables (synchronously)
+@param       variables   Optional variables
+@result      YES if the runnable object has run successfully, otherwise NO</declaration_comment>
+        <declaration_comment>*/</declaration_comment>
+    - ( <declaration_param>BOOL</declaration_param> )<declaration_type>run</declaration_type>: ( <declaration_type>nullable</declaration_type> <declaration_type>NSDictionary</declaration_type>&lt; <declaration_template>NSString</declaration_template> <declaration_template>*</declaration_template>, <declaration_template>NSString</declaration_template> <declaration_template>*</declaration_template> &gt; <declaration_type>*</declaration_type> )<declaration_var>variables</declaration_var>;   
+    @@end </declaration>
+<desc><p>Represents an object that can be run (like a task).
+</p></desc>
+<methods><method id="//xsdoc_ref/occ/intfm/SKRunableObject/run" lang="occ" type="intfm" optionalOrRequired="@required"><name>run</name>
+<abstract><p>Runs the task (synchronously)
+</p></abstract>
+<parsedparameterlist>
+<parsedparameter><type>( nullable NSDictionary&amp;lt; NSString *, NSString * &amp;gt; * )</type><name>variables</name></parsedparameter>
+</parsedparameterlist>
+<returntype> BOOL </returntype>
+<result><p>YES if the runnable object has run successfully, otherwise NO
+</p></result>
+<declaration>- ( <declaration_type>BOOL</declaration_type> )<declaration_var>run</declaration_var>; </declaration>
+<desc><p/></desc>
+</method><method id="//xsdoc_ref/occ/intfm/SKRunableObject/run:" lang="occ" type="intfm" optionalOrRequired="@required"><name>run:</name>
+<abstract><p>Runs the task with variables (synchronously)
+</p></abstract>
+<parameterlist>
+<parameter><name>variables</name><desc><p>Optional variables</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>( nullable NSDictionary&amp;lt; NSString *, NSString * &amp;gt; * )</type><name>variables</name></parsedparameter>
+</parsedparameterlist>
+<returntype> BOOL </returntype>
+<result><p>YES if the runnable object has run successfully, otherwise NO
+</p></result>
+<declaration>- ( <declaration_type>BOOL</declaration_type> )<declaration_function>run</declaration_function>: ( <declaration_type>nullable</declaration_type> <declaration_type>NSDictionary</declaration_type>&lt; <declaration_param>NSString</declaration_param> <declaration_template>*</declaration_template>, <declaration_param>NSString</declaration_param> <declaration_param>*</declaration_param> &gt; <declaration_type>*</declaration_type> )<declaration_var>variables</declaration_var>; </declaration>
+<desc><p/></desc>
+</method></methods>
+<properties><property id="//xsdoc_ref/occ/instp/SKRunableObject/error" lang="occ" optionalOrRequired="@required"><name>error</name>
+<abstract><p>An optional error, possibly set after the task has run
+</p></abstract>
+<returntype>NSError *</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param>,
+    <declaration_param>nullable</declaration_param> ) <declaration_type>NSError</declaration_type> <declaration_type>*</declaration_type> <declaration_var>error</declaration_var>; </declaration>
+<desc><p/></desc>
+</property><property id="//xsdoc_ref/occ/instp/SKRunableObject/running" lang="occ" optionalOrRequired="@required"><name>running</name>
+<abstract><p>Set when the runnable object is currently running
+</p></abstract>
+<returntype>BOOL</returntype>
+<declaration>@property( <declaration_param>atomic</declaration_param>,
+    <declaration_param>readonly</declaration_param> ) <declaration_type>BOOL</declaration_type> <declaration_var>running</declaration_var>; </declaration>
+<desc><p/></desc>
+</property></properties>
+<timestamp>Monday, May 15, 2017</timestamp>
+</protocol></classes>
+<copyrightinfo>&#169; (c) 2017, Jean-David Gadina - www.xs-labs.com
+</copyrightinfo>
+<timestamp>Monday, May 15, 2017</timestamp>
+</header>

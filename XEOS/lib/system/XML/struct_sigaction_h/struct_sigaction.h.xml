@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/struct_sigaction.h" lang="c" filename="struct_sigaction.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/system/include/system/types/struct_sigaction.h"><name>struct_sigaction.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdint.h">&lt;system/types/__private/stdint.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/sigset_t.h">&lt;system/types/sigset_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/siginfo_t.h">&lt;system/types/siginfo_t.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<structs_and_unions><struct id="//xsdoc_ref/c/tag/sigaction" lang="c"><name>sigaction</name>
+<parsedparameterlist>
+<parsedparameter><type>sigset_t</type><name>sa_mask</name></parsedparameter>
+<parsedparameter><type>int</type><name>sa_flags</name></parsedparameter>
+<parsedparameter><type>void</type><name>sa_sigaction</name></parsedparameter>
+<parsedparameter><type>void</type><name>sa_handler</name></parsedparameter>
+</parsedparameterlist>
+<declaration> <declaration_keyword>struct</declaration_keyword> <declaration_type>sigaction</declaration_type> { 
+    <declaration_type>sigset_t</declaration_type> <declaration_var>sa_mask</declaration_var>; 
+    <declaration_type>int</declaration_type> <declaration_var>sa_flags</declaration_var>;  
+    <declaration_type>void</declaration_type> ( <declaration_type>*</declaration_type> <declaration_function>sa_sigaction</declaration_function> )(
+        <declaration_param>int</declaration_param>,
+        <declaration_type>siginfo_t</declaration_type> <declaration_param>*</declaration_param>,
+        <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> ); 
+    <declaration_type>void</declaration_type> ( <declaration_type>*</declaration_type> <declaration_function>sa_handler</declaration_function> )(
+        <declaration_param>int</declaration_param> ); 
+};  </declaration>
+<desc><p/></desc>
+</struct></structs_and_unions><defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_SYSTEM_TYPES_STRUCT_SIGACTION_H__" definetype="value" lang="c"><name>__XEOS_LIB_SYSTEM_TYPES_STRUCT_SIGACTION_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_SYSTEM_TYPES_STRUCT_SIGACTION_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

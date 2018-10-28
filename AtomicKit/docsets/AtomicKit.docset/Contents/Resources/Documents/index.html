@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AtomicKit  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="AtomicKit  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">AtomicKit Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/macmade/AtomicKit"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">AtomicKit Reference</a>
+        <img id="carat" src="img/carat.png" />
+        AtomicKit  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes.html#/s:9AtomicKit0A0C">Atomic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DispatchedArrayController.html">DispatchedArrayController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DispatchedBool.html">DispatchedBool</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DispatchedDictionaryController.html">DispatchedDictionaryController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DispatchedMutableArray.html">DispatchedMutableArray</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DispatchedMutableDictionary.html">DispatchedMutableDictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DispatchedMutableSet.html">DispatchedMutableSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DispatchedNumber.html">DispatchedNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DispatchedObject.html">DispatchedObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DispatchedString.html">DispatchedString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DispatchedTreeController.html">DispatchedTreeController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DispatchedValue.html">DispatchedValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/LockingValue.html">LockingValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Mutex.html">Mutex</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Mutex/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RWLock.html">RWLock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RWLock/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RWLock/Intent.html">– Intent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RecursiveMutex.html">RecursiveMutex</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RecursiveMutex/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Semaphore.html">Semaphore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Semaphore/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/UnfairLock.html">UnfairLock</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/DispatchedValueWrapper.html">DispatchedValueWrapper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/Lockable.html">Lockable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/ThreadSafeValueWrapper.html">ThreadSafeValueWrapper</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='atomickit' class='heading'>AtomicKit</h1>
+
+<p><a href="https://travis-ci.org/macmade/AtomicKit"><img src="https://img.shields.io/travis/macmade/AtomicKit.svg?branch=master&style=flat" alt="Build Status"></a>
+<a href="https://coveralls.io/r/macmade/AtomicKit?branch=master"><img src="https://img.shields.io/coveralls/macmade/AtomicKit.svg?branch=master&style=flat" alt="Coverage Status"></a>
+<a href="https://github.com/macmade/AtomicKit/issues"><img src="http://img.shields.io/github/issues/macmade/AtomicKit.svg?style=flat" alt="Issues"></a>
+<img src="https://img.shields.io/badge/status-active-brightgreen.svg?style=flat" alt="Status">
+<img src="https://img.shields.io/badge/license-mit-brightgreen.svg?style=flat" alt="License">
+<a href="https://twitter.com/macmade"><img src="https://img.shields.io/badge/contact-@macmade-blue.svg?style=flat" alt="Contact"></a><br>
+<a href="https://patreon.com/macmade"><img src="https://img.shields.io/badge/donate-patreon-yellow.svg?style=flat" alt="Donate-Patreon"></a>
+<a href="https://www.gratipay.com/macmade"><img src="https://img.shields.io/badge/donate-gratipay-yellow.svg?style=flat" alt="Donate-Gratipay"></a>
+<a href="https://paypal.me/xslabs"><img src="https://img.shields.io/badge/donate-paypal-yellow.svg?style=flat" alt="Donate-Paypal"></a></p>
+
+<p><img src="Assets/Icon.png" alt="AtomicKit" title="AtomicKit"></p>
+<h2 id='about' class='heading'>About</h2>
+
+<p><strong>Concurrency made simple in Swift.</strong></p>
+
+<p><strong>AtomicKit</strong> is a Swift framework designed to ease dealing with concurrency in Swift projects.</p>
+<h3 id='background' class='heading'>Background</h3>
+
+<p>Coming from Objective-C and C++, I lacked a few features in Swift, like Objective-C&rsquo;s  <code>@atomic</code> or C++&lsquo;s  <code>std::atomic</code>.</p>
+
+<p>Apple&rsquo;s GCD (Grand Central Dispatch) is absolutely awesome when it comes to synchronization, but you&rsquo;ll have to use it explicitely in Swift.<br>
+Writing atomic/dispatched getters and setters is not a big deal, but it currently leads to a lot of boilerplate code, which I like to avoid in my projects.</p>
+
+<p>The <strong>AtomicKit</strong> project intends to simplify this, by adding easy-to-use synchronization Swift types.</p>
+<h2 id='documentation' class='heading'>Documentation</h2>
+
+<p>Documentation and API reference can be found at: <a href="http://doc.xs-labs.com/AtomicKit/">http://doc.xs-labs.com/AtomicKit/</a></p>
+<h2 id='synchronization-primitives' class='heading'>Synchronization Primitives</h2>
+
+<p><strong>AtomicKit</strong> exposes a few synchronization primitive types, like:</p>
+
+<ul>
+<li><strong>Mutex</strong></li>
+<li><strong>RecursiveMutex</strong></li>
+<li><strong>UnfairLock</strong></li>
+</ul>
+
+<p>These types conforms to the <code>AtomicKit.Lockable</code> protocol, which extends <code>NSLocking</code>, meaning they all have the following methods:</p>
+<pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">lock</span><span class="p">()</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">unlock</span><span class="p">()</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">tryLock</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
+</code></pre>
+<h3 id='atomickit-mutex' class='heading'>AtomicKit.Mutex</h3>
+
+<p>This is a wrapper for <code>pthread_mutex_t</code>.<br>
+This version is <strong>not recursive</strong>.</p>
+<h3 id='atomickit-recursivemutex' class='heading'>AtomicKit.RecursiveMutex</h3>
+
+<p>This is a wrapper for <code>pthread_mutex_t</code>.<br>
+This version is <strong>recursive</strong>.</p>
+<h3 id='atomickit-unfairlock' class='heading'>AtomicKit.UnfairLock</h3>
+
+<p>This is a wrapper for <code>os_unfair_lock_t</code>.</p>
+<h2 id='semaphores' class='heading'>Semaphores</h2>
+
+<p><strong>AtomicKit</strong> provides a <code>Semaphore</code> class.<br>
+Semaphores are initialized with a count, and may be named, in which case they are shared between multiple processes.</p>
+
+<p>The <code>Semaphore</code> class exposes the following methods:</p>
+<pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span> <span class="nv">count</span><span class="p">:</span> <span class="kt">Int32</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span> <span class="p">)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">wait</span><span class="p">()</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">signal</span><span class="p">()</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">tryWait</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
+</code></pre>
+
+<p>Internally, the <code>Semaphore</code> class uses <code>POSIX</code> semaphores for named semaphores, and <code>MACH</code> semaphores for unnamed semaphores.</p>
+<h2 id='read-write-locks' class='heading'>Read-Write Locks</h2>
+
+<p><strong>AtomicKit</strong> supports read-write locking mechanism using the <code>RWLock</code> class:</p>
+<pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Intent</span>
+<span class="p">{</span>
+    <span class="k">case</span> <span class="n">reading</span>
+    <span class="k">case</span> <span class="n">writing</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">lock</span><span class="p">(</span> <span class="k">for</span> <span class="nv">intent</span><span class="p">:</span> <span class="kt">Intent</span> <span class="p">)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">unlock</span><span class="p">()</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">tryLock</span><span class="p">(</span> <span class="k">for</span> <span class="nv">intent</span><span class="p">:</span> <span class="kt">Intent</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
+</code></pre>
+<h2 id='atomic-properties' class='heading'>Atomic Properties</h2>
+
+<p><strong>AtomicKit</strong> provides a generic type called <code>Atomic</code>.<br>
+If you&rsquo;re familiar with C++, you can think of it as <code>std::atomic</code>.</p>
+
+<p>The goal is to provide a thread-safe property type that you can use in your own classes:</p>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">Foo</span>
+<span class="p">{</span>
+    <span class="kd">public</span> <span class="k">var</span> <span class="nv">bar</span> <span class="o">=</span> <span class="kt">Atomic</span><span class="o">&lt;</span> <span class="kt">Bool</span> <span class="o">&gt;</span><span class="p">(</span> <span class="nv">value</span><span class="p">:</span> <span class="kc">false</span> <span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>The example above declares an atomic <code>Boolean</code> property.  </p>
+
+<p>Its value can be get with:</p>
+<pre class="highlight swift"><code><span class="k">self</span><span class="o">.</span><span class="n">bar</span><span class="o">.</span><span class="nf">get</span><span class="p">()</span>
+</code></pre>
+
+<p>And can be set with:</p>
+<pre class="highlight swift"><code><span class="k">self</span><span class="o">.</span><span class="n">bar</span><span class="o">.</span><span class="nf">set</span><span class="p">(</span> <span class="kc">true</span> <span class="p">)</span>
+</code></pre>
+
+<p>Internally, <code>Atomic</code> uses an <code>UnfairLock</code>.</p>
+
+<p>If more complex stuff is required with the value it holds, the <code>Atomic</code> generic type lets you execute a custom closure.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">foo</span> <span class="o">=</span> <span class="kt">Atomic</span><span class="o">&lt;</span> <span class="kt">String</span> <span class="o">&gt;</span><span class="p">(</span> <span class="nv">value</span><span class="p">:</span> <span class="s">"hello"</span> <span class="p">)</span>
+
+<span class="n">foo</span><span class="o">.</span><span class="n">execute</span><span class="p">{</span> <span class="p">(</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">String</span> <span class="p">)</span> <span class="k">in</span> <span class="n">value</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span> <span class="s">", world"</span> <span class="p">)</span> <span class="p">}</span>
+</code></pre>
+
+<p>You can also use a return value from the closure:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">isEmpty</span> <span class="o">=</span> <span class="n">foo</span><span class="o">.</span><span class="n">execute</span><span class="p">{</span> <span class="p">(</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">String</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="k">in</span> <span class="n">value</span><span class="o">.</span><span class="n">isEmpty</span> <span class="p">}</span>
+</code></pre>
+
+<p>Atomicity is guaranteed in both cases.</p>
+<h3 id='lockingvalue' class='heading'>LockingValue</h3>
+
+<p>Under the hood, the <code>Atomic</code> class inherits from <code>LockingValue</code>.<br>
+<code>LockingValue</code> works just the same, but takes an extra generic parameter specifying the type of lock used for synchronization.</p>
+
+<p>As mentioned above, <code>Atomic</code> uses an <code>UnfairLock</code>.<br>
+Using <code>LockingValue</code>, you can specify another type of locking mechanism, as long as it conforms to the <code>NSLocking</code> protocol:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">foo</span> <span class="o">=</span> <span class="kt">LockingValue</span><span class="o">&lt;</span> <span class="kt">String</span><span class="p">?,</span> <span class="kt">NSRecursiveLock</span> <span class="o">&gt;</span><span class="p">(</span> <span class="nv">value</span><span class="p">:</span> <span class="kc">nil</span> <span class="p">)</span>
+</code></pre>
+<h2 id='dispatched-atomic-properties' class='heading'>Dispatched Atomic Properties</h2>
+
+<p>Using a locking mechanism is a way to achieve synchronization.<br>
+But using <strong>dispatch queues</strong> also ensure synchronization between multiple concurrent accesses.</p>
+
+<p><strong>AtomicKit</strong> supports this through the <code>DispatchedValue</code> generic class.</p>
+
+<p>A <code>DispatchedValue</code> is initialized with a default value, and with a dispatch queue:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">foo</span> <span class="o">=</span> <span class="kt">DispatchedValue</span><span class="o">&lt;</span> <span class="kt">String</span> <span class="o">&gt;</span><span class="p">(</span> <span class="nv">value</span><span class="p">:</span> <span class="s">""</span><span class="p">,</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="o">.</span><span class="n">main</span> <span class="p">)</span>
+</code></pre>
+
+<p>Then, every call to the <code>get</code> or <code>set</code> methods will be executed on the provided queue, thus achieving effective synchronization.</p>
+
+<p>As the <code>Atomic</code> type, <code>DispatchedValue</code> also lets you execute custom closures, that will be executed on the provided queue:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">foo</span> <span class="o">=</span> <span class="kt">DispatchedValue</span><span class="o">&lt;</span> <span class="kt">String</span> <span class="o">&gt;</span><span class="p">(</span> <span class="nv">value</span><span class="p">:</span> <span class="s">"hello"</span><span class="p">,</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="o">.</span><span class="n">main</span> <span class="p">)</span>
+
+<span class="n">foo</span><span class="o">.</span><span class="n">execute</span><span class="p">{</span> <span class="p">(</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">String</span> <span class="p">)</span> <span class="k">in</span> <span class="n">value</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span> <span class="s">", world"</span> <span class="p">)</span> <span class="p">}</span>
+
+<span class="k">let</span> <span class="nv">isEmpty</span> <span class="o">=</span> <span class="n">foo</span><span class="o">.</span><span class="n">execute</span><span class="p">{</span> <span class="p">(</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">String</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="k">in</span> <span class="n">value</span><span class="o">.</span><span class="n">isEmpty</span> <span class="p">}</span>
+</code></pre>
+<h3 id='dispatched-properties-and-kvo' class='heading'>Dispatched properties and KVO</h3>
+
+<p>As it&rsquo;s a Swift generic type, the <code>DispatchedValue</code> class cannot be used from Objective-C, and so can&rsquo;t be used with KVO (key-value observing).</p>
+
+<p>This might be a problem, especially if your project relies on Cocoa bindings, which use KVO.</p>
+
+<p><strong>AtomicKit</strong> solves this by exposing Objective-C and KVO compatible versions of <code>DispatchedValue</code>, specialized for common Objective-C types:</p>
+
+<ul>
+<li><strong>DispatchedArrayController</strong></li>
+<li><strong>DispatchedBool</strong></li>
+<li><strong>DispatchedMutableArray</strong></li>
+<li><strong>DispatchedMutableDictionary</strong></li>
+<li><strong>DispatchedMutableSet</strong></li>
+<li><strong>DispatchedNumber</strong></li>
+<li><strong>DispatchedObject</strong></li>
+<li><strong>DispatchedString</strong></li>
+<li><strong>DispatchedTree</strong></li>
+</ul>
+
+<p>All of these types defaults to the main dispatch queue, if none is provided.<br>
+This is especially handy when using Cocoa bindings, as changes often needs to occur on the main thread, for UI reasons.</p>
+
+<p>All of these specializations expose a <code>value</code> property, which is observable using KVO.<br>
+It also means you can safely use Cocoa bindings with them.</p>
+<h2 id='license' class='heading'>License</h2>
+
+<p><strong>AtomicKit</strong> is released under the terms of the MIT license.</p>
+<h2 id='repository-infos' class='heading'>Repository Infos</h2>
+<pre class="highlight plaintext"><code>Owner:          Jean-David Gadina - XS-Labs
+Web:            www.xs-labs.com
+Blog:           www.noxeos.com
+Twitter:        @macmade
+GitHub:         github.com/macmade
+LinkedIn:       ch.linkedin.com/in/macmade/
+StackOverflow:  stackoverflow.com/users/182676/macmade
+</code></pre>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>(c) 2017 Jean-David Gadina - <a class="link" href="http://www.xs-labs.com" target="_blank" rel="external">www.xs-labs.com</a></p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

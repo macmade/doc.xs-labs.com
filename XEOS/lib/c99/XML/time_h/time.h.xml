@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/time.h" lang="c" filename="time.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/c99/include/c99/time.h"><name>time.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/null.h">&lt;system/types/null.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/size_t.h">&lt;system/types/size_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/clock_t.h">&lt;system/types/clock_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/time_t.h">&lt;system/types/time_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/struct_tm.h">&lt;system/types/struct_tm.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/asctime" lang="c"><name>asctime</name>
+<parsedparameterlist>
+<parsedparameter><type>const struct tm *</type><name>timeptr</name></parsedparameter>
+</parsedparameterlist>
+<returntype> char *</returntype>
+<declaration><declaration_type>char</declaration_type> <declaration_type>*</declaration_type> <declaration_function>asctime</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>tm</declaration_type> <declaration_type>*</declaration_type><declaration_param>timeptr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/clock" lang="c"><name>clock</name>
+<returntype> clock_t</returntype>
+<declaration><declaration_type>clock_t</declaration_type> <declaration_function>clock</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ctime" lang="c"><name>ctime</name>
+<parsedparameterlist>
+<parsedparameter><type>const time_t *</type><name>timer</name></parsedparameter>
+</parsedparameterlist>
+<returntype> char *</returntype>
+<declaration><declaration_type>char</declaration_type> <declaration_type>*</declaration_type> <declaration_function>ctime</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>time_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>timer</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/difftime" lang="c"><name>difftime</name>
+<parsedparameterlist>
+<parsedparameter><type>time_t</type><name>time1</name></parsedparameter>
+<parsedparameter><type>time_t</type><name>time0</name></parsedparameter>
+</parsedparameterlist>
+<returntype> double</returntype>
+<declaration><declaration_type>double</declaration_type> <declaration_function>difftime</declaration_function>(
+    <declaration_type>time_t</declaration_type> <declaration_param>time1</declaration_param>,
+    <declaration_type>time_t</declaration_type> <declaration_param>time0</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/gmtime" lang="c"><name>gmtime</name>
+<parsedparameterlist>
+<parsedparameter><type>const time_t *</type><name>timer</name></parsedparameter>
+</parsedparameterlist>
+<returntype>struct tm *</returntype>
+<declaration><declaration_keyword>struct</declaration_keyword> <declaration_type>tm</declaration_type> <declaration_type>*</declaration_type> <declaration_function>gmtime</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>time_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>timer</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/localtime" lang="c"><name>localtime</name>
+<parsedparameterlist>
+<parsedparameter><type>const time_t *</type><name>timer</name></parsedparameter>
+</parsedparameterlist>
+<returntype>struct tm *</returntype>
+<declaration><declaration_keyword>struct</declaration_keyword> <declaration_type>tm</declaration_type> <declaration_type>*</declaration_type> <declaration_function>localtime</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>time_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>timer</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/mktime" lang="c"><name>mktime</name>
+<parsedparameterlist>
+<parsedparameter><type>struct tm *</type><name>timeptr</name></parsedparameter>
+</parsedparameterlist>
+<returntype> time_t</returntype>
+<declaration><declaration_type>time_t</declaration_type> <declaration_function>mktime</declaration_function>(
+    <declaration_keyword>struct</declaration_keyword> <declaration_type>tm</declaration_type> <declaration_type>*</declaration_type><declaration_param>timeptr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/strftime" lang="c"><name>strftime</name>
+<parsedparameterlist>
+<parsedparameter><type>char * restrict</type><name>s</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>maxsize</name></parsedparameter>
+<parsedparameter><type>const char * restrict</type><name>format</name></parsedparameter>
+<parsedparameter><type>const struct tm *</type><name>restrict</name></parsedparameter>
+</parsedparameterlist>
+<returntype> size_t</returntype>
+<declaration><declaration_type>size_t</declaration_type> <declaration_function>strftime</declaration_function>(
+    <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>s</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>maxsize</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>format</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>tm</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>timeptr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/time" lang="c"><name>time</name>
+<parsedparameterlist>
+<parsedparameter><type>time_t *</type><name>timer</name></parsedparameter>
+</parsedparameterlist>
+<returntype> time_t</returntype>
+<declaration><declaration_type>time_t</declaration_type> <declaration_function>time</declaration_function>(
+    <declaration_type>time_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>timer</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_C99_TIME_H__" definetype="value" lang="c"><name>__XEOS_LIB_C99_TIME_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_C99_TIME_H__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/CLOCKS_PER_SEC" definetype="value" lang="c"><name>CLOCKS_PER_SEC</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>CLOCKS_PER_SEC</declaration_preprocessor> <declaration_preprocessor>1000000</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

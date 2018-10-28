@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/ctype.h" lang="c" filename="ctype.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/posix/include/posix/ctype.h"><name>ctype.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/ctype.h">&lt;c99/ctype.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/locale_t.h">&lt;system/types/locale_t.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/isalnum_l" lang="c"><name>isalnum_l</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+<parsedparameter><type>locale_t</type><name>l</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>isalnum_l</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param>,
+    <declaration_type>locale_t</declaration_type> <declaration_param>l</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/isalpha_l" lang="c"><name>isalpha_l</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+<parsedparameter><type>locale_t</type><name>l</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>isalpha_l</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param>,
+    <declaration_type>locale_t</declaration_type> <declaration_param>l</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/isascii" lang="c"><name>isascii</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>isascii</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/isblank_l" lang="c"><name>isblank_l</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+<parsedparameter><type>locale_t</type><name>l</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>isblank_l</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param>,
+    <declaration_type>locale_t</declaration_type> <declaration_param>l</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/iscntrl_l" lang="c"><name>iscntrl_l</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+<parsedparameter><type>locale_t</type><name>l</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>iscntrl_l</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param>,
+    <declaration_type>locale_t</declaration_type> <declaration_param>l</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/isdigit_l" lang="c"><name>isdigit_l</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+<parsedparameter><type>locale_t</type><name>l</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>isdigit_l</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param>,
+    <declaration_type>locale_t</declaration_type> <declaration_param>l</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/isgraph_l" lang="c"><name>isgraph_l</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+<parsedparameter><type>locale_t</type><name>l</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>isgraph_l</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param>,
+    <declaration_type>locale_t</declaration_type> <declaration_param>l</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/islower_l" lang="c"><name>islower_l</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+<parsedparameter><type>locale_t</type><name>l</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>islower_l</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param>,
+    <declaration_type>locale_t</declaration_type> <declaration_param>l</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/isprint_l" lang="c"><name>isprint_l</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+<parsedparameter><type>locale_t</type><name>l</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>isprint_l</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param>,
+    <declaration_type>locale_t</declaration_type> <declaration_param>l</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ispunct_l" lang="c"><name>ispunct_l</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+<parsedparameter><type>locale_t</type><name>l</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>ispunct_l</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param>,
+    <declaration_type>locale_t</declaration_type> <declaration_param>l</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/isspace_l" lang="c"><name>isspace_l</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+<parsedparameter><type>locale_t</type><name>l</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>isspace_l</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param>,
+    <declaration_type>locale_t</declaration_type> <declaration_param>l</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/isupper_l" lang="c"><name>isupper_l</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+<parsedparameter><type>locale_t</type><name>l</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>isupper_l</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param>,
+    <declaration_type>locale_t</declaration_type> <declaration_param>l</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/isxdigit_l" lang="c"><name>isxdigit_l</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+<parsedparameter><type>locale_t</type><name>l</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>isxdigit_l</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param>,
+    <declaration_type>locale_t</declaration_type> <declaration_param>l</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/toascii" lang="c"><name>toascii</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>toascii</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/tolower_l" lang="c"><name>tolower_l</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+<parsedparameter><type>locale_t</type><name>l</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>tolower_l</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param>,
+    <declaration_type>locale_t</declaration_type> <declaration_param>l</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/toupper_l" lang="c"><name>toupper_l</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>c</name></parsedparameter>
+<parsedparameter><type>locale_t</type><name>l</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>toupper_l</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>c</declaration_param>,
+    <declaration_type>locale_t</declaration_type> <declaration_param>l</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_POSIX_CTYPE_H__" definetype="value" lang="c"><name>__XEOS_LIB_POSIX_CTYPE_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_POSIX_CTYPE_H__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/_tolower" definetype="function" lang="c"><name>_tolower</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_c_</name></parsedparameter>
+</parsedparameterlist>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>_tolower</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_c_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_c_</declaration_preprocessor> <declaration_preprocessor>+</declaration_preprocessor> <declaration_preprocessor>0x20</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/_toupper" definetype="function" lang="c"><name>_toupper</name>
+<parsedparameterlist>
+<parsedparameter><type></type><name>_c_</name></parsedparameter>
+</parsedparameterlist>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>_toupper</declaration_preprocessor><declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_c_</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>_c_</declaration_preprocessor> <declaration_preprocessor>-</declaration_preprocessor> <declaration_preprocessor>0x20</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

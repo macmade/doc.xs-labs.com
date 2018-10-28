@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/inet.h" lang="c" filename="inet.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/posix/include/posix/arpa/inet.h"><name>inet.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/in.h">&lt;netinet/in.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/inttypes.h">&lt;inttypes.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/in_port_t.h">&lt;system/types/in_port_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/in_addr_t.h">&lt;system/types/in_addr_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/struct_in_addr.h">&lt;system/types/struct_in_addr.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/uint32_t.h">&lt;system/types/uint32_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/uint16_t.h">&lt;system/types/uint16_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/socklen_t.h">&lt;system/types/socklen_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/inet_addrstrlen.h">&lt;system/types/inet_addrstrlen.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/inet6_addrstrlen.h">&lt;system/types/inet6_addrstrlen.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/htonl" lang="c"><name>htonl</name>
+<parsedparameterlist>
+<parsedparameter><type>uint32_t</type><name>hostlong</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uint32_t</returntype>
+<declaration> <declaration_type>uint32_t</declaration_type> <declaration_function>htonl</declaration_function>(
+    <declaration_type>uint32_t</declaration_type> <declaration_param>hostlong</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/htons" lang="c"><name>htons</name>
+<parsedparameterlist>
+<parsedparameter><type>uint16_t</type><name>hostshort</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uint16_t</returntype>
+<declaration><declaration_type>uint16_t</declaration_type> <declaration_function>htons</declaration_function>(
+    <declaration_type>uint16_t</declaration_type> <declaration_param>hostshort</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/inet_addr" lang="c"><name>inet_addr</name>
+<parsedparameterlist>
+<parsedparameter><type>const char *</type><name>cp</name></parsedparameter>
+</parsedparameterlist>
+<returntype> in_addr_t</returntype>
+<declaration><declaration_type>in_addr_t</declaration_type> <declaration_function>inet_addr</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_param>cp</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/inet_ntoa" lang="c"><name>inet_ntoa</name>
+<parsedparameterlist>
+<parsedparameter><type>struct in_addr</type><name>in</name></parsedparameter>
+</parsedparameterlist>
+<returntype> char *</returntype>
+<declaration><declaration_type>char</declaration_type> <declaration_type>*</declaration_type> <declaration_function>inet_ntoa</declaration_function>(
+    <declaration_keyword>struct</declaration_keyword> <declaration_type>in_addr</declaration_type> <declaration_param>in</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/inet_ntop" lang="c"><name>inet_ntop</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>af</name></parsedparameter>
+<parsedparameter><type>const void * restrict</type><name>src</name></parsedparameter>
+<parsedparameter><type>char * restrict</type><name>dst</name></parsedparameter>
+<parsedparameter><type>socklen_t</type><name>size</name></parsedparameter>
+</parsedparameterlist>
+<returntype> const char *</returntype>
+<declaration><declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type> <declaration_function>inet_ntop</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>af</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>src</declaration_param>,
+    <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>dst</declaration_param>,
+    <declaration_type>socklen_t</declaration_type> <declaration_param>size</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/inet_pton" lang="c"><name>inet_pton</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>af</name></parsedparameter>
+<parsedparameter><type>const char * restrict</type><name>src</name></parsedparameter>
+<parsedparameter><type>void * restrict</type><name>dst</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>inet_pton</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>af</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>src</declaration_param>,
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>dst</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ntohl" lang="c"><name>ntohl</name>
+<parsedparameterlist>
+<parsedparameter><type>uint32_t</type><name>netlong</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uint32_t</returntype>
+<declaration><declaration_type>uint32_t</declaration_type> <declaration_function>ntohl</declaration_function>(
+    <declaration_type>uint32_t</declaration_type> <declaration_param>netlong</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/ntohs" lang="c"><name>ntohs</name>
+<parsedparameterlist>
+<parsedparameter><type>uint16_t</type><name>netshort</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uint16_t</returntype>
+<declaration><declaration_type>uint16_t</declaration_type> <declaration_function>ntohs</declaration_function>(
+    <declaration_type>uint16_t</declaration_type> <declaration_param>netshort</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_POSIX_ARPA_INET_H__" definetype="value" lang="c"><name>__XEOS_LIB_POSIX_ARPA_INET_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_POSIX_ARPA_INET_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

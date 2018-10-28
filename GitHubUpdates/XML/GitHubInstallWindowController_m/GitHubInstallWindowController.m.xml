@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/GitHubInstallWindowController.m" lang="occ" filename="GitHubInstallWindowController.m" headerpath="/Users/macmade/Documents/Macmade/GitHub/GitHubUpdates/Documentation/../GitHubUpdates/GitHubInstallWindowController.m"><name>GitHubInstallWindowController.m</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/GitHubInstallWindowController.h">"GitHubInstallWindowController.h"</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/GitHubProgressWindowController.h">"GitHubProgressWindowController.h"</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/GitHubRelease.h">"GitHubRelease.h"</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/GitHubReleaseAsset.h">"GitHubReleaseAsset.h"</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/NSError+GitHubUpdates.h">"NSError+GitHubUpdates.h"</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/NSString+GitHubUpdates.h">"NSString+GitHubUpdates.h"</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/NSBundle+GitHubUpdates.h">"NSBundle+GitHubUpdates.h"</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/NSAttributedString+GitHubUpdates.h">"NSAttributedString+GitHubUpdates.h"</hd_link></include>
+</includes>
+<desc><p/></desc>
+<copyrightinfo>&#169; (c) 2017, Jean-David Gadina - www.xs-labs.com
+</copyrightinfo>
+<timestamp>Sunday, June 18, 2017</timestamp>
+</header>

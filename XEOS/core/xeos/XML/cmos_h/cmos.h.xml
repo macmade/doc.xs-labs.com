@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/cmos.h" lang="c" filename="cmos.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/core/xeos/include/xeos/hal/cmos.h"><name>cmos.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdint.h">&lt;stdint.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/XEOS_HAL_CMOS_Read" lang="c"><name>XEOS_HAL_CMOS_Read</name>
+<abstract><p>Reads data from CMOS
+</p></abstract>
+<parameterlist>
+<parameter><name>bytes</name><desc><p>The bytes buffer</p></desc></parameter>
+<parameter><name>length</name><desc><p>The number of bytes to read</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>uint8_t *</type><name>bytes</name></parsedparameter>
+<parsedparameter><type>uint8_t</type><name>length</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_CMOS_Read</declaration_function>(
+    <declaration_type>uint8_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>bytes</declaration_param>,
+    <declaration_type>uint8_t</declaration_type> <declaration_param>length</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_CMOS_Write" lang="c"><name>XEOS_HAL_CMOS_Write</name>
+<abstract><p>Writes data from CMOS
+</p></abstract>
+<parameterlist>
+<parameter><name>bytes</name><desc><p>The bytes buffer</p></desc></parameter>
+<parameter><name>length</name><desc><p>The number of bytes to write</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>uint8_t *</type><name>bytes</name></parsedparameter>
+<parsedparameter><type>uint8_t</type><name>length</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_CMOS_Write</declaration_function>(
+    <declaration_type>uint8_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>bytes</declaration_param>,
+    <declaration_type>uint8_t</declaration_type> <declaration_param>length</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<typedefs><typedef id="//xsdoc_ref/c/tdef/XEOS_HAL_CMOS_Register" lang="c" type="simple"><name>XEOS_HAL_CMOS_Register</name>
+<abstract><p>CMOS register
+</p></abstract>
+<constantlist>
+<constant><name>XEOS_HAL_CMOS_RegisterAddress</name><desc><p>Address register</p></desc></constant>
+<constant><name>XEOS_HAL_CMOS_RegisterData</name><desc><p>Data register</p></desc></constant>
+</constantlist>
+<parsedparameterlist>
+<parsedparameter><type></type><name>XEOS_HAL_CMOS_RegisterAddress</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CMOS_RegisterData</name></parsedparameter>
+</parsedparameterlist>
+<declaration> <declaration_comment>/*!</declaration_comment>
+    <declaration_comment>*/</declaration_comment>
+<declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>XEOS_HAL_CMOS_RegisterAddress</declaration_var> = <declaration_number>0x70</declaration_number>, 
+    <declaration_var>XEOS_HAL_CMOS_RegisterData</declaration_var> = <declaration_number>0x71</declaration_number> 
+} <declaration_var>XEOS_HAL_CMOS_Register</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef></typedefs><defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_HAL_CMOS_H__" definetype="value" lang="c"><name>__XEOS_HAL_CMOS_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_HAL_CMOS_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

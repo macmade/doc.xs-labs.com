@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/system.h" lang="c" filename="system.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/system/include/system.h"><name>system.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/atomic.h">&lt;system/atomic.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/syscall.h">&lt;system/syscall.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_SYSTEM_H__" definetype="value" lang="c"><name>__XEOS_LIB_SYSTEM_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_SYSTEM_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

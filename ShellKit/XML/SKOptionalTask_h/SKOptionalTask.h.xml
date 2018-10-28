@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/SKOptionalTask.h" lang="c" filename="SKOptionalTask.h" headerpath="/Users/macmade/Documents/Macmade/GitHub/ShellKit/Documentation/../ShellKit/Classes/ShellKit/SKOptionalTask.h"><name>SKOptionalTask.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/Foundation.h">&lt;Foundation/Foundation.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/SKTask.h">&lt;ShellKit/SKTask.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<classes><class id="//xsdoc_ref/occ/cl/SKOptionalTask" lang="occ"><name>SKOptionalTask</name>
+<abstract><p>Represents an optional shell task
+</p></abstract>
+<attributes><attribute><name>Superclass</name><value><hd_link logicalPath="//xsdoc_ref/occ/cl/SKTask">SKTask</hd_link></value></attribute>
+</attributes>
+<declaration>@<declaration_type>interface</declaration_type> <declaration_type>SKOptionalTask</declaration_type>: <declaration_type>SKTask</declaration_type>  @@end </declaration>
+<desc><p>Optional tasks will succeed regardless of the exit status
+of their command.
+If used in a task group, a faling optional task will not fail
+the whole group.
+</p></desc>
+<timestamp>Monday, May 15, 2017</timestamp>
+</class></classes>
+<copyrightinfo>&#169; (c) 2017, Jean-David Gadina - www.xs-labs.com
+</copyrightinfo>
+<timestamp>Monday, May 15, 2017</timestamp>
+</header>

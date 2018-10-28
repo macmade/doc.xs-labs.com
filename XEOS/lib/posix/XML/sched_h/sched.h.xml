@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/sched.h" lang="c" filename="sched.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/posix/include/posix/sched.h"><name>sched.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/time.h">&lt;time.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pid_t.h">&lt;system/types/pid_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/struct_sched_param.h">&lt;system/types/struct_sched_param.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/sched_get_priority_max" lang="c"><name>sched_get_priority_max</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>policy</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>sched_get_priority_max</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>policy</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sched_get_priority_min" lang="c"><name>sched_get_priority_min</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>policy</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>sched_get_priority_min</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>policy</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sched_getparam" lang="c"><name>sched_getparam</name>
+<parsedparameterlist>
+<parsedparameter><type>pid_t</type><name>pid</name></parsedparameter>
+<parsedparameter><type>struct sched_param *</type><name>param</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>sched_getparam</declaration_function>(
+    <declaration_type>pid_t</declaration_type> <declaration_param>pid</declaration_param>,
+    <declaration_keyword>struct</declaration_keyword> <declaration_type>sched_param</declaration_type> <declaration_type>*</declaration_type><declaration_param>param</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sched_getscheduler" lang="c"><name>sched_getscheduler</name>
+<parsedparameterlist>
+<parsedparameter><type>pid_t</type><name>pid</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>sched_getscheduler</declaration_function>(
+    <declaration_type>pid_t</declaration_type> <declaration_param>pid</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sched_rr_get_interval" lang="c"><name>sched_rr_get_interval</name>
+<parsedparameterlist>
+<parsedparameter><type>pid_t</type><name>pid</name></parsedparameter>
+<parsedparameter><type>struct timespec *</type><name>interval</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>sched_rr_get_interval</declaration_function>(
+    <declaration_type>pid_t</declaration_type> <declaration_param>pid</declaration_param>,
+    <declaration_keyword>struct</declaration_keyword> <declaration_type>timespec</declaration_type> <declaration_type>*</declaration_type><declaration_param>interval</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sched_setparam" lang="c"><name>sched_setparam</name>
+<parsedparameterlist>
+<parsedparameter><type>pid_t</type><name>pid</name></parsedparameter>
+<parsedparameter><type>const struct sched_param *</type><name>param</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>sched_setparam</declaration_function>(
+    <declaration_type>pid_t</declaration_type> <declaration_param>pid</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>sched_param</declaration_type> <declaration_type>*</declaration_type><declaration_param>param</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sched_setscheduler" lang="c"><name>sched_setscheduler</name>
+<parsedparameterlist>
+<parsedparameter><type>pid_t</type><name>pid</name></parsedparameter>
+<parsedparameter><type>int</type><name>policy</name></parsedparameter>
+<parsedparameter><type>const struct sched_param *</type><name>param</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>sched_setscheduler</declaration_function>(
+    <declaration_type>pid_t</declaration_type> <declaration_param>pid</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>policy</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>sched_param</declaration_type> <declaration_type>*</declaration_type><declaration_param>param</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/sched_yield" lang="c"><name>sched_yield</name>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>sched_yield</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_POSIX_SCHED_H__" definetype="value" lang="c"><name>__XEOS_LIB_POSIX_SCHED_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_POSIX_SCHED_H__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SCHED_FIFO" definetype="value" lang="c"><name>SCHED_FIFO</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SCHED_FIFO</declaration_preprocessor> <declaration_preprocessor>0</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SCHED_OTHER" definetype="value" lang="c"><name>SCHED_OTHER</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SCHED_OTHER</declaration_preprocessor> <declaration_preprocessor>2</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/SCHED_RR" definetype="value" lang="c"><name>SCHED_RR</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>SCHED_RR</declaration_preprocessor> <declaration_preprocessor>1</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

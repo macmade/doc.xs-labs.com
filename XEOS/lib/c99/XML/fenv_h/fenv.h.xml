@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/fenv.h" lang="c" filename="fenv.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/c99/include/c99/fenv.h"><name>fenv.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/fenv_t.h">&lt;system/types/fenv_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/fexcept_t.h">&lt;system/types/fexcept_t.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/feclearexcept" lang="c"><name>feclearexcept</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>excepts</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>feclearexcept</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>excepts</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fegetenv" lang="c"><name>fegetenv</name>
+<parsedparameterlist>
+<parsedparameter><type>fenv_t *</type><name>envp</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>fegetenv</declaration_function>(
+    <declaration_type>fenv_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>envp</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fegetexceptflag" lang="c"><name>fegetexceptflag</name>
+<parsedparameterlist>
+<parsedparameter><type>fexcept_t *</type><name>flagp</name></parsedparameter>
+<parsedparameter><type>int</type><name>excepts</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>fegetexceptflag</declaration_function>(
+    <declaration_type>fexcept_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>flagp</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>excepts</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fegetround" lang="c"><name>fegetround</name>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>fegetround</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/feholdexcept" lang="c"><name>feholdexcept</name>
+<parsedparameterlist>
+<parsedparameter><type>fenv_t *</type><name>envp</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>feholdexcept</declaration_function>(
+    <declaration_type>fenv_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>envp</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/feraiseexcept" lang="c"><name>feraiseexcept</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>excepts</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>feraiseexcept</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>excepts</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fesetenv" lang="c"><name>fesetenv</name>
+<parsedparameterlist>
+<parsedparameter><type>const fenv_t *</type><name>envp</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>fesetenv</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>fenv_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>envp</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fesetexceptflag" lang="c"><name>fesetexceptflag</name>
+<parsedparameterlist>
+<parsedparameter><type>const fexcept_t *</type><name>flagp</name></parsedparameter>
+<parsedparameter><type>int</type><name>excepts</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>fesetexceptflag</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>fexcept_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>flagp</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>excepts</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fesetround" lang="c"><name>fesetround</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>round</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>fesetround</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>round</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/fetestexcept" lang="c"><name>fetestexcept</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>excepts</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>fetestexcept</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>excepts</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/feupdateenv" lang="c"><name>feupdateenv</name>
+<parsedparameterlist>
+<parsedparameter><type>const fenv_t *</type><name>envp</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>feupdateenv</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>fenv_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>envp</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<constants><constant id="//xsdoc_ref/c/data/__XEOS_Lib_C99_FEDefaultEnv" lang="c"><name>__XEOS_Lib_C99_FEDefaultEnv</name>
+<returntype>extern const fenv_t</returntype>
+<declaration><declaration_keyword>extern</declaration_keyword> <declaration_keyword>const</declaration_keyword> <declaration_type>fenv_t</declaration_type> <declaration_var>__XEOS_Lib_C99_FEDefaultEnv</declaration_var>;  </declaration>
+<desc><p/></desc>
+</constant></constants>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_C99_FENV_H__" definetype="value" lang="c"><name>__XEOS_LIB_C99_FENV_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_C99_FENV_H__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FE_ALL_EXCEPT" definetype="value" lang="c"><name>FE_ALL_EXCEPT</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FE_ALL_EXCEPT</declaration_preprocessor> <declaration_preprocessor>0x001F</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FE_DFL_ENV" definetype="value" lang="c"><name>FE_DFL_ENV</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FE_DFL_ENV</declaration_preprocessor> <declaration_preprocessor>&amp;</declaration_preprocessor><declaration_preprocessor>__XEOS_Lib_C99_FEDefaultEnv</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FE_DIVBYZERO" definetype="value" lang="c"><name>FE_DIVBYZERO</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FE_DIVBYZERO</declaration_preprocessor> <declaration_preprocessor>0x0002</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FE_DOWNWARD" definetype="value" lang="c"><name>FE_DOWNWARD</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FE_DOWNWARD</declaration_preprocessor> <declaration_preprocessor>0x00800000</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FE_INEXACT" definetype="value" lang="c"><name>FE_INEXACT</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FE_INEXACT</declaration_preprocessor> <declaration_preprocessor>0x0010</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FE_INVALID" definetype="value" lang="c"><name>FE_INVALID</name>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FE_INVALID</declaration_preprocessor> <declaration_preprocessor>0x0001</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FE_OVERFLOW" definetype="value" lang="c"><name>FE_OVERFLOW</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FE_OVERFLOW</declaration_preprocessor> <declaration_preprocessor>0x0004</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FE_TONEAREST" definetype="value" lang="c"><name>FE_TONEAREST</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FE_TONEAREST</declaration_preprocessor> <declaration_preprocessor>0x00000000</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FE_TOWARDZERO" definetype="value" lang="c"><name>FE_TOWARDZERO</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FE_TOWARDZERO</declaration_preprocessor> <declaration_preprocessor>0x00C00000</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FE_UNDERFLOW" definetype="value" lang="c"><name>FE_UNDERFLOW</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FE_UNDERFLOW</declaration_preprocessor> <declaration_preprocessor>0x0008</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/FE_UPWARD" definetype="value" lang="c"><name>FE_UPWARD</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>FE_UPWARD</declaration_preprocessor> <declaration_preprocessor>0x00400000</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

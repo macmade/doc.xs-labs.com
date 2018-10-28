@@ -1,0 +1,1002 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/pthread.h" lang="c" filename="pthread.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/lib/pthread/include/pthread.h"><name>pthread.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pthread_attr_t.h">&lt;system/types/pthread_attr_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pthread_barrier_t.h">&lt;system/types/pthread_barrier_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pthread_barrierattr_t.h">&lt;system/types/pthread_barrierattr_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pthread_cond_t.h">&lt;system/types/pthread_cond_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pthread_condattr_t.h">&lt;system/types/pthread_condattr_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pthread_key_t.h">&lt;system/types/pthread_key_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pthread_mutex_t.h">&lt;system/types/pthread_mutex_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pthread_mutexattr_t.h">&lt;system/types/pthread_mutexattr_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pthread_once_t.h">&lt;system/types/pthread_once_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pthread_rwlock_t.h">&lt;system/types/pthread_rwlock_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pthread_rwlockattr_t.h">&lt;system/types/pthread_rwlockattr_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pthread_spinlock_t.h">&lt;system/types/pthread_spinlock_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pthread_t.h">&lt;system/types/pthread_t.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/sched.h">&lt;sched.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/time.h">&lt;time.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/pthread_atfork" lang="c"><name>pthread_atfork</name>
+<parsedparameterlist>
+<parsedparameter><type>void</type><name>prepare</name></parsedparameter>
+<parsedparameter><type>void</type><name>parent</name></parsedparameter>
+<parsedparameter><type>void</type><name>child</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_atfork</declaration_function>(
+    <declaration_type>void</declaration_type> ( <declaration_type>*</declaration_type> <declaration_param>prepare</declaration_param> )(
+        <declaration_param>void</declaration_param> ),
+    <declaration_type>void</declaration_type> ( <declaration_type>*</declaration_type> <declaration_param>parent</declaration_param> )(
+        <declaration_param>void</declaration_param> ),
+    <declaration_type>void</declaration_type> ( <declaration_type>*</declaration_type> <declaration_param>child</declaration_param> )(
+        <declaration_param>void</declaration_param> ) );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_attr_destroy" lang="c"><name>pthread_attr_destroy</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_attr_t *</type><name>attr</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_attr_destroy</declaration_function>(
+    <declaration_type>pthread_attr_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>attr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_attr_getdetachstate" lang="c"><name>pthread_attr_getdetachstate</name>
+<parsedparameterlist>
+<parsedparameter><type>const pthread_attr_t *</type><name>attr</name></parsedparameter>
+<parsedparameter><type>int *</type><name>detachstate</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_attr_getdetachstate</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>pthread_attr_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>attr</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_type>*</declaration_type><declaration_param>detachstate</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_attr_getguardsize" lang="c"><name>pthread_attr_getguardsize</name>
+<parsedparameterlist>
+<parsedparameter><type>const pthread_attr_t * restrict</type><name>attr</name></parsedparameter>
+<parsedparameter><type>size_t * restrict</type><name>guardsize</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_attr_getguardsize</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>pthread_attr_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>attr</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>guardsize</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_attr_getinheritsched" lang="c"><name>pthread_attr_getinheritsched</name>
+<parsedparameterlist>
+<parsedparameter><type>const pthread_attr_t * restrict</type><name>attr</name></parsedparameter>
+<parsedparameter><type>int * restrict</type><name>inheritsched</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_attr_getinheritsched</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>pthread_attr_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>attr</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>inheritsched</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_attr_getschedparam" lang="c"><name>pthread_attr_getschedparam</name>
+<parsedparameterlist>
+<parsedparameter><type>const pthread_attr_t * restrict</type><name>attr</name></parsedparameter>
+<parsedparameter><type>struct sched_param *</type><name>restrict</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_attr_getschedparam</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>pthread_attr_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>attr</declaration_param>,
+    <declaration_keyword>struct</declaration_keyword> <declaration_type>sched_param</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>param</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_attr_getschedpolicy" lang="c"><name>pthread_attr_getschedpolicy</name>
+<parsedparameterlist>
+<parsedparameter><type>const pthread_attr_t * restrict</type><name>attr</name></parsedparameter>
+<parsedparameter><type>int * restrict</type><name>policy</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_attr_getschedpolicy</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>pthread_attr_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>attr</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>policy</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_attr_getscope" lang="c"><name>pthread_attr_getscope</name>
+<parsedparameterlist>
+<parsedparameter><type>const pthread_attr_t * restrict</type><name>attr</name></parsedparameter>
+<parsedparameter><type>int * restrict</type><name>contentionscope</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_attr_getscope</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>pthread_attr_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>attr</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>contentionscope</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_attr_getstack" lang="c"><name>pthread_attr_getstack</name>
+<parsedparameterlist>
+<parsedparameter><type>const pthread_attr_t * restrict</type><name>attr</name></parsedparameter>
+<parsedparameter><type>void ** restrict</type><name>stackaddr</name></parsedparameter>
+<parsedparameter><type>size_t * restrict</type><name>stacksize</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_attr_getstack</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>pthread_attr_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>attr</declaration_param>,
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>stackaddr</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>stacksize</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_attr_getstacksize" lang="c"><name>pthread_attr_getstacksize</name>
+<parsedparameterlist>
+<parsedparameter><type>const pthread_attr_t * restrict</type><name>attr</name></parsedparameter>
+<parsedparameter><type>size_t * restrict</type><name>stacksize</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_attr_getstacksize</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>pthread_attr_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>attr</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>stacksize</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_attr_init" lang="c"><name>pthread_attr_init</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_attr_t *</type><name>attr</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_attr_init</declaration_function>(
+    <declaration_type>pthread_attr_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>attr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_attr_setdetachstate" lang="c"><name>pthread_attr_setdetachstate</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_attr_t *</type><name>attr</name></parsedparameter>
+<parsedparameter><type>int</type><name>detachstate</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_attr_setdetachstate</declaration_function>(
+    <declaration_type>pthread_attr_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>attr</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>detachstate</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_attr_setguardsize" lang="c"><name>pthread_attr_setguardsize</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_attr_t *</type><name>attr</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>guardsize</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_attr_setguardsize</declaration_function>(
+    <declaration_type>pthread_attr_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>attr</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>guardsize</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_attr_setinheritsched" lang="c"><name>pthread_attr_setinheritsched</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_attr_t *</type><name>attr</name></parsedparameter>
+<parsedparameter><type>int</type><name>inheritsched</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_attr_setinheritsched</declaration_function>(
+    <declaration_type>pthread_attr_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>attr</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>inheritsched</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_attr_setschedparam" lang="c"><name>pthread_attr_setschedparam</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_attr_t * restrict</type><name>attr</name></parsedparameter>
+<parsedparameter><type>const struct sched_param *</type><name>restrict</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_attr_setschedparam</declaration_function>(
+    <declaration_type>pthread_attr_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>attr</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>sched_param</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>param</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_attr_setschedpolicy" lang="c"><name>pthread_attr_setschedpolicy</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_attr_t *</type><name>attr</name></parsedparameter>
+<parsedparameter><type>int</type><name>policy</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_attr_setschedpolicy</declaration_function>(
+    <declaration_type>pthread_attr_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>attr</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>policy</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_attr_setscope" lang="c"><name>pthread_attr_setscope</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_attr_t *</type><name>attr</name></parsedparameter>
+<parsedparameter><type>int</type><name>contentionscope</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_attr_setscope</declaration_function>(
+    <declaration_type>pthread_attr_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>attr</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>contentionscope</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_attr_setstack" lang="c"><name>pthread_attr_setstack</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_attr_t *</type><name>attr</name></parsedparameter>
+<parsedparameter><type>void *</type><name>stackaddr</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>stacksize</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_attr_setstack</declaration_function>(
+    <declaration_type>pthread_attr_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>attr</declaration_param>,
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>stackaddr</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>stacksize</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_attr_setstacksize" lang="c"><name>pthread_attr_setstacksize</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_attr_t *</type><name>attr</name></parsedparameter>
+<parsedparameter><type>size_t</type><name>stacksize</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_attr_setstacksize</declaration_function>(
+    <declaration_type>pthread_attr_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>attr</declaration_param>,
+    <declaration_type>size_t</declaration_type> <declaration_param>stacksize</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_barrier_destroy" lang="c"><name>pthread_barrier_destroy</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_barrier_t *</type><name>barrier</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_barrier_destroy</declaration_function>(
+    <declaration_type>pthread_barrier_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>barrier</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_barrier_init" lang="c"><name>pthread_barrier_init</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_barrier_t * restrict</type><name>barrier</name></parsedparameter>
+<parsedparameter><type>const pthread_barrierattr_t * restrict</type><name>attr</name></parsedparameter>
+<parsedparameter><type>unsigned</type><name>count</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_barrier_init</declaration_function>(
+    <declaration_type>pthread_barrier_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>barrier</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>pthread_barrierattr_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>attr</declaration_param>,
+    <declaration_keyword>unsigned</declaration_keyword> <declaration_param>count</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_barrier_wait" lang="c"><name>pthread_barrier_wait</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_barrier_t *</type><name>barrier</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_barrier_wait</declaration_function>(
+    <declaration_type>pthread_barrier_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>barrier</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_barrierattr_destroy" lang="c"><name>pthread_barrierattr_destroy</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_barrierattr_t *</type><name>attr</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_barrierattr_destroy</declaration_function>(
+    <declaration_type>pthread_barrierattr_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>attr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_barrierattr_getpshared" lang="c"><name>pthread_barrierattr_getpshared</name>
+<parsedparameterlist>
+<parsedparameter><type>const pthread_barrierattr_t * restrict</type><name>attr</name></parsedparameter>
+<parsedparameter><type>int * restrict</type><name>pshared</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_barrierattr_getpshared</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>pthread_barrierattr_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>attr</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>pshared</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_barrierattr_init" lang="c"><name>pthread_barrierattr_init</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_barrierattr_t *</type><name>attr</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_barrierattr_init</declaration_function>(
+    <declaration_type>pthread_barrierattr_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>attr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_barrierattr_setpshared" lang="c"><name>pthread_barrierattr_setpshared</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_barrierattr_t *</type><name>attr</name></parsedparameter>
+<parsedparameter><type>int</type><name>pshared</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_barrierattr_setpshared</declaration_function>(
+    <declaration_type>pthread_barrierattr_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>attr</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>pshared</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_cancel" lang="c"><name>pthread_cancel</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_t</type><name>thread</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_cancel</declaration_function>(
+    <declaration_type>pthread_t</declaration_type> <declaration_param>thread</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_cleanup_pop" lang="c"><name>pthread_cleanup_pop</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>execute</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>pthread_cleanup_pop</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>execute</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_cleanup_push" lang="c"><name>pthread_cleanup_push</name>
+<parsedparameterlist>
+<parsedparameter><type>void</type><name>routine</name></parsedparameter>
+<parsedparameter><type>void *</type><name>arg</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>pthread_cleanup_push</declaration_function>(
+    <declaration_type>void</declaration_type> ( <declaration_type>*</declaration_type> <declaration_param>routine</declaration_param> )(
+        <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> ),
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>arg</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_cond_broadcast" lang="c"><name>pthread_cond_broadcast</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_cond_t *</type><name>cond</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_cond_broadcast</declaration_function>(
+    <declaration_type>pthread_cond_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>cond</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_cond_destroy" lang="c"><name>pthread_cond_destroy</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_cond_t *</type><name>cond</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_cond_destroy</declaration_function>(
+    <declaration_type>pthread_cond_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>cond</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_cond_init" lang="c"><name>pthread_cond_init</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_cond_t * restrict</type><name>cond</name></parsedparameter>
+<parsedparameter><type>const pthread_condattr_t * restrict</type><name>attr</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_cond_init</declaration_function>(
+    <declaration_type>pthread_cond_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>cond</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>pthread_condattr_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>attr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_cond_signal" lang="c"><name>pthread_cond_signal</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_cond_t *</type><name>cond</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_cond_signal</declaration_function>(
+    <declaration_type>pthread_cond_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>cond</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_cond_timedwait" lang="c"><name>pthread_cond_timedwait</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_cond_t * restrict</type><name>cond</name></parsedparameter>
+<parsedparameter><type>pthread_mutex_t * restrict</type><name>mutex</name></parsedparameter>
+<parsedparameter><type>const struct timespec *</type><name>restrict</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_cond_timedwait</declaration_function>(
+    <declaration_type>pthread_cond_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>cond</declaration_param>,
+    <declaration_type>pthread_mutex_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>mutex</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>timespec</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>abstime</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_cond_wait" lang="c"><name>pthread_cond_wait</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_cond_t * restrict</type><name>cond</name></parsedparameter>
+<parsedparameter><type>pthread_mutex_t * restrict</type><name>mutex</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_cond_wait</declaration_function>(
+    <declaration_type>pthread_cond_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>cond</declaration_param>,
+    <declaration_type>pthread_mutex_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>mutex</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_condattr_destroy" lang="c"><name>pthread_condattr_destroy</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_condattr_t *</type><name>attr</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_condattr_destroy</declaration_function>(
+    <declaration_type>pthread_condattr_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>attr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_condattr_getclock" lang="c"><name>pthread_condattr_getclock</name>
+<parsedparameterlist>
+<parsedparameter><type>const pthread_condattr_t * restrict</type><name>attr</name></parsedparameter>
+<parsedparameter><type>clockid_t * restrict</type><name>clock_id</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_condattr_getclock</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>pthread_condattr_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>attr</declaration_param>,
+    <declaration_type>clockid_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>clock_id</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_condattr_getpshared" lang="c"><name>pthread_condattr_getpshared</name>
+<parsedparameterlist>
+<parsedparameter><type>const pthread_condattr_t * restrict</type><name>attr</name></parsedparameter>
+<parsedparameter><type>int * restrict</type><name>pshared</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_condattr_getpshared</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>pthread_condattr_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>attr</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>pshared</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_condattr_init" lang="c"><name>pthread_condattr_init</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_condattr_t *</type><name>attr</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_condattr_init</declaration_function>(
+    <declaration_type>pthread_condattr_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>attr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_condattr_setclock" lang="c"><name>pthread_condattr_setclock</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_condattr_t *</type><name>attr</name></parsedparameter>
+<parsedparameter><type>clockid_t</type><name>clock_id</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_condattr_setclock</declaration_function>(
+    <declaration_type>pthread_condattr_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>attr</declaration_param>,
+    <declaration_type>clockid_t</declaration_type> <declaration_param>clock_id</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_condattr_setpshared" lang="c"><name>pthread_condattr_setpshared</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_condattr_t *</type><name>attr</name></parsedparameter>
+<parsedparameter><type>int</type><name>pshared</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_condattr_setpshared</declaration_function>(
+    <declaration_type>pthread_condattr_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>attr</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>pshared</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_create" lang="c"><name>pthread_create</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_t * restrict</type><name>thread</name></parsedparameter>
+<parsedparameter><type>const pthread_attr_t * restrict</type><name>attr</name></parsedparameter>
+<parsedparameter><type>void *</type><name>start_routine</name></parsedparameter>
+<parsedparameter><type>void * restrict</type><name>arg</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_create</declaration_function>(
+    <declaration_type>pthread_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>thread</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>pthread_attr_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>attr</declaration_param>,
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type>( <declaration_type>*</declaration_type> <declaration_param>start_routine</declaration_param> )(
+        <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> ),
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>arg</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_detach" lang="c"><name>pthread_detach</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_t</type><name>thread</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_detach</declaration_function>(
+    <declaration_type>pthread_t</declaration_type> <declaration_param>thread</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_equal" lang="c"><name>pthread_equal</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_t</type><name>t1</name></parsedparameter>
+<parsedparameter><type>pthread_t</type><name>t2</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_equal</declaration_function>(
+    <declaration_type>pthread_t</declaration_type> <declaration_param>t1</declaration_param>,
+    <declaration_type>pthread_t</declaration_type> <declaration_param>t2</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_exit" lang="c"><name>pthread_exit</name>
+<parsedparameterlist>
+<parsedparameter><type>void *</type><name>value_ptr</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>pthread_exit</declaration_function>(
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>value_ptr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_getconcurrency" lang="c"><name>pthread_getconcurrency</name>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_getconcurrency</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_getcpuclockid" lang="c"><name>pthread_getcpuclockid</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_t</type><name>thread_id</name></parsedparameter>
+<parsedparameter><type>clockid_t *</type><name>clock_id</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_getcpuclockid</declaration_function>(
+    <declaration_type>pthread_t</declaration_type> <declaration_param>thread_id</declaration_param>,
+    <declaration_type>clockid_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>clock_id</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_getschedparam" lang="c"><name>pthread_getschedparam</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_t</type><name>thread</name></parsedparameter>
+<parsedparameter><type>int * restrict</type><name>policy</name></parsedparameter>
+<parsedparameter><type>struct sched_param *</type><name>restrict</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_getschedparam</declaration_function>(
+    <declaration_type>pthread_t</declaration_type> <declaration_param>thread</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>policy</declaration_param>,
+    <declaration_keyword>struct</declaration_keyword> <declaration_type>sched_param</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>param</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_getspecific" lang="c"><name>pthread_getspecific</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_key_t</type><name>key</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void *</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_type>*</declaration_type> <declaration_function>pthread_getspecific</declaration_function>(
+    <declaration_type>pthread_key_t</declaration_type> <declaration_param>key</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_join" lang="c"><name>pthread_join</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_t</type><name>thread</name></parsedparameter>
+<parsedparameter><type>void **</type><name>value_ptr</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_join</declaration_function>(
+    <declaration_type>pthread_t</declaration_type> <declaration_param>thread</declaration_param>,
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_type>*</declaration_type><declaration_param>value_ptr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_key_create" lang="c"><name>pthread_key_create</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_key_t *</type><name>key</name></parsedparameter>
+<parsedparameter><type>void</type><name>destructor</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_key_create</declaration_function>(
+    <declaration_type>pthread_key_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>key</declaration_param>,
+    <declaration_type>void</declaration_type> ( <declaration_type>*</declaration_type> <declaration_param>destructor</declaration_param> )(
+        <declaration_type>void</declaration_type> <declaration_type>*</declaration_type> ) );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_key_delete" lang="c"><name>pthread_key_delete</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_key_t</type><name>key</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_key_delete</declaration_function>(
+    <declaration_type>pthread_key_t</declaration_type> <declaration_param>key</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_mutex_consistent" lang="c"><name>pthread_mutex_consistent</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_mutex_t *</type><name>mutex</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_mutex_consistent</declaration_function>(
+    <declaration_type>pthread_mutex_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>mutex</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_mutex_destroy" lang="c"><name>pthread_mutex_destroy</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_mutex_t *</type><name>mutex</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_mutex_destroy</declaration_function>(
+    <declaration_type>pthread_mutex_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>mutex</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_mutex_getprioceiling" lang="c"><name>pthread_mutex_getprioceiling</name>
+<parsedparameterlist>
+<parsedparameter><type>const pthread_mutex_t * restrict</type><name>mutex</name></parsedparameter>
+<parsedparameter><type>int * restrict</type><name>prioceiling</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_mutex_getprioceiling</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>pthread_mutex_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>mutex</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>prioceiling</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_mutex_init" lang="c"><name>pthread_mutex_init</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_mutex_t * restrict</type><name>mutex</name></parsedparameter>
+<parsedparameter><type>const pthread_mutexattr_t * restrict</type><name>attr</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_mutex_init</declaration_function>(
+    <declaration_type>pthread_mutex_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>mutex</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>pthread_mutexattr_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>attr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_mutex_lock" lang="c"><name>pthread_mutex_lock</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_mutex_t *</type><name>mutex</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_mutex_lock</declaration_function>(
+    <declaration_type>pthread_mutex_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>mutex</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_mutex_setprioceiling" lang="c"><name>pthread_mutex_setprioceiling</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_mutex_t * restrict</type><name>mutex</name></parsedparameter>
+<parsedparameter><type>int</type><name>prioceiling</name></parsedparameter>
+<parsedparameter><type>int * restrict</type><name>old_ceiling</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_mutex_setprioceiling</declaration_function>(
+    <declaration_type>pthread_mutex_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>mutex</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>prioceiling</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>old_ceiling</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_mutex_timedlock" lang="c"><name>pthread_mutex_timedlock</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_mutex_t * restrict</type><name>mutex</name></parsedparameter>
+<parsedparameter><type>const struct timespec *</type><name>restrict</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_mutex_timedlock</declaration_function>(
+    <declaration_type>pthread_mutex_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>mutex</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>timespec</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>abs_timeout</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_mutex_trylock" lang="c"><name>pthread_mutex_trylock</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_mutex_t *</type><name>mutex</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_mutex_trylock</declaration_function>(
+    <declaration_type>pthread_mutex_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>mutex</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_mutex_unlock" lang="c"><name>pthread_mutex_unlock</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_mutex_t *</type><name>mutex</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_mutex_unlock</declaration_function>(
+    <declaration_type>pthread_mutex_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>mutex</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_mutexattr_destroy" lang="c"><name>pthread_mutexattr_destroy</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_mutexattr_t *</type><name>attr</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_mutexattr_destroy</declaration_function>(
+    <declaration_type>pthread_mutexattr_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>attr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_mutexattr_getprioceiling" lang="c"><name>pthread_mutexattr_getprioceiling</name>
+<parsedparameterlist>
+<parsedparameter><type>const pthread_mutexattr_t * restrict</type><name>attr</name></parsedparameter>
+<parsedparameter><type>int * restrict</type><name>prioceiling</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_mutexattr_getprioceiling</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>pthread_mutexattr_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>attr</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>prioceiling</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_mutexattr_getprotocol" lang="c"><name>pthread_mutexattr_getprotocol</name>
+<parsedparameterlist>
+<parsedparameter><type>const pthread_mutexattr_t * restrict</type><name>attr</name></parsedparameter>
+<parsedparameter><type>int * restrict</type><name>protocol</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_mutexattr_getprotocol</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>pthread_mutexattr_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>attr</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>protocol</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_mutexattr_getpshared" lang="c"><name>pthread_mutexattr_getpshared</name>
+<parsedparameterlist>
+<parsedparameter><type>const pthread_mutexattr_t * restrict</type><name>attr</name></parsedparameter>
+<parsedparameter><type>int * restrict</type><name>pshared</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_mutexattr_getpshared</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>pthread_mutexattr_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>attr</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>pshared</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_mutexattr_getrobust" lang="c"><name>pthread_mutexattr_getrobust</name>
+<parsedparameterlist>
+<parsedparameter><type>const pthread_mutexattr_t * restrict</type><name>attr</name></parsedparameter>
+<parsedparameter><type>int * restrict</type><name>robust</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_mutexattr_getrobust</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>pthread_mutexattr_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>attr</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>robust</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_mutexattr_gettype" lang="c"><name>pthread_mutexattr_gettype</name>
+<parsedparameterlist>
+<parsedparameter><type>const pthread_mutexattr_t * restrict</type><name>attr</name></parsedparameter>
+<parsedparameter><type>int * restrict</type><name>type</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_mutexattr_gettype</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>pthread_mutexattr_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>attr</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>type</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_mutexattr_init" lang="c"><name>pthread_mutexattr_init</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_mutexattr_t *</type><name>attr</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_mutexattr_init</declaration_function>(
+    <declaration_type>pthread_mutexattr_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>attr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_mutexattr_setprioceiling" lang="c"><name>pthread_mutexattr_setprioceiling</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_mutexattr_t *</type><name>attr</name></parsedparameter>
+<parsedparameter><type>int</type><name>prioceiling</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_mutexattr_setprioceiling</declaration_function>(
+    <declaration_type>pthread_mutexattr_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>attr</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>prioceiling</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_mutexattr_setprotocol" lang="c"><name>pthread_mutexattr_setprotocol</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_mutexattr_t *</type><name>attr</name></parsedparameter>
+<parsedparameter><type>int</type><name>protocol</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_mutexattr_setprotocol</declaration_function>(
+    <declaration_type>pthread_mutexattr_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>attr</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>protocol</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_mutexattr_setpshared" lang="c"><name>pthread_mutexattr_setpshared</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_mutexattr_t *</type><name>attr</name></parsedparameter>
+<parsedparameter><type>int</type><name>pshared</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_mutexattr_setpshared</declaration_function>(
+    <declaration_type>pthread_mutexattr_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>attr</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>pshared</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_mutexattr_setrobust" lang="c"><name>pthread_mutexattr_setrobust</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_mutexattr_t *</type><name>attr</name></parsedparameter>
+<parsedparameter><type>int</type><name>robust</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_mutexattr_setrobust</declaration_function>(
+    <declaration_type>pthread_mutexattr_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>attr</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>robust</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_mutexattr_settype" lang="c"><name>pthread_mutexattr_settype</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_mutexattr_t *</type><name>attr</name></parsedparameter>
+<parsedparameter><type>int</type><name>type</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_mutexattr_settype</declaration_function>(
+    <declaration_type>pthread_mutexattr_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>attr</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>type</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_once" lang="c"><name>pthread_once</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_once_t *</type><name>once_control</name></parsedparameter>
+<parsedparameter><type>void</type><name>init_routine</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_once</declaration_function>(
+    <declaration_type>pthread_once_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>once_control</declaration_param>,
+    <declaration_type>void</declaration_type> ( <declaration_type>*</declaration_type> <declaration_param>init_routine</declaration_param> )(
+        <declaration_param>void</declaration_param> ) );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_rwlock_destroy" lang="c"><name>pthread_rwlock_destroy</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_rwlock_t *</type><name>rwlock</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_rwlock_destroy</declaration_function>(
+    <declaration_type>pthread_rwlock_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>rwlock</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_rwlock_init" lang="c"><name>pthread_rwlock_init</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_rwlock_t * restrict</type><name>rwlock</name></parsedparameter>
+<parsedparameter><type>const pthread_rwlockattr_t * restrict</type><name>attr</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_rwlock_init</declaration_function>(
+    <declaration_type>pthread_rwlock_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>rwlock</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>pthread_rwlockattr_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>attr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_rwlock_rdlock" lang="c"><name>pthread_rwlock_rdlock</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_rwlock_t *</type><name>rwlock</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_rwlock_rdlock</declaration_function>(
+    <declaration_type>pthread_rwlock_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>rwlock</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_rwlock_timedrdlock" lang="c"><name>pthread_rwlock_timedrdlock</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_rwlock_t * restrict</type><name>rwlock</name></parsedparameter>
+<parsedparameter><type>const struct timespec *</type><name>restrict</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_rwlock_timedrdlock</declaration_function>(
+    <declaration_type>pthread_rwlock_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>rwlock</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>timespec</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>abs_timeout</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_rwlock_timedwrlock" lang="c"><name>pthread_rwlock_timedwrlock</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_rwlock_t * restrict</type><name>rwlock</name></parsedparameter>
+<parsedparameter><type>const struct timespec *</type><name>restrict</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_rwlock_timedwrlock</declaration_function>(
+    <declaration_type>pthread_rwlock_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>rwlock</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>timespec</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>abs_timeout</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_rwlock_tryrdlock" lang="c"><name>pthread_rwlock_tryrdlock</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_rwlock_t *</type><name>rwlock</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_rwlock_tryrdlock</declaration_function>(
+    <declaration_type>pthread_rwlock_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>rwlock</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_rwlock_trywrlock" lang="c"><name>pthread_rwlock_trywrlock</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_rwlock_t *</type><name>rwlock</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_rwlock_trywrlock</declaration_function>(
+    <declaration_type>pthread_rwlock_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>rwlock</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_rwlock_unlock" lang="c"><name>pthread_rwlock_unlock</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_rwlock_t *</type><name>rwlock</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_rwlock_unlock</declaration_function>(
+    <declaration_type>pthread_rwlock_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>rwlock</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_rwlock_wrlock" lang="c"><name>pthread_rwlock_wrlock</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_rwlock_t *</type><name>rwlock</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_rwlock_wrlock</declaration_function>(
+    <declaration_type>pthread_rwlock_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>rwlock</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_rwlockattr_destroy" lang="c"><name>pthread_rwlockattr_destroy</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_rwlockattr_t *</type><name>attr</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_rwlockattr_destroy</declaration_function>(
+    <declaration_type>pthread_rwlockattr_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>attr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_rwlockattr_getpshared" lang="c"><name>pthread_rwlockattr_getpshared</name>
+<parsedparameterlist>
+<parsedparameter><type>const pthread_rwlockattr_t * restrict</type><name>attr</name></parsedparameter>
+<parsedparameter><type>int * restrict</type><name>pshared</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_rwlockattr_getpshared</declaration_function>(
+    <declaration_keyword>const</declaration_keyword> <declaration_type>pthread_rwlockattr_t</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>attr</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_type>*</declaration_type><declaration_type>restrict</declaration_type> <declaration_param>pshared</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_rwlockattr_init" lang="c"><name>pthread_rwlockattr_init</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_rwlockattr_t *</type><name>attr</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_rwlockattr_init</declaration_function>(
+    <declaration_type>pthread_rwlockattr_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>attr</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_rwlockattr_setpshared" lang="c"><name>pthread_rwlockattr_setpshared</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_rwlockattr_t *</type><name>attr</name></parsedparameter>
+<parsedparameter><type>int</type><name>pshared</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_rwlockattr_setpshared</declaration_function>(
+    <declaration_type>pthread_rwlockattr_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>attr</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>pshared</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_self" lang="c"><name>pthread_self</name>
+<returntype> pthread_t</returntype>
+<declaration><declaration_type>pthread_t</declaration_type> <declaration_function>pthread_self</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_setcancelstate" lang="c"><name>pthread_setcancelstate</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>state</name></parsedparameter>
+<parsedparameter><type>int *</type><name>oldstate</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_setcancelstate</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>state</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_type>*</declaration_type><declaration_param>oldstate</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_setcanceltype" lang="c"><name>pthread_setcanceltype</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>type</name></parsedparameter>
+<parsedparameter><type>int *</type><name>oldtype</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_setcanceltype</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>type</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_type>*</declaration_type><declaration_param>oldtype</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_setconcurrency" lang="c"><name>pthread_setconcurrency</name>
+<parsedparameterlist>
+<parsedparameter><type>int</type><name>new_level</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_setconcurrency</declaration_function>(
+    <declaration_type>int</declaration_type> <declaration_param>new_level</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_setschedparam" lang="c"><name>pthread_setschedparam</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_t</type><name>thread</name></parsedparameter>
+<parsedparameter><type>int</type><name>policy</name></parsedparameter>
+<parsedparameter><type>const struct sched_param *</type><name>param</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_setschedparam</declaration_function>(
+    <declaration_type>pthread_t</declaration_type> <declaration_param>thread</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>policy</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_keyword>struct</declaration_keyword> <declaration_type>sched_param</declaration_type> <declaration_type>*</declaration_type><declaration_param>param</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_setspecific" lang="c"><name>pthread_setspecific</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_key_t</type><name>key</name></parsedparameter>
+<parsedparameter><type>const void *</type><name>value</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_setspecific</declaration_function>(
+    <declaration_type>pthread_key_t</declaration_type> <declaration_param>key</declaration_param>,
+    <declaration_keyword>const</declaration_keyword> <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>value</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_spin_destroy" lang="c"><name>pthread_spin_destroy</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_spinlock_t *</type><name>lock</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_spin_destroy</declaration_function>(
+    <declaration_type>pthread_spinlock_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>lock</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_spin_init" lang="c"><name>pthread_spin_init</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_spinlock_t *</type><name>lock</name></parsedparameter>
+<parsedparameter><type>int</type><name>pshared</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_spin_init</declaration_function>(
+    <declaration_type>pthread_spinlock_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>lock</declaration_param>,
+    <declaration_type>int</declaration_type> <declaration_param>pshared</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_spin_lock" lang="c"><name>pthread_spin_lock</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_spinlock_t *</type><name>lock</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_spin_lock</declaration_function>(
+    <declaration_type>pthread_spinlock_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>lock</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_spin_trylock" lang="c"><name>pthread_spin_trylock</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_spinlock_t *</type><name>lock</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_spin_trylock</declaration_function>(
+    <declaration_type>pthread_spinlock_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>lock</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_spin_unlock" lang="c"><name>pthread_spin_unlock</name>
+<parsedparameterlist>
+<parsedparameter><type>pthread_spinlock_t *</type><name>lock</name></parsedparameter>
+</parsedparameterlist>
+<returntype> int</returntype>
+<declaration><declaration_type>int</declaration_type> <declaration_function>pthread_spin_unlock</declaration_function>(
+    <declaration_type>pthread_spinlock_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>lock</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/pthread_testcancel" lang="c"><name>pthread_testcancel</name>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>pthread_testcancel</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_LIB_PTHREAD_PTHREAD_H__" definetype="value" lang="c"><name>__XEOS_LIB_PTHREAD_PTHREAD_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_LIB_PTHREAD_PTHREAD_H__</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/PTHREAD_BARRIER_SERIAL_THREAD" definetype="value" lang="c"><name>PTHREAD_BARRIER_SERIAL_THREAD</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>PTHREAD_BARRIER_SERIAL_THREAD</declaration_preprocessor> <declaration_preprocessor>0x00</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/PTHREAD_CANCEL_ASYNCHRONOUS" definetype="value" lang="c"><name>PTHREAD_CANCEL_ASYNCHRONOUS</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>PTHREAD_CANCEL_ASYNCHRONOUS</declaration_preprocessor> <declaration_preprocessor>0x03</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/PTHREAD_CANCEL_DEFERRED" definetype="value" lang="c"><name>PTHREAD_CANCEL_DEFERRED</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>PTHREAD_CANCEL_DEFERRED</declaration_preprocessor> <declaration_preprocessor>0x02</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/PTHREAD_CANCEL_DISABLE" definetype="value" lang="c"><name>PTHREAD_CANCEL_DISABLE</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>PTHREAD_CANCEL_DISABLE</declaration_preprocessor> <declaration_preprocessor>0x00</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/PTHREAD_CANCEL_ENABLE" definetype="value" lang="c"><name>PTHREAD_CANCEL_ENABLE</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>PTHREAD_CANCEL_ENABLE</declaration_preprocessor> <declaration_preprocessor>0x01</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/PTHREAD_CANCELED" definetype="value" lang="c"><name>PTHREAD_CANCELED</name>
+<attributes><attribute><name>Value</name><value>0x1 (1)</value></attribute>
+</attributes>
+<declaration> <declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>PTHREAD_CANCELED</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>(</declaration_preprocessor> <declaration_preprocessor>void</declaration_preprocessor> <declaration_preprocessor>*</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor><declaration_preprocessor>1</declaration_preprocessor> <declaration_preprocessor>)</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/PTHREAD_CREATE_DETACHED" definetype="value" lang="c"><name>PTHREAD_CREATE_DETACHED</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>PTHREAD_CREATE_DETACHED</declaration_preprocessor> <declaration_preprocessor>0x02</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/PTHREAD_CREATE_JOINABLE" definetype="value" lang="c"><name>PTHREAD_CREATE_JOINABLE</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>PTHREAD_CREATE_JOINABLE</declaration_preprocessor> <declaration_preprocessor>0x01</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/PTHREAD_EXPLICIT_SCHED" definetype="value" lang="c"><name>PTHREAD_EXPLICIT_SCHED</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>PTHREAD_EXPLICIT_SCHED</declaration_preprocessor> <declaration_preprocessor>0x02</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/PTHREAD_INHERIT_SCHED" definetype="value" lang="c"><name>PTHREAD_INHERIT_SCHED</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>PTHREAD_INHERIT_SCHED</declaration_preprocessor> <declaration_preprocessor>0x01</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/PTHREAD_MUTEX_DEFAULT" definetype="value" lang="c"><name>PTHREAD_MUTEX_DEFAULT</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>PTHREAD_MUTEX_DEFAULT</declaration_preprocessor> <declaration_preprocessor>0x00</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/PTHREAD_MUTEX_ERRORCHECK" definetype="value" lang="c"><name>PTHREAD_MUTEX_ERRORCHECK</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>PTHREAD_MUTEX_ERRORCHECK</declaration_preprocessor> <declaration_preprocessor>0x01</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/PTHREAD_MUTEX_NORMAL" definetype="value" lang="c"><name>PTHREAD_MUTEX_NORMAL</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>PTHREAD_MUTEX_NORMAL</declaration_preprocessor> <declaration_preprocessor>0x00</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/PTHREAD_MUTEX_RECURSIVE" definetype="value" lang="c"><name>PTHREAD_MUTEX_RECURSIVE</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>PTHREAD_MUTEX_RECURSIVE</declaration_preprocessor> <declaration_preprocessor>0x02</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/PTHREAD_MUTEX_ROBUST" definetype="value" lang="c"><name>PTHREAD_MUTEX_ROBUST</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>PTHREAD_MUTEX_ROBUST</declaration_preprocessor> <declaration_preprocessor>0x03</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/PTHREAD_MUTEX_STALLED" definetype="value" lang="c"><name>PTHREAD_MUTEX_STALLED</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>PTHREAD_MUTEX_STALLED</declaration_preprocessor> <declaration_preprocessor>0x04</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/PTHREAD_PRIO_INHERIT" definetype="value" lang="c"><name>PTHREAD_PRIO_INHERIT</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>PTHREAD_PRIO_INHERIT</declaration_preprocessor> <declaration_preprocessor>0x01</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/PTHREAD_PRIO_NONE" definetype="value" lang="c"><name>PTHREAD_PRIO_NONE</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>PTHREAD_PRIO_NONE</declaration_preprocessor> <declaration_preprocessor>0x00</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/PTHREAD_PRIO_PROTECT" definetype="value" lang="c"><name>PTHREAD_PRIO_PROTECT</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>PTHREAD_PRIO_PROTECT</declaration_preprocessor> <declaration_preprocessor>0x02</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/PTHREAD_PROCESS_PRIVATE" definetype="value" lang="c"><name>PTHREAD_PROCESS_PRIVATE</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>PTHREAD_PROCESS_PRIVATE</declaration_preprocessor> <declaration_preprocessor>0x02</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/PTHREAD_PROCESS_SHARED" definetype="value" lang="c"><name>PTHREAD_PROCESS_SHARED</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>PTHREAD_PROCESS_SHARED</declaration_preprocessor> <declaration_preprocessor>0x01</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/PTHREAD_SCOPE_PROCESS" definetype="value" lang="c"><name>PTHREAD_SCOPE_PROCESS</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>PTHREAD_SCOPE_PROCESS</declaration_preprocessor> <declaration_preprocessor>0x02</declaration_preprocessor> </declaration>
+</pdefine><pdefine id="//xsdoc_ref/c/macro/PTHREAD_SCOPE_SYSTEM" definetype="value" lang="c"><name>PTHREAD_SCOPE_SYSTEM</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>PTHREAD_SCOPE_SYSTEM</declaration_preprocessor> <declaration_preprocessor>0x01</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

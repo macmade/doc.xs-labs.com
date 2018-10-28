@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/cpu.h" lang="c" filename="cpu.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/core/xeos/include/xeos/hal/cpu.h"><name>cpu.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdbool.h">&lt;stdbool.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdint.h">&lt;stdint.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/XEOS_HAL_CPU_CPUID" lang="c"><name>XEOS_HAL_CPU_CPUID</name>
+<abstract><p>CPU identification (cpuid instruction)
+</p></abstract>
+<parameterlist>
+<parameter><name>info</name><desc><p>The info to request</p></desc></parameter>
+<parameter><name>eax</name><desc><p>On return, the content of the EAX register</p></desc></parameter>
+<parameter><name>ebx</name><desc><p>On return, the content of the EBX register</p></desc></parameter>
+<parameter><name>ecx</name><desc><p>On return, the content of the ECX register</p></desc></parameter>
+<parameter><name>edx</name><desc><p>On return, the content of the EDX register</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>uint32_t</type><name>info</name></parsedparameter>
+<parsedparameter><type>uint32_t *</type><name>eax</name></parsedparameter>
+<parsedparameter><type>uint32_t *</type><name>ebx</name></parsedparameter>
+<parsedparameter><type>uint32_t *</type><name>ecx</name></parsedparameter>
+<parsedparameter><type>uint32_t *</type><name>edx</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration> <declaration_comment>/*!</declaration_comment>
+    <declaration_comment>*/</declaration_comment>
+<declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_CPU_CPUID</declaration_function>(
+    <declaration_type>uint32_t</declaration_type> <declaration_param>info</declaration_param>,
+    <declaration_type>uint32_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>eax</declaration_param>,
+    <declaration_type>uint32_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>ebx</declaration_param>,
+    <declaration_type>uint32_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>ecx</declaration_param>,
+    <declaration_type>uint32_t</declaration_type> <declaration_type>*</declaration_type><declaration_param>edx</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_CPU_DisableInterrupts" lang="c"><name>XEOS_HAL_CPU_DisableInterrupts</name>
+<abstract><p>Disables all interrupts
+</p></abstract>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_CPU_DisableInterrupts</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_CPU_DisablePAE" lang="c"><name>XEOS_HAL_CPU_DisablePAE</name>
+<abstract><p>Disables PAE (Physical Address Extension)
+</p></abstract>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_CPU_DisablePAE</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_CPU_DisablePaging" lang="c"><name>XEOS_HAL_CPU_DisablePaging</name>
+<abstract><p>Disables paging
+</p></abstract>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_CPU_DisablePaging</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_CPU_EnableInterrupts" lang="c"><name>XEOS_HAL_CPU_EnableInterrupts</name>
+<abstract><p>Enables all interrupts
+</p></abstract>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_CPU_EnableInterrupts</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_CPU_EnablePAE" lang="c"><name>XEOS_HAL_CPU_EnablePAE</name>
+<abstract><p>Enables PAE (Physical Address Extension)
+</p></abstract>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_CPU_EnablePAE</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_CPU_EnablePaging" lang="c"><name>XEOS_HAL_CPU_EnablePaging</name>
+<abstract><p>Enables paging
+</p></abstract>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_CPU_EnablePaging</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_CPU_GetBrandName" lang="c"><name>XEOS_HAL_CPU_GetBrandName</name>
+<abstract><p>Gets the CPU brand name string
+</p></abstract>
+<returntype> const char *</returntype>
+<result><p>The CPU brand name string
+</p></result>
+<declaration><declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type> <declaration_function>XEOS_HAL_CPU_GetBrandName</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_CPU_GetCR0" lang="c"><name>XEOS_HAL_CPU_GetCR0</name>
+<abstract><p>Gets the content of the Control Register 0 (CR0)
+</p></abstract>
+<returntype> uint32_t</returntype>
+<result><p>The content of CR0
+</p></result>
+<declaration><declaration_type>uint32_t</declaration_type> <declaration_function>XEOS_HAL_CPU_GetCR0</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_CPU_GetCR1" lang="c"><name>XEOS_HAL_CPU_GetCR1</name>
+<abstract><p>Gets the content of the Control Register 1 (CR1)
+</p></abstract>
+<returntype> uint32_t</returntype>
+<result><p>The content of CR1
+</p></result>
+<declaration><declaration_type>uint32_t</declaration_type> <declaration_function>XEOS_HAL_CPU_GetCR1</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_CPU_GetCR2" lang="c"><name>XEOS_HAL_CPU_GetCR2</name>
+<abstract><p>Gets the content of the Control Register 2 (CR2)
+</p></abstract>
+<returntype> uint32_t</returntype>
+<result><p>The content of CR2
+</p></result>
+<declaration><declaration_type>uint32_t</declaration_type> <declaration_function>XEOS_HAL_CPU_GetCR2</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_CPU_GetCR3" lang="c"><name>XEOS_HAL_CPU_GetCR3</name>
+<abstract><p>Gets the content of the Control Register 3 (CR3)
+</p></abstract>
+<returntype> uint32_t</returntype>
+<result><p>The content of CR3
+</p></result>
+<declaration><declaration_type>uint32_t</declaration_type> <declaration_function>XEOS_HAL_CPU_GetCR3</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_CPU_GetCR4" lang="c"><name>XEOS_HAL_CPU_GetCR4</name>
+<abstract><p>Gets the content of the Control Register 4 (CR4)
+</p></abstract>
+<returntype> uint32_t</returntype>
+<result><p>The content of CR4
+</p></result>
+<declaration><declaration_type>uint32_t</declaration_type> <declaration_function>XEOS_HAL_CPU_GetCR4</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_CPU_GetVendorID" lang="c"><name>XEOS_HAL_CPU_GetVendorID</name>
+<abstract><p>Gets the CPU vendor ID string
+</p></abstract>
+<returntype> const char *</returntype>
+<result><p>The CPU vendor ID string
+</p></result>
+<declaration><declaration_keyword>const</declaration_keyword> <declaration_type>char</declaration_type> <declaration_type>*</declaration_type> <declaration_function>XEOS_HAL_CPU_GetVendorID</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_CPU_Halt" lang="c"><name>XEOS_HAL_CPU_Halt</name>
+<abstract><p>Halts the CPU
+</p></abstract>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_CPU_Halt</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_CPU_HasFeature" lang="c"><name>XEOS_HAL_CPU_HasFeature</name>
+<abstract><p>Checks if the CPU supports a feature
+</p></abstract>
+<parameterlist>
+<parameter><name>feature</name><desc><p>The CPU feature to check</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_HAL_CPUInfos_Feature</type><name>feature</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<result><p>True if the feature is supported, otherwise false
+</p></result>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>XEOS_HAL_CPU_HasFeature</declaration_function>(
+    <declaration_type>XEOS_HAL_CPUInfos_Feature</declaration_type> <declaration_param>feature</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_CPU_InterruptsEnabled" lang="c"><name>XEOS_HAL_CPU_InterruptsEnabled</name>
+<abstract><p>Checks if the interrupts are enabled
+</p></abstract>
+<returntype> bool</returntype>
+<result><p>True if the interrupts are enabled, otherwise false
+</p></result>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>XEOS_HAL_CPU_InterruptsEnabled</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_CPU_LoadGDT" lang="c"><name>XEOS_HAL_CPU_LoadGDT</name>
+<abstract><p>Loads the Global Descriptor Table (GDT) pointer
+</p></abstract>
+<parameterlist>
+<parameter><name>p</name><desc><p>The GDT pointer</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>void *</type><name>p</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_CPU_LoadGDT</declaration_function>(
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>p</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_CPU_LoadIDT" lang="c"><name>XEOS_HAL_CPU_LoadIDT</name>
+<abstract><p>Loads the Interrupt Descriptor Table (IDT) pointer
+</p></abstract>
+<parameterlist>
+<parameter><name>p</name><desc><p>The IDT pointer</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>void *</type><name>p</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_CPU_LoadIDT</declaration_function>(
+    <declaration_type>void</declaration_type> <declaration_type>*</declaration_type><declaration_param>p</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_CPU_PAEEnabled" lang="c"><name>XEOS_HAL_CPU_PAEEnabled</name>
+<abstract><p>Checks if PAE (Physical Address Extension)
+</p></abstract>
+<returntype> bool</returntype>
+<result><p>True if PAE is enabled, otherwise false
+</p></result>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>XEOS_HAL_CPU_PAEEnabled</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_CPU_PagingEnabled" lang="c"><name>XEOS_HAL_CPU_PagingEnabled</name>
+<abstract><p>Checks if paging is enabled
+</p></abstract>
+<returntype> bool</returntype>
+<result><p>True if paging is enabled, otherwise false
+</p></result>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>XEOS_HAL_CPU_PagingEnabled</declaration_function>(
+    <declaration_param>void</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_CPU_RDMSR" lang="c"><name>XEOS_HAL_CPU_RDMSR</name>
+<abstract><p>Gets the content of a Model Specific Register (MSR)
+</p></abstract>
+<parameterlist>
+<parameter><name>id</name><desc><p>The MSR ID</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>uint32_t</type><name>id</name></parsedparameter>
+</parsedparameterlist>
+<returntype> uint64_t</returntype>
+<result><p>The MSR value
+</p></result>
+<declaration><declaration_type>uint64_t</declaration_type> <declaration_function>XEOS_HAL_CPU_RDMSR</declaration_function>(
+    <declaration_type>uint32_t</declaration_type> <declaration_param>id</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_CPU_SetCR0" lang="c"><name>XEOS_HAL_CPU_SetCR0</name>
+<abstract><p>Sets the content of the Control Register 0 (CR0)
+</p></abstract>
+<parameterlist>
+<parameter><name>value</name><desc><p>The content of CR0</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>uint32_t</type><name>value</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_CPU_SetCR0</declaration_function>(
+    <declaration_type>uint32_t</declaration_type> <declaration_param>value</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_CPU_SetCR1" lang="c"><name>XEOS_HAL_CPU_SetCR1</name>
+<abstract><p>Sets the content of the Control Register 1 (CR1)
+</p></abstract>
+<parameterlist>
+<parameter><name>value</name><desc><p>The content of CR1</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>uint32_t</type><name>value</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_CPU_SetCR1</declaration_function>(
+    <declaration_type>uint32_t</declaration_type> <declaration_param>value</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_CPU_SetCR2" lang="c"><name>XEOS_HAL_CPU_SetCR2</name>
+<abstract><p>Sets the content of the Control Register 2 (CR2)
+</p></abstract>
+<parameterlist>
+<parameter><name>value</name><desc><p>The content of CR2</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>uint32_t</type><name>value</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_CPU_SetCR2</declaration_function>(
+    <declaration_type>uint32_t</declaration_type> <declaration_param>value</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_CPU_SetCR3" lang="c"><name>XEOS_HAL_CPU_SetCR3</name>
+<abstract><p>Sets the content of the Control Register 3 (CR3)
+</p></abstract>
+<parameterlist>
+<parameter><name>value</name><desc><p>The content of CR3</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>uint32_t</type><name>value</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_CPU_SetCR3</declaration_function>(
+    <declaration_type>uint32_t</declaration_type> <declaration_param>value</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_CPU_SetCR4" lang="c"><name>XEOS_HAL_CPU_SetCR4</name>
+<abstract><p>Sets the content of the Control Register 4 (CR4)
+</p></abstract>
+<parameterlist>
+<parameter><name>value</name><desc><p>The content of CR4</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>uint32_t</type><name>value</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_CPU_SetCR4</declaration_function>(
+    <declaration_type>uint32_t</declaration_type> <declaration_param>value</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_CPU_SoftwareInterrupt" lang="c"><name>XEOS_HAL_CPU_SoftwareInterrupt</name>
+<abstract><p>Generates a software interrupt
+</p></abstract>
+<parameterlist>
+<parameter><name>n</name><desc><p>The interrupt number</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>uint8_t</type><name>n</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_CPU_SoftwareInterrupt</declaration_function>(
+    <declaration_type>uint8_t</declaration_type> <declaration_param>n</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_HAL_CPU_WRMSR" lang="c"><name>XEOS_HAL_CPU_WRMSR</name>
+<abstract><p>Writes a value into a Model Specifi Register (MSR)
+</p></abstract>
+<parameterlist>
+<parameter><name>id</name><desc><p>The MSR ID</p></desc></parameter>
+<parameter><name>value</name><desc><p>The value to write</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>uint32_t</type><name>id</name></parsedparameter>
+<parsedparameter><type>uint64_t</type><name>value</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_HAL_CPU_WRMSR</declaration_function>(
+    <declaration_type>uint32_t</declaration_type> <declaration_param>id</declaration_param>,
+    <declaration_type>uint64_t</declaration_type> <declaration_param>value</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<typedefs><typedef id="//xsdoc_ref/c/tdef/XEOS_HAL_CPU_Registers" lang="c" type="simple"><name>XEOS_HAL_CPU_Registers</name>
+<abstract><p>x86-64 registers
+</p></abstract>
+<parsedparameterlist>
+<parsedparameter><type>uint64_t</type><name>rax</name></parsedparameter>
+<parsedparameter><type>uint64_t</type><name>rbx</name></parsedparameter>
+<parsedparameter><type>uint64_t</type><name>rcx</name></parsedparameter>
+<parsedparameter><type>uint64_t</type><name>rdx</name></parsedparameter>
+<parsedparameter><type>uint64_t</type><name>rsi</name></parsedparameter>
+<parsedparameter><type>uint64_t</type><name>rdi</name></parsedparameter>
+<parsedparameter><type>uint64_t</type><name>r8</name></parsedparameter>
+<parsedparameter><type>uint64_t</type><name>r9</name></parsedparameter>
+<parsedparameter><type>uint64_t</type><name>r10</name></parsedparameter>
+<parsedparameter><type>uint64_t</type><name>r11</name></parsedparameter>
+<parsedparameter><type>uint64_t</type><name>r12</name></parsedparameter>
+<parsedparameter><type>uint64_t</type><name>r13</name></parsedparameter>
+<parsedparameter><type>uint64_t</type><name>r14</name></parsedparameter>
+<parsedparameter><type>uint64_t</type><name>r15</name></parsedparameter>
+<parsedparameter><type>uint64_t</type><name>rsp</name></parsedparameter>
+<parsedparameter><type>uint64_t</type><name>rbp</name></parsedparameter>
+</parsedparameterlist>
+<declaration> <declaration_comment>/*!</declaration_comment>
+    <declaration_comment>*/</declaration_comment>
+<declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> { 
+    <declaration_type>uint64_t</declaration_type> <declaration_var>rax</declaration_var>; 
+    <declaration_type>uint64_t</declaration_type> <declaration_var>rbx</declaration_var>; 
+    <declaration_type>uint64_t</declaration_type> <declaration_var>rcx</declaration_var>; 
+    <declaration_type>uint64_t</declaration_type> <declaration_var>rdx</declaration_var>; 
+    <declaration_type>uint64_t</declaration_type> <declaration_var>rsi</declaration_var>; 
+    <declaration_type>uint64_t</declaration_type> <declaration_var>rdi</declaration_var>; 
+    <declaration_type>uint64_t</declaration_type> <declaration_var>r8</declaration_var>; 
+    <declaration_type>uint64_t</declaration_type> <declaration_var>r9</declaration_var>; 
+    <declaration_type>uint64_t</declaration_type> <declaration_var>r10</declaration_var>; 
+    <declaration_type>uint64_t</declaration_type> <declaration_var>r11</declaration_var>; 
+    <declaration_type>uint64_t</declaration_type> <declaration_var>r12</declaration_var>; 
+    <declaration_type>uint64_t</declaration_type> <declaration_var>r13</declaration_var>; 
+    <declaration_type>uint64_t</declaration_type> <declaration_var>r14</declaration_var>; 
+    <declaration_type>uint64_t</declaration_type> <declaration_var>r15</declaration_var>; 
+    <declaration_type>uint64_t</declaration_type> <declaration_var>rsp</declaration_var>; 
+    <declaration_type>uint64_t</declaration_type> <declaration_var>rbp</declaration_var>; 
+} <declaration_var>XEOS_HAL_CPU_Registers</declaration_var>;  </declaration>
+<desc><p>Structure representing the x86-64 registers. For i386, the
+same typedef is available, but with a different layout.
+</p></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_HAL_CPU_Registers_DONTLINK_1" lang="c" type="simple"><name>XEOS_HAL_CPU_Registers</name>
+<abstract><p>i386 registers
+</p></abstract>
+<parsedparameterlist>
+<parsedparameter><type>uint32_t</type><name>eax</name></parsedparameter>
+<parsedparameter><type>uint32_t</type><name>ebx</name></parsedparameter>
+<parsedparameter><type>uint32_t</type><name>ecx</name></parsedparameter>
+<parsedparameter><type>uint32_t</type><name>edx</name></parsedparameter>
+<parsedparameter><type>uint32_t</type><name>esi</name></parsedparameter>
+<parsedparameter><type>uint32_t</type><name>edi</name></parsedparameter>
+<parsedparameter><type>uint32_t</type><name>esp</name></parsedparameter>
+<parsedparameter><type>uint32_t</type><name>ebp</name></parsedparameter>
+</parsedparameterlist>
+<declaration> <declaration_comment>/*!</declaration_comment>
+    <declaration_comment>*/</declaration_comment>
+<declaration_keyword>typedef</declaration_keyword> <declaration_keyword>struct</declaration_keyword> { 
+    <declaration_type>uint32_t</declaration_type> <declaration_var>eax</declaration_var>; 
+    <declaration_type>uint32_t</declaration_type> <declaration_var>ebx</declaration_var>; 
+    <declaration_type>uint32_t</declaration_type> <declaration_var>ecx</declaration_var>; 
+    <declaration_type>uint32_t</declaration_type> <declaration_var>edx</declaration_var>; 
+    <declaration_type>uint32_t</declaration_type> <declaration_var>esi</declaration_var>; 
+    <declaration_type>uint32_t</declaration_type> <declaration_var>edi</declaration_var>; 
+    <declaration_type>uint32_t</declaration_type> <declaration_var>esp</declaration_var>; 
+    <declaration_type>uint32_t</declaration_type> <declaration_var>ebp</declaration_var>; 
+} <declaration_var>XEOS_HAL_CPU_Registers</declaration_var>;  </declaration>
+<desc><p>Structure representing the i386 registers. For x86-64, the
+same typedef is available, but with a different layout.
+</p></desc>
+</typedef><typedef id="//xsdoc_ref/c/tdef/XEOS_HAL_CPUInfos_Feature" lang="c" type="simple"><name>XEOS_HAL_CPUInfos_Feature</name>
+<abstract><p>CPU features
+</p></abstract>
+<constantlist>
+<constant><name>XEOS_HAL_CPUInfos_FeatureFPU</name><desc><p>Onboard x87 FPU</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureVME</name><desc><p>Virtual mode extensions (VIF)</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureDE</name><desc><p>Debugging extensions (CR4 bit 3)</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeaturePSE</name><desc><p>Page size extensions</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureTSC</name><desc><p>Time Stamp Counter</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureMSR</name><desc><p>Model-specific registers</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeaturePAE</name><desc><p>Physical Address Extension</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureMCE</name><desc><p>Machine Check Exception</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureCX8</name><desc><p>CMPXCHG8 (compare-and-swap) instruction</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureAPIC</name><desc><p>Onboard Advanced Programmable Interrupt Controller</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureSEP</name><desc><p>SYSENTER and SYSEXIT instructions</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureMTRR</name><desc><p>Memory Type Range Registers</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeaturePGE</name><desc><p>Page Global Enable bit in CR4</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureMCA</name><desc><p>Machine check architecture</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureCMOV</name><desc><p>Conditional move and FCMOV instructions</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeaturePAT</name><desc><p>Page Attribute Table</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeaturePSE36</name><desc><p>36-bit page huge pages</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeaturePN</name><desc><p>Processor Serial Number</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureCLFlush</name><desc><p>CLFLUSH instruction (SSE2)</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureDTS</name><desc><p>Debug store: save trace of executed jumps</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureACPI</name><desc><p>Onboard thermal control MSRs for ACPI</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureMMX</name><desc><p>MMX instructions</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureFXSR</name><desc><p>FXSAVE, FXRESTOR instructions, CR4 bit 9</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureSSE</name><desc><p>SSE instructions (a.k.a. Katmai New Instructions)</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureSSE2</name><desc><p>SSE2 instructions</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureSS</name><desc><p>CPU cache supports self-snoop</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureHT</name><desc><p>Hyper-threading</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureTM</name><desc><p>Thermal monitor automatically limits temperature</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureIA64</name><desc><p>IA64 processor emulating x86</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeaturePBE</name><desc><p>Pending Break Enable (PBE# pin) wakeup support</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeaturePNI</name><desc><p>Prescott New Instructions (SSE3)</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeaturePCLMulQDQ</name><desc><p>PCLMULQDQ support</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureDTES64</name><desc><p>64-bit debug store (edx bit 21)</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureMonitor</name><desc><p>MONITOR and MWAIT instructions (SSE3)</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureDSCPL</name><desc><p>CPL qualified debug store</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureVMX</name><desc><p>Virtual Machine eXtensions</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureSMX</name><desc><p>Safer Mode Extensions (LaGrande)</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureEST</name><desc><p>Enhanced SpeedStep</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureTM2</name><desc><p>Thermal Monitor 2</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureSSSE3</name><desc><p>Supplemental SSE3 instructions</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureCID</name><desc><p>Context ID</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureFMA</name><desc><p>Fused multiply-add (FMA3)</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureCX16</name><desc><p>CMPXCHG16B instruction</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureXTPT</name><desc><p>Can disable sending task priority messages</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeaturePDCM</name><desc><p>Perfmon &amp; debug capability</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeaturePCID</name><desc><p>Process context identifiers (CR4 bit 17)</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureDCA</name><desc><p>Direct cache access for DMA writes</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureSSE41</name><desc><p>SSE4.1 instructions</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureSSE42</name><desc><p>SSE4.2 instructions</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureX2APIC</name><desc><p>x2APIC support</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureMOVBE</name><desc><p>MOVBE instruction (big-endian, Intel Atom only)</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeaturePOPCNT</name><desc><p>POPCNT instruction</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureTSCDeadLine</name><desc><p>APIC supports one-shot operation using a TSC deadline value</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureAES</name><desc><p>AES instruction set</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureXSave</name><desc><p>XSAVE, XRESTOR, XSETBV, XGETBV</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureOSXSave</name><desc><p>XSAVE enabled by OS</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureAVX</name><desc><p>Advanced Vector Extensions</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureF16C</name><desc><p>CVT16 instruction set (half-precision) FP support</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureRDRND</name><desc><p>RDRAND (on-chip random number generator) support</p></desc></constant>
+<constant><name>XEOS_HAL_CPUInfos_FeatureHypervisor</name><desc><p>Running on a hypervisor (always 0 on a real CPU)</p></desc></constant>
+</constantlist>
+<parsedparameterlist>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureFPU</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureVME</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureDE</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeaturePSE</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureTSC</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureMSR</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeaturePAE</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureMCE</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureCX8</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureAPIC</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureSEP</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureMTRR</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeaturePGE</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureMCA</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureCMOV</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeaturePAT</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeaturePSE36</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeaturePN</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureCLFlush</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureDTS</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureACPI</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureMMX</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureFXSR</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureSSE</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureSSE2</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureSS</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureHT</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureTM</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureIA64</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeaturePBE</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeaturePNI</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeaturePCLMulQDQ</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureDTES64</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureMonitor</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureDSCPL</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureVMX</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureSMX</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureEST</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureTM2</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureSSSE3</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureCID</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureFMA</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureCX16</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureXTPT</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeaturePDCM</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeaturePCID</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureDCA</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureSSE41</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureSSE42</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureX2APIC</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureMOVBE</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeaturePOPCNT</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureTSCDeadLine</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureAES</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureXSave</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureOSXSave</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureAVX</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureF16C</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureRDRND</name></parsedparameter>
+<parsedparameter><type></type><name>XEOS_HAL_CPUInfos_FeatureHypervisor</name></parsedparameter>
+</parsedparameterlist>
+<declaration> <declaration_comment>/*!</declaration_comment>
+    <declaration_comment>*/</declaration_comment>
+<declaration_keyword>typedef</declaration_keyword> <declaration_keyword>enum</declaration_keyword> { 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureFPU</declaration_var> = <declaration_number>0x000</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureVME</declaration_var> = <declaration_number>0x001</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureDE</declaration_var> = <declaration_number>0x002</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeaturePSE</declaration_var> = <declaration_number>0x003</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureTSC</declaration_var> = <declaration_number>0x004</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureMSR</declaration_var> = <declaration_number>0x005</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeaturePAE</declaration_var> = <declaration_number>0x006</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureMCE</declaration_var> = <declaration_number>0x007</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureCX8</declaration_var> = <declaration_number>0x008</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureAPIC</declaration_var> = <declaration_number>0x009</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureSEP</declaration_var> = <declaration_number>0x00B</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureMTRR</declaration_var> = <declaration_number>0x00C</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeaturePGE</declaration_var> = <declaration_number>0x00D</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureMCA</declaration_var> = <declaration_number>0x00E</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureCMOV</declaration_var> = <declaration_number>0x00F</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeaturePAT</declaration_var> = <declaration_number>0x010</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeaturePSE36</declaration_var> = <declaration_number>0x011</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeaturePN</declaration_var> = <declaration_number>0x012</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureCLFlush</declaration_var> = <declaration_number>0x013</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureDTS</declaration_var> = <declaration_number>0x015</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureACPI</declaration_var> = <declaration_number>0x016</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureMMX</declaration_var> = <declaration_number>0x017</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureFXSR</declaration_var> = <declaration_number>0x018</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureSSE</declaration_var> = <declaration_number>0x019</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureSSE2</declaration_var> = <declaration_number>0x01A</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureSS</declaration_var> = <declaration_number>0x01B</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureHT</declaration_var> = <declaration_number>0x01C</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureTM</declaration_var> = <declaration_number>0x01D</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureIA64</declaration_var> = <declaration_number>0x01E</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeaturePBE</declaration_var> = <declaration_number>0x01F</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeaturePNI</declaration_var> = <declaration_number>0x100</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeaturePCLMulQDQ</declaration_var> = <declaration_number>0x101</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureDTES64</declaration_var> = <declaration_number>0x102</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureMonitor</declaration_var> = <declaration_number>0x103</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureDSCPL</declaration_var> = <declaration_number>0x104</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureVMX</declaration_var> = <declaration_number>0x105</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureSMX</declaration_var> = <declaration_number>0x106</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureEST</declaration_var> = <declaration_number>0x107</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureTM2</declaration_var> = <declaration_number>0x108</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureSSSE3</declaration_var> = <declaration_number>0x109</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureCID</declaration_var> = <declaration_number>0x10A</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureFMA</declaration_var> = <declaration_number>0x10C</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureCX16</declaration_var> = <declaration_number>0x10D</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureXTPT</declaration_var> = <declaration_number>0x10E</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeaturePDCM</declaration_var> = <declaration_number>0x10F</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeaturePCID</declaration_var> = <declaration_number>0x111</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureDCA</declaration_var> = <declaration_number>0x112</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureSSE41</declaration_var> = <declaration_number>0x113</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureSSE42</declaration_var> = <declaration_number>0x114</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureX2APIC</declaration_var> = <declaration_number>0x115</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureMOVBE</declaration_var> = <declaration_number>0x116</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeaturePOPCNT</declaration_var> = <declaration_number>0x117</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureTSCDeadLine</declaration_var> = <declaration_number>0x118</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureAES</declaration_var> = <declaration_number>0x119</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureXSave</declaration_var> = <declaration_number>0x11A</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureOSXSave</declaration_var> = <declaration_number>0x11B</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureAVX</declaration_var> = <declaration_number>0x11C</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureF16C</declaration_var> = <declaration_number>0x11D</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureRDRND</declaration_var> = <declaration_number>0x11E</declaration_number>, 
+    <declaration_var>XEOS_HAL_CPUInfos_FeatureHypervisor</declaration_var> = <declaration_number>0x11F</declaration_number> 
+} <declaration_var>XEOS_HAL_CPUInfos_Feature</declaration_var>;  </declaration>
+<desc><p/></desc>
+</typedef></typedefs><defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_HAL_CPU_H__" definetype="value" lang="c"><name>__XEOS_HAL_CPU_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_HAL_CPU_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>

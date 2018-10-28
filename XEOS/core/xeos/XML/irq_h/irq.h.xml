@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE header PUBLIC "-//Apple Computer//DTD HEADERDOC 1.6//EN" "/System/Library/DTDs/HeaderDoc-1.6.dtd">
+<header id="//xsdoc_ref/doc/header/irq.h" lang="c" filename="irq.h" headerpath="/Users/macmade/Documents/Macmade/Development/GitHub/XEOS/source/core/xeos/include/xeos/irq.h"><name>irq.h</name>
+<includes>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/pic.h">&lt;xeos/hal/pic.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/cpu.h">&lt;xeos/hal/cpu.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdint.h">&lt;stdint.h&gt;</hd_link></include>
+<include><hd_link logicalPath="//xsdoc_ref/doc/header/stdbool.h">&lt;stdbool.h&gt;</hd_link></include>
+</includes>
+<desc><p/></desc>
+<functions><function id="//xsdoc_ref/c/func/XEOS_IRQ_AddIRQHandler" lang="c"><name>XEOS_IRQ_AddIRQHandler</name>
+<abstract><p>Installs a handler function for an IRQ line
+</p></abstract>
+<parameterlist>
+<parameter><name>irq</name><desc><p>The IRQ line</p></desc></parameter>
+<parameter><name>handler</name><desc><p>The IRQ handler function</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_HAL_PIC_IRQ</type><name>irq</name></parsedparameter>
+<parsedparameter><type>XEOS_IRQ_IRQHandler</type><name>handler</name></parsedparameter>
+</parsedparameterlist>
+<returntype> bool</returntype>
+<result><p>True if the handler was installed, otherwise false
+</p></result>
+<declaration><declaration_type>bool</declaration_type> <declaration_function>XEOS_IRQ_AddIRQHandler</declaration_function>(
+    <declaration_type>XEOS_HAL_PIC_IRQ</declaration_type> <declaration_param>irq</declaration_param>,
+    <declaration_type>XEOS_IRQ_IRQHandler</declaration_type> <declaration_param>handler</declaration_param> );  </declaration>
+<desc><p>Note that the number of handlers for an IRQ line is limited.
+If the maximum number of handlers is reached, the handler
+won't be installed and the function will return false.
+</p></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_IRQ_ExecuteIRQHandlers" lang="c"><name>XEOS_IRQ_ExecuteIRQHandlers</name>
+<abstract><p>Executes all installed handlers for an IRQ line
+</p></abstract>
+<parameterlist>
+<parameter><name>irq</name><desc><p>The IRQ line</p></desc></parameter>
+<parameter><name>registers</name><desc><p>The processor registers</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_HAL_PIC_IRQ</type><name>irq</name></parsedparameter>
+<parsedparameter><type>XEOS_HAL_CPU_Registers *</type><name>registers</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_IRQ_ExecuteIRQHandlers</declaration_function>(
+    <declaration_type>XEOS_HAL_PIC_IRQ</declaration_type> <declaration_param>irq</declaration_param>,
+    <declaration_type>XEOS_HAL_CPU_Registers</declaration_type> <declaration_type>*</declaration_type><declaration_param>registers</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_IRQ_Keyboard" lang="c"><name>XEOS_IRQ_Keyboard</name>
+<abstract><p>IRQ handler for the keyboard (IRQ1)
+</p></abstract>
+<parameterlist>
+<parameter><name>irq</name><desc><p>The IRQ line</p></desc></parameter>
+<parameter><name>registers</name><desc><p>The processor registers</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_HAL_PIC_IRQ</type><name>irq</name></parsedparameter>
+<parsedparameter><type>XEOS_HAL_CPU_Registers *</type><name>registers</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_IRQ_Keyboard</declaration_function>(
+    <declaration_type>XEOS_HAL_PIC_IRQ</declaration_type> <declaration_param>irq</declaration_param>,
+    <declaration_type>XEOS_HAL_CPU_Registers</declaration_type> <declaration_type>*</declaration_type><declaration_param>registers</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_IRQ_RealTimeClock" lang="c"><name>XEOS_IRQ_RealTimeClock</name>
+<abstract><p>IRQ handler for the real time clock (IRQ8)
+</p></abstract>
+<parameterlist>
+<parameter><name>irq</name><desc><p>The IRQ line</p></desc></parameter>
+<parameter><name>registers</name><desc><p>The processor registers</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_HAL_PIC_IRQ</type><name>irq</name></parsedparameter>
+<parsedparameter><type>XEOS_HAL_CPU_Registers *</type><name>registers</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_IRQ_RealTimeClock</declaration_function>(
+    <declaration_type>XEOS_HAL_PIC_IRQ</declaration_type> <declaration_param>irq</declaration_param>,
+    <declaration_type>XEOS_HAL_CPU_Registers</declaration_type> <declaration_type>*</declaration_type><declaration_param>registers</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_IRQ_RemoveIRQHandler" lang="c"><name>XEOS_IRQ_RemoveIRQHandler</name>
+<abstract><p>Removes a handler function for an IRQ line
+</p></abstract>
+<parameterlist>
+<parameter><name>irq</name><desc><p>The IRQ line</p></desc></parameter>
+<parameter><name>handler</name><desc><p>The IRQ handler function</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_HAL_PIC_IRQ</type><name>irq</name></parsedparameter>
+<parsedparameter><type>XEOS_IRQ_IRQHandler</type><name>handler</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_IRQ_RemoveIRQHandler</declaration_function>(
+    <declaration_type>XEOS_HAL_PIC_IRQ</declaration_type> <declaration_param>irq</declaration_param>,
+    <declaration_type>XEOS_IRQ_IRQHandler</declaration_type> <declaration_param>handler</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function><function id="//xsdoc_ref/c/func/XEOS_IRQ_SystemTimer" lang="c"><name>XEOS_IRQ_SystemTimer</name>
+<abstract><p>IRQ handler for the system timer (IRQ0)
+</p></abstract>
+<parameterlist>
+<parameter><name>irq</name><desc><p>The IRQ line</p></desc></parameter>
+<parameter><name>registers</name><desc><p>The processor registers</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_HAL_PIC_IRQ</type><name>irq</name></parsedparameter>
+<parsedparameter><type>XEOS_HAL_CPU_Registers *</type><name>registers</name></parsedparameter>
+</parsedparameterlist>
+<returntype> void</returntype>
+<declaration><declaration_type>void</declaration_type> <declaration_function>XEOS_IRQ_SystemTimer</declaration_function>(
+    <declaration_type>XEOS_HAL_PIC_IRQ</declaration_type> <declaration_param>irq</declaration_param>,
+    <declaration_type>XEOS_HAL_CPU_Registers</declaration_type> <declaration_type>*</declaration_type><declaration_param>registers</declaration_param> );  </declaration>
+<desc><p/></desc>
+</function></functions>
+<typedefs><typedef id="//xsdoc_ref/c/tdef/XEOS_IRQ_IRQHandler" lang="c" type="funcPtr"><name>XEOS_IRQ_IRQHandler</name>
+<abstract><p>Handler function for an IRQ
+</p></abstract>
+<parameterlist>
+<parameter><name>irq</name><desc><p>The IRQ line</p></desc></parameter>
+<parameter><name>registers</name><desc><p>The processor registers</p></desc></parameter>
+</parameterlist>
+<parsedparameterlist>
+<parsedparameter><type>XEOS_HAL_PIC_IRQ</type><name>irq</name></parsedparameter>
+<parsedparameter><type>XEOS_HAL_CPU_Registers *</type><name>registers</name></parsedparameter>
+</parsedparameterlist>
+<declaration> <declaration_comment>/*!</declaration_comment>
+    <declaration_comment>*/</declaration_comment>
+<declaration_keyword>typedef</declaration_keyword> <declaration_type>void</declaration_type> ( <declaration_type>*</declaration_type><declaration_function>XEOS_IRQ_IRQHandler</declaration_function> )(
+    <declaration_type>XEOS_HAL_PIC_IRQ</declaration_type> <declaration_param>irq</declaration_param>,
+    <declaration_type>XEOS_HAL_CPU_Registers</declaration_type> <declaration_type>*</declaration_type><declaration_param>registers</declaration_param> );  </declaration>
+<desc><p/></desc>
+</typedef></typedefs><defines><pdefine id="//xsdoc_ref/c/macro/__XEOS_IRQ_H__" definetype="value" lang="c"><name>__XEOS_IRQ_H__</name>
+<declaration><declaration_preprocessor>#define</declaration_preprocessor> <declaration_preprocessor>__XEOS_IRQ_H__</declaration_preprocessor> </declaration>
+</pdefine></defines><timestamp>Wednesday, June 25, 2014</timestamp>
+</header>
